@@ -1,0 +1,37 @@
+﻿@using Lte.Parameters.Kpi.Entities
+@model IEnumerable<CdmaRegionStat>
+
+<table class="table table-hover">
+    <caption>@Model.First().StatDate.ToShortDateString() 3G总体指标</caption>
+    <thead>
+        <tr style="font-weight:bold; background-color:#A8C3CB;">
+            <th>@Html.LabelFor(x=>x.ElementAt(0).Region)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).ErlangIncludingSwitch)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).Flow)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).Drop2GRate)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).Drop3GRate)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).CallSetupRate)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).ConnectionRate)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).Ecio)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).Ci)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).DownSwitchRate)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (CdmaRegionStat stat in Model)
+        { 
+            <tr>
+                <td>@stat.Region</td>
+                <td>@stat.ErlangIncludingSwitch</td>
+                <td>@String.Format("{0:0.0}",stat.Flow/1024)</td>
+                <td>@String.Format("{0:0.00}",stat.Drop2GRate*100)</td>
+                <td>@String.Format("{0:0.00}",stat.Drop3GRate*100)</td>
+                <td>@String.Format("{0:0.00}",stat.CallSetupRate*100)</td>
+                <td>@String.Format("{0:0.00}",stat.ConnectionRate*100)</td>
+                <td>@String.Format("{0:0.00}",stat.Ecio*100)</td>
+                <td>@String.Format("{0:0.00}",stat.Ci*100)</td>
+                <td>@String.Format("{0:0.00}",stat.DownSwitchRate)</td>
+            </tr>
+        }
+    </tbody>
+</table>

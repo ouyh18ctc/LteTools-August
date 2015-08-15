@@ -1,0 +1,31 @@
+﻿@model Lte.Evaluations.ViewHelpers.ENodebQueryViewModel
+
+    <fieldset>
+        <legend>查询条件设置</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(x=>x.CityName)
+                @Html.DropDownListFor(x => x.CityName, Model.CityList,
+                "=不限定城市=")
+            </li>
+            <li>
+                @Html.LabelFor(x=>x.DistrictName)
+                @Html.DropDownListFor(x => x.DistrictName, Model.DistrictList,
+                "=不限定区域=")
+            </li>
+            <li>
+                @Html.LabelFor(x=>x.TownName)
+                @Html.DropDownListFor(x => x.TownName, Model.TownList,
+                "=不限定镇区=")
+            </li>
+            <li>
+                @Html.LabelFor(x=>x.ENodebName) 
+                @Html.EditorFor(x=>x.ENodebName)
+            </li>
+            <li>
+                @Html.LabelFor(x=>x.Address) 
+                @Html.EditorFor(x=>x.Address)
+            </li>
+            <li><input type="submit" value="查询基站" class="btn btn-primary btn-lg" /></li>
+        </ol>
+    </fieldset>

@@ -1,0 +1,30 @@
+﻿@model List<Lte.Evaluations.Dingli.HandoverInfo>
+
+@{
+    ViewBag.Title = "导入路测数据";
+}
+
+@section featured {
+    <hgroup class="title">
+        <h1>@ViewBag.Title</h1>
+    </hgroup>
+    
+    }
+
+<article>
+    @using (Html.BeginForm("HandoverAnalyze", "Dingli",
+        FormMethod.Post, new {enctype = "multipart/form-data"}))
+    {
+        <p class="field input">
+            鼎利文件选择：
+            <input type="file" name="fileUpload" />
+        </p>
+        <p><button type="submit">导入数据</button>
+            @Html.ActionLink("导出信令", "ExportLogs", new {fileName = "results.csv"})</p>
+    }
+    @{ Html.RenderPartial("_HandoverInfo", Model);}
+</article>
+
+@{ Html.RenderPartial("_DtMenu");}
+
+

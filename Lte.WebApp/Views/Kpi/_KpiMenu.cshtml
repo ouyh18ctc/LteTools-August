@@ -1,0 +1,12 @@
+﻿
+    <div class="list-group">
+        <div class="list-group-item active">
+            <h3 class="list-group-item-heading">指标统计相关功能</h3>
+        </div>
+        @Html.ActionLink("全网基本指标", "Index", null, new{@class="list-group-item"})
+        @Html.ActionLink("全网4G指标", "Precise4G", null, new{@class="list-group-item"})
+        @Html.ActionLink("TOP-2G掉话指标分析", "TopDrop2G", null, new{@class="list-group-item"})
+        @Html.ActionLink("TOP-2G全天掉话指标分析", "TopDrop2GDaily", null, new{@class="list-group-item"})
+        @Html.ActionLink("TOP-3G连接指标分析", "TopConnection3G", null, new{@class="list-group-item"})
+        @Html.ActionLink("日常指标导入", "Import", null, new{@class="list-group-item"})
+    </div>

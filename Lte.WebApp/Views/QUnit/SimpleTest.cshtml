@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "简单测试练习";
+}
+
+@section css{
+    <link rel="Stylesheet" href="../../Content/qunit.css" type="text/css" media="screen" />
+}
+
+@{ Html.RenderPartial("_QUnitFramework");}
+
+@section scripts{
+    <script type="text/javascript" src="../../Scripts/Plugins/qunit.js" ></script>
+    <script type="text/javascript">
+        test('奇偶数测试', function() {
+            ok(0 % 2 == 0, 'Zero is an even number');
+            ok(2 % 2 == 0, 'So is two');
+            ok(-4 % 2 == 0, 'So is negative four');
+            ok(!(1 % 2 == 0), 'One is not an even number');
+            ok(!(-7 % 2 == 0), 'Neither is negative seven');
+        });
+        test('Comparing Test', function(){
+            equal( {}, {}, 'passes, empty objects have the same content');
+            equal({ a: 1 }, { a: 1 }, 'passes, {a: 1} equals {a: 1}');
+            equal( [], [], 'passes, empty arrays have the same content');
+            equal( [1], [1], 'passes, array [1] have the same content');
+        });
+    </script>
+}
+

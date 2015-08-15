@@ -1,0 +1,107 @@
+﻿@model Lte.Evaluations.ViewHelpers.ENodebDetailsViewModel
+
+<h4>小区列表</h4>
+<table summary="User Grid" class="zebra">
+    <thead>
+        <tr style="font-weight:bold; background-color:#A8C3CB;">
+            @if (Model.Cells.Any())
+            {
+                if (Model.CdmaCells != null && Model.CdmaCells.Any())
+                {
+                    <th>@Html.LabelFor(x=>x.CdmaCells.ElementAt(0).CellType)</th>
+                    <th>@Html.LabelFor(x=>x.CdmaCells.ElementAt(0).CellId)</th>
+                }
+                else
+                {
+                    <th>--</th>
+                    <th>--</th>
+                }
+                <th>@Html.LabelFor(x=>x.Cells.ElementAt(0).SectorId)</th>
+                <th>@Html.LabelFor(x=>x.Cells.ElementAt(0).Frequency)</th>
+                <th>@Html.LabelFor(x=>x.Cells.ElementAt(0).Height)</th>
+                <th>@Html.LabelFor(x=>x.Cells.ElementAt(0).Azimuth)</th>
+                <th>@Html.LabelFor(x=>x.Cells.ElementAt(0).MTilt)</th>
+                <th>@Html.LabelFor(x=>x.Cells.ElementAt(0).ETilt)</th>
+                if (Model.CdmaCells != null && Model.CdmaCells.Any())
+                {
+                    <th>
+                        @Html.LabelFor(x=>x.Cells.ElementAt(0).Pci) /
+                        @Html.LabelFor(x=>x.CdmaCells.ElementAt(0).Pn)
+                    </th>
+                }
+                else
+                {
+                    <th>@Html.LabelFor(x=>x.Cells.ElementAt(0).Pci)</th>
+                }
+                <th>@Html.LabelFor(x=>x.Cells.ElementAt(0).AntennaGain)</th>
+                if (Model.CdmaCells != null && Model.CdmaCells.Any())
+                {
+                    <th>
+                        @Html.LabelFor(x=>x.Cells.ElementAt(0).Prach) /
+                        @Html.LabelFor(x=>x.CdmaCells.ElementAt(0).Lac)
+                    </th>
+                }
+                else
+                {
+                    <th>@Html.LabelFor(x=>x.Cells.ElementAt(0).Prach)</th>
+                }
+                <th>@Html.LabelFor(x=>x.Cells.ElementAt(0).RsPower)</th>
+            }
+            else if (Model.CdmaCells != null && Model.CdmaCells.Any())
+            {
+                <th>@Html.LabelFor(x=>x.CdmaCells.ElementAt(0).CellType)</th>
+                <th>@Html.LabelFor(x=>x.CdmaCells.ElementAt(0).CellId)</th>
+                <th>@Html.LabelFor(x=>x.CdmaCells.ElementAt(0).SectorId)</th>
+                <th>@Html.LabelFor(x=>x.CdmaCells.ElementAt(0).Frequency)</th>
+                <th>@Html.LabelFor(x=>x.CdmaCells.ElementAt(0).Height)</th>
+                <th>@Html.LabelFor(x=>x.CdmaCells.ElementAt(0).Azimuth)</th>
+                <th>@Html.LabelFor(x=>x.CdmaCells.ElementAt(0).MTilt)</th>
+                <th>@Html.LabelFor(x=>x.CdmaCells.ElementAt(0).ETilt)</th>
+                <th>@Html.LabelFor(x=>x.CdmaCells.ElementAt(0).Pn)</th>
+                <th>@Html.LabelFor(x=>x.CdmaCells.ElementAt(0).AntennaGain)</th>
+                <th>@Html.LabelFor(x=>x.CdmaCells.ElementAt(0).Lac)</th>
+                <th>--</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Lte.Parameters.Entities.Cell cell in Model.Cells)
+        { 
+            <tr>
+                <td>LTE</td>
+                <td>--</td>
+                <td>@cell.SectorId</td>
+                <td>@cell.Frequency</td>
+                <td>@cell.Height</td>
+                <td>@cell.Azimuth</td>
+                <td>@cell.MTilt</td>
+                <td>@cell.ETilt</td>
+                <td>@cell.Pci</td>
+                <td>@cell.AntennaGain</td>
+                <td>@cell.Prach</td>
+                <td>@cell.RsPower</td>
+            </tr>
+        }
+
+        @if (Model.CdmaCells != null)
+        {
+            foreach (Lte.Parameters.Entities.CdmaCell cdmaCell in Model.CdmaCells)
+            { 
+                <tr>
+                    <td>CDMA-@cdmaCell.CellType</td>
+                    <td>@cdmaCell.CellId</td>
+                    <td>@cdmaCell.SectorId</td>
+                    <td>@cdmaCell.CellName</td>
+                    <td>@cdmaCell.Height</td>
+                    <td>@cdmaCell.Azimuth</td>
+                    <td>@cdmaCell.MTilt</td>
+                    <td>@cdmaCell.ETilt</td>
+                    <td>@cdmaCell.Pn</td>
+                    <td>@cdmaCell.AntennaGain</td>
+                    <td>@cdmaCell.Lac</td>
+                    <td>--</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

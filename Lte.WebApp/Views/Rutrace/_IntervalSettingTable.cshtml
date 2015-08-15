@@ -1,0 +1,23 @@
+﻿@model IList<Lte.Evaluations.Entities.StatValueIntervalSetting>
+
+<table summary="User Grid" class="zebra">
+    <thead>
+        <tr style="font-weight:bold; background-color:#A8C3CB;">
+	        <th>区间下限</th>
+            <th>区间上限</th>
+            <th>当前区间统计数量</th>
+            <th>建议设定区间上限</th>
+        </tr>
+    </thead>
+    <tbody id="interval-settings">
+    @for (int i = 0; i < Model.Count; i++)
+    { 
+        <tr>
+            <td>@Model[i].IntervalLowLevel</td>
+            <td>@Model[i].IntervalUpLevel</td>
+            <td>@Model[i].RecordsCount</td>
+            <td>@Html.EditorFor(x=>x.ElementAt(i).SuggestUpLevel)</td>
+        </tr>
+    }
+    </tbody>
+</table>

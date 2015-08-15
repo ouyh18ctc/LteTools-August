@@ -1,0 +1,114 @@
+﻿@model Lte.Evaluations.Kpi.TopDrop2GDailyViewModel
+
+@{
+    ViewBag.Title = "TOP掉话小区分析";
+}
+
+@section featured {
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+            </hgroup>
+    }
+<section>
+    
+    <div id="radiotabs">
+        <ul>
+            <li><a href ="#oneday">当日指标分析</a></li>
+            <li><a href="#multi-days">TOP小区变化趋势</a></li>
+        </ul>
+        <div id="oneday">
+        @using (Html.BeginForm("TopDrop2GDaily", "Kpi",
+            FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+            Html.RenderPartial("_StatDateSelection", Model);
+            <p>
+                <button type="submit" id="stat" class="btn btn-primary btn-lg">
+                    <span class="glyphicon glyphicon-search"></span>统计指标
+                </button>
+            </p>
+            }
+        @if (Model.StatList.Any())
+        {
+            <h3>@Model.StatDate.ToShortDateString() TOP掉话指标</h3>
+            Html.RenderPartial("_TopDrop2GDailyStatTable", Model.StatList);
+        }
+        </div>
+        <div id="multi-days">
+            @{ Html.RenderPartial("_DateSpanAndTopCountSelection", Model); }
+            <p>
+                <button type="button" id="showresults" class="btn btn-primary btn-lg">
+                    <span class="glyphicon glyphicon-play"></span>统计指标显示图表
+                </button>
+            </p>
+            <div id="top" style="min-width: 600px; min-height: 400px; margin: 0 auto"></div>
+        </div>
+    </div>
+    <div id="dialog-modal"></div>
+</section>
+
+@section css{
+@Styles.Render("~/Content/themes/base/css")
+}
+
+@section Scripts {
+@Scripts.Render("~/bundles/jqueryui")
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/highcharts")
+<script type="text/javascript" src="~/Scripts/Highcharts/modules/exporting.js"></script>
+<script type="text/javascript" src="~/Scripts/Dingli/ComboSetting.js"></script>
+<script type="text/javascript" src="~/Scripts/Parameters/TopStatSet.js"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/TopHistorySet.js"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/ExtendOperations.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#radiotabs").tabs();
+        $("#StatDate").datepicker({ dateFormat: 'yy-mm-dd' });
+        $("#StartDate").datepicker({ dateFormat: 'yy-mm-dd' });
+        $("#EndDate").datepicker({ dateFormat: 'yy-mm-dd' });
+    });
+    $("#showresults").click(function () {
+        var begin = new Date($("#StartDate").val());
+        var end = new Date($("#EndDate").val());
+        $("#system_message").html("");
+        if (begin.toString() == "Invalid Date" || end.toString() == "Invalid Date") {
+            $("#system_message").append("<div class='error'>输入日期格式错误！</div>");
+        } else if (begin > end) {
+            $("#system_message").append("<div class='error'>开始日期必须早于或等于结束日期！</div>");
+        } else {
+            var statSet = new TopStatSet('');
+            statSet.queryTopDrop2GDaily($("#StartDate").val(), $("#EndDate").val(), "#top", $("#TopCounts").val());
+        }
+    });
+    $(".top-history").click(function () {
+        var cellInfo = $(this).attr('name');
+        var end = $("#StatDate").val();
+        var setting = new TopHistorySet(cellInfo, end);
+        $("#dialog-modal").showChartDialog('历史信息', setting.getTopDrop2GDailyOptions(), 860, 480);
+    });
+    $("a.top-detail-distance").click(function () {
+        var cellInfo = $(this).attr('title');
+        var end = $("#StatDate").val();
+        var setting = new TopHistorySet(cellInfo, end);
+        $("#dialog-modal").showChartDialog('距离分布指标', setting.getTop2GDistanceDistribution(), 960, 680);
+    });
+    $("a.top-detail-drophour").click(function () {
+        var cellInfo = $(this).attr('title');
+        var end = $("#StatDate").val();
+        var setting = new TopHistorySet(cellInfo, end);
+        $("#dialog-modal").showChartDialog('掉话次数小时趋势', setting.getTop2GDropsHourDistribution(), 960, 680);
+    });
+    $("a.top-detail-coverageinterference").click(function () {
+        var cellInfo = $(this).attr('title');
+        var end = $("#StatDate").val();
+        var setting = new TopHistorySet(cellInfo, end);
+        $("#dialog-modal").showChartDialog('覆盖干扰小时趋势', setting.getCoverageInterferenceDistribution(), 960, 680);
+    });
+    $("a.top-detail-alarm").click(function () {
+        var cellInfo = $(this).attr('title');
+        var end = $("#StatDate").val();
+        var setting = new TopHistorySet(cellInfo, end);
+        $("#dialog-modal").showChartDialog('告警指标小时变化趋势', setting.getAlarmHourDistribution(), 960, 680);
+    });
+</script>
+    }
+

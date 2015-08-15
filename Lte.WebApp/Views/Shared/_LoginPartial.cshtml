@@ -1,0 +1,23 @@
+﻿
+@if (Request.IsAuthenticated) {
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                @Html.ActionLink("您好," + User.Identity.Name + "!", "Manage", "Account", 
+                    routeValues: null, htmlAttributes: new { title = "管理账号" })
+            </li>
+            <li>
+                <a href="javascript:document.getElementById('logoutForm').submit()">退出登录</a>
+                @Html.AntiForgeryToken();
+            </li>
+        </ul>
+    }
+} else {
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("注册", "Register", "Account", routeValues: null, 
+                htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("登录", "Login", "Account", routeValues: null, 
+                htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

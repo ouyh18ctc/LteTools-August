@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Lte.Evaluations.ViewHelpers.TownENodebStat>
+
+@{
+    ViewBag.Title = "各镇区LTE基站分布情况";
+    ViewBag.Message = "——全网各个区和镇的基站数量比例统计";
+}
+
+@section featured {
+    <hgroup class="title">
+        <h1>@ViewBag.Title</h1>
+        <h2>@ViewBag.Message</h2>
+    </hgroup>
+    }
+
+<div class="row">
+    <div class="col-md-6">
+        @{ Html.RenderPartial("_TownENodebStatTable"); }
+    </div>
+    @foreach (string cityName in Model.Select(x=>x.CityName).Distinct())
+    {
+        <div class="col-md-6">
+            <div id="pie-@cityName" class="city" style="min-height: 400px"></div>  
+        </div>
+        foreach (string districtName in Model.Where(x => x.CityName == cityName).Select(x => x.DistrictName).Distinct())
+        { 
+            <div class="col-md-6">
+                <div id="pie-@cityName-@districtName" class="district" style="min-height: 400px"></div>
+            </div>
+        }
+    }
+</div>
+
+@section scripts{
+@Scripts.Render("~/bundles/highcharts")
+<script type="text/javascript" src="~/Scripts/Parameters/ENodebStatSet.js"></script>
+<script type="text/javascript" src="../../Scripts/Dingli/Pie3dSetting.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var dataSet = new ENodebStatSet();
+        $(".city").each(function () {
+            var parts = $(this).attr("id").split('-');
+            var cityStat = dataSet.getDistrictENodebsStat(parts[1]);
+            var pieSetting = new Pie3dSetting(parts[1] + '基站数统计', cityStat);
+            $(this).highcharts(pieSetting.getOptions(true));
+        });
+        $(".district").each(function () {
+            var parts = $(this).attr("id").split('-');
+            var districtStat = dataSet.getTownENodebsStat(parts[1], parts[2]);
+            var pieSetting = new Pie3dSetting(parts[1] + parts[2] + '基站数统计', districtStat);
+            $(this).highcharts(pieSetting.getOptions(true));
+        });
+        $(".show-details").click("normal", function () {
+            var parts = $(this).attr("id").split('-');
+            $("#row-" + parts[0] + "-" + parts[1]).toggle();
+        });
+    });
+</script>
+}

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09d6ed6b-baa9-4c00-9c71-afdb87f0bd19}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>程序设计流程图</Name>
+    <RootNamespace>程序设计流程图</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Content Include="3G下切2G\下切原因分析流程.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="3G下切2G\下切原因分析流程.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>3G下切2G\下切原因分析流程.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="3G下切2G\批量下切原因分析流程.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="3G下切2G\批量下切原因分析流程.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>3G下切2G\批量下切原因分析流程.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="3G下切2G\第一轮文件扫描流程.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="3G下切2G\第一轮文件扫描流程.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>3G下切2G\第一轮文件扫描流程.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="一减课题\RU干扰细节列表生成算法.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="一减课题\RU干扰细节列表生成算法.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>一减课题\RU干扰细节列表生成算法.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="一减课题\RuInterferenceRecord_Import.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="一减课题\RuInterferenceRecord_Import.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>一减课题\RuInterferenceRecord_Import.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="一减课题\RU信息导入干扰列表的流程.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="一减课题\RU信息导入干扰列表的流程.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>一减课题\RU信息导入干扰列表的流程.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="一减课题\RU信息列表.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="一减课题\RU信息列表.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>一减课题\RU信息列表.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="一减课题\RU文件读取流程.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="一减课题\RU文件读取流程.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>一减课题\RU文件读取流程.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="一减课题\其他主要数据结构.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="一减课题\其他主要数据结构.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>一减课题\其他主要数据结构.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="一减课题\干扰记录数据结构.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="一减课题\干扰记录数据结构.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>一减课题\干扰记录数据结构.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="一减课题\总体流程图.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="一减课题\总体流程图.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>一减课题\总体流程图.activitydiagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="3G下切2G\下切事件定义.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="3G下切2G\下切事件定义.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>3G下切2G\下切事件定义.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="3G下切2G\下切事件生成总体流程.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="3G下切2G\下切事件生成总体流程.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>3G下切2G\下切事件生成总体流程.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="3G下切2G\总体流程图.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="3G下切2G\总体流程图.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>3G下切2G\总体流程图.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="3G下切2G\第二轮文件扫描流程.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="3G下切2G\第二轮文件扫描流程.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>3G下切2G\第二轮文件扫描流程.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="3G下切2G\简要话单文件.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="3G下切2G\简要话单文件.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>3G下切2G\简要话单文件.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\程序设计流程图.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Folder Include="3G下切2G" />
+    <Folder Include="一减课题" />
+  </ItemGroup>
+</Project>

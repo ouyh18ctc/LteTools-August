@@ -1,0 +1,39 @@
+﻿@model List<Lte.Evaluations.Dingli.HandoverInfo>
+
+@if (Model != null && Model.Count > 0)
+{ 
+<table summary="User Grid" class="zebra">
+<thead>
+<tr style="font-weight:bold; background-color:#A8C3CB;">
+	<th>请求时间</th>
+    <th>完成时间</th>
+    <th>测量时间</th>
+    <th>切换前PCI</th>
+    <th>切换后PCI</th>
+    <th>切换前频点</th>
+    <th>切换后频点</th>
+    <th>是否成功</th>
+    <th>切换前下行速率</th>
+    <th>切换后下行速率</th>
+</tr>
+</thead>
+<tbody>
+@foreach (Lte.Evaluations.Dingli.HandoverInfo info in Model)
+{ 
+    <tr>
+        <td>@info.RequestTime.ToString("HH:mm:ss.fff")</td>
+        <td>@info.FinishedTime.ToString("HH:mm:ss.fff")</td>
+        <td>@info.MeasureTime.ToString("HH:mm:ss.fff")</td>
+        <td>@info.PciBefore</td>
+        <td>@info.PciAfter</td>
+        <td>@info.EarfcnBefore</td>
+        <td>@info.EarfcnAfter</td>
+        <td>@info.HandoverSuccess.ToString()</td>
+        <td>@info.DlThroughputBefore</td>
+        <td>@info.DlThroughputAfter</td>
+    </tr>
+}
+</tbody>
+
+</table>
+}

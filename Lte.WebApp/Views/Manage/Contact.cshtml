@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "联系方式";
+    ViewBag.Message = "——欢迎向本人反馈使用的问题和建议。";
+}
+
+@section featured {
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <h3><span class="label label-primary">电话</span></h3>
+        <p>
+            <span class="label label-info">手机:</span>
+            <span>13392299235</span>
+        </p>
+        <p>
+            <span class="label label-info">办公电话:</span>
+            <span>0757-83877744</span>
+        </p>
+        <h3><span class="label label-primary">单位地址</span></h3>
+        <p>
+            南海区平洲南港路7号7楼<br />
+            广东佛山，528251
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h3><span class="label label-primary">互联网信息</span></h3>
+        <p>
+            <span class="label label-info">OA邮箱:</span>
+            <span><a href="mailto:ouyh18@gdtel.com.cn">ouyh18@gdtel.com.cn</a></span>
+        </p>
+        <p>
+            <span class="label label-info">189邮箱:</span>
+            <span><a href="mailto:ouyh18@189.cn">ouyh18@189.cn</a></span>
+        </p>
+        <p>
+            <span class="label label-success">QQ:</span>
+            <span>632008536</span>
+        </p>
+        <p>
+            <span class="label label-success">微信：</span>
+            <span>fsook_ook</span>
+        </p>
+    </div>
+    <div class="col-md-4">
+        @{Html.RenderPartial("_Accessory");}
+    </div>
+</div>
+
+
+

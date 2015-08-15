@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bulkPmMrDataFile>
+  <fileHeader fileFormatVersion="V1.0" period="15" reportTime="2015-07-13T22:45:00.000" startTime="2015-07-13T22:30:00.000" endTime="2015-07-13T22:45:00.000"/>
+<eNB id="501250" >
+<measurement mrName="MR.RSRP">
+<smr>MR.RSRP.00 MR.RSRP.01 MR.RSRP.02 MR.RSRP.03 MR.RSRP.04 MR.RSRP.05 MR.RSRP.06 MR.RSRP.07 MR.RSRP.08 MR.RSRP.09 MR.RSRP.10 MR.RSRP.11 MR.RSRP.12 MR.RSRP.13 MR.RSRP.14 MR.RSRP.15 MR.RSRP.16 MR.RSRP.17 MR.RSRP.18 MR.RSRP.19 MR.RSRP.20 MR.RSRP.21 MR.RSRP.22 MR.RSRP.23 MR.RSRP.24 MR.RSRP.25 MR.RSRP.26 MR.RSRP.27 MR.RSRP.28 MR.RSRP.29 MR.RSRP.30 MR.RSRP.31 MR.RSRP.32 MR.RSRP.33 MR.RSRP.34 MR.RSRP.35 MR.RSRP.36 MR.RSRP.37 MR.RSRP.38 MR.RSRP.39 MR.RSRP.40 MR.RSRP.41 MR.RSRP.42 MR.RSRP.43 MR.RSRP.44 MR.RSRP.45 MR.RSRP.46 MR.RSRP.47</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 2 29 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 1 0 0 0 0 0 1 5 35 21 3 4 5 4 5 10 11 11 11 6 5 0 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 3 7 8 5 9 13 3 7 4 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.RSRQ">
+<smr>MR.RSRQ.00 MR.RSRQ.01 MR.RSRQ.02 MR.RSRQ.03 MR.RSRQ.04 MR.RSRQ.05 MR.RSRQ.06 MR.RSRQ.07 MR.RSRQ.08 MR.RSRQ.09 MR.RSRQ.10 MR.RSRQ.11 MR.RSRQ.12 MR.RSRQ.13 MR.RSRQ.14 MR.RSRQ.15 MR.RSRQ.16 MR.RSRQ.17</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 2 26 5 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 1 8 35 25 67 7 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 1 64 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.Tadv">
+<smr>MR.Tadv.00 MR.Tadv.01 MR.Tadv.02 MR.Tadv.03 MR.Tadv.04 MR.Tadv.05 MR.Tadv.06 MR.Tadv.07 MR.Tadv.08 MR.Tadv.09 MR.Tadv.10 MR.Tadv.11 MR.Tadv.12 MR.Tadv.13 MR.Tadv.14 MR.Tadv.15 MR.Tadv.16 MR.Tadv.17 MR.Tadv.18 MR.Tadv.19 MR.Tadv.20 MR.Tadv.21 MR.Tadv.22 MR.Tadv.23 MR.Tadv.24 MR.Tadv.25 MR.Tadv.26 MR.Tadv.27 MR.Tadv.28 MR.Tadv.29 MR.Tadv.30 MR.Tadv.31 MR.Tadv.32 MR.Tadv.33 MR.Tadv.34 MR.Tadv.35 MR.Tadv.36 MR.Tadv.37 MR.Tadv.38 MR.Tadv.39 MR.Tadv.40 MR.Tadv.41 MR.Tadv.42 MR.Tadv.43 MR.Tadv.44</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 14 12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 33 22 0 0 81 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14 45 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PowerHeadRoom">
+<smr>MR.PowerHeadRoom.00 MR.PowerHeadRoom.01 MR.PowerHeadRoom.02 MR.PowerHeadRoom.03 MR.PowerHeadRoom.04 MR.PowerHeadRoom.05 MR.PowerHeadRoom.06 MR.PowerHeadRoom.07 MR.PowerHeadRoom.08 MR.PowerHeadRoom.09 MR.PowerHeadRoom.10 MR.PowerHeadRoom.11 MR.PowerHeadRoom.12 MR.PowerHeadRoom.13 MR.PowerHeadRoom.14 MR.PowerHeadRoom.15 MR.PowerHeadRoom.16 MR.PowerHeadRoom.17 MR.PowerHeadRoom.18 MR.PowerHeadRoom.19 MR.PowerHeadRoom.20 MR.PowerHeadRoom.21 MR.PowerHeadRoom.22 MR.PowerHeadRoom.23 MR.PowerHeadRoom.24 MR.PowerHeadRoom.25 MR.PowerHeadRoom.26 MR.PowerHeadRoom.27 MR.PowerHeadRoom.28 MR.PowerHeadRoom.29 MR.PowerHeadRoom.30 MR.PowerHeadRoom.31 MR.PowerHeadRoom.32 MR.PowerHeadRoom.33 MR.PowerHeadRoom.34 MR.PowerHeadRoom.35 MR.PowerHeadRoom.36 MR.PowerHeadRoom.37 MR.PowerHeadRoom.38 MR.PowerHeadRoom.39 MR.PowerHeadRoom.40 MR.PowerHeadRoom.41 MR.PowerHeadRoom.42 MR.PowerHeadRoom.43 MR.PowerHeadRoom.44 MR.PowerHeadRoom.45 MR.PowerHeadRoom.46 MR.PowerHeadRoom.47 MR.PowerHeadRoom.48 MR.PowerHeadRoom.49 MR.PowerHeadRoom.50 MR.PowerHeadRoom.51 MR.PowerHeadRoom.52 MR.PowerHeadRoom.53 MR.PowerHeadRoom.54 MR.PowerHeadRoom.55 MR.PowerHeadRoom.56 MR.PowerHeadRoom.57 MR.PowerHeadRoom.58 MR.PowerHeadRoom.59 MR.PowerHeadRoom.60 MR.PowerHeadRoom.61 MR.PowerHeadRoom.62 MR.PowerHeadRoom.63</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5 12 7 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 1 1 0 2 7 4 3 12 3 10 35 33 10 3 2 4 1 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 7 0 6 7 11 8 2 4 6 3 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.ReceivedIPower">
+<smr>MR.ReceivedIPower.00 MR.ReceivedIPower.01 MR.ReceivedIPower.02 MR.ReceivedIPower.03 MR.ReceivedIPower.04 MR.ReceivedIPower.05 MR.ReceivedIPower.06 MR.ReceivedIPower.07 MR.ReceivedIPower.08 MR.ReceivedIPower.09 MR.ReceivedIPower.10 MR.ReceivedIPower.11 MR.ReceivedIPower.12 MR.ReceivedIPower.13 MR.ReceivedIPower.14 MR.ReceivedIPower.15 MR.ReceivedIPower.16 MR.ReceivedIPower.17 MR.ReceivedIPower.18 MR.ReceivedIPower.19 MR.ReceivedIPower.20 MR.ReceivedIPower.21 MR.ReceivedIPower.22 MR.ReceivedIPower.23 MR.ReceivedIPower.24 MR.ReceivedIPower.25 MR.ReceivedIPower.26 MR.ReceivedIPower.27 MR.ReceivedIPower.28 MR.ReceivedIPower.29 MR.ReceivedIPower.30 MR.ReceivedIPower.31 MR.ReceivedIPower.32 MR.ReceivedIPower.33 MR.ReceivedIPower.34 MR.ReceivedIPower.35 MR.ReceivedIPower.36 MR.ReceivedIPower.37 MR.ReceivedIPower.38 MR.ReceivedIPower.39 MR.ReceivedIPower.40 MR.ReceivedIPower.41 MR.ReceivedIPower.42 MR.ReceivedIPower.43 MR.ReceivedIPower.44 MR.ReceivedIPower.45 MR.ReceivedIPower.46 MR.ReceivedIPower.47 MR.ReceivedIPower.48 MR.ReceivedIPower.49 MR.ReceivedIPower.50 MR.ReceivedIPower.51 MR.ReceivedIPower.52</smr>
+<object id="128320048:1825:0">
+<v>0 0 0 0 0 0 0 87 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:1">
+<v>0 0 0 0 0 0 0 87 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:2">
+<v>0 0 0 0 0 0 0 87 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:3">
+<v>0 0 0 0 0 0 0 87 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:4">
+<v>0 0 0 0 0 0 0 87 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:5">
+<v>0 0 0 0 0 0 0 87 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:6">
+<v>0 0 0 0 0 0 0 87 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:7">
+<v>0 0 0 0 0 0 0 87 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:8">
+<v>0 0 0 0 0 0 0 87 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:9">
+<v>0 0 0 0 0 0 0 87 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:0">
+<v>0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:1">
+<v>0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:2">
+<v>0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:3">
+<v>0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:4">
+<v>0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:5">
+<v>0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:6">
+<v>0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:7">
+<v>0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:8">
+<v>0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:9">
+<v>0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:0">
+<v>0 0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:1">
+<v>0 0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:2">
+<v>0 0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:3">
+<v>0 0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:4">
+<v>0 0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:5">
+<v>0 0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:6">
+<v>0 0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:7">
+<v>0 0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:8">
+<v>0 0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:9">
+<v>0 0 0 0 0 0 0 0 88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.RIPPRB">
+<smr>MR.RIPPRB.00 MR.RIPPRB.01 MR.RIPPRB.02 MR.RIPPRB.03 MR.RIPPRB.04 MR.RIPPRB.05 MR.RIPPRB.06 MR.RIPPRB.07 MR.RIPPRB.08 MR.RIPPRB.09 MR.RIPPRB.10 MR.RIPPRB.11 MR.RIPPRB.12 MR.RIPPRB.13 MR.RIPPRB.14 MR.RIPPRB.15 MR.RIPPRB.16 MR.RIPPRB.17 MR.RIPPRB.18 MR.RIPPRB.19 MR.RIPPRB.20 MR.RIPPRB.21 MR.RIPPRB.22 MR.RIPPRB.23 MR.RIPPRB.24 MR.RIPPRB.25 MR.RIPPRB.26 MR.RIPPRB.27 MR.RIPPRB.28 MR.RIPPRB.29 MR.RIPPRB.30 MR.RIPPRB.31 MR.RIPPRB.32 MR.RIPPRB.33 MR.RIPPRB.34 MR.RIPPRB.35 MR.RIPPRB.36 MR.RIPPRB.37 MR.RIPPRB.38 MR.RIPPRB.39 MR.RIPPRB.40 MR.RIPPRB.41 MR.RIPPRB.42 MR.RIPPRB.43 MR.RIPPRB.44 MR.RIPPRB.45 MR.RIPPRB.46 MR.RIPPRB.47 MR.RIPPRB.48 MR.RIPPRB.49 MR.RIPPRB.50 MR.RIPPRB.51 MR.RIPPRB.52</smr>
+<object id="128320048:1825:0:00">
+<v>0 0 0 0 0 0 0 0 0 85 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:0:00">
+<v>0 0 0 0 0 0 0 2 86 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:0:00">
+<v>0 0 0 0 0 0 0 0 0 87 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.AOA">
+<smr>MR.AOA.00 MR.AOA.01 MR.AOA.02 MR.AOA.03 MR.AOA.04 MR.AOA.05 MR.AOA.06 MR.AOA.07 MR.AOA.08 MR.AOA.09 MR.AOA.10 MR.AOA.11 MR.AOA.12 MR.AOA.13 MR.AOA.14 MR.AOA.15 MR.AOA.16 MR.AOA.17 MR.AOA.18 MR.AOA.19 MR.AOA.20 MR.AOA.21 MR.AOA.22 MR.AOA.23 MR.AOA.24 MR.AOA.25 MR.AOA.26 MR.AOA.27 MR.AOA.28 MR.AOA.29 MR.AOA.30 MR.AOA.31 MR.AOA.32 MR.AOA.33 MR.AOA.34 MR.AOA.35 MR.AOA.36 MR.AOA.37 MR.AOA.38 MR.AOA.39 MR.AOA.40 MR.AOA.41 MR.AOA.42 MR.AOA.43 MR.AOA.44 MR.AOA.45 MR.AOA.46 MR.AOA.47 MR.AOA.48 MR.AOA.49 MR.AOA.50 MR.AOA.51 MR.AOA.52 MR.AOA.53 MR.AOA.54 MR.AOA.55 MR.AOA.56 MR.AOA.57 MR.AOA.58 MR.AOA.59 MR.AOA.60 MR.AOA.61 MR.AOA.62 MR.AOA.63 MR.AOA.64 MR.AOA.65 MR.AOA.66 MR.AOA.67 MR.AOA.68 MR.AOA.69 MR.AOA.70 MR.AOA.71</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateULQci1">
+<smr>MR.PacketLossRateULQci1.00 MR.PacketLossRateULQci1.01 MR.PacketLossRateULQci1.02 MR.PacketLossRateULQci1.03 MR.PacketLossRateULQci1.04 MR.PacketLossRateULQci1.05 MR.PacketLossRateULQci1.06 MR.PacketLossRateULQci1.07 MR.PacketLossRateULQci1.08 MR.PacketLossRateULQci1.09 MR.PacketLossRateULQci1.10 MR.PacketLossRateULQci1.11 MR.PacketLossRateULQci1.12 MR.PacketLossRateULQci1.13 MR.PacketLossRateULQci1.14 MR.PacketLossRateULQci1.15 MR.PacketLossRateULQci1.16 MR.PacketLossRateULQci1.17 MR.PacketLossRateULQci1.18 MR.PacketLossRateULQci1.19 MR.PacketLossRateULQci1.20 MR.PacketLossRateULQci1.21 MR.PacketLossRateULQci1.22 MR.PacketLossRateULQci1.23 MR.PacketLossRateULQci1.24 MR.PacketLossRateULQci1.25 MR.PacketLossRateULQci1.26 MR.PacketLossRateULQci1.27</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateULQci2">
+<smr>MR.PacketLossRateULQci2.00 MR.PacketLossRateULQci2.01 MR.PacketLossRateULQci2.02 MR.PacketLossRateULQci2.03 MR.PacketLossRateULQci2.04 MR.PacketLossRateULQci2.05 MR.PacketLossRateULQci2.06 MR.PacketLossRateULQci2.07 MR.PacketLossRateULQci2.08 MR.PacketLossRateULQci2.09 MR.PacketLossRateULQci2.10 MR.PacketLossRateULQci2.11 MR.PacketLossRateULQci2.12 MR.PacketLossRateULQci2.13 MR.PacketLossRateULQci2.14 MR.PacketLossRateULQci2.15 MR.PacketLossRateULQci2.16 MR.PacketLossRateULQci2.17 MR.PacketLossRateULQci2.18 MR.PacketLossRateULQci2.19 MR.PacketLossRateULQci2.20 MR.PacketLossRateULQci2.21 MR.PacketLossRateULQci2.22 MR.PacketLossRateULQci2.23 MR.PacketLossRateULQci2.24 MR.PacketLossRateULQci2.25 MR.PacketLossRateULQci2.26 MR.PacketLossRateULQci2.27</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateULQci3">
+<smr>MR.PacketLossRateULQci3.00 MR.PacketLossRateULQci3.01 MR.PacketLossRateULQci3.02 MR.PacketLossRateULQci3.03 MR.PacketLossRateULQci3.04 MR.PacketLossRateULQci3.05 MR.PacketLossRateULQci3.06 MR.PacketLossRateULQci3.07 MR.PacketLossRateULQci3.08 MR.PacketLossRateULQci3.09 MR.PacketLossRateULQci3.10 MR.PacketLossRateULQci3.11 MR.PacketLossRateULQci3.12 MR.PacketLossRateULQci3.13 MR.PacketLossRateULQci3.14 MR.PacketLossRateULQci3.15 MR.PacketLossRateULQci3.16 MR.PacketLossRateULQci3.17 MR.PacketLossRateULQci3.18 MR.PacketLossRateULQci3.19 MR.PacketLossRateULQci3.20 MR.PacketLossRateULQci3.21 MR.PacketLossRateULQci3.22 MR.PacketLossRateULQci3.23 MR.PacketLossRateULQci3.24 MR.PacketLossRateULQci3.25 MR.PacketLossRateULQci3.26 MR.PacketLossRateULQci3.27</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateULQci4">
+<smr>MR.PacketLossRateULQci4.00 MR.PacketLossRateULQci4.01 MR.PacketLossRateULQci4.02 MR.PacketLossRateULQci4.03 MR.PacketLossRateULQci4.04 MR.PacketLossRateULQci4.05 MR.PacketLossRateULQci4.06 MR.PacketLossRateULQci4.07 MR.PacketLossRateULQci4.08 MR.PacketLossRateULQci4.09 MR.PacketLossRateULQci4.10 MR.PacketLossRateULQci4.11 MR.PacketLossRateULQci4.12 MR.PacketLossRateULQci4.13 MR.PacketLossRateULQci4.14 MR.PacketLossRateULQci4.15 MR.PacketLossRateULQci4.16 MR.PacketLossRateULQci4.17 MR.PacketLossRateULQci4.18 MR.PacketLossRateULQci4.19 MR.PacketLossRateULQci4.20 MR.PacketLossRateULQci4.21 MR.PacketLossRateULQci4.22 MR.PacketLossRateULQci4.23 MR.PacketLossRateULQci4.24 MR.PacketLossRateULQci4.25 MR.PacketLossRateULQci4.26 MR.PacketLossRateULQci4.27</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateULQci5">
+<smr>MR.PacketLossRateULQci5.00 MR.PacketLossRateULQci5.01 MR.PacketLossRateULQci5.02 MR.PacketLossRateULQci5.03 MR.PacketLossRateULQci5.04 MR.PacketLossRateULQci5.05 MR.PacketLossRateULQci5.06 MR.PacketLossRateULQci5.07 MR.PacketLossRateULQci5.08 MR.PacketLossRateULQci5.09 MR.PacketLossRateULQci5.10 MR.PacketLossRateULQci5.11 MR.PacketLossRateULQci5.12 MR.PacketLossRateULQci5.13 MR.PacketLossRateULQci5.14 MR.PacketLossRateULQci5.15 MR.PacketLossRateULQci5.16 MR.PacketLossRateULQci5.17 MR.PacketLossRateULQci5.18 MR.PacketLossRateULQci5.19 MR.PacketLossRateULQci5.20 MR.PacketLossRateULQci5.21 MR.PacketLossRateULQci5.22 MR.PacketLossRateULQci5.23 MR.PacketLossRateULQci5.24 MR.PacketLossRateULQci5.25 MR.PacketLossRateULQci5.26 MR.PacketLossRateULQci5.27</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateULQci6">
+<smr>MR.PacketLossRateULQci6.00 MR.PacketLossRateULQci6.01 MR.PacketLossRateULQci6.02 MR.PacketLossRateULQci6.03 MR.PacketLossRateULQci6.04 MR.PacketLossRateULQci6.05 MR.PacketLossRateULQci6.06 MR.PacketLossRateULQci6.07 MR.PacketLossRateULQci6.08 MR.PacketLossRateULQci6.09 MR.PacketLossRateULQci6.10 MR.PacketLossRateULQci6.11 MR.PacketLossRateULQci6.12 MR.PacketLossRateULQci6.13 MR.PacketLossRateULQci6.14 MR.PacketLossRateULQci6.15 MR.PacketLossRateULQci6.16 MR.PacketLossRateULQci6.17 MR.PacketLossRateULQci6.18 MR.PacketLossRateULQci6.19 MR.PacketLossRateULQci6.20 MR.PacketLossRateULQci6.21 MR.PacketLossRateULQci6.22 MR.PacketLossRateULQci6.23 MR.PacketLossRateULQci6.24 MR.PacketLossRateULQci6.25 MR.PacketLossRateULQci6.26 MR.PacketLossRateULQci6.27</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateULQci7">
+<smr>MR.PacketLossRateULQci7.00 MR.PacketLossRateULQci7.01 MR.PacketLossRateULQci7.02 MR.PacketLossRateULQci7.03 MR.PacketLossRateULQci7.04 MR.PacketLossRateULQci7.05 MR.PacketLossRateULQci7.06 MR.PacketLossRateULQci7.07 MR.PacketLossRateULQci7.08 MR.PacketLossRateULQci7.09 MR.PacketLossRateULQci7.10 MR.PacketLossRateULQci7.11 MR.PacketLossRateULQci7.12 MR.PacketLossRateULQci7.13 MR.PacketLossRateULQci7.14 MR.PacketLossRateULQci7.15 MR.PacketLossRateULQci7.16 MR.PacketLossRateULQci7.17 MR.PacketLossRateULQci7.18 MR.PacketLossRateULQci7.19 MR.PacketLossRateULQci7.20 MR.PacketLossRateULQci7.21 MR.PacketLossRateULQci7.22 MR.PacketLossRateULQci7.23 MR.PacketLossRateULQci7.24 MR.PacketLossRateULQci7.25 MR.PacketLossRateULQci7.26 MR.PacketLossRateULQci7.27</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateULQci8">
+<smr>MR.PacketLossRateULQci8.00 MR.PacketLossRateULQci8.01 MR.PacketLossRateULQci8.02 MR.PacketLossRateULQci8.03 MR.PacketLossRateULQci8.04 MR.PacketLossRateULQci8.05 MR.PacketLossRateULQci8.06 MR.PacketLossRateULQci8.07 MR.PacketLossRateULQci8.08 MR.PacketLossRateULQci8.09 MR.PacketLossRateULQci8.10 MR.PacketLossRateULQci8.11 MR.PacketLossRateULQci8.12 MR.PacketLossRateULQci8.13 MR.PacketLossRateULQci8.14 MR.PacketLossRateULQci8.15 MR.PacketLossRateULQci8.16 MR.PacketLossRateULQci8.17 MR.PacketLossRateULQci8.18 MR.PacketLossRateULQci8.19 MR.PacketLossRateULQci8.20 MR.PacketLossRateULQci8.21 MR.PacketLossRateULQci8.22 MR.PacketLossRateULQci8.23 MR.PacketLossRateULQci8.24 MR.PacketLossRateULQci8.25 MR.PacketLossRateULQci8.26 MR.PacketLossRateULQci8.27</smr>
+<object id="128320048">
+<v>27 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>111 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>57 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateULQci9">
+<smr>MR.PacketLossRateULQci9.00 MR.PacketLossRateULQci9.01 MR.PacketLossRateULQci9.02 MR.PacketLossRateULQci9.03 MR.PacketLossRateULQci9.04 MR.PacketLossRateULQci9.05 MR.PacketLossRateULQci9.06 MR.PacketLossRateULQci9.07 MR.PacketLossRateULQci9.08 MR.PacketLossRateULQci9.09 MR.PacketLossRateULQci9.10 MR.PacketLossRateULQci9.11 MR.PacketLossRateULQci9.12 MR.PacketLossRateULQci9.13 MR.PacketLossRateULQci9.14 MR.PacketLossRateULQci9.15 MR.PacketLossRateULQci9.16 MR.PacketLossRateULQci9.17 MR.PacketLossRateULQci9.18 MR.PacketLossRateULQci9.19 MR.PacketLossRateULQci9.20 MR.PacketLossRateULQci9.21 MR.PacketLossRateULQci9.22 MR.PacketLossRateULQci9.23 MR.PacketLossRateULQci9.24 MR.PacketLossRateULQci9.25 MR.PacketLossRateULQci9.26 MR.PacketLossRateULQci9.27</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateDLQci1">
+<smr>MR.PacketLossRateDLQci1.00 MR.PacketLossRateDLQci1.01 MR.PacketLossRateDLQci1.02 MR.PacketLossRateDLQci1.03 MR.PacketLossRateDLQci1.04 MR.PacketLossRateDLQci1.05 MR.PacketLossRateDLQci1.06 MR.PacketLossRateDLQci1.07 MR.PacketLossRateDLQci1.08 MR.PacketLossRateDLQci1.09 MR.PacketLossRateDLQci1.10 MR.PacketLossRateDLQci1.11 MR.PacketLossRateDLQci1.12 MR.PacketLossRateDLQci1.13 MR.PacketLossRateDLQci1.14 MR.PacketLossRateDLQci1.15 MR.PacketLossRateDLQci1.16 MR.PacketLossRateDLQci1.17 MR.PacketLossRateDLQci1.18 MR.PacketLossRateDLQci1.19 MR.PacketLossRateDLQci1.20 MR.PacketLossRateDLQci1.21 MR.PacketLossRateDLQci1.22 MR.PacketLossRateDLQci1.23 MR.PacketLossRateDLQci1.24 MR.PacketLossRateDLQci1.25 MR.PacketLossRateDLQci1.26 MR.PacketLossRateDLQci1.27</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateDLQci2">
+<smr>MR.PacketLossRateDLQci2.00 MR.PacketLossRateDLQci2.01 MR.PacketLossRateDLQci2.02 MR.PacketLossRateDLQci2.03 MR.PacketLossRateDLQci2.04 MR.PacketLossRateDLQci2.05 MR.PacketLossRateDLQci2.06 MR.PacketLossRateDLQci2.07 MR.PacketLossRateDLQci2.08 MR.PacketLossRateDLQci2.09 MR.PacketLossRateDLQci2.10 MR.PacketLossRateDLQci2.11 MR.PacketLossRateDLQci2.12 MR.PacketLossRateDLQci2.13 MR.PacketLossRateDLQci2.14 MR.PacketLossRateDLQci2.15 MR.PacketLossRateDLQci2.16 MR.PacketLossRateDLQci2.17 MR.PacketLossRateDLQci2.18 MR.PacketLossRateDLQci2.19 MR.PacketLossRateDLQci2.20 MR.PacketLossRateDLQci2.21 MR.PacketLossRateDLQci2.22 MR.PacketLossRateDLQci2.23 MR.PacketLossRateDLQci2.24 MR.PacketLossRateDLQci2.25 MR.PacketLossRateDLQci2.26 MR.PacketLossRateDLQci2.27</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateDLQci3">
+<smr>MR.PacketLossRateDLQci3.00 MR.PacketLossRateDLQci3.01 MR.PacketLossRateDLQci3.02 MR.PacketLossRateDLQci3.03 MR.PacketLossRateDLQci3.04 MR.PacketLossRateDLQci3.05 MR.PacketLossRateDLQci3.06 MR.PacketLossRateDLQci3.07 MR.PacketLossRateDLQci3.08 MR.PacketLossRateDLQci3.09 MR.PacketLossRateDLQci3.10 MR.PacketLossRateDLQci3.11 MR.PacketLossRateDLQci3.12 MR.PacketLossRateDLQci3.13 MR.PacketLossRateDLQci3.14 MR.PacketLossRateDLQci3.15 MR.PacketLossRateDLQci3.16 MR.PacketLossRateDLQci3.17 MR.PacketLossRateDLQci3.18 MR.PacketLossRateDLQci3.19 MR.PacketLossRateDLQci3.20 MR.PacketLossRateDLQci3.21 MR.PacketLossRateDLQci3.22 MR.PacketLossRateDLQci3.23 MR.PacketLossRateDLQci3.24 MR.PacketLossRateDLQci3.25 MR.PacketLossRateDLQci3.26 MR.PacketLossRateDLQci3.27</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateDLQci4">
+<smr>MR.PacketLossRateDLQci4.00 MR.PacketLossRateDLQci4.01 MR.PacketLossRateDLQci4.02 MR.PacketLossRateDLQci4.03 MR.PacketLossRateDLQci4.04 MR.PacketLossRateDLQci4.05 MR.PacketLossRateDLQci4.06 MR.PacketLossRateDLQci4.07 MR.PacketLossRateDLQci4.08 MR.PacketLossRateDLQci4.09 MR.PacketLossRateDLQci4.10 MR.PacketLossRateDLQci4.11 MR.PacketLossRateDLQci4.12 MR.PacketLossRateDLQci4.13 MR.PacketLossRateDLQci4.14 MR.PacketLossRateDLQci4.15 MR.PacketLossRateDLQci4.16 MR.PacketLossRateDLQci4.17 MR.PacketLossRateDLQci4.18 MR.PacketLossRateDLQci4.19 MR.PacketLossRateDLQci4.20 MR.PacketLossRateDLQci4.21 MR.PacketLossRateDLQci4.22 MR.PacketLossRateDLQci4.23 MR.PacketLossRateDLQci4.24 MR.PacketLossRateDLQci4.25 MR.PacketLossRateDLQci4.26 MR.PacketLossRateDLQci4.27</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateDLQci5">
+<smr>MR.PacketLossRateDLQci5.00 MR.PacketLossRateDLQci5.01 MR.PacketLossRateDLQci5.02 MR.PacketLossRateDLQci5.03 MR.PacketLossRateDLQci5.04 MR.PacketLossRateDLQci5.05 MR.PacketLossRateDLQci5.06 MR.PacketLossRateDLQci5.07 MR.PacketLossRateDLQci5.08 MR.PacketLossRateDLQci5.09 MR.PacketLossRateDLQci5.10 MR.PacketLossRateDLQci5.11 MR.PacketLossRateDLQci5.12 MR.PacketLossRateDLQci5.13 MR.PacketLossRateDLQci5.14 MR.PacketLossRateDLQci5.15 MR.PacketLossRateDLQci5.16 MR.PacketLossRateDLQci5.17 MR.PacketLossRateDLQci5.18 MR.PacketLossRateDLQci5.19 MR.PacketLossRateDLQci5.20 MR.PacketLossRateDLQci5.21 MR.PacketLossRateDLQci5.22 MR.PacketLossRateDLQci5.23 MR.PacketLossRateDLQci5.24 MR.PacketLossRateDLQci5.25 MR.PacketLossRateDLQci5.26 MR.PacketLossRateDLQci5.27</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateDLQci6">
+<smr>MR.PacketLossRateDLQci6.00 MR.PacketLossRateDLQci6.01 MR.PacketLossRateDLQci6.02 MR.PacketLossRateDLQci6.03 MR.PacketLossRateDLQci6.04 MR.PacketLossRateDLQci6.05 MR.PacketLossRateDLQci6.06 MR.PacketLossRateDLQci6.07 MR.PacketLossRateDLQci6.08 MR.PacketLossRateDLQci6.09 MR.PacketLossRateDLQci6.10 MR.PacketLossRateDLQci6.11 MR.PacketLossRateDLQci6.12 MR.PacketLossRateDLQci6.13 MR.PacketLossRateDLQci6.14 MR.PacketLossRateDLQci6.15 MR.PacketLossRateDLQci6.16 MR.PacketLossRateDLQci6.17 MR.PacketLossRateDLQci6.18 MR.PacketLossRateDLQci6.19 MR.PacketLossRateDLQci6.20 MR.PacketLossRateDLQci6.21 MR.PacketLossRateDLQci6.22 MR.PacketLossRateDLQci6.23 MR.PacketLossRateDLQci6.24 MR.PacketLossRateDLQci6.25 MR.PacketLossRateDLQci6.26 MR.PacketLossRateDLQci6.27</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateDLQci7">
+<smr>MR.PacketLossRateDLQci7.00 MR.PacketLossRateDLQci7.01 MR.PacketLossRateDLQci7.02 MR.PacketLossRateDLQci7.03 MR.PacketLossRateDLQci7.04 MR.PacketLossRateDLQci7.05 MR.PacketLossRateDLQci7.06 MR.PacketLossRateDLQci7.07 MR.PacketLossRateDLQci7.08 MR.PacketLossRateDLQci7.09 MR.PacketLossRateDLQci7.10 MR.PacketLossRateDLQci7.11 MR.PacketLossRateDLQci7.12 MR.PacketLossRateDLQci7.13 MR.PacketLossRateDLQci7.14 MR.PacketLossRateDLQci7.15 MR.PacketLossRateDLQci7.16 MR.PacketLossRateDLQci7.17 MR.PacketLossRateDLQci7.18 MR.PacketLossRateDLQci7.19 MR.PacketLossRateDLQci7.20 MR.PacketLossRateDLQci7.21 MR.PacketLossRateDLQci7.22 MR.PacketLossRateDLQci7.23 MR.PacketLossRateDLQci7.24 MR.PacketLossRateDLQci7.25 MR.PacketLossRateDLQci7.26 MR.PacketLossRateDLQci7.27</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateDLQci8">
+<smr>MR.PacketLossRateDLQci8.00 MR.PacketLossRateDLQci8.01 MR.PacketLossRateDLQci8.02 MR.PacketLossRateDLQci8.03 MR.PacketLossRateDLQci8.04 MR.PacketLossRateDLQci8.05 MR.PacketLossRateDLQci8.06 MR.PacketLossRateDLQci8.07 MR.PacketLossRateDLQci8.08 MR.PacketLossRateDLQci8.09 MR.PacketLossRateDLQci8.10 MR.PacketLossRateDLQci8.11 MR.PacketLossRateDLQci8.12 MR.PacketLossRateDLQci8.13 MR.PacketLossRateDLQci8.14 MR.PacketLossRateDLQci8.15 MR.PacketLossRateDLQci8.16 MR.PacketLossRateDLQci8.17 MR.PacketLossRateDLQci8.18 MR.PacketLossRateDLQci8.19 MR.PacketLossRateDLQci8.20 MR.PacketLossRateDLQci8.21 MR.PacketLossRateDLQci8.22 MR.PacketLossRateDLQci8.23 MR.PacketLossRateDLQci8.24 MR.PacketLossRateDLQci8.25 MR.PacketLossRateDLQci8.26 MR.PacketLossRateDLQci8.27</smr>
+<object id="128320048">
+<v>24 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>106 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>53 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.PacketLossRateDLQci9">
+<smr>MR.PacketLossRateDLQci9.00 MR.PacketLossRateDLQci9.01 MR.PacketLossRateDLQci9.02 MR.PacketLossRateDLQci9.03 MR.PacketLossRateDLQci9.04 MR.PacketLossRateDLQci9.05 MR.PacketLossRateDLQci9.06 MR.PacketLossRateDLQci9.07 MR.PacketLossRateDLQci9.08 MR.PacketLossRateDLQci9.09 MR.PacketLossRateDLQci9.10 MR.PacketLossRateDLQci9.11 MR.PacketLossRateDLQci9.12 MR.PacketLossRateDLQci9.13 MR.PacketLossRateDLQci9.14 MR.PacketLossRateDLQci9.15 MR.PacketLossRateDLQci9.16 MR.PacketLossRateDLQci9.17 MR.PacketLossRateDLQci9.18 MR.PacketLossRateDLQci9.19 MR.PacketLossRateDLQci9.20 MR.PacketLossRateDLQci9.21 MR.PacketLossRateDLQci9.22 MR.PacketLossRateDLQci9.23 MR.PacketLossRateDLQci9.24 MR.PacketLossRateDLQci9.25 MR.PacketLossRateDLQci9.26 MR.PacketLossRateDLQci9.27</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.SinrUL">
+<smr>MR.SinrUL.00 MR.SinrUL.01 MR.SinrUL.02 MR.SinrUL.03 MR.SinrUL.04 MR.SinrUL.05 MR.SinrUL.06 MR.SinrUL.07 MR.SinrUL.08 MR.SinrUL.09 MR.SinrUL.10 MR.SinrUL.11 MR.SinrUL.12 MR.SinrUL.13 MR.SinrUL.14 MR.SinrUL.15 MR.SinrUL.16 MR.SinrUL.17 MR.SinrUL.18 MR.SinrUL.19 MR.SinrUL.20 MR.SinrUL.21 MR.SinrUL.22 MR.SinrUL.23 MR.SinrUL.24 MR.SinrUL.25 MR.SinrUL.26 MR.SinrUL.27 MR.SinrUL.28 MR.SinrUL.29 MR.SinrUL.30 MR.SinrUL.31 MR.SinrUL.32 MR.SinrUL.33 MR.SinrUL.34 MR.SinrUL.35 MR.SinrUL.36</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 11 12 0 0 0 0 0 0 0 0 1 </v>
+</object>
+<object id="128320049">
+<v>15 5 2 4 3 3 6 4 2 2 3 2 3 2 3 2 1 0 1 0 0 2 2 0 1 5 7 1 4 9 7 12 12 5 2 0 4 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 2 0 0 1 0 0 1 1 4 8 1 2 7 10 21 </v>
+</object>
+</measurement>
+<measurement mrName="MR.TadvRsrp">
+<smr>MR.Tadv00Rsrp00 MR.Tadv00Rsrp01 MR.Tadv00Rsrp02 MR.Tadv00Rsrp03 MR.Tadv00Rsrp04 MR.Tadv00Rsrp05 MR.Tadv00Rsrp06 MR.Tadv00Rsrp07 MR.Tadv00Rsrp08 MR.Tadv00Rsrp09 MR.Tadv00Rsrp10 MR.Tadv00Rsrp11 MR.Tadv01Rsrp00 MR.Tadv01Rsrp01 MR.Tadv01Rsrp02 MR.Tadv01Rsrp03 MR.Tadv01Rsrp04 MR.Tadv01Rsrp05 MR.Tadv01Rsrp06 MR.Tadv01Rsrp07 MR.Tadv01Rsrp08 MR.Tadv01Rsrp09 MR.Tadv01Rsrp10 MR.Tadv01Rsrp11 MR.Tadv02Rsrp00 MR.Tadv02Rsrp01 MR.Tadv02Rsrp02 MR.Tadv02Rsrp03 MR.Tadv02Rsrp04 MR.Tadv02Rsrp05 MR.Tadv02Rsrp06 MR.Tadv02Rsrp07 MR.Tadv02Rsrp08 MR.Tadv02Rsrp09 MR.Tadv02Rsrp10 MR.Tadv02Rsrp11 MR.Tadv03Rsrp00 MR.Tadv03Rsrp01 MR.Tadv03Rsrp02 MR.Tadv03Rsrp03 MR.Tadv03Rsrp04 MR.Tadv03Rsrp05 MR.Tadv03Rsrp06 MR.Tadv03Rsrp07 MR.Tadv03Rsrp08 MR.Tadv03Rsrp09 MR.Tadv03Rsrp10 MR.Tadv03Rsrp11 MR.Tadv04Rsrp00 MR.Tadv04Rsrp01 MR.Tadv04Rsrp02 MR.Tadv04Rsrp03 MR.Tadv04Rsrp04 MR.Tadv04Rsrp05 MR.Tadv04Rsrp06 MR.Tadv04Rsrp07 MR.Tadv04Rsrp08 MR.Tadv04Rsrp09 MR.Tadv04Rsrp10 MR.Tadv04Rsrp11 MR.Tadv05Rsrp00 MR.Tadv05Rsrp01 MR.Tadv05Rsrp02 MR.Tadv05Rsrp03 MR.Tadv05Rsrp04 MR.Tadv05Rsrp05 MR.Tadv05Rsrp06 MR.Tadv05Rsrp07 MR.Tadv05Rsrp08 MR.Tadv05Rsrp09 MR.Tadv05Rsrp10 MR.Tadv05Rsrp11 MR.Tadv06Rsrp00 MR.Tadv06Rsrp01 MR.Tadv06Rsrp02 MR.Tadv06Rsrp03 MR.Tadv06Rsrp04 MR.Tadv06Rsrp05 MR.Tadv06Rsrp06 MR.Tadv06Rsrp07 MR.Tadv06Rsrp08 MR.Tadv06Rsrp09 MR.Tadv06Rsrp10 MR.Tadv06Rsrp11 MR.Tadv07Rsrp00 MR.Tadv07Rsrp01 MR.Tadv07Rsrp02 MR.Tadv07Rsrp03 MR.Tadv07Rsrp04 MR.Tadv07Rsrp05 MR.Tadv07Rsrp06 MR.Tadv07Rsrp07 MR.Tadv07Rsrp08 MR.Tadv07Rsrp09 MR.Tadv07Rsrp10 MR.Tadv07Rsrp11 MR.Tadv08Rsrp00 MR.Tadv08Rsrp01 MR.Tadv08Rsrp02 MR.Tadv08Rsrp03 MR.Tadv08Rsrp04 MR.Tadv08Rsrp05 MR.Tadv08Rsrp06 MR.Tadv08Rsrp07 MR.Tadv08Rsrp08 MR.Tadv08Rsrp09 MR.Tadv08Rsrp10 MR.Tadv08Rsrp11 MR.Tadv09Rsrp00 MR.Tadv09Rsrp01 MR.Tadv09Rsrp02 MR.Tadv09Rsrp03 MR.Tadv09Rsrp04 MR.Tadv09Rsrp05 MR.Tadv09Rsrp06 MR.Tadv09Rsrp07 MR.Tadv09Rsrp08 MR.Tadv09Rsrp09 MR.Tadv09Rsrp10 MR.Tadv09Rsrp11 MR.Tadv10Rsrp00 MR.Tadv10Rsrp01 MR.Tadv10Rsrp02 MR.Tadv10Rsrp03 MR.Tadv10Rsrp04 MR.Tadv10Rsrp05 MR.Tadv10Rsrp06 MR.Tadv10Rsrp07 MR.Tadv10Rsrp08 MR.Tadv10Rsrp09 MR.Tadv10Rsrp10 MR.Tadv10Rsrp11</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 26 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 59 28 41 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12 35 11 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.TadvAoa">
+<smr>MR.Tadv00Aoa00 MR.Tadv00Aoa01 MR.Tadv00Aoa02 MR.Tadv00Aoa03 MR.Tadv00Aoa04 MR.Tadv00Aoa05 MR.Tadv00Aoa06 MR.Tadv00Aoa07 MR.Tadv00Aoa08 MR.Tadv00Aoa09 MR.Tadv00Aoa10 MR.Tadv00Aoa11 MR.Tadv01Aoa00 MR.Tadv01Aoa01 MR.Tadv01Aoa02 MR.Tadv01Aoa03 MR.Tadv01Aoa04 MR.Tadv01Aoa05 MR.Tadv01Aoa06 MR.Tadv01Aoa07 MR.Tadv01Aoa08 MR.Tadv01Aoa09 MR.Tadv01Aoa10 MR.Tadv01Aoa11 MR.Tadv02Aoa00 MR.Tadv02Aoa01 MR.Tadv02Aoa02 MR.Tadv02Aoa03 MR.Tadv02Aoa04 MR.Tadv02Aoa05 MR.Tadv02Aoa06 MR.Tadv02Aoa07 MR.Tadv02Aoa08 MR.Tadv02Aoa09 MR.Tadv02Aoa10 MR.Tadv02Aoa11 MR.Tadv03Aoa00 MR.Tadv03Aoa01 MR.Tadv03Aoa02 MR.Tadv03Aoa03 MR.Tadv03Aoa04 MR.Tadv03Aoa05 MR.Tadv03Aoa06 MR.Tadv03Aoa07 MR.Tadv03Aoa08 MR.Tadv03Aoa09 MR.Tadv03Aoa10 MR.Tadv03Aoa11 MR.Tadv04Aoa00 MR.Tadv04Aoa01 MR.Tadv04Aoa02 MR.Tadv04Aoa03 MR.Tadv04Aoa04 MR.Tadv04Aoa05 MR.Tadv04Aoa06 MR.Tadv04Aoa07 MR.Tadv04Aoa08 MR.Tadv04Aoa09 MR.Tadv04Aoa10 MR.Tadv04Aoa11 MR.Tadv05Aoa00 MR.Tadv05Aoa01 MR.Tadv05Aoa02 MR.Tadv05Aoa03 MR.Tadv05Aoa04 MR.Tadv05Aoa05 MR.Tadv05Aoa06 MR.Tadv05Aoa07 MR.Tadv05Aoa08 MR.Tadv05Aoa09 MR.Tadv05Aoa10 MR.Tadv05Aoa11 MR.Tadv06Aoa00 MR.Tadv06Aoa01 MR.Tadv06Aoa02 MR.Tadv06Aoa03 MR.Tadv06Aoa04 MR.Tadv06Aoa05 MR.Tadv06Aoa06 MR.Tadv06Aoa07 MR.Tadv06Aoa08 MR.Tadv06Aoa09 MR.Tadv06Aoa10 MR.Tadv06Aoa11 MR.Tadv07Aoa00 MR.Tadv07Aoa01 MR.Tadv07Aoa02 MR.Tadv07Aoa03 MR.Tadv07Aoa04 MR.Tadv07Aoa05 MR.Tadv07Aoa06 MR.Tadv07Aoa07 MR.Tadv07Aoa08 MR.Tadv07Aoa09 MR.Tadv07Aoa10 MR.Tadv07Aoa11 MR.Tadv08Aoa00 MR.Tadv08Aoa01 MR.Tadv08Aoa02 MR.Tadv08Aoa03 MR.Tadv08Aoa04 MR.Tadv08Aoa05 MR.Tadv08Aoa06 MR.Tadv08Aoa07 MR.Tadv08Aoa08 MR.Tadv08Aoa09 MR.Tadv08Aoa10 MR.Tadv08Aoa11 MR.Tadv09Aoa00 MR.Tadv09Aoa01 MR.Tadv09Aoa02 MR.Tadv09Aoa03 MR.Tadv09Aoa04 MR.Tadv09Aoa05 MR.Tadv09Aoa06 MR.Tadv09Aoa07 MR.Tadv09Aoa08 MR.Tadv09Aoa09 MR.Tadv09Aoa10 MR.Tadv09Aoa11 MR.Tadv10Aoa00 MR.Tadv10Aoa01 MR.Tadv10Aoa02 MR.Tadv10Aoa03 MR.Tadv10Aoa04 MR.Tadv10Aoa05 MR.Tadv10Aoa06 MR.Tadv10Aoa07 MR.Tadv10Aoa08 MR.Tadv10Aoa09 MR.Tadv10Aoa10 MR.Tadv10Aoa11</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.RsrpRsrq">
+<smr>MR.Rsrp00Rsrq00 MR.Rsrp00Rsrq01 MR.Rsrp00Rsrq02 MR.Rsrp00Rsrq03 MR.Rsrp00Rsrq04 MR.Rsrp00Rsrq05 MR.Rsrp00Rsrq06 MR.Rsrp00Rsrq07 MR.Rsrp00Rsrq08 MR.Rsrp00Rsrq09 MR.Rsrp01Rsrq00 MR.Rsrp01Rsrq01 MR.Rsrp01Rsrq02 MR.Rsrp01Rsrq03 MR.Rsrp01Rsrq04 MR.Rsrp01Rsrq05 MR.Rsrp01Rsrq06 MR.Rsrp01Rsrq07 MR.Rsrp01Rsrq08 MR.Rsrp01Rsrq09 MR.Rsrp02Rsrq00 MR.Rsrp02Rsrq01 MR.Rsrp02Rsrq02 MR.Rsrp02Rsrq03 MR.Rsrp02Rsrq04 MR.Rsrp02Rsrq05 MR.Rsrp02Rsrq06 MR.Rsrp02Rsrq07 MR.Rsrp02Rsrq08 MR.Rsrp02Rsrq09 MR.Rsrp03Rsrq00 MR.Rsrp03Rsrq01 MR.Rsrp03Rsrq02 MR.Rsrp03Rsrq03 MR.Rsrp03Rsrq04 MR.Rsrp03Rsrq05 MR.Rsrp03Rsrq06 MR.Rsrp03Rsrq07 MR.Rsrp03Rsrq08 MR.Rsrp03Rsrq09 MR.Rsrp04Rsrq00 MR.Rsrp04Rsrq01 MR.Rsrp04Rsrq02 MR.Rsrp04Rsrq03 MR.Rsrp04Rsrq04 MR.Rsrp04Rsrq05 MR.Rsrp04Rsrq06 MR.Rsrp04Rsrq07 MR.Rsrp04Rsrq08 MR.Rsrp04Rsrq09 MR.Rsrp05Rsrq00 MR.Rsrp05Rsrq01 MR.Rsrp05Rsrq02 MR.Rsrp05Rsrq03 MR.Rsrp05Rsrq04 MR.Rsrp05Rsrq05 MR.Rsrp05Rsrq06 MR.Rsrp05Rsrq07 MR.Rsrp05Rsrq08 MR.Rsrp05Rsrq09 MR.Rsrp06Rsrq00 MR.Rsrp06Rsrq01 MR.Rsrp06Rsrq02 MR.Rsrp06Rsrq03 MR.Rsrp06Rsrq04 MR.Rsrp06Rsrq05 MR.Rsrp06Rsrq06 MR.Rsrp06Rsrq07 MR.Rsrp06Rsrq08 MR.Rsrp06Rsrq09 MR.Rsrp07Rsrq00 MR.Rsrp07Rsrq01 MR.Rsrp07Rsrq02 MR.Rsrp07Rsrq03 MR.Rsrp07Rsrq04 MR.Rsrp07Rsrq05 MR.Rsrp07Rsrq06 MR.Rsrp07Rsrq07 MR.Rsrp07Rsrq08 MR.Rsrp07Rsrq09 MR.Rsrp08Rsrq00 MR.Rsrp08Rsrq01 MR.Rsrp08Rsrq02 MR.Rsrp08Rsrq03 MR.Rsrp08Rsrq04 MR.Rsrp08Rsrq05 MR.Rsrp08Rsrq06 MR.Rsrp08Rsrq07 MR.Rsrp08Rsrq08 MR.Rsrp08Rsrq09 MR.Rsrp09Rsrq00 MR.Rsrp09Rsrq01 MR.Rsrp09Rsrq02 MR.Rsrp09Rsrq03 MR.Rsrp09Rsrq04 MR.Rsrp09Rsrq05 MR.Rsrp09Rsrq06 MR.Rsrp09Rsrq07 MR.Rsrp09Rsrq08 MR.Rsrp09Rsrq09 MR.Rsrp10Rsrq00 MR.Rsrp10Rsrq01 MR.Rsrp10Rsrq02 MR.Rsrp10Rsrq03 MR.Rsrp10Rsrq04 MR.Rsrp10Rsrq05 MR.Rsrp10Rsrq06 MR.Rsrp10Rsrq07 MR.Rsrp10Rsrq08 MR.Rsrp10Rsrq09 MR.Rsrp11Rsrq00 MR.Rsrp11Rsrq01 MR.Rsrp11Rsrq02 MR.Rsrp11Rsrq03 MR.Rsrp11Rsrq04 MR.Rsrp11Rsrq05 MR.Rsrp11Rsrq06 MR.Rsrp11Rsrq07 MR.Rsrp11Rsrq08 MR.Rsrp11Rsrq09</smr>
+<object id="128320048">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 29 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049">
+<v>0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 8 56 1 0 0 0 0 0 0 0 0 3 25 0 0 0 0 0 0 0 0 1 43 0 0 0 0 0 0 0 0 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13 0 0 0 0 0 0 0 0 0 38 0 0 0 0 0 0 0 0 0 13 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.RipRsrp">
+<smr>MR.Rip00Rsrp00 MR.Rip00Rsrp01 MR.Rip00Rsrp02 MR.Rip00Rsrp03 MR.Rip00Rsrp04 MR.Rip00Rsrp05 MR.Rip00Rsrp06 MR.Rip00Rsrp07 MR.Rip00Rsrp08 MR.Rip00Rsrp09 MR.Rip00Rsrp10 MR.Rip00Rsrp11 MR.Rip01Rsrp00 MR.Rip01Rsrp01 MR.Rip01Rsrp02 MR.Rip01Rsrp03 MR.Rip01Rsrp04 MR.Rip01Rsrp05 MR.Rip01Rsrp06 MR.Rip01Rsrp07 MR.Rip01Rsrp08 MR.Rip01Rsrp09 MR.Rip01Rsrp10 MR.Rip01Rsrp11 MR.Rip02Rsrp00 MR.Rip02Rsrp01 MR.Rip02Rsrp02 MR.Rip02Rsrp03 MR.Rip02Rsrp04 MR.Rip02Rsrp05 MR.Rip02Rsrp06 MR.Rip02Rsrp07 MR.Rip02Rsrp08 MR.Rip02Rsrp09 MR.Rip02Rsrp10 MR.Rip02Rsrp11 MR.Rip03Rsrp00 MR.Rip03Rsrp01 MR.Rip03Rsrp02 MR.Rip03Rsrp03 MR.Rip03Rsrp04 MR.Rip03Rsrp05 MR.Rip03Rsrp06 MR.Rip03Rsrp07 MR.Rip03Rsrp08 MR.Rip03Rsrp09 MR.Rip03Rsrp10 MR.Rip03Rsrp11 MR.Rip04Rsrp00 MR.Rip04Rsrp01 MR.Rip04Rsrp02 MR.Rip04Rsrp03 MR.Rip04Rsrp04 MR.Rip04Rsrp05 MR.Rip04Rsrp06 MR.Rip04Rsrp07 MR.Rip04Rsrp08 MR.Rip04Rsrp09 MR.Rip04Rsrp10 MR.Rip04Rsrp11 MR.Rip05Rsrp00 MR.Rip05Rsrp01 MR.Rip05Rsrp02 MR.Rip05Rsrp03 MR.Rip05Rsrp04 MR.Rip05Rsrp05 MR.Rip05Rsrp06 MR.Rip05Rsrp07 MR.Rip05Rsrp08 MR.Rip05Rsrp09 MR.Rip05Rsrp10 MR.Rip05Rsrp11 MR.Rip06Rsrp00 MR.Rip06Rsrp01 MR.Rip06Rsrp02 MR.Rip06Rsrp03 MR.Rip06Rsrp04 MR.Rip06Rsrp05 MR.Rip06Rsrp06 MR.Rip06Rsrp07 MR.Rip06Rsrp08 MR.Rip06Rsrp09 MR.Rip06Rsrp10 MR.Rip06Rsrp11 MR.Rip07Rsrp00 MR.Rip07Rsrp01 MR.Rip07Rsrp02 MR.Rip07Rsrp03 MR.Rip07Rsrp04 MR.Rip07Rsrp05 MR.Rip07Rsrp06 MR.Rip07Rsrp07 MR.Rip07Rsrp08 MR.Rip07Rsrp09 MR.Rip07Rsrp10 MR.Rip07Rsrp11 MR.Rip08Rsrp00 MR.Rip08Rsrp01 MR.Rip08Rsrp02 MR.Rip08Rsrp03 MR.Rip08Rsrp04 MR.Rip08Rsrp05 MR.Rip08Rsrp06 MR.Rip08Rsrp07 MR.Rip08Rsrp08 MR.Rip08Rsrp09 MR.Rip08Rsrp10 MR.Rip08Rsrp11</smr>
+<object id="128320048:1825:0">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 31 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:1">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 31 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:2">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 31 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:3">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 31 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:4">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 31 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:5">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 31 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:6">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 31 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:7">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 31 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:8">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 31 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:9">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 31 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:0">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 1 65 28 44 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:1">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 1 65 28 44 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:2">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 1 65 28 44 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:3">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 1 65 28 44 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:4">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 1 65 28 44 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:5">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 1 65 28 44 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:6">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 1 65 28 44 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:7">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 1 65 28 44 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:8">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 1 65 28 44 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:9">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 1 65 28 44 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:0">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 13 38 13 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:1">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 13 38 13 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:2">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 13 38 13 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:3">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 13 38 13 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:4">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 13 38 13 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:5">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 13 38 13 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:6">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 13 38 13 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:7">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 13 38 13 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:8">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 13 38 13 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:9">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 13 38 13 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.RipRsrq">
+<smr>MR.Rip00Rsrq00 MR.Rip00Rsrq01 MR.Rip00Rsrq02 MR.Rip00Rsrq03 MR.Rip00Rsrq04 MR.Rip00Rsrq05 MR.Rip00Rsrq06 MR.Rip00Rsrq07 MR.Rip00Rsrq08 MR.Rip00Rsrq09 MR.Rip01Rsrq00 MR.Rip01Rsrq01 MR.Rip01Rsrq02 MR.Rip01Rsrq03 MR.Rip01Rsrq04 MR.Rip01Rsrq05 MR.Rip01Rsrq06 MR.Rip01Rsrq07 MR.Rip01Rsrq08 MR.Rip01Rsrq09 MR.Rip02Rsrq00 MR.Rip02Rsrq01 MR.Rip02Rsrq02 MR.Rip02Rsrq03 MR.Rip02Rsrq04 MR.Rip02Rsrq05 MR.Rip02Rsrq06 MR.Rip02Rsrq07 MR.Rip02Rsrq08 MR.Rip02Rsrq09 MR.Rip03Rsrq00 MR.Rip03Rsrq01 MR.Rip03Rsrq02 MR.Rip03Rsrq03 MR.Rip03Rsrq04 MR.Rip03Rsrq05 MR.Rip03Rsrq06 MR.Rip03Rsrq07 MR.Rip03Rsrq08 MR.Rip03Rsrq09 MR.Rip04Rsrq00 MR.Rip04Rsrq01 MR.Rip04Rsrq02 MR.Rip04Rsrq03 MR.Rip04Rsrq04 MR.Rip04Rsrq05 MR.Rip04Rsrq06 MR.Rip04Rsrq07 MR.Rip04Rsrq08 MR.Rip04Rsrq09 MR.Rip05Rsrq00 MR.Rip05Rsrq01 MR.Rip05Rsrq02 MR.Rip05Rsrq03 MR.Rip05Rsrq04 MR.Rip05Rsrq05 MR.Rip05Rsrq06 MR.Rip05Rsrq07 MR.Rip05Rsrq08 MR.Rip05Rsrq09 MR.Rip06Rsrq00 MR.Rip06Rsrq01 MR.Rip06Rsrq02 MR.Rip06Rsrq03 MR.Rip06Rsrq04 MR.Rip06Rsrq05 MR.Rip06Rsrq06 MR.Rip06Rsrq07 MR.Rip06Rsrq08 MR.Rip06Rsrq09 MR.Rip07Rsrq00 MR.Rip07Rsrq01 MR.Rip07Rsrq02 MR.Rip07Rsrq03 MR.Rip07Rsrq04 MR.Rip07Rsrq05 MR.Rip07Rsrq06 MR.Rip07Rsrq07 MR.Rip07Rsrq08 MR.Rip07Rsrq09 MR.Rip08Rsrq00 MR.Rip08Rsrq01 MR.Rip08Rsrq02 MR.Rip08Rsrq03 MR.Rip08Rsrq04 MR.Rip08Rsrq05 MR.Rip08Rsrq06 MR.Rip08Rsrq07 MR.Rip08Rsrq08 MR.Rip08Rsrq09</smr>
+<object id="128320048:1825:0">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:1">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:2">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:3">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:4">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:5">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:6">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:7">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:8">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:9">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:0">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 60 74 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:1">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 60 74 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:2">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 60 74 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:3">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 60 74 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:4">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 60 74 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:5">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 60 74 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:6">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 60 74 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:7">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 60 74 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:8">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 60 74 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:9">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 60 74 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:0">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 65 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:1">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 65 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:2">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 65 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:3">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 65 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:4">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 65 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:5">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 65 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:6">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 65 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:7">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 65 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:8">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 65 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:9">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 65 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+<measurement mrName="MR.SinrULRip">
+<smr>MR.SinrUL00Rip00 MR.SinrUL00Rip01 MR.SinrUL00Rip02 MR.SinrUL00Rip03 MR.SinrUL00Rip04 MR.SinrUL00Rip05 MR.SinrUL00Rip06 MR.SinrUL00Rip07 MR.SinrUL00Rip08 MR.SinrUL01Rip00 MR.SinrUL01Rip01 MR.SinrUL01Rip02 MR.SinrUL01Rip03 MR.SinrUL01Rip04 MR.SinrUL01Rip05 MR.SinrUL01Rip06 MR.SinrUL01Rip07 MR.SinrUL01Rip08 MR.SinrUL02Rip00 MR.SinrUL02Rip01 MR.SinrUL02Rip02 MR.SinrUL02Rip03 MR.SinrUL02Rip04 MR.SinrUL02Rip05 MR.SinrUL02Rip06 MR.SinrUL02Rip07 MR.SinrUL02Rip08 MR.SinrUL03Rip00 MR.SinrUL03Rip01 MR.SinrUL03Rip02 MR.SinrUL03Rip03 MR.SinrUL03Rip04 MR.SinrUL03Rip05 MR.SinrUL03Rip06 MR.SinrUL03Rip07 MR.SinrUL03Rip08 MR.SinrUL04Rip00 MR.SinrUL04Rip01 MR.SinrUL04Rip02 MR.SinrUL04Rip03 MR.SinrUL04Rip04 MR.SinrUL04Rip05 MR.SinrUL04Rip06 MR.SinrUL04Rip07 MR.SinrUL04Rip08 MR.SinrUL05Rip00 MR.SinrUL05Rip01 MR.SinrUL05Rip02 MR.SinrUL05Rip03 MR.SinrUL05Rip04 MR.SinrUL05Rip05 MR.SinrUL05Rip06 MR.SinrUL05Rip07 MR.SinrUL05Rip08 MR.SinrUL06Rip00 MR.SinrUL06Rip01 MR.SinrUL06Rip02 MR.SinrUL06Rip03 MR.SinrUL06Rip04 MR.SinrUL06Rip05 MR.SinrUL06Rip06 MR.SinrUL06Rip07 MR.SinrUL06Rip08 MR.SinrUL07Rip00 MR.SinrUL07Rip01 MR.SinrUL07Rip02 MR.SinrUL07Rip03 MR.SinrUL07Rip04 MR.SinrUL07Rip05 MR.SinrUL07Rip06 MR.SinrUL07Rip07 MR.SinrUL07Rip08 MR.SinrUL08Rip00 MR.SinrUL08Rip01 MR.SinrUL08Rip02 MR.SinrUL08Rip03 MR.SinrUL08Rip04 MR.SinrUL08Rip05 MR.SinrUL08Rip06 MR.SinrUL08Rip07 MR.SinrUL08Rip08 MR.SinrUL09Rip00 MR.SinrUL09Rip01 MR.SinrUL09Rip02 MR.SinrUL09Rip03 MR.SinrUL09Rip04 MR.SinrUL09Rip05 MR.SinrUL09Rip06 MR.SinrUL09Rip07 MR.SinrUL09Rip08 MR.SinrUL10Rip00 MR.SinrUL10Rip01 MR.SinrUL10Rip02 MR.SinrUL10Rip03 MR.SinrUL10Rip04 MR.SinrUL10Rip05 MR.SinrUL10Rip06 MR.SinrUL10Rip07 MR.SinrUL10Rip08</smr>
+<object id="128320048:1825:0">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:1">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:2">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:3">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:4">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:5">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:6">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:7">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:8">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320048:1825:9">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:0">
+<v>0 15 0 0 0 0 0 0 0 0 14 0 0 0 0 0 0 0 0 13 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 0 7 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 10 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 31 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:1">
+<v>0 15 0 0 0 0 0 0 0 0 14 0 0 0 0 0 0 0 0 13 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 0 7 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 10 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 31 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:2">
+<v>0 15 0 0 0 0 0 0 0 0 14 0 0 0 0 0 0 0 0 13 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 0 7 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 10 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 31 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:3">
+<v>0 15 0 0 0 0 0 0 0 0 14 0 0 0 0 0 0 0 0 13 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 0 7 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 10 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 31 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:4">
+<v>0 15 0 0 0 0 0 0 0 0 14 0 0 0 0 0 0 0 0 13 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 0 7 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 10 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 31 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:5">
+<v>0 15 0 0 0 0 0 0 0 0 14 0 0 0 0 0 0 0 0 13 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 0 7 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 10 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 31 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:6">
+<v>0 15 0 0 0 0 0 0 0 0 14 0 0 0 0 0 0 0 0 13 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 0 7 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 10 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 31 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:7">
+<v>0 15 0 0 0 0 0 0 0 0 14 0 0 0 0 0 0 0 0 13 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 0 7 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 10 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 31 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:8">
+<v>0 15 0 0 0 0 0 0 0 0 14 0 0 0 0 0 0 0 0 13 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 0 7 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 10 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 31 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320049:1825:9">
+<v>0 15 0 0 0 0 0 0 0 0 14 0 0 0 0 0 0 0 0 13 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 0 7 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 10 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 31 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:0">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 21 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:1">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 21 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:2">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 21 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:3">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 21 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:4">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 21 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:5">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 21 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:6">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 21 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:7">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 21 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:8">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 21 0 0 0 0 0 0 0 </v>
+</object>
+<object id="128320050:1825:9">
+<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 28 0 0 0 0 0 0 0 0 21 0 0 0 0 0 0 0 </v>
+</object>
+</measurement>
+</eNB>
+</bulkPmMrDataFile>

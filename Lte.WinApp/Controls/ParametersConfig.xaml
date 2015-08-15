@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="Lte.WinApp.Controls.ParametersConfig"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:model="clr-namespace:Lte.WinApp.Models"
+             mc:Ignorable="d">
+    <Grid HorizontalAlignment="Stretch" d:DataContext="{model:ParametersDumpConfig}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions> 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <CheckBox Margin="5" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" 
+                  IsChecked="{Binding ImportENodeb,UpdateSourceTrigger=PropertyChanged}"/>
+        <CheckBox Margin="5" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" 
+                  IsChecked="{Binding UpdateENodeb,UpdateSourceTrigger=PropertyChanged}"/>
+        <CheckBox Margin="5" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" 
+                  IsChecked="{Binding ImportLteCell,UpdateSourceTrigger=PropertyChanged}"/>
+        <CheckBox Margin="5" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" 
+                  IsChecked="{Binding UpdateLteCell,UpdateSourceTrigger=PropertyChanged}"/>
+        <CheckBox Margin="5" VerticalAlignment="Center" Grid.Row="3" Grid.Column="2" 
+                  IsChecked="{Binding UpdatePci,UpdateSourceTrigger=PropertyChanged}"/>
+        <CheckBox Margin="5" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" 
+                  IsChecked="{Binding ImportBts,UpdateSourceTrigger=PropertyChanged}"/>
+        <CheckBox Margin="5" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" 
+                  IsChecked="{Binding UpdateBts,UpdateSourceTrigger=PropertyChanged}"/>
+        <CheckBox Margin="5" VerticalAlignment="Center" Grid.Row="6" Grid.Column="0" 
+                  IsChecked="{Binding ImportCdmaCell,UpdateSourceTrigger=PropertyChanged}"/>
+        <CheckBox Margin="5" VerticalAlignment="Center" Grid.Row="7" Grid.Column="0" 
+                  IsChecked="{Binding UpdateCdmaCell,UpdateSourceTrigger=PropertyChanged}"/>
+        <Label Margin="5" Grid.Row="0" Grid.Column="1" Content="导入ENodeb"/>
+        <Label Margin="5" Grid.Row="1" Grid.Column="1" Content="更新ENodeb"/>
+        <Label Margin="5" Grid.Row="2" Grid.Column="1" Content="导入LTE小区"/>
+        <Label Margin="5" Grid.Row="3" Grid.Column="1" Content="更新LTE小区"/>
+        <Label Margin="5" Grid.Row="3" Grid.Column="3" Content="更新PCI"/>
+        <Label Margin="5" Grid.Row="4" Grid.Column="1" Content="导入BTS"/>
+        <Label Margin="5" Grid.Row="5" Grid.Column="1" Content="更新BTS"/>
+        <Label Margin="5" Grid.Row="6" Grid.Column="1" Content="导入CDMA小区"/>
+        <Label Margin="5" Grid.Row="7" Grid.Column="1" Content="更新CDMA小区"/>
+    </Grid>
+</UserControl>

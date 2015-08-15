@@ -1,0 +1,11 @@
+﻿<NUnitProject>
+  <Settings activeconfig="Debug" />
+  <Config name="Debug" binpathtype="Auto">
+    <assembly path="Lte.Parameters.Test\bin\Release\Lte.Parameters.Test.dll" />
+    <assembly path="Lte.Evaluations.Test\bin\Release\Lte.Evaluations.Test.dll" />
+    <assembly path="Lte.Domain.Test\bin\Release\Lte.Domain.Test.dll" />
+    <assembly path="Lte.WebApp.Tests\bin\Release\Lte.WebApp.Tests.dll" />
+    <assembly path="Lte.WinApp.Test\bin\Release\Lte.WinApp.Test.dll" />
+  </Config>
+  <Config name="Release" binpathtype="Auto" />
+</NUnitProject>

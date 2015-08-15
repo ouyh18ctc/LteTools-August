@@ -1,0 +1,65 @@
+﻿@model Lte.Evaluations.Dingli.TestFileRecordsViewModel
+
+@{
+    ViewBag.Title = "2G路测数据-" + Model.FileName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<input type="hidden" id="longitude" value="@Model.CenterX" />
+<input type="hidden" id="lattitude" value="@Model.CenterY" />
+<section>
+    <h2>@ViewBag.Title</h2>
+    <div class="btn-group">
+        <input class="btn btn-toolbar" type="button" value="Ec/Io" id="showEcIo"/>
+        <input class="btn btn-toolbar" type="button" value="接收功率" id="showRx"/>
+    </div>
+    <table class="float-right">
+        <tbody>
+            <tr id ="colors"></tr>
+            <tr id="limits"></tr>
+        </tbody>
+    </table>
+</section>
+
+@section scripts{
+    <script type="text/javascript" src="~/Scripts/Parameters/MapContainer.js"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/ExtendOperations.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var map = new BMap.Map("allmap");
+            var center = new BMap.Point($("#longitude").val(), $("#lattitude").val());
+            var container = new MapContainer(map);
+            container.initalize(center, 15);
+
+            $("#showEcIo").click(function() {
+                map.clearOverlays();
+                var data = [
+                    { L: -40, H: -15, C: 'ff0000' },
+                    { L: -15, H: -12, C: '800f0f' },
+                    { L: -12, H: -9, C: '080880' },
+                    { L: -9, H: 0, C: '08f008' }
+                ];
+                for (var i = 0; i < data.length; i++) {
+                    container.addDtPoints("/api/EcioPoints/", data[i].L, data[i].H, '#' + data[i].C);
+                }
+                $("#colors").updateColor(data, "Ec/Io(dB)");
+                $("#limits").updateLimit(data);
+            });
+
+            $("#showRx").click(function () {
+                map.clearOverlays();
+                var data = [
+                    { L: -120, H: -100, C: 'ff0000' },
+                    { L: -100, H: -90, C: '800f0f' },
+                    { L: -90, H: -70, C: '080880' },
+                    { L: -70, H: 0, C: '08f008' }
+                ];
+                for (var i = 0; i < data.length; i++) {
+                    container.addDtPoints("/api/RxPoints/", data[i].L, data[i].H, '#' + data[i].C);
+                }
+                $("#colors").updateColor(data, "RxAGC(dBm)");
+                $("#limits").updateLimit(data);
+            });
+        });
+    </script>
+}

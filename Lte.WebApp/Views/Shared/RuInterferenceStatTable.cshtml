@@ -1,0 +1,39 @@
+﻿@model List<Lte.Evaluations.Rutrace.Record.RuInterferenceStat>
+
+<table summary="User Grid" class="zebra">
+        <thead>
+            <tr style="font-weight:bold; background-color:#A8C3CB;">
+                <th>LTE小区名称</th>
+                <th>CDMA小区名称</th>
+                <th>ENodeb ID</th>
+                <th>小区编号</th>
+                <th>扇区编号</th>
+                <th>干扰小区数</th>
+                <th>干扰比例</th>
+                <th>最小RTD</th>
+                <th>平均RTD</th>  
+                <th>最大TA</th>
+                <th>平均TA</th>
+                <th>超远覆盖比例</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (Lte.Evaluations.Rutrace.Record.RuInterferenceStat stat in Model)
+        { 
+            <tr>
+                <td>@stat.LteCellName</td>
+                <td>@stat.CdmaCellName</td>
+                <td>@stat.ENodebId</td>
+                <td>@stat.CellId</td>
+                <td>@stat.SectorId</td>
+                <td>@stat.VictimCells</td>
+                <td>@String.Format("{0:0.00}", stat.InterferenceRatio*100)%</td>
+                <td>@String.Format("{0:0.00}", stat.MinRtd)</td>
+                <td>@String.Format("{0:0.00}", stat.AverageRtd)</td>
+                <td>@String.Format("{0:0.00}", stat.TaMax)</td>
+                <td>@String.Format("{0:0.00}", stat.TaAverage)</td>
+                <td>@String.Format("{0:0.00}", stat.TaExcessRate*100)%</td>
+            </tr>
+        }
+        </tbody>
+    </table>

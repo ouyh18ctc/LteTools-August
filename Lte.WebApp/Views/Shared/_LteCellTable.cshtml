@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Lte.Parameters.Entities.Cell>
+
+<h4>LTE小区信息</h4>
+<table summary="User Grid" class="zebra">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ENodebId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SectorId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Frequency)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BandClass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pci)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prach)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RsPower)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tac)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Height)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Azimuth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MTilt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ETilt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AntennaGain)
+        </th>
+        <th>精确覆盖率指标</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENodebId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SectorId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Frequency)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BandClass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pci)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prach)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RsPower)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tac)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Height)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Azimuth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MTilt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ETilt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AntennaGain)
+        </td>
+        <td>
+            <button id="precise:@item.ENodebId:@item.SectorId"
+                    class="btn btn-primary show-precise">精确覆盖率分析</button>
+        </td>
+    </tr>
+}
+
+</table>

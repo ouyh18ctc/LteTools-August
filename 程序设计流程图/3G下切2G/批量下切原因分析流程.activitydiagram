@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="0ba0cf95-2134-47c2-9d79-1d00c07a2bd1" name="批量下切原因分析流程" linkedPackageId="26df8dd0-eb6c-4528-8645-a302d42dd0a0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="e773ed93-ea6b-4b17-ad7d-660f459bd225" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="d902868d-0070-4c4b-a749-389524b75dde" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="618a0342-a443-4a9e-b1c3-ec6624d9a63c">
+          <propertyInstance Id="ad97cdca-a91d-4b79-95cf-d79100f16f7b" name="BaseName">
+            <elementDefinition Id="b909c1d9-f039-4e3a-8361-b6c3649cae5c" />
+          </propertyInstance>
+          <elementDefinition Id="6f9588b2-c5a2-41f6-8305-98f95fb97edc" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="d846f4c9-a507-4b62-af55-d510e17c08ce">
+          <propertyInstance Id="b1ac6368-66c5-43ef-a06a-11b3f5688f84" name="ClrAttributes">
+            <elementDefinition Id="19a219eb-3a9c-4c83-9dc1-61fc1761021c" />
+          </propertyInstance>
+          <elementDefinition Id="dd60cb12-6fa3-4028-bd43-70a9397c2649" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="8fca720f-86dc-4b66-9a8c-26f3996d803d">
+          <propertyInstance Id="a1e1ac4c-775a-4efa-a4e0-b62e6723180a" name="Usings">
+            <elementDefinition Id="4b35385f-db9a-49dc-9c08-f03524202e90" />
+          </propertyInstance>
+          <elementDefinition Id="242858d7-6dfc-4f45-b4e0-7d00febb07f7" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="8b6f2eec-7257-40db-8239-1cf105bf597d" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="12d0c820-d2d8-4c73-9404-d1a0083d0b07" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="f22164e0-b149-4333-b839-02216c9c0744">
+          <propertyInstance Id="8efe4a86-1daf-470f-8be1-2aeef6614fc2" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="f877d50a-6d4b-4e81-97e2-677c41b1a836" />
+          </propertyInstance>
+          <elementDefinition Id="dc0b7c06-5b9b-4d5c-810a-788fb1ac3c8c" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="365aab9d-6ee8-40fb-a6a5-a6668b91495e">
+          <propertyInstance Id="3466a3ce-9810-4dde-8d8a-5d85f00e33a9" name="TemplateFilePath" value="ClassTemplate=D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="c6070deb-b077-43db-8d59-6cba939377a9" />
+          </propertyInstance>
+          <elementDefinition Id="ea323429-dc76-4189-9772-ec0cc1f9165c" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="8f5a1161-ba88-4ac6-b84d-7ebde93e6cc4">
+          <propertyInstance Id="578049a6-52d0-4fd3-b4b3-2f273d50c8a8" name="ProjectPath" value="ClassTemplate=..\程序设计流程图Lib\程序设计流程图Lib.csproj|EnumTemplate=..\程序设计流程图Lib\程序设计流程图Lib.csproj|InterfaceTemplate=..\程序设计流程图Lib\程序设计流程图Lib.csproj|StructTemplate=..\程序设计流程图Lib\程序设计流程图Lib.csproj">
+            <elementDefinition Id="023aebb5-dfe7-4d43-8bec-e574bd55dcc4" />
+          </propertyInstance>
+          <elementDefinition Id="63f717c2-eae2-42e8-bcfa-83598d514974" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="2477d026-e65d-45ec-af73-efb40ac28720">
+          <propertyInstance Id="3b0b3d42-9438-49fa-9a8c-8d6e2ddec978" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="64cdedcf-fbcc-4d35-81ab-ad491d2f4482" />
+          </propertyInstance>
+          <elementDefinition Id="24594cb8-3a88-441a-a473-130ea95eb00a" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="5d63cf15-31f7-402e-8fa0-33c77ecfe9bb">
+          <propertyInstance Id="fee453d8-ec91-415f-870e-6965df0811ce" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="ab36a85c-f59b-4a60-a5bf-9a371fb3e2fd" />
+          </propertyInstance>
+          <elementDefinition Id="5c62d799-0f32-42a6-8e4c-0aad9919ed6b" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="b613358c-de1c-45a8-a027-baea646c9702">
+          <propertyInstance Id="33e33fcc-0185-4c43-aaef-8b7bfc679f59" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="10efb90d-f41a-4f66-8589-052f08defabb" />
+          </propertyInstance>
+          <elementDefinition Id="c16c9d0d-80b7-4fa0-a83c-7d866994ae5b" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="d401fd92-ece4-4fef-9bb8-00a2ad863977">
+          <propertyInstance Id="289a2582-74f2-47bf-97f6-febdb4cd1643" name="Parameters">
+            <elementDefinition Id="37873a52-aac7-4365-9a33-f33e67b38a70" />
+          </propertyInstance>
+          <elementDefinition Id="7528ab24-6f96-4038-b817-61482a4d9298" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="1b89a4c5-700b-46b1-926b-cf7914678703">
+      <profileInstance Id="1ea02ca3-f033-414c-96ee-bc9eca7d934d" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="f0a5e30f-e494-4331-b503-61afd93a4ac0">
+      <profileInstance Id="37c33200-0309-4c81-af05-a349e9f153b1" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ab1e608d-4efd-4272-b219-5623b72c3d03">
+      <profileInstance Id="eaed13f3-ac5e-42cb-a133-16f24ddd26dd" name="CSharpProfile">
+        <elementDefinition Id="6e752274-2099-4212-8fdd-8e1e3e591fc5" />
+      </profileInstance>
+      <elementDefinition Id="88f9bc42-1594-4e4d-b086-b243b52f00d5" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="af4f91b6-561c-4753-a25d-59549fe581f6">
+      <profileInstance Id="250bb8d3-656b-4937-88c3-c66e8bdd3863" name="TextTemplateBindings">
+        <elementDefinition Id="cec03ec2-f976-48a9-b1df-477452ecce63" />
+      </profileInstance>
+      <elementDefinition Id="83d8309a-3aa1-401f-9fd1-b4d9a3c75f87" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="6c616cee-3e42-4156-8ee9-f5c2b5937516" name="批量下切原因分析流程" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="06a9a32d-e686-4c2e-8759-ca8356b1fa59" />
+        <nodes>
+          <initialNode Id="9779227d-b521-4503-b932-7639e4d38a8c" name="Initial1" isLeaf="false">
+            <elementDefinition Id="722cfaf0-9a52-4669-98ca-6cb2ada187d3" />
+            <flowNodeTargets>
+              <controlFlow Id="3715840d-7e99-4664-9938-46d17610ee9e" isLeaf="false">
+                <sendSignalActionMoniker Id="8eb5721d-abb1-45a4-8dd0-b8814a4b6746" LastKnownName="读取下切事件数据库" />
+                <elementDefinition Id="9309af11-da99-4341-9615-83aa81c67f10" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <sendSignalAction Id="8eb5721d-abb1-45a4-8dd0-b8814a4b6746" name="读取下切事件数据库" isLeaf="false">
+            <elementDefinition Id="3ef4f818-ec4e-41c3-8223-6851c2d87bd7" />
+            <flowNodeTargets>
+              <controlFlow Id="3acd9f95-44a5-4aa6-a733-dfac77fd118e" isLeaf="false">
+                <opaqueActionMoniker Id="d366c4de-9797-455b-8021-fa2a56c799ba" LastKnownName="筛选出下切原因为“未定义”的下切事件" />
+                <elementDefinition Id="573ec859-11e7-44ca-b059-477578919a2c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <objectNode Id="86eafce9-7beb-44bd-b33a-ff631b933f10" name="下切事件数据库" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="bd2c0309-4994-4f68-9a12-6e7e31c0be49" />
+            <objectFlowTargets>
+              <objectFlow Id="7f1ed5b1-2541-4e19-9285-4926c6d55b80" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="b457f9ed-aea0-4a1a-844a-fd0ecc8fa9af" LastKnownName="下切事件集合" />
+                <elementDefinition Id="aca1588b-abdc-453d-a953-f32a20b0b126" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="22da84af-4f85-4546-810f-625c98051ab3" name="2147483647" value="2147483647">
+                <elementDefinition Id="271bb2a9-e592-41ab-87a8-9535517dcaa7" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="d366c4de-9797-455b-8021-fa2a56c799ba" name="筛选出下切原因为“未定义”的下切事件" isLeaf="false">
+            <elementDefinition Id="9b6656ab-9aab-4827-b1ed-afa5ed0f2424" />
+            <flowNodeTargets>
+              <controlFlow Id="05b44f5f-d499-4b6c-91ea-6d6493a7f88a" isLeaf="false">
+                <opaqueActionMoniker Id="8181f4ef-431e-4e58-8094-3177142003d6" LastKnownName="按照下切关系进行分组，按照数量从大到小排列" />
+                <elementDefinition Id="f62e756a-353a-4b35-9634-ea2121afe320" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin Id="b457f9ed-aea0-4a1a-844a-fd0ecc8fa9af" name="下切事件集合" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="d50b9166-3f4d-496a-a973-2d69aba02741" />
+                  <upperBound>
+                    <literalInteger Id="9561cfcb-b771-413b-b83e-aa343b75123f" name="2147483647" value="2147483647">
+                      <elementDefinition Id="03232d3e-7856-4507-8676-96cbca9933a5" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <opaqueAction Id="8181f4ef-431e-4e58-8094-3177142003d6" name="按照下切关系进行分组，按照数量从大到小排列" isLeaf="false">
+            <elementDefinition Id="1f65150e-d802-43e2-8ed9-9b051bbcd3d2" />
+            <flowNodeTargets>
+              <controlFlow Id="b2d21489-34cd-4255-8ca3-c697a96d6f89" isLeaf="false">
+                <opaqueActionMoniker Id="b3e4a9cc-95fe-479f-b7c3-8ab9ada03f45" LastKnownName="读取下一个下切关系" />
+                <elementDefinition Id="32008387-c96b-40c9-98c8-47c9335c71d7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <sendSignalAction Id="4bb56e2d-e810-46d4-a1a9-032d651d8322" name="分析源小区与目的小区是否属于同一扇区" isLeaf="false">
+            <elementDefinition Id="300ee8d1-b6b7-4b18-b52a-b1b9805b889c" />
+            <flowNodeTargets>
+              <controlFlow Id="717962bb-f652-47fe-aa68-d727e1ac8c78" isLeaf="false">
+                <decisionNodeMoniker Id="6b4e67a3-4fbb-4bcc-aa6e-48ac1fbb469f" LastKnownName="Decision1" />
+                <elementDefinition Id="2f903c00-17f9-48cf-83d4-91c0dc126881" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <sendSignalActionHasTarget>
+                <inputPin Id="c7666459-234f-488e-ac88-d7f9dfd56d67" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="b636c9f5-34ea-4126-b7ba-5d1cc7eb827b" />
+                  <upperBound>
+                    <literalInteger Id="52a3a246-ef94-4e89-aee6-47ededb593ec" name="2147483647" value="2147483647">
+                      <elementDefinition Id="83e19d0c-5c1e-4e00-9e83-f8c11a27e3da" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </sendSignalActionHasTarget>
+            </pins>
+          </sendSignalAction>
+          <opaqueAction Id="b3e4a9cc-95fe-479f-b7c3-8ab9ada03f45" name="读取下一个下切关系" isLeaf="false">
+            <elementDefinition Id="5ab792fd-14a6-45ee-b04c-86052ddd7937" />
+            <flowNodeTargets>
+              <controlFlow Id="88f2129e-971f-419c-b815-9ff8d9d05062" isLeaf="false">
+                <sendSignalActionMoniker Id="4bb56e2d-e810-46d4-a1a9-032d651d8322" LastKnownName="分析源小区与目的小区是否属于同一扇区" />
+                <elementDefinition Id="b85dfd0e-b20a-4fb8-97a8-f2280c7b3033" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="6b4e67a3-4fbb-4bcc-aa6e-48ac1fbb469f" name="Decision1" isLeaf="false">
+            <elementDefinition Id="c7f05b33-b092-4f66-bf76-437bd576522b" />
+            <flowNodeTargets>
+              <controlFlow Id="907eab49-fdf3-4cc5-b872-1dd3c34c2588" guard="否" isLeaf="false">
+                <callOperationActionMoniker Id="2e63fa85-e29e-46ba-b8a9-2531487eacb0" LastKnownName="循环该下切关系下的每个事件" />
+                <elementDefinition Id="3862ddbe-e530-41b7-815a-b7362437b942" />
+              </controlFlow>
+              <controlFlow Id="9baeb16a-47d9-47e0-899a-b77b3cf03be4" guard="是" isLeaf="false">
+                <sendSignalActionMoniker Id="4bb5ea47-4a52-460b-b5f0-7ed1be1fb037" LastKnownName="接入的（目的）2G小区所在扇区是否具有3G载频？" />
+                <elementDefinition Id="e6876904-4411-4f92-8d53-3b159527ddf9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <callOperationAction Id="2e63fa85-e29e-46ba-b8a9-2531487eacb0" name="循环该下切关系下的每个事件" isLeaf="false">
+            <elementDefinition Id="7cf99610-17c7-4b3e-88ed-f0fefeb76b27" />
+            <flowNodeTargets>
+              <controlFlow Id="006cf70b-4d81-433a-ac8f-ab1154901976" isLeaf="false">
+                <opaqueActionMoniker Id="2b768783-1998-4755-94e5-4d46cd7f36e4" LastKnownName="对每个下切事件执行同扇区下切原因分析并更新数据库" />
+                <elementDefinition Id="bd6c164b-8383-4b98-a851-7437a8b4736c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <opaqueAction Id="2b768783-1998-4755-94e5-4d46cd7f36e4" name="对每个下切事件执行同扇区下切原因分析并更新数据库" isLeaf="false">
+            <elementDefinition Id="703e75ad-1f24-4777-a301-d265468124b7" />
+            <flowNodeTargets>
+              <controlFlow Id="fd29b975-1c01-4df7-bbcb-3192badc4510" isLeaf="false">
+                <mergeNodeMoniker Id="a632bdc6-2f9c-4f8e-bfdf-e266cc728193" LastKnownName="Merge1" />
+                <elementDefinition Id="f139dedc-9455-4aed-b2be-25bb2371dbea" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin Id="df647ee1-55d1-4fdd-ad8b-793e83541a48" name="下切原因" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="65993181-cf99-4e08-a220-8b276b3c0d22" />
+                  <objectFlowTargets>
+                    <objectFlow Id="d8d9850d-ba00-4626-9953-360272eefad3" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="86eafce9-7beb-44bd-b33a-ff631b933f10" LastKnownName="下切事件数据库" />
+                      <elementDefinition Id="0b075c57-81aa-4383-90f2-f85d28c6206a" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="661a08d5-f4f6-4e4b-a96f-25709fa919ae" name="2147483647" value="2147483647">
+                      <elementDefinition Id="593387f5-da0c-44cc-b160-3497fc3487ca" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+            </pins>
+          </opaqueAction>
+          <mergeNode Id="a632bdc6-2f9c-4f8e-bfdf-e266cc728193" name="Merge1" isLeaf="false">
+            <elementDefinition Id="447b8748-2c73-438b-9f60-a9566e4c4e81" />
+            <flowNodeTargets>
+              <controlFlow Id="e49e09dc-0e8c-40ca-8f0e-ffd8383d8ec8" isLeaf="false">
+                <sendSignalActionMoniker Id="cd9ad20c-ab4d-4079-bac7-75abf0dfecc6" LastKnownName="下切关系属否遍历完？" />
+                <elementDefinition Id="412dc980-56b8-4ae0-bf14-43ee81b2c3b0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <sendSignalAction Id="cd9ad20c-ab4d-4079-bac7-75abf0dfecc6" name="下切关系属否遍历完？" isLeaf="false">
+            <elementDefinition Id="1d05a136-4b77-45b8-a2da-038af94fe022" />
+            <flowNodeTargets>
+              <controlFlow Id="d5991f33-9623-44f5-be6e-2ceaf6e8699e" isLeaf="false">
+                <decisionNodeMoniker Id="3bdfdd26-5766-4a50-964f-b1551cd07d7b" LastKnownName="Decision2" />
+                <elementDefinition Id="fe2f791b-916f-4b0e-83d8-a2b19ad387f3" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <decisionNode Id="3bdfdd26-5766-4a50-964f-b1551cd07d7b" name="Decision2" isLeaf="false">
+            <elementDefinition Id="559c85db-0ae5-44e8-ac98-dd8038d01f89" />
+            <flowNodeTargets>
+              <controlFlow Id="74e53cd8-7439-49b1-8c82-99758ee617d3" guard="是" isLeaf="false">
+                <activityFinalNodeMoniker Id="b38ac6c5-8f18-46dc-8d10-2d6bf036e844" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="28ff20a1-38b5-4728-9d34-f539f6385351" />
+              </controlFlow>
+              <controlFlow Id="cf9f8451-77b4-44dd-80cb-89e552419155" guard="否" isLeaf="false">
+                <opaqueActionMoniker Id="b3e4a9cc-95fe-479f-b7c3-8ab9ada03f45" LastKnownName="读取下一个下切关系" />
+                <elementDefinition Id="c5da0adc-82f1-4ce5-a161-d3edd7ae85ca" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode Id="b38ac6c5-8f18-46dc-8d10-2d6bf036e844" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="9964b082-0ef5-493c-b940-505876e216b8" />
+          </activityFinalNode>
+          <objectNode Id="1d64d721-5ab4-4f48-b497-c22557e52d69" name="基础信息数据库" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="68767e61-d21a-4c7e-8eba-0b9394c7468c" />
+            <objectFlowTargets>
+              <objectFlow Id="ad43ae28-945b-4d4a-812d-f7bca9ff269e" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="c7666459-234f-488e-ac88-d7f9dfd56d67" />
+                <elementDefinition Id="3055d3fc-f17e-4ef3-bf23-5215d02c5884" />
+              </objectFlow>
+              <objectFlow Id="223f1ab7-774a-43d3-9e90-5ca55d60e00c" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="3720ef6a-2b73-4a0d-a745-1d5a96258d4a" />
+                <elementDefinition Id="4d575781-a93e-46f5-a666-5bb21b295f30" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="8b189fec-6fa9-4d48-b324-405747bd2208" name="2147483647" value="2147483647">
+                <elementDefinition Id="f8cf07f0-6470-44cb-a880-f556bbc2fa24" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <sendSignalAction Id="4bb5ea47-4a52-460b-b5f0-7ed1be1fb037" name="接入的（目的）2G小区所在扇区是否具有3G载频？" isLeaf="false">
+            <elementDefinition Id="b6a25ad4-3ae7-479c-a5fd-102831c67844" />
+            <flowNodeTargets>
+              <controlFlow Id="e957c46d-1ffd-4e80-ba0d-b8f7fca2b0ec" isLeaf="false">
+                <decisionNodeMoniker Id="9110c359-57f8-4fbe-bd68-51c7a2b7544b" LastKnownName="Decision3" />
+                <elementDefinition Id="be533451-f5a4-457c-95f7-92d35f97a155" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <sendSignalActionHasTarget>
+                <inputPin Id="3720ef6a-2b73-4a0d-a745-1d5a96258d4a" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="af63cd07-c47e-4a64-b4a2-e7b8205a61be" />
+                  <upperBound>
+                    <literalInteger Id="4ffe51c2-9ab3-47ad-9daa-8311c36b2c0a" name="2147483647" value="2147483647">
+                      <elementDefinition Id="ca7d6208-6ea6-4f02-8dd6-f576cddc1942" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </sendSignalActionHasTarget>
+            </pins>
+          </sendSignalAction>
+          <decisionNode Id="9110c359-57f8-4fbe-bd68-51c7a2b7544b" name="Decision3" isLeaf="false">
+            <elementDefinition Id="f0e0122f-536d-41e6-9594-c351940386a9" />
+            <flowNodeTargets>
+              <controlFlow Id="712370a1-cf89-44af-9c18-a943579510c7" guard="否" isLeaf="false">
+                <sendSignalActionMoniker Id="2e0bfb65-5680-4791-87d8-3708143bf8c5" LastKnownName="批量判断原因为目标小区无3G载频并更新数据库" />
+                <elementDefinition Id="7d31e4cd-12db-4302-800e-7b0e4a8f1f47" />
+              </controlFlow>
+              <controlFlow Id="ca2472d7-92a2-48a6-91ed-673ff4a81a06" guard="是" isLeaf="false">
+                <sendSignalActionMoniker Id="839ecd6e-3ed3-45f2-bb36-6566824b8209" LastKnownName="接入2G小区所在的扇区是否包含与释放3G小区相同频点的载频？" />
+                <elementDefinition Id="bb628c64-6d8d-4777-8890-adc5dfda4ff3" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <sendSignalAction Id="2e0bfb65-5680-4791-87d8-3708143bf8c5" name="批量判断原因为目标小区无3G载频并更新数据库" isLeaf="false">
+            <elementDefinition Id="49a61de3-e431-4857-b5de-68457f7ffb88" />
+            <flowNodeTargets>
+              <controlFlow Id="23ac68e2-ecd6-4ac9-814c-ce8209e796f6" isLeaf="false">
+                <mergeNodeMoniker Id="10dea9eb-707c-4b80-8fea-d51b2c364f1c" LastKnownName="Merge2" />
+                <elementDefinition Id="5674ba39-2ec0-4cdc-967f-7e5925e3340f" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <actionHasOutputsInternal>
+                <outputPin Id="23270a24-a27b-4fc1-87cd-4708653fb554" name="下切原因" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="63e21006-56ca-497a-a66c-cbc912c68142" />
+                  <objectFlowTargets>
+                    <objectFlow Id="547d2b89-1aa8-4a00-800b-735a48bb6357" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="86eafce9-7beb-44bd-b33a-ff631b933f10" LastKnownName="下切事件数据库" />
+                      <elementDefinition Id="cb2a7b57-57b6-4612-a663-b8c838a8f038" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="942de687-465f-4c11-bfc9-8fadc5959b7d" name="2147483647" value="2147483647">
+                      <elementDefinition Id="94253dc2-5d14-4553-a8ff-74a8ca721fcf" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </actionHasOutputsInternal>
+            </pins>
+          </sendSignalAction>
+          <sendSignalAction Id="839ecd6e-3ed3-45f2-bb36-6566824b8209" name="接入2G小区所在的扇区是否包含与释放3G小区相同频点的载频？" isLeaf="false">
+            <elementDefinition Id="a09ec403-00a6-418b-8196-5275bf270cdf" />
+            <flowNodeTargets>
+              <controlFlow Id="e4ddb7b4-ce91-4832-8995-7fe1e9bd7f04" isLeaf="false">
+                <decisionNodeMoniker Id="147ffe65-4842-466a-9baa-4d7b30863ac1" LastKnownName="Decision4" />
+                <elementDefinition Id="e8b5195e-8a69-4d51-bb46-58773d2b9d08" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <decisionNode Id="147ffe65-4842-466a-9baa-4d7b30863ac1" name="Decision4" isLeaf="false">
+            <elementDefinition Id="7adc837d-bf1a-4d9a-81ea-593ad2a9ec43" />
+            <flowNodeTargets>
+              <controlFlow Id="d3379fdc-260a-42e8-9c4f-8ac9dc0a35af" guard="否" isLeaf="false">
+                <sendSignalActionMoniker Id="fdf6af11-30db-4fbd-b3d6-2278ccd30a29" LastKnownName="批量判断原因为多载波边界问题并更新数据库" />
+                <elementDefinition Id="fdd41ddc-26a1-4555-9f77-571d7accb3d5" />
+              </controlFlow>
+              <controlFlow Id="df951bb3-f935-4fe4-b9a7-ad52d40713d9" guard="是" isLeaf="false">
+                <callOperationActionMoniker Id="aac2ff0e-9a0f-4f3f-89ff-b29d8b2e1059" LastKnownName="循环该下切关系下的每个事件" />
+                <elementDefinition Id="c05f253e-9467-430a-9a8b-f3d1c01f9bfa" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <sendSignalAction Id="fdf6af11-30db-4fbd-b3d6-2278ccd30a29" name="批量判断原因为多载波边界问题并更新数据库" isLeaf="false">
+            <elementDefinition Id="705058c1-fd9c-4c8a-815c-92dccdeeb0df" />
+            <flowNodeTargets>
+              <controlFlow Id="7c7b94fe-2d84-4177-aa54-99b3a76d38cc" isLeaf="false">
+                <mergeNodeMoniker Id="10dea9eb-707c-4b80-8fea-d51b2c364f1c" LastKnownName="Merge2" />
+                <elementDefinition Id="31aff365-1c6a-4a50-95fb-d17ebdbd9d88" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <actionHasOutputsInternal>
+                <outputPin Id="6c28401a-1ced-4bbc-9c3a-78c9837f0a1c" name="下切原因" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="8751f74c-5ac6-4346-aae3-8e17475976e9" />
+                  <objectFlowTargets>
+                    <objectFlow Id="20bc50b3-66c4-4327-8c19-6186f186269c" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="86eafce9-7beb-44bd-b33a-ff631b933f10" LastKnownName="下切事件数据库" />
+                      <elementDefinition Id="94588e19-5028-4b17-9225-7f76e7dd83ea" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="6b285609-4de2-43ac-8238-d96c6e2c19bd" name="2147483647" value="2147483647">
+                      <elementDefinition Id="6d4af4e9-e1a4-4eff-9e53-b54fde4ff2bb" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </actionHasOutputsInternal>
+            </pins>
+          </sendSignalAction>
+          <mergeNode Id="10dea9eb-707c-4b80-8fea-d51b2c364f1c" name="Merge2" isLeaf="false">
+            <elementDefinition Id="cc36b999-ea30-4ad3-a6e1-c82e30b381ce" />
+            <flowNodeTargets>
+              <controlFlow Id="cb6a9cfe-11eb-47ab-8872-554f72ce6fe6" isLeaf="false">
+                <mergeNodeMoniker Id="36ec7db7-202f-4213-9adf-7b910bfd7b0c" LastKnownName="Merge3" />
+                <elementDefinition Id="94726731-322c-436f-a64c-1bdc297e93bf" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <callOperationAction Id="aac2ff0e-9a0f-4f3f-89ff-b29d8b2e1059" name="循环该下切关系下的每个事件" isLeaf="false">
+            <elementDefinition Id="393e4f25-2715-443a-8ed3-e7fbf0f6dacb" />
+            <flowNodeTargets>
+              <controlFlow Id="5f5dff33-0950-4a72-b823-d8746e2652f0" isLeaf="false">
+                <opaqueActionMoniker Id="6309a10f-b861-4578-8d87-e5636f300625" LastKnownName="对每个下切事件执行不同扇区下切覆盖原因分析并更新数据库" />
+                <elementDefinition Id="8e6dc0a4-f4d0-480f-b2b9-8e14f8b1de2c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <opaqueAction Id="6309a10f-b861-4578-8d87-e5636f300625" name="对每个下切事件执行不同扇区下切覆盖原因分析并更新数据库" isLeaf="false">
+            <elementDefinition Id="d86046db-959a-47bb-aa4d-b202f250601c" />
+            <flowNodeTargets>
+              <controlFlow Id="95b3ffb9-9746-4ee3-a4e6-b96a6cd2912a" isLeaf="false">
+                <mergeNodeMoniker Id="36ec7db7-202f-4213-9adf-7b910bfd7b0c" LastKnownName="Merge3" />
+                <elementDefinition Id="f66f1baa-1734-48f3-aae0-089a28b50189" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin Id="d792fc31-5761-4a2a-a54e-d521fd98e7e2" name="下切原因" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="8f7728c3-1cce-4632-9796-f9a9898e07f3" />
+                  <objectFlowTargets>
+                    <objectFlow Id="26dec0ad-8449-4b2d-bb5a-2f7ffe299508" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="86eafce9-7beb-44bd-b33a-ff631b933f10" LastKnownName="下切事件数据库" />
+                      <elementDefinition Id="6a4f10cd-68da-4cd0-b378-e255e5cb6917" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="8108814c-1d04-4f81-a67c-362d2969d201" name="2147483647" value="2147483647">
+                      <elementDefinition Id="9c5c3538-6cc1-470b-acf8-57d18c8ee56b" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+            </pins>
+          </opaqueAction>
+          <mergeNode Id="36ec7db7-202f-4213-9adf-7b910bfd7b0c" name="Merge3" isLeaf="false">
+            <elementDefinition Id="0560213a-7ee5-48f7-a880-1118b7d4ecf7" />
+            <flowNodeTargets>
+              <controlFlow Id="bf134ef7-eea4-4d04-9689-dd39d9aec57d" isLeaf="false">
+                <mergeNodeMoniker Id="a632bdc6-2f9c-4f8e-bfdf-e266cc728193" LastKnownName="Merge1" />
+                <elementDefinition Id="9e3be602-b59f-46da-afc1-a4b1ded0c447" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="26df8dd0-eb6c-4528-8645-a302d42dd0a0" name="程序设计流程图">
+    <elementDefinition Id="fbe1d8c8-8ba0-418f-89e0-42c5cd33b822" />
+  </package>
+</activityRootModel>

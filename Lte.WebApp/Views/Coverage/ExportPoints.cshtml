@@ -1,0 +1,49 @@
+﻿@model Lte.Evaluations.Entities.StatValueField
+@{
+    ViewBag.Title = "路测数据地理化展示";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<input type="hidden" id="longitude" value="@TempData["centerX"]" />
+<input type="hidden" id="lattitude" value="@TempData["centerY"]" />
+<div class="float-left">
+	<input type="button" id="refresh" value="刷新"/>
+	@Html.DropDownListFor(x => x.FieldName, new List<SelectListItem> {
+        new SelectListItem { Text = "信号RSRP", Value = "信号RSRP" },
+        new SelectListItem { Text = "标称SINR", Value = "标称SINR" }
+        })
+</div> 
+<table class="float-right">
+	<tbody>
+		<tr id ="colors"></tr>
+		<tr id="limits"></tr>
+	</tbody>
+</table>
+
+@section scripts{
+<script type="text/javascript" src="~/Scripts/Parameters/ExtendOperations.js"></script>
+<script type="text/javascript" src="../../Scripts/Parameters/MapContainer.js"></script>
+<script type="text/javascript" src="~/Scripts/Parameters/EvaluationMapCanvas.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var map = new BMap.Map("allmap");
+        var point = new BMap.Point($("#longitude").val(), $("#lattitude").val());
+        var container = new MapContainer(map);
+        container.initalize(point, 15);
+
+        $("#colors").updateColorTag("GetStatValueField", $("#FieldName").val());
+        $("#limits").updateLimitTag("GetStatValueField", $("#FieldName").val());
+        $("#FieldName").change(function () {
+            $("#colors").updateColorTag("GetStatValueField", $(this).val());
+            $("#limits").updateLimitTag("GetStatValueField", $(this).val());
+        });
+
+        $("#refresh").click(function () {
+            var canvas = new EvaluationMapCanvas(container);
+            canvas.importCellsWithRange("/Evaluation/ImportCellsWithRange");
+            canvas.drawSectors("/Evaluation/GetSectors");
+            canvas.drawCoveragePoints("GetCoveragePoints", $("#FieldName").val());
+        });
+    });
+</script>
+}

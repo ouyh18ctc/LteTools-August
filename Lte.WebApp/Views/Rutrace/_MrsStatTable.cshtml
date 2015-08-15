@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Lte.Parameters.Entities.MrsCellDateView>
+
+<table summary="User Grid" class="zebra">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateString)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CellName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalMrs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CoveragePercentage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CoverageTo110)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CoverageTo115)
+        </th>
+        <th>
+            关联分析
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateString)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CellName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalMrs)
+        </td>
+        <td>
+            @String.Format("{0:0.00}", item.CoveragePercentage)
+        </td>
+        <td>
+            @String.Format("{0:0.00}", item.CoverageTo110)
+        </td>
+        <td>
+            @String.Format("{0:0.00}", item.CoverageTo115)
+        </td>
+        <td>
+            <div class="btn-group">
+                <button id="precise:@item.CellId:@item.SectorId:@item.DateString:@item.CellName"
+                    class="btn btn-primary show-precise">精确覆盖率分析</button>
+                <button id="ta:@item.CellId:@item.SectorId:@item.DateString:@item.CellName"
+                    class="btn btn-primary show-ta">TA区间分布</button>
+                <button id="rsrpta:@item.CellId:@item.SectorId:@item.DateString:@item.CellName"
+                    class="btn btn-primary show-rsrpta">RSRP-TA联合分析</button>
+            </div>
+        </td>
+    </tr>
+}
+
+</table>

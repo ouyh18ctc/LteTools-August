@@ -1,0 +1,112 @@
+﻿@model Lte.WebApp.Models.EvaluationViewModel
+@using Lte.Evaluations.ViewHelpers
+
+@section featured {
+            <hgroup class="title">
+                <h1>仿真区域查询</h1>
+            </hgroup>
+}
+
+<article>
+@using (Html.BeginForm("RegionDef", "Evaluation",
+    FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    Html.RenderPartial("QueryConditions", Model);
+        <p>
+            <input type="button" id="showinfo" value="仿真参数详细设置" />
+            <input id="SelectAllENodebs" type="checkbox" checked="checked" />添加所有的基站            
+            <button type="button" id="addENodebs" class="btn btn-primary">
+                <span class="glyphicon glyphicon-sort-by-attributes-alt"></span>
+                添加所选基站/刷新信息
+            </button>
+            @Html.ActionLink("计算结果","PointsCalculate")
+        </p>
+    <fieldset id="details" hidden="hidden">
+        <legend>门限参数设置</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(x=>x.TrafficLoad)
+                @Html.EditorFor(x=>x.TrafficLoad)
+                @Html.ValidationMessageFor(x=>x.TrafficLoad)
+            </li>
+            <li>
+                @Html.LabelFor(x=>x.DistanceInMeter)
+                @Html.EditorFor(x=>x.DistanceInMeter)
+                @Html.ValidationMessageFor(x=>x.DistanceInMeter)
+            </li>
+            <li>
+                @Html.LabelFor(x=>x.CellCoverage)
+                @Html.EditorFor(x=>x.CellCoverage)
+                @Html.ValidationMessageFor(x=>x.CellCoverage)
+            </li>
+            <li>
+                <input type="button" id="modpara" value="仿真参数修改" />
+            </li>
+        </ol>
+    </fieldset>
+    
+}
+@if (Model.ENodebs != null) 
+{ 
+    Html.RenderPartial("ENodebSelection", Model.ENodebs); 
+    <div class="pager">
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("RegionDef", 
+            new { page = x }))
+    </div>
+}
+
+</article>
+
+<aside>
+    <h3>已选择eNodeb列表</h3>
+    <h4>操作提示：鼠标在表示小区的方块上方时显示其详细信息；双击删除该小区。</h4>
+    <div id="selectedList" ></div>
+</aside>
+
+@section scripts{
+<script type="text/javascript" src="~/Scripts/Parameters/RegionRefresh.js"></script>
+<script type="text/javascript" src="~/Scripts/Parameters/RegionCellsPresenter.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var region = new RegionRefresh("#CityName", "#DistrictName", "#TownName");
+        $("#CityName").change(function () {
+            region.getDistrictList($(this).val(), "/ParametersQuery/GetDistrictList/");
+        });
+        $("#DistrictName").change(function () {
+            region.getTownList($("#CityName").val(), $(this).val(), "/ParametersQuery/GetTownList/");
+        });
+        $("#showinfo").toggle(function () {
+            $("#details").show();
+        }, function () {
+            $("#details").hide();
+        });
+        $("#modpara").click(function () {
+            $.ajax({
+                url: "ModifyParameters",
+                type: "GET",
+                dataType: "json",
+                data: {
+                    trafficLoad: $("#TrafficLoad").val(),
+                    cellCoverage: $("#CellCoverage").val(),
+                    distanceInMeter: $("#DistanceInMeter").val()
+                },
+                success: function () { }
+            });
+        });
+
+        var presenter = new RegionCellsPresenter("#selectedList");
+        presenter.showAllCells("GetCells", "RemoveOneCell");
+        $("#addENodebs").click(function () {
+            var message = "";
+            if ($("#SelectAllENodebs").attr("checked") != "checked") {
+                $(".ENodeb").each(function () {
+                    if ($(this).attr("checked") == "checked") {
+                        message += $(this).val() + ",";
+                    }
+                });
+            }
+            presenter.showSelectedCells("ImportCells", message, "RemoveOneCell");
+        });
+    });
+</script>
+}

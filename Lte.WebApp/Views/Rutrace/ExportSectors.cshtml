@@ -1,0 +1,73 @@
+﻿@using Lte.Evaluations.Infrastructure.Entities
+@model Lte.Evaluations.ViewHelpers.StatFieldsSelectionViewModel
+@{
+    ViewBag.Title = "仿真结果";
+}
+
+<div class="row">
+    <article class="col-md-4">
+        <p>
+            小区指标选择：
+            @Html.DropDownListFor(x => x.RuFieldName, StatRuChoiceQueries.Choices.Select(
+                s => new SelectListItem { Text = s, Value = s }).ToList())
+            栅格指标选择：
+            @Html.DropDownListFor(x => x.ValueFieldName, StatValueChoiceQueries.Choices.Select(
+                s => new SelectListItem { Text = s, Value = s }).ToList())
+        </p>
+        <p>
+            <input type="button" class="btn btn-primary" id="refresh" value="小区指标专题"/>
+            <input type="button" class="btn btn-primary" id="generation" value="覆盖图生成" />
+            <input type="hidden" id="centerx" value="@Model.Longtitute" />
+            <input type="hidden" id="centery" value="@Model.Lattitute" />
+        </p>
+    </article>
+ 
+    <aside class="col-md-4">
+        <table class="float-right">
+            <tbody>
+                <tr id ="colorsRu"></tr>
+                <tr id="limitsRu"></tr>
+                <tr id ="colorsValue"></tr>
+                <tr id="limitsValue"></tr>
+            </tbody>
+        </table>
+    </aside>
+    
+</div>
+
+
+@section scripts{
+<script type="text/javascript" src="../../Scripts/Parameters/MapContainer.js"></script>
+<script type="text/javascript" src="~/Scripts/Parameters/ExtendOperations.js"></script>
+<script type="text/javascript" src="~/Scripts/Parameters/EvaluationMapCanvas.js"></script>
+<script type="text/javascript">
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point($("#centerx").val(), $("#centery").val());
+    var container = new MapContainer(map);
+    container.initalize(point, 15);
+    var canvas = new EvaluationMapCanvas(container);
+
+    $("#colorsRu").updateColorTag("GetStatRuField", $("#RuFieldName").val());
+    $("#limitsRu").updateLimitTag("GetStatRuField", $("#RuFieldName").val());
+    $("#colorsValue").updateColorTag("GetStatValueField", $("#ValueFieldName").val());
+    $("#limitsValue").updateLimitTag("GetStatValueField", $("#ValueFieldName").val());
+    $("#RuFieldName").change(function () {
+        $("#colorsRu").updateColorTag("GetStatRuField", $(this).val());
+        $("#limitsRu").updateLimitTag("GetStatRuField", $(this).val());
+    });
+    $("#ValueFieldName").change(function () {
+        $("#colorsValue").updateColorTag("GetStatValueField", $(this).val());
+        $("#limitsValue").updateLimitTag("GetStatValueField", $(this).val());
+    });
+    $("#refresh").click(function () {
+        map.removeSectors();
+        canvas.drawKpiSectors("GetStatSectors", $("#RuFieldName").val());
+    });
+
+    $("#generation").click(function () {
+        canvas.removeGrids();
+        canvas.updateRange();
+        canvas.drawGridsWithRange("/Evaluation/ImportCellsWithRange", $("#ValueFieldName").val());
+    });
+</script>
+}

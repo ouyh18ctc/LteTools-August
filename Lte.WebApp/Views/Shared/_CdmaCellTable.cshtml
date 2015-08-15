@@ -1,0 +1,97 @@
+﻿@model IEnumerable<Lte.Parameters.Entities.CdmaCell>
+
+<h4>CDMA小区信息</h4>
+<table summary="User Grid" class="zebra">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BtsId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SectorId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CellType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Frequency)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CellId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lac)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Longtitute)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lattitute)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Height)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MTilt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ETilt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Azimuth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AntennaGain)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BtsId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SectorId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CellType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CellName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CellId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lac)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Longtitute)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lattitute)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Height)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MTilt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ETilt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Azimuth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AntennaGain)
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,134 @@
+﻿
+.pager {
+    text-align: right;
+    border-top: 2px solid silver;
+    padding: .25em 0 0 0;
+    margin-top: .5em;
+}
+
+.pager a {
+    font-size: 10px;
+    color: #666;
+    text-decoration: none;
+    padding: 0 .2em 0 .2em;
+}
+
+    .pager a.selected {
+        background-color: #353535;
+        color: white;
+    }
+
+    /* menu */
+    nav {
+        margin-bottom: 5px;
+    }
+
+/* featured */
+.featured {
+    background-color: #fff;
+}
+
+    .featured .content-wrapper {
+        background-color: #7ac0da;
+        background-image: -ms-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
+        background-image: -o-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #7ac0da), color-stop(1, #a4d4e6));
+        background-image: -webkit-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
+        background-image: linear-gradient(#7ac0da 0%, #a4d4e6 100%);
+        color: #3e5667;
+        padding: 20px 40px 30px 40px;
+    }
+
+        .featured hgroup.title h1, .featured hgroup.title h2 {
+            color: #fff;
+        }
+
+        .featured p {
+            font-size: 1.1em;
+        }
+
+/* page titles */
+hgroup.title {
+    margin-bottom: 10px;
+}
+
+hgroup.title h1, hgroup.title h2 {
+    display: inline;
+}
+
+    hgroup.title h1 {
+        font-size: 200%;
+    }
+
+hgroup.title h2 {
+    font-weight: normal;
+    margin-left: 3px;
+    font-size:150%;
+}
+
+/* features */
+section.feature {
+    float: left;
+    padding: 50px;
+}
+
+.zero, .one, .two, .three, .four, .five, .six, .seven, .eight, .nine {
+    padding-left:40px;
+    padding-top:5px;
+    margin: 25px 0;
+}
+        .zero {
+    background-position: 10px 10px;
+    background: url("../Images/orderedList0.png") no-repeat;
+}
+
+        .one {
+    background-position: 10px 10px;
+            background: url("../Images/orderedList1.png") no-repeat;
+        }
+
+        .two {
+    background-position: 10px 10px;
+            background: url("../Images/orderedList2.png") no-repeat;
+        }
+
+        .three {
+    background-position: 10px 10px;
+            background: url("../Images/orderedList3.png") no-repeat;
+        }
+
+        .four {
+    background-position: 10px 10px;
+            background: url("../Images/orderedList4.png") no-repeat;
+        }
+
+        .five {
+    background-position: 10px 10px;
+            background: url("../Images/orderedList5.png") no-repeat;
+        }
+
+        .six {
+    background-position: 10px 10px;
+            background: url("../Images/orderedList6.png") no-repeat;
+        }
+
+        .seven {
+    background-position: 10px 10px;
+            background: url("../Images/orderedList7.png") no-repeat;
+        }
+
+        .eight {
+    background-position: 10px 10px;
+            background: url("../Images/orderedList8.png") no-repeat;
+        }
+
+        .nine {
+    background-position: 10px 10px;
+            background: url("../Images/orderedList9.png") no-repeat;
+        }
+
+.col-md-4:hover {
+    border-width: 2px;
+    border-color: #FF9933;
+    background-color: #99FFCC;
+}

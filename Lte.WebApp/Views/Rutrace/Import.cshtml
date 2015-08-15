@@ -1,0 +1,144 @@
+﻿@model MrInterferenceViewModel
+
+@{
+    ViewBag.Title = "LTE MR覆盖专题分析";
+    ViewBag.Message = "——从数据库导入4G的MRO数据和MRS数据";
+}
+@using Lte.Evaluations.ViewHelpers
+@using Lte.Parameters.Entities
+
+@section featured {
+    <hgroup class="title">
+        <h1>@ViewBag.Title</h1>
+        <h2>@ViewBag.Message</h2>
+    </hgroup>
+}
+
+    <div id="radiotabs">
+        <ul>
+            <li><a href="#conditions">查询条件</a></li>
+            <li><a href="#mrs-stat">MRS统计信息</a></li>
+            <li><a href="#coverage-chart">覆盖率统计图</a></li>
+            <li><a href="#tabs-4">站间距分析</a></li>
+            <li><a href="#tabs-5">超远覆盖分析</a></li>
+        </ul>
+        <div id="conditions">
+		    
+            @using (Html.BeginForm("ImportResult", "Rutrace",
+                FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                Html.RenderPartial("QueryConditions", Model);
+                Html.RenderPartial("../Kpi/_DateSpanSelection", Model);
+                <p>
+                    @Html.ActionLink("显示设置", "DisplayDef")
+                    @Html.ActionLink("导出结果", "ExportStat", new { fileName = "Stat.csv" })                
+                </p>
+            }
+        </div>
+	    <div id="mrs-stat">
+		@{
+            List<MrsCellDateView> stats = Model.MrsCells;
+    
+            if (stats != null)
+            {
+                Html.RenderPartial("_MrsStatTable", Model.MrsCells);
+            <div class="pager">
+                @Html.PageLinks(Model.PagingInfo, x => Url.Action("Import", new { page = x }))
+            </div>
+            }
+        }
+	    </div>
+        <div id="coverage-chart">
+            <p>
+                选择TOP记录数：
+                <select id="topnum" name="topnum">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                </select>
+                <button type="button" id="showCharts" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-sort-by-attributes-alt"></span>
+                    图表结果展示
+                </button>
+            </p>
+            <div id="chart_coverage" style="height:500px;width:900px; "></div>
+        </div>
+	    <div id="tabs-4">
+		    <div id="chart_averagertd_and_taaverage" style="height:650px;width:900px; "></div>
+	    </div>
+        <div id="tabs-5">
+            <div id="chart_taaverage_and_excessrate" style="height:650px;width:900px; "></div>
+        </div>
+    </div>
+    <div id="dialog-modal"></div>
+
+@section css{
+@Styles.Render("~/Content/themes/base/css")
+}
+@section Scripts {
+    <script type="text/javascript" src="~/Scripts/Dingli/RuInterferenceSet.js"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/RegionRefresh.js"></script>
+    <script type="text/javascript" src="~/Scripts/Dingli/ComboSetting.js"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/MrsStatSet.js"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/ExtendOperations.js"></script>
+
+@Scripts.Render("~/bundles/jqueryui")
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/highcharts")
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#radiotabs").tabs();
+        var region = new RegionRefresh("#CityName", "#DistrictName", "#TownName");
+        $("#CityName").change(function () {
+            region.getDistrictList("/api/DistrictList/" + $(this).val(), false);
+        });
+        $("#DistrictName").change(function () {
+            region.getTownList("/api/TownList/" + $("#CityName").val() + "/" + $(this).val(), false);
+        });
+        $("#StartDate").datepicker({ dateFormat: 'yy-mm-dd' });
+        $("#EndDate").datepicker({ dateFormat: 'yy-mm-dd' });
+        $("#showCharts").click(function() {
+            var setting = new ComboSetting('MR覆盖率变化趋势');
+            var dataSet = new MrsStatSet(setting);
+            dataSet.generateCoveragePlot("/api/MrsQueryCoverage/" + $("#topnum").val(),
+                $("#chart_coverage"));
+        });
+        $(".show-precise").click(function() {
+            var segments = $(this).attr("id").split(':');
+            var eNodebId = segments[1];
+            var sectorId = segments[2];
+            var date = segments[3].replace('/', '-').replace('/', '-');
+            var setting = new ComboSetting(segments[4] + '精确覆盖率变化趋势');
+            var dataSet = new PreciseStatSet(setting);
+            dataSet.generatePlot("/api/QueryPreciseStat/" + eNodebId + "/" + sectorId + "/" + date,
+                $("#dialog-modal"), 900, 480);
+        });
+
+        $(".show-ta").click(function () {
+            var segments = $(this).attr("id").split(':');
+            var eNodebId = segments[1];
+            var sectorId = segments[2];
+            var date = segments[3].replace('/', '-').replace('/', '-');
+            var setting = new ComboSetting(segments[4] + 'TA区间分布');
+            var dataSet = new MrsStatSet(setting);
+            dataSet.generateTaPlot("/api/MrsQueryTa/" + eNodebId + "/" + sectorId + "/" + date,
+                $("#dialog-modal"), 900, 480);
+        });
+
+        $(".show-rsrpta").click(function () {
+            var segments = $(this).attr("id").split(':');
+            var eNodebId = segments[1];
+            var sectorId = segments[2];
+            var date = segments[3].replace('/', '-').replace('/', '-');
+            var setting = new ComboSetting(segments[4] + 'RSRP-TA区间分布');
+            var dataSet = new MrsStatSet(setting);
+            dataSet.generateRsrpTaPlot("/api/MroQueryRsrpTa/" + eNodebId + "/" + sectorId + "/" + date,
+                $("#dialog-modal"), 900, 480);
+        });
+    });
+    
+</script>
+}
+
+
+

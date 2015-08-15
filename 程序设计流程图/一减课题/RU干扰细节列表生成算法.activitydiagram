@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="47c00b29-b585-4e2a-bf64-354ee3801282" name="RU" linkedPackageId="5e46cb83-c2b0-4b77-b187-c7d4e63f4699" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="95000c76-0e7c-417c-834d-bfd80997ed73" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="d902868d-0070-4c4b-a749-389524b75dde" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="ff966fbd-08de-48aa-8eac-2a5d70db2391">
+          <propertyInstance Id="26d51470-29bb-4368-bce8-f26340802556" name="BaseName">
+            <elementDefinition Id="b909c1d9-f039-4e3a-8361-b6c3649cae5c" />
+          </propertyInstance>
+          <elementDefinition Id="6f9588b2-c5a2-41f6-8305-98f95fb97edc" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="cd862eba-e606-47c3-a3f5-93249f74f94e">
+          <propertyInstance Id="4b2c41a9-1b9b-4b13-beb8-5161e1c6ec6d" name="ClrAttributes">
+            <elementDefinition Id="19a219eb-3a9c-4c83-9dc1-61fc1761021c" />
+          </propertyInstance>
+          <elementDefinition Id="dd60cb12-6fa3-4028-bd43-70a9397c2649" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="8caa7cbc-0131-4d5c-9695-a9b4d315c7e9">
+          <propertyInstance Id="d0f126e9-4bea-45c3-bb18-5183721f8d7d" name="Usings">
+            <elementDefinition Id="4b35385f-db9a-49dc-9c08-f03524202e90" />
+          </propertyInstance>
+          <elementDefinition Id="242858d7-6dfc-4f45-b4e0-7d00febb07f7" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="1030066c-f204-48d1-a44d-3c1c5caf87d6" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="12d0c820-d2d8-4c73-9404-d1a0083d0b07" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="fa45b3c2-2b23-46d7-a0e3-944cff82777b">
+          <propertyInstance Id="2c619fd6-febc-4549-b515-583cd9f1c7de" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="f877d50a-6d4b-4e81-97e2-677c41b1a836" />
+          </propertyInstance>
+          <elementDefinition Id="dc0b7c06-5b9b-4d5c-810a-788fb1ac3c8c" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="ef47f0ad-777e-4600-9e4e-36b289eca855">
+          <propertyInstance Id="6575e193-7aff-48b0-ae6d-fd7c58de0ea7" name="TemplateFilePath" value="ClassTemplate=D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="c6070deb-b077-43db-8d59-6cba939377a9" />
+          </propertyInstance>
+          <elementDefinition Id="ea323429-dc76-4189-9772-ec0cc1f9165c" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="162f714d-e0d5-4da8-883a-020a97ae4b80">
+          <propertyInstance Id="782087a5-a4ec-4fe4-8e6f-56d0602c252d" name="ProjectPath" value="ClassTemplate=..\程序设计流程图Lib\程序设计流程图Lib.csproj|EnumTemplate=..\程序设计流程图Lib\程序设计流程图Lib.csproj|InterfaceTemplate=..\程序设计流程图Lib\程序设计流程图Lib.csproj|StructTemplate=..\程序设计流程图Lib\程序设计流程图Lib.csproj">
+            <elementDefinition Id="023aebb5-dfe7-4d43-8bec-e574bd55dcc4" />
+          </propertyInstance>
+          <elementDefinition Id="63f717c2-eae2-42e8-bcfa-83598d514974" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="15662922-a69d-4f80-999c-a68e5b8318b8">
+          <propertyInstance Id="a0828ba1-0cb9-4ba3-9ca9-dc3148948fbb" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="64cdedcf-fbcc-4d35-81ab-ad491d2f4482" />
+          </propertyInstance>
+          <elementDefinition Id="24594cb8-3a88-441a-a473-130ea95eb00a" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="8a507c8c-9312-45da-9121-551644678fed">
+          <propertyInstance Id="2cb30e7b-02f0-471f-826f-d0a2966ca4fa" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="ab36a85c-f59b-4a60-a5bf-9a371fb3e2fd" />
+          </propertyInstance>
+          <elementDefinition Id="5c62d799-0f32-42a6-8e4c-0aad9919ed6b" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="b7472519-41a6-4dda-8f16-c036e00a69af">
+          <propertyInstance Id="1bb4954b-6f19-4307-b233-4cd0a2de13fa" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="10efb90d-f41a-4f66-8589-052f08defabb" />
+          </propertyInstance>
+          <elementDefinition Id="c16c9d0d-80b7-4fa0-a83c-7d866994ae5b" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="fe2ad896-bf2f-4fff-8576-cb55f3abc8c7">
+          <propertyInstance Id="22d92b04-40bf-4c05-b4f3-b1539e33a1ac" name="Parameters">
+            <elementDefinition Id="37873a52-aac7-4365-9a33-f33e67b38a70" />
+          </propertyInstance>
+          <elementDefinition Id="7528ab24-6f96-4038-b817-61482a4d9298" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="21a11807-8804-431d-a739-23a232db7937">
+      <profileInstance Id="e2ba777b-c43b-4753-8d52-67776e903d96" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="2df03aa7-ce3d-4bd9-85ec-0dbe5a0f419c">
+      <profileInstance Id="b10b3ce9-5fc4-45a6-a6af-5ee0884283d7" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="d1303e31-72e5-4f99-a1e9-803612faa792">
+      <profileInstance Id="7469a0a7-f199-4717-800f-058c30930ec9" name="CSharpProfile">
+        <elementDefinition Id="6e752274-2099-4212-8fdd-8e1e3e591fc5" />
+      </profileInstance>
+      <elementDefinition Id="88f9bc42-1594-4e4d-b086-b243b52f00d5" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="599f944b-56a0-4827-bc03-302ef084756e">
+      <profileInstance Id="89137ab7-510f-4e15-b2c3-c32107b9d1e4" name="TextTemplateBindings">
+        <elementDefinition Id="cec03ec2-f976-48a9-b1df-477452ecce63" />
+      </profileInstance>
+      <elementDefinition Id="83d8309a-3aa1-401f-9fd1-b4d9a3c75f87" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="e39bf63c-6bd6-4d8d-a2bd-202b4245db41" name="RU" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="4e227054-5cab-4a8b-b7f6-c5ce8b2fd976" />
+        <nodes>
+          <initialNode Id="b123ebbd-2a95-429a-8657-bfb1ced19170" name="Initial1" isLeaf="false">
+            <elementDefinition Id="714fe245-e8eb-45ff-84a3-3c3ffaf37dca" />
+            <flowNodeTargets>
+              <controlFlow Id="c3aaa9b3-ff9b-4b99-b975-2dc025898416" isLeaf="false">
+                <opaqueActionMoniker Id="46fe585e-7936-4b09-a4b8-7e3bb3d522d9" LastKnownName="读取下一个RU干扰记录" />
+                <elementDefinition Id="50aad834-8f7a-40f8-a743-31974f65a6fa" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="46fe585e-7936-4b09-a4b8-7e3bb3d522d9" name="读取下一个RU干扰记录" isLeaf="false">
+            <elementDefinition Id="981c526c-65e1-401e-b14a-09bc0b37d436" />
+            <flowNodeTargets>
+              <controlFlow Id="e4f44a04-9040-4c51-ab81-b3a9017c75d5" isLeaf="false">
+                <opaqueActionMoniker Id="03f6f87a-a5bc-4c27-be87-3d5580b29060" LastKnownName="读取其干扰小区列表中的下一个干扰小区" />
+                <elementDefinition Id="b8e534eb-180f-42dc-b4e9-62dafb0b2053" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="03f6f87a-a5bc-4c27-be87-3d5580b29060" name="读取其干扰小区列表中的下一个干扰小区" isLeaf="false">
+            <elementDefinition Id="c0b10f3d-c154-4b43-8a98-df38570cdb5d" />
+            <flowNodeTargets>
+              <controlFlow Id="7e545d93-0c3c-4345-b696-da34f2e230cc" isLeaf="false">
+                <sendSignalActionMoniker Id="2df17cf2-30ea-4a20-9ab6-d1319c165866" LastKnownName="查询干扰细节列表内是否有这个干扰小区" />
+                <elementDefinition Id="e3748bdd-6e3b-4373-ae8e-526c81ab57e9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <objectNode Id="4658b59c-e590-493c-8d1d-a89d0adc9113" name="RU干扰细节列表" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="8f8081e4-cf7b-4235-ac4d-845b0f8bcd75" />
+            <objectFlowTargets>
+              <objectFlow Id="03eb00e2-7ba8-45f2-bd3f-3d689cf81784" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="164a8afc-86e4-4d6e-8f0a-d6f6cd5b2cd2" />
+                <elementDefinition Id="7b9aae53-254a-4724-9284-a8aa110a1934" />
+              </objectFlow>
+              <objectFlow Id="8b8d0be9-fa5d-49d8-a71e-875b703f9901" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="79d36c60-251d-478b-abaf-57f300c88b73" />
+                <elementDefinition Id="860d7b09-008d-4146-a612-fb8dc2998f73" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="7fe8fcb5-5ef2-4e6f-b451-79b44042ab40" name="2147483647" value="2147483647">
+                <elementDefinition Id="ad765297-93e0-4400-b8c1-25a4de8b9004" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <sendSignalAction Id="2df17cf2-30ea-4a20-9ab6-d1319c165866" name="查询干扰细节列表内是否有这个干扰小区" isLeaf="false">
+            <elementDefinition Id="67bca2bf-1bc8-420f-86a0-464d18aea569" />
+            <flowNodeTargets>
+              <controlFlow Id="75bfb5d4-9c32-4e4d-8db3-12eb6fdcaa2d" isLeaf="false">
+                <decisionNodeMoniker Id="43c916b8-0145-49db-a92a-5269db0c1ed4" LastKnownName="Decision1" />
+                <elementDefinition Id="da7ed946-4f87-41a2-8187-400fb6068bde" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <sendSignalActionHasTarget>
+                <inputPin Id="79d36c60-251d-478b-abaf-57f300c88b73" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="ef1c7468-df2d-464d-884d-35d996e93d75" />
+                  <upperBound>
+                    <literalInteger Id="c8adadbc-ebe7-427f-b183-658c81247704" name="2147483647" value="2147483647">
+                      <elementDefinition Id="380608db-e1c8-4a30-a6be-149887920cb9" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </sendSignalActionHasTarget>
+            </pins>
+          </sendSignalAction>
+          <decisionNode Id="43c916b8-0145-49db-a92a-5269db0c1ed4" name="Decision1" isLeaf="false">
+            <elementDefinition Id="952d2272-822d-4f67-bdbe-8a8d1448618d" />
+            <flowNodeTargets>
+              <controlFlow Id="a497bc8b-8672-4cab-a317-92e174ae97e8" guard="是" isLeaf="false">
+                <opaqueActionMoniker Id="0efe77fb-980d-47e2-ad0a-606797c64e2a" LastKnownName="获得干扰细节对象" />
+                <elementDefinition Id="0ff64c04-3e8e-40a5-9354-1da1a7947a43" />
+              </controlFlow>
+              <controlFlow Id="8980f25f-dd01-40b0-8f9e-f633698d380e" guard="否" isLeaf="false">
+                <opaqueActionMoniker Id="a23d4749-74d3-46a2-8263-adeaed4ba5b9" LastKnownName="生成新的干扰细节对象" />
+                <elementDefinition Id="f2b7f133-fc0d-4c83-b036-3826035ca2d7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="0efe77fb-980d-47e2-ad0a-606797c64e2a" name="获得干扰细节对象" isLeaf="false">
+            <elementDefinition Id="48239257-8976-4539-b4e6-5f0285e22f5d" />
+            <flowNodeTargets>
+              <controlFlow Id="476d8ac8-f8c6-470f-94ec-7f24ac9c3c43" isLeaf="false">
+                <opaqueActionMoniker Id="2289c551-992d-449b-8875-5a9a694963e7" LastKnownName="新增或更新受干扰小区的测量次数和干扰次数" />
+                <elementDefinition Id="8d2db7a8-0c77-43ff-a2f2-6bb7d99aef07" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin Id="164a8afc-86e4-4d6e-8f0a-d6f6cd5b2cd2" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="b8f7dc39-b6e7-472f-ad9e-8efa7c5857c6" />
+                  <upperBound>
+                    <literalInteger Id="eb8e3a77-4e3a-45b5-8a6a-ed78e311abf9" name="2147483647" value="2147483647">
+                      <elementDefinition Id="eebae9db-b322-43cf-8846-bbe24dc0de5a" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <opaqueAction Id="a23d4749-74d3-46a2-8263-adeaed4ba5b9" name="生成新的干扰细节对象" isLeaf="false">
+            <elementDefinition Id="8de5b306-14b4-4cfe-af51-f6aff2967f1f" />
+            <flowNodeTargets>
+              <controlFlow Id="e7cb9765-5df4-4a91-91f6-5290f1e3a976" isLeaf="false">
+                <opaqueActionMoniker Id="2289c551-992d-449b-8875-5a9a694963e7" LastKnownName="新增或更新受干扰小区的测量次数和干扰次数" />
+                <elementDefinition Id="51b797c0-f0e0-422a-aca2-d123fe590583" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="2289c551-992d-449b-8875-5a9a694963e7" name="新增或更新受干扰小区的测量次数和干扰次数" isLeaf="false">
+            <elementDefinition Id="61688d6c-d38a-4bfd-a061-610345511d77" />
+            <flowNodeTargets>
+              <controlFlow Id="c3526e3b-4471-4ecf-90b3-2a7f1c5c8124" isLeaf="false">
+                <sendSignalActionMoniker Id="4c0a0ac8-4ad3-460e-b40c-7b23662ee0d6" LastKnownName="新增或更新干扰细节对象" />
+                <elementDefinition Id="75cb5131-f378-4650-8bcd-50c370d201a5" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <sendSignalAction Id="4c0a0ac8-4ad3-460e-b40c-7b23662ee0d6" name="新增或更新干扰细节对象" isLeaf="false">
+            <elementDefinition Id="e62aa1e0-1c06-40ee-a2c8-f1df8bf9fe9a" />
+            <flowNodeTargets>
+              <controlFlow Id="594babd7-ac5d-4ee1-8d39-e4374f772ded" isLeaf="false">
+                <sendSignalActionMoniker Id="240a2361-28ca-494f-99ee-78d3eb32472d" LastKnownName="干扰小区是否读取完？" />
+                <elementDefinition Id="3bfda5fa-35e8-4d38-9a17-47e9843b1e90" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <sendSignalAction Id="240a2361-28ca-494f-99ee-78d3eb32472d" name="干扰小区是否读取完？" isLeaf="false">
+            <elementDefinition Id="e50e0b9c-f8c4-4a38-ad1d-0c605f99a522" />
+            <flowNodeTargets>
+              <controlFlow Id="e173de57-9f29-408a-989e-f1fcc73acfe0" isLeaf="false">
+                <decisionNodeMoniker Id="fe94d9dc-b078-42da-a43c-f3a71422fb6b" LastKnownName="Decision3" />
+                <elementDefinition Id="b5b50799-6779-4127-a4ce-cbf07a0e419a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <sendSignalAction Id="e373f61f-e498-488e-880d-0bc95c928366" name="干扰对象是否读取完？" isLeaf="false">
+            <elementDefinition Id="c7357219-1860-4308-8f12-8e19111f2225" />
+            <flowNodeTargets>
+              <controlFlow Id="f6322b46-a3d6-45a4-a39e-09cc1a948c07" isLeaf="false">
+                <decisionNodeMoniker Id="d0dfee42-9aa9-4090-b442-6f7fda2abb9d" LastKnownName="Decision2" />
+                <elementDefinition Id="a7f330ff-ffda-4fbf-8775-2e2374fa8d3e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <decisionNode Id="d0dfee42-9aa9-4090-b442-6f7fda2abb9d" name="Decision2" isLeaf="false">
+            <elementDefinition Id="5f24dc68-edb8-49a7-8d4d-fad921c7a370" />
+            <flowNodeTargets>
+              <controlFlow Id="809d85e6-fb82-4de1-bf8b-5fe83272bef2" guard="是" isLeaf="false">
+                <activityFinalNodeMoniker Id="9c49b7f0-6414-41ce-bf64-fb8566dfe0ff" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="c9dbe6cc-dcaf-403b-a8ba-a1fd92131dab" />
+              </controlFlow>
+              <controlFlow Id="3e01ad60-0233-450e-b8fa-518b38f036bb" guard="否" isLeaf="false">
+                <opaqueActionMoniker Id="46fe585e-7936-4b09-a4b8-7e3bb3d522d9" LastKnownName="读取下一个RU干扰记录" />
+                <elementDefinition Id="93561a22-4cf6-4f7b-bde7-807369beb8ba" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode Id="fe94d9dc-b078-42da-a43c-f3a71422fb6b" name="Decision3" isLeaf="false">
+            <elementDefinition Id="4a0745a6-87aa-423a-a5a2-ec456035163d" />
+            <flowNodeTargets>
+              <controlFlow Id="ec844869-4640-4e17-ab26-b522db764dfd" guard="是" isLeaf="false">
+                <sendSignalActionMoniker Id="e373f61f-e498-488e-880d-0bc95c928366" LastKnownName="干扰对象是否读取完？" />
+                <elementDefinition Id="e8ff11e0-501b-4084-bc30-3ee4d99f3abb" />
+              </controlFlow>
+              <controlFlow Id="e4271885-c39a-434b-9fac-2953fcba21c4" guard="否" isLeaf="false">
+                <opaqueActionMoniker Id="03f6f87a-a5bc-4c27-be87-3d5580b29060" LastKnownName="读取其干扰小区列表中的下一个干扰小区" />
+                <elementDefinition Id="e6e535b0-3a97-4a3a-ab3b-11220da45e35" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode Id="9c49b7f0-6414-41ce-bf64-fb8566dfe0ff" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="6a35e848-c1b1-4436-b560-10f4e429dd06" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="5e46cb83-c2b0-4b77-b187-c7d4e63f4699" name="程序设计流程图">
+    <elementDefinition Id="fbe1d8c8-8ba0-418f-89e0-42c5cd33b822" />
+  </package>
+</activityRootModel>

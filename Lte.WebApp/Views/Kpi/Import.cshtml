@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "指标统计数据导入";
+    ViewBag.Message = "——读取Excel表信息，然后导入数据库";
+}
+
+@section featured {
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+}
+<div class="row">
+    <div class="col-md-8">
+        @using (Html.BeginForm("KpiImport", "Kpi",
+            FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <fieldset>
+                <legend>指标文件选择</legend>
+                <ol>
+                    <li>
+                        每日KPI Excel文件选择：
+                        <input type="file" name="dailyKpi" accept=".xls, .xlsx" />
+                    </li>
+                </ol>
+            </fieldset>
+
+            <p>
+                <button type="submit" class="btn btn-primary btn-lg">
+                    <span class="glyphicon glyphicon-save"></span>导入文件
+                </button>
+            </p>
+        }
+    </div>
+    <div class="col-md-4">
+        @{ Html.RenderPartial("_KpiMenu");}
+    </div>
+</div>
+

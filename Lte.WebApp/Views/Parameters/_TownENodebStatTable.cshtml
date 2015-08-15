@@ -1,0 +1,65 @@
+﻿@using Lte.Evaluations.ViewHelpers
+@model IEnumerable<Lte.Evaluations.ViewHelpers.TownENodebStat>
+
+@if (Model.Any())
+{ 
+    <table class="table table-hover">
+        <thead>
+        <tr>
+	        <th>@Html.LabelFor(x => x.ElementAt(0).CityName)</th>
+            <th>@Html.LabelFor(x => x.ElementAt(0).RegionName)</th>
+            <th>@Html.LabelFor(x => x.ElementAt(0).DistrictName)</th>
+            <th>@Html.LabelFor(x => x.ElementAt(0).TownName)</th>
+            <th>@Html.LabelFor(x => x.ElementAt(0).TotalENodebs)</th>
+            <th>基站列表</th>
+        </tr>
+        </thead>
+        <tbody>
+            @{
+                IEnumerable<string> cities = Model.Select(x => x.CityName).Distinct();
+                foreach (string city in cities)
+                {
+                    IEnumerable<string> districts 
+                        = Model.Where(x => x.CityName == city).Select(x => x.DistrictName).Distinct();
+                        <tr>
+                            <td>@city</td>
+                            <td>-</td>
+                            <td>合计</td>
+                            <td>-</td>
+                            <td>@Model.Where(x=>x.CityName==city).Sum(x=>x.TotalENodebs)</td>
+                            <td>-</td>
+                        </tr>
+                    foreach (string district in districts)
+                    {
+                        IEnumerable<TownENodebStat> stats
+                            = Model.Where(x => x.CityName == city && x.DistrictName == district);
+                        <tr>
+                            <td>@city</td>
+                            <td>-</td>
+                            <td>@district</td>
+                            <td>合计</td>
+                            <td>@stats.Sum(x=>x.TotalENodebs)</td>
+                            <td>
+                                <button class="btn btn-primary show-details" id="@city-@district">
+                                    <span class="glyphicon glyphicon-open"></span>
+                                    展开/收起
+                                </button>
+                            </td>
+                        </tr>
+                        foreach (TownENodebStat stat in stats)
+                        {
+                            <tr id="row-@city-@district" style="display:none">
+                                <td>@city</td>
+                                <td>@stat.RegionName</td>
+                                <td>@district</td>
+                                <td>@stat.TownName</td>
+                                <td>@stat.TotalENodebs</td>
+                                <td>@Html.ActionLink("基站列表", "ENodebList", new {townId = stat.TownId})</td>
+                            </tr>
+                        }
+                    }
+                }
+            }
+        </tbody>
+    </table>
+}

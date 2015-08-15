@@ -1,0 +1,66 @@
+﻿@using Lte.Parameters.Kpi.Entities
+@model IEnumerable<TownPrecise4GView>
+
+<h3 class="label label-success">@Model.First().StatDate.ToShortDateString() 4G总体指标</h3>
+<table class="table table-hover" style="font-size:10px">
+    <thead>
+        <tr style="font-weight:bold; background-color:#A8C3CB;">
+            <th>@Html.LabelFor(x=>x.ElementAt(0).City)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).District)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).Town)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).TotalMrs)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).PreciseRate)</th>
+        </tr>
+    </thead>
+    <tbody>
+    @{
+        IEnumerable<string> cities = Model.Select(x => x.City).Distinct();
+        foreach (string city in cities)
+        {
+            IEnumerable<string> districts
+                = Model.Where(x => x.City == city).Select(x => x.District).Distinct();
+            IEnumerable<TownPrecise4GView> cityStats = Model.Where(x => x.City == city);
+            <tr>
+                <td>@city</td>
+                <td>-</td>
+                <td>合计</td>
+                <td>@cityStats.Sum(x => x.TotalMrs)</td>
+                <td>
+                    @String.Format("{0:0.00}",
+                        (1-(double)cityStats.Sum(x => x.SecondNeighbors)/cityStats.Sum(x => x.TotalMrs))*100)
+                </td>
+            </tr>
+            foreach (string district in districts)
+            {
+                IEnumerable<TownPrecise4GView> stats
+                    = Model.Where(x => x.City == city && x.District == district);
+                <tr>
+                    <td>@city</td>
+                    <td>@district</td>
+                    <td>
+                        <button class="btn btn-primary show-details" id="@city-@district">
+                            <span class="glyphicon glyphicon-open"></span>
+                            展开/收起
+                        </button>
+                    </td>
+                    <td>@stats.Sum(x => x.TotalMrs)</td>
+                    <td>
+                        @String.Format("{0:0.00}",
+                            (1-(double)stats.Sum(x => x.SecondNeighbors)/stats.Sum(x => x.TotalMrs))*100)
+                    </td>
+                </tr>
+                foreach (TownPrecise4GView stat in stats)
+                {
+                    <tr id="row-@city-@district" style="display: none">
+                        <td>@stat.City</td>
+                        <td>@stat.District</td>
+                        <td>@stat.Town</td>
+                        <td>@stat.TotalMrs</td>
+                        <td>@String.Format("{0:0.00}", stat.PreciseRate*100)</td>
+                    </tr>
+                }
+            }
+        }
+    }
+    </tbody>
+</table>

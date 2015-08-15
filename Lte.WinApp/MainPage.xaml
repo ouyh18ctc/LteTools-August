@@ -1,0 +1,31 @@
+﻿<Page x:Class="Lte.WinApp.MainPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:controls="clr-namespace:Lte.WinApp.Controls"
+        xmlns:res="clr-namespace:Lte.WinApp.Properties"
+        mc:Ignorable="d" 
+        d:DesignHeight="550" d:DesignWidth="700"
+        Title="主界面">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Offset="0" Color="White"/>
+                <GradientStop Offset="1" Color="LightGray"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Name="PageTitle" Margin="5" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <WrapPanel Margin="15" Grid.Row="1">
+            <controls:MenuButton x:Name="TopDropImport" ButtonTag="TopDrop2G"/>
+            <controls:MenuButton x:Name="RutraceImport" ButtonTag="RutraceCdr"/>
+            <controls:MenuButton x:Name="RutraceDisplay" ButtonTag="RuMrDisplay"/>
+            <controls:MenuButton x:Name="ParametersImport" ButtonTag="Parameters"/>
+            <controls:MenuButton x:Name="DtDisplay" ButtonTag="DtDisplay"/>
+        </WrapPanel>
+    </Grid>
+</Page>

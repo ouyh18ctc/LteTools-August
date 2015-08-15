@@ -1,0 +1,38 @@
+﻿@model Lte.Evaluations.ViewHelpers.ENodebDetailsViewModel
+<h4>基站信息</h4>
+    <table>
+        <thead>
+        <tr>
+	        <th>基站类别</th>
+            <th>@Html.DisplayNameFor(x=>x.ENodeb.Name)</th>
+            <th>@Html.DisplayNameFor(x=>x.ENodeb.ENodebId)</th>
+            <th>@Html.DisplayNameFor(x=>x.ENodeb.Address)</th>
+            <th>@Html.DisplayNameFor(x=>x.ENodeb.Factory)</th>
+            <th>@Html.DisplayNameFor(x=>x.Bts.BscId)</th>
+            <th>编辑信息</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Html.Encode("LTE-"+(Model.ENodeb.IsFdd?"FDD":"TDD"))</td>
+                <td>@Model.ENodeb.Name</td>
+                <td>@Model.ENodeb.ENodebId</td>
+                <td>@Model.ENodeb.Address</td>
+                <td>@Model.ENodeb.Factory</td>
+                <td>--</td>
+                <td><button class="btn btn-primary" id="editENodeb">编辑信息</button></td>
+            </tr>
+            @if (Model.Bts != null)
+            {
+            <tr>
+                <td>CDMA</td>
+                <td>@Model.Bts.Name</td>
+                <td>@Model.Bts.BtsId</td>
+                <td>@Model.Bts.Address</td>
+                <td>--</td>
+                <td>@Model.Bts.BscId</td>
+                <td><button class="btn btn-primary" id="editBts">编辑信息</button></td>
+            </tr>
+            }
+        </tbody>
+    </table>

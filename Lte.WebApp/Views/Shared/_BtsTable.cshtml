@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Lte.Parameters.Entities.CdmaBts>
+
+<h4>CDMA基站信息</h4>
+<table summary="User Grid" class="zebra">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BtsId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BscId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENodebId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Longtitute)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lattitute)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BtsId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BscId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENodebId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Longtitute)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lattitute)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+    </tr>
+}
+
+</table>

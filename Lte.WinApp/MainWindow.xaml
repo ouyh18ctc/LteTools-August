@@ -1,0 +1,7 @@
+﻿<NavigationWindow x:Class="Lte.WinApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LTE优化小工具" Height="550" Width="725" Icon="Resources/Images/Application.ico"
+        Source="MainPage.xaml">
+
+</NavigationWindow>

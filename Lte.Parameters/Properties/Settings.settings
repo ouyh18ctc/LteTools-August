@@ -1,0 +1,20 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Lte.Parameters.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LowerBound" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">780</Value>
+    </Setting>
+    <Setting Name="UpperBound" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">2340</Value>
+    </Setting>
+    <Setting Name="ouyanghui_testConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=WIN-E7U0ZAGEQAQ;Initial Catalog=ouyanghui_test;Persist Security Info=True;User ID=ouyanghui;Password=123456&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=WIN-E7U0ZAGEQAQ;Initial Catalog=ouyanghui_test;Persist Security Info=True;User ID=ouyanghui;Password=123456</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "专题优化";
+    ViewBag.Message = "——提供全方位的覆盖评估场景和专题规划和优化工具";
+}
+
+@section featured {
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                在这里，我们提供<em>专题优化精品化</em>的功能，更多精彩内容请点击以下各个菜单项。
+            </p>
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="one">
+            <h4>小区覆盖仿真模拟</h4>
+            根据各小区的工程参数模拟覆盖范围，主要覆盖指标（RSRP、SINR）进行分析和呈现请点击 
+            @Html.ActionLink("开始仿真", "RegionDef", "Evaluation", null, new {@class="btn btn-primary"})
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="two">
+            <h4>LTE“一减”专题分析</h4>
+            分析3G的RU数据和CDR数据，挖掘小区的重叠覆盖、过覆盖等问题，对4G共站的效果进行模拟，并在百度地图上呈现。
+            @Html.ActionLink("小区分析", "Import", "Rutrace", null, new {@class="btn btn-primary"})
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="three">
+            <h4>校园网专题优化</h4>
+            校园网专项优化，包括数据管理、指标分析和覆盖呈现请点击
+            @Html.ActionLink("校园网专题","List","College", null, new {@class="btn btn-primary"})
+        </div>
+    </div>    
+    <div class="col-md-4">
+        <div class="four">
+            <h4>指标监控分析</h4>
+            对日常指标的监控请点击
+            @Html.ActionLink("日常指标监控", "Index", "Kpi", null, new {@class="btn btn-primary"})
+            ，全天TOP掉话分析请点击
+            @Html.ActionLink("TOP掉话", "TopDrop2GDaily", "Kpi", null, new {@class="btn btn-primary"})
+        </div>
+    </div>    
+    <div class="col-md-4">
+        <div class="five">
+            <h4>4G指标分析</h4>
+            精确覆盖率指标分析和地理化呈现请点击
+            @Html.ActionLink("4G精确覆盖率", "Precise4G", "Kpi", null, 
+            new {@class="btn btn-primary", @title="统计日常的4G精确覆盖率指标"})
+        </div>
+    </div>
+</div>
+

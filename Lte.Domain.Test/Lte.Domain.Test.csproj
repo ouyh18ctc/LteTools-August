@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D268719E-19FF-4B3B-A841-D379ECC6E559}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lte.Domain.Test</RootNamespace>
+    <AssemblyName>Lte.Domain.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.2.1409.1722, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Moq.4.2.1507.0118\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq, Version=1.13.52.2, Culture=neutral, PublicKeyToken=8c59a1bf3e8d42c1, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Data.Linq.1.0.0\lib\NET40\Remotion.Data.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise />
+  </Choose>
+  <ItemGroup>
+    <Compile Include="Antenna\DistanceAzimuthMetric_DefaultTest.cs" />
+    <Compile Include="Antenna\HorizontalPropertyUnitTest.cs" />
+    <Compile Include="Antenna\HorizontalProperty_DefaultTest.cs" />
+    <Compile Include="Antenna\VerticalPropertyTest.cs" />
+    <Compile Include="Broadcast\AdjustDistanceCalculationTest.cs" />
+    <Compile Include="Broadcast\AdjustFrequencyCalculationTest.cs" />
+    <Compile Include="Broadcast\AdjustUrbanCalculationTest.cs" />
+    <Compile Include="Broadcast\BroadcastModelDistanceTest.cs" />
+    <Compile Include="Broadcast\BroadcastModelFrequencyTest.cs" />
+    <Compile Include="Broadcast\BroadcastModelSettingTest.cs" />
+    <Compile Include="Broadcast\BroadcastModelUrbanTest.cs" />
+    <Compile Include="Broadcast\BroadcastModelValidationTest.cs" />
+    <Compile Include="Broadcast\MockModelOperations.cs" />
+    <Compile Include="Broadcast\StubValidationBroadcastModel.cs" />
+    <Compile Include="Broadcast\ValidationTest.cs" />
+    <Compile Include="Excel\ColumnClass.cs" />
+    <Compile Include="Excel\ColumnClassTest.cs" />
+    <Compile Include="Excel\ExcelImporterTest.cs" />
+    <Compile Include="Excel\StubExcelImporter.cs" />
+    <Compile Include="Excel\DataTableExtensionsTest.cs" />
+    <Compile Include="Geo\AngleBetweenAzimuthsTest.cs" />
+    <Compile Include="Geo\AngleFromCellAzimuthTest.cs" />
+    <Compile Include="Geo\AngleFromCellTiltTest.cs" />
+    <Compile Include="Geo\GetDegreeIntervalTest.cs" />
+    <Compile Include="Geo\GetOffsetPointsUnitTest.cs" />
+    <Compile Include="Geo\GetSectorPointsTest.cs" />
+    <Compile Include="Geo\MovePointTest.cs" />
+    <Compile Include="Geo\PositionAzimuthTest.cs" />
+    <Compile Include="Geo\Service\QueryGeoPointsServiceTest.cs" />
+    <Compile Include="Geo\Service\QueryOutdoorCellServiceTest.cs" />
+    <Compile Include="Geo\TiltFromCellTest.cs" />
+    <Compile Include="LinqToExcel\CellExcelTest.cs" />
+    <Compile Include="LinqToExcel\ColumnMappings_IntegrationTests.cs" />
+    <Compile Include="LinqToExcel\ColumnMappings_SQLStatements_UnitTests.cs" />
+    <Compile Include="LinqToExcel\Company.cs" />
+    <Compile Include="LinqToExcel\ConfiguredWorksheetName_IntegrationTests.cs" />
+    <Compile Include="LinqToExcel\ConfiguredWorksheetName_SQLStatements_UnitTests.cs" />
+    <Compile Include="LinqToExcel\ConnectionString_UnitTests.cs" />
+    <Compile Include="LinqToExcel\Convention_IntegrationTests.cs" />
+    <Compile Include="LinqToExcel\Convention_SQLStatements_UnitTests.cs" />
+    <Compile Include="LinqToExcel\CSV_IntegrationTests.cs" />
+    <Compile Include="LinqToExcel\CSV_SQLStatements_UnitTests.cs" />
+    <Compile Include="LinqToExcel\Excel2007_IntegrationTests.cs" />
+    <Compile Include="LinqToExcel\ExcelQueryFactoryTests.cs" />
+    <Compile Include="LinqToExcel\IMEX_Tests.cs" />
+    <Compile Include="LinqToExcel\InvalidColumnNamesUsed.cs" />
+    <Compile Include="LinqToExcel\NamedRange_IntegrationTests.cs" />
+    <Compile Include="LinqToExcel\NamedRange_SQLStatements_UnitTests.cs" />
+    <Compile Include="LinqToExcel\NoHeader_IntregrationTests.cs" />
+    <Compile Include="LinqToExcel\NoHeader_SQLStatements_UnitTests.cs" />
+    <Compile Include="LinqToExcel\PersistentConnection_IntegrationTests.cs" />
+    <Compile Include="LinqToExcel\Range_IntegrationTests.cs" />
+    <Compile Include="LinqToExcel\Range_SQLStatements_UnitTests.cs" />
+    <Compile Include="LinqToExcel\RowTest.cs" />
+    <Compile Include="LinqToExcel\Row_IntegrationTests.cs" />
+    <Compile Include="LinqToExcel\Row_SQLStatement_UnitTests.cs" />
+    <Compile Include="LinqToExcel\SQLLogStatements_Helper.cs" />
+    <Compile Include="LinqToExcel\UnSupportedMethods.cs" />
+    <Compile Include="Measure\Point\ImportCellTestConfig.cs" />
+    <Compile Include="Regular\BindGetAndSetAttributesTest.cs" />
+    <Compile Include="Regular\DateTimeTranslationTest.cs" />
+    <Compile Include="TypeDefs\IpAddressTest.cs" />
+    <Compile Include="Regular\StubIpAddress.cs" />
+    <Compile Include="LinqToCsv\CsvContextWriteTests.cs" />
+    <Compile Include="LinqToCsv\IAssertable.cs" />
+    <Compile Include="LinqToCsv\Product\Person.cs" />
+    <Compile Include="LinqToCsv\Product\ProductData.cs" />
+    <Compile Include="LinqToCsv\Product\ProductDataCharLength.cs" />
+    <Compile Include="LinqToCsv\Product\ProductDataParsingOutputFormat.cs" />
+    <Compile Include="LinqToCsv\Product\ProductDataSpecificFieldIndex.cs" />
+    <Compile Include="LinqToCsv\Product\ProductData_DuplicateIndices.cs" />
+    <Compile Include="LinqToCsv\Product\ProductData_MissingFieldIndex.cs" />
+    <Compile Include="LinqToCsv\Test.cs" />
+    <Compile Include="LinqToCsv\TestFieldMapper\FieldMapperConstructorTest.cs" />
+    <Compile Include="LinqToCsv\TestRead\CsvContextReadTest.cs" />
+    <Compile Include="LinqToCsv\TestRead\CsvContextReadTests_Delimited.cs" />
+    <Compile Include="LinqToCsv\TestRead\CsvContextReadTests_OutputFormat.cs" />
+    <Compile Include="LinqToCsv\TestRead\CsvContextReadTests_UnknownColumns.cs" />
+    <Compile Include="LinqToCsv\TestRead\CsvContextReadTests_UseFieldIndex.cs" />
+    <Compile Include="LinqToCsv\Utils.cs" />
+    <Compile Include="Measure\Comparable\CalculateReceivedRsrp_2100Test.cs" />
+    <Compile Include="Measure\Comparable\ComparableCell_AzimuthFactorTest.cs" />
+    <Compile Include="Measure\Comparable\ComparableCell_ContructTest.cs" />
+    <Compile Include="Measure\Comparable\ComparableCell_NewTest.cs" />
+    <Compile Include="Measure\Comparable\ComparableCell_OnePointTest.cs" />
+    <Compile Include="Measure\Comparable\ComparableCell_SetAzimuthAngleTest.cs" />
+    <Compile Include="Measure\Comparable\ComparableCell_ThreePointsTest.cs" />
+    <Compile Include="Measure\Comparable\ComparableCell_TwoPointsTest.cs" />
+    <Compile Include="Measure\Comparable\MetricCalculate_DefaultTest.cs" />
+    <Compile Include="Measure\Comparable\SetupComparableCellTest.cs" />
+    <Compile Include="Measure\FakeComparableCell.cs" />
+    <Compile Include="Measure\Interference\CalculateDifferentModInterferenceTest.cs" />
+    <Compile Include="Measure\Interference\CalculateDifferentModTestClass.cs" />
+    <Compile Include="Measure\Interference\CalculateSameModInterferenceTest.cs" />
+    <Compile Include="Measure\Interference\CalculateSameModTestClass.cs" />
+    <Compile Include="Measure\Interference\InterferenceTester.cs" />
+    <Compile Include="Measure\Interference\UpdateDifferentModInterferenceTest.cs" />
+    <Compile Include="Measure\Interference\UpdateDifferentModInterferenceTestClass.cs" />
+    <Compile Include="Measure\Interference\UpdateSameModInterferenceTest.cs" />
+    <Compile Include="Measure\Interference\UpdateSameModInterferenceTestClass.cs" />
+    <Compile Include="Measure\Budget\CalculateReceivedPower_1800Test.cs" />
+    <Compile Include="Measure\Budget\CalculateReceivedPower_2100Test.cs" />
+    <Compile Include="Measure\Budget\LinkBudgetCalculationTest.cs" />
+    <Compile Include="Measure\Budget\LinkBudgetFromCellTest.cs" />
+    <Compile Include="Measure\Budget\LinkBudgetTest.cs" />
+    <Compile Include="Measure\MeasureCell\MeasurableCellConnectionTest.cs" />
+    <Compile Include="Measure\MeasureCell\MeasurableCellResultMockCellTest.cs" />
+    <Compile Include="Measure\MeasureCell\MeasurableCell_Azimuth0Test.cs" />
+    <Compile Include="Measure\MeasureCell\MeasurableCell_Azimuth30Test.cs" />
+    <Compile Include="Measure\MeasureCell\MeasurableCell_Azimuth60Test.cs" />
+    <Compile Include="Measure\Point\CalculatePerformanceTest.cs" />
+    <Compile Include="Measure\Point\GenerateComparableCellListTest.cs" />
+    <Compile Include="Measure\Point\GenerateMeasurableCellListTest.cs" />
+    <Compile Include="Measure\Point\ImportCellsTest.cs" />
+    <Compile Include="Measure\Point\MeasurePointConstructionTest.cs" />
+    <Compile Include="Measure\Point\MeasurePointListOperationsTest.cs" />
+    <Compile Include="Measure\MockOperations.cs" />
+    <Compile Include="Measure\Plan\FakeMeasurableCell.cs" />
+    <Compile Include="Measure\Plan\FakeMeasurePoint.cs" />
+    <Compile Include="Measure\Plan\MeasurePlanCellTest.cs" />
+    <Compile Include="Measure\Plan\MeasurePointCellRelationTest.cs" />
+    <Compile Include="Measure\Result\CalculatePerformanceTest_MF.cs" />
+    <Compile Include="Measure\Result\CalculateStrongestCellTest.cs" />
+    <Compile Include="Measure\Result\MeasurePointResultTest.cs" />
+    <Compile Include="Measure\Result\StubMeasurePointResult.cs" />
+    <Compile Include="Measure\Result\UpdateTotalInterferenceTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regular\ClassDeriveTest.cs" />
+    <Compile Include="Regular\CloneAttributeTest.cs" />
+    <Compile Include="Regular\ExtendedMathRoundTest.cs" />
+    <Compile Include="Regular\GeneralTextTest.cs" />
+    <Compile Include="Regular\GetAntennaPortsConfigTest.cs" />
+    <Compile Include="Regular\GetStreamReaderTest.cs" />
+    <Compile Include="Regular\HexBasicTest.cs" />
+    <Compile Include="Regular\HexOperationsTest.cs" />
+    <Compile Include="TypeDefs\LegalIpTest.cs" />
+    <Compile Include="Regular\SecureConversionTest.cs" />
+    <Compile Include="Regular\SecureSetValueTest.cs" />
+    <Compile Include="Regular\SumOfPowerLevelTest.cs" />
+    <Compile Include="TypeDefs\FrequencyBandTest.cs" />
+    <Compile Include="TypeDefs\GetFieldTextTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lte.Domain\Lte.Domain.csproj">
+      <Project>{2dd76789-48d0-4608-bbb2-d9ac6f5d8196}</Project>
+      <Name>Lte.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

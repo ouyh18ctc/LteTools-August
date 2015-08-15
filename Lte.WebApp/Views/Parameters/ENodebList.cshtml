@@ -1,0 +1,94 @@
+﻿@model ENodebListViewModel
+
+@using Lte.Evaluations.ViewHelpers
+
+@{
+    ViewBag.Title = Model.InfoTitle;
+}
+
+@section featured {
+    <hgroup class="title">
+        <h1>@ViewBag.Title</h1>
+        <div align="right">@Html.ActionLink("返回全网基站列表","List", null, new{@class="btn btn-primary"})</div>
+    </hgroup>
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#enodeb-info" data-toggle="tab">基站信息</a>
+            </li>
+            <li><a href="#cell-map" data-toggle="tab">小区地图</a></li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div id="enodeb-info" class="tab-pane fade in active">
+                @{ Html.RenderPartial("_ENodebTable", Model.Items); }
+                <div class="pager">
+                    @Html.PageLinks(Model.PagingInfo, x => Url.Action("ENodebList", 
+                        new { townId = Model.TownId, page = x }))
+                </div>
+            </div>
+            <div id="cell-map" class="tab-pane fade">
+                <div class="btn-group">
+                    <button id="showbts" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-road"></span>
+                        显示基站
+                    </button>
+                    <button id="showcells" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-plane"></span>
+                        显示小区
+                    </button>
+                    <button id="resetmap" class="btn btn-primary show-details">
+                        <span class="glyphicon glyphicon-edit"></span>
+                        重置地图
+                    </button>
+                </div>
+                <div id="allmap" style="width: 100%;height: 600px;overflow: hidden;margin:0;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" id="longitude" value="@Model.CenterLongtitute" />
+<input type="hidden" id="lattitude" value="@Model.CenterLattitute" />
+
+@section scripts{
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=OeWDTDlnolWHBNP1GSkDph34"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/MapContainer.js"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/EvaluationMapCanvas.js"></script>
+    <script type="text/javascript">
+        var map = new BMap.Map("allmap");
+        var container = new MapContainer(map);
+        var point = new BMap.Point($("#longitude").val(), $("#lattitude").val());
+        var canvas = new EvaluationMapCanvas(container);
+        $("#showbts").click(function() {
+            $.ajax({
+                url: "/api/QueryENodeb",
+                type: "GET",
+                dataType: "json",
+                success: function(data) {
+                    canvas.drawMarkers("/api/ENodeb", data);
+                }
+            });
+        });
+        $("#showcells").click(function() {
+            $.ajax({
+                url: "/api/QueryENodeb",
+                type: "GET",
+                dataType: "json",
+                success: function(data) {
+                    canvas.drawSectors("/api/SectorList", data);
+                }
+            });
+        });
+        $("#resetmap").click(function() {
+            canvas.removeMarkers();
+            canvas.removeSectors();
+        });
+
+        map.centerAndZoom(point, 15);
+        map.setCurrentCity("佛山");
+        map.enableScrollWheelZoom(); //启用滚轮放大缩小  
+    </script>
+}

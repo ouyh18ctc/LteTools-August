@@ -1,0 +1,85 @@
+﻿@using Lte.Parameters.Kpi.Entities
+@model IEnumerable<TopDrop2GCellDailyView>
+
+<table summary="User Grid" class="bordered">
+    <thead>
+        <tr>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).CdmaCellId)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).CdmaName)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).LteName)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).SectorId)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).Frequency)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).CdrDrops)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).CdrDropRate)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).KpiDropRate)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).AverageRssi)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).AverageDropEcio)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).AverageDropDistance)</th>
+            <th style="width:270px">查看信息</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (TopDrop2GCellDailyView stat in Model)
+        { 
+        <tr>
+            <td>@stat.CdmaCellId</td>
+            <td>@stat.CdmaName</td>
+            <td>@stat.LteName</td>
+            <td>@stat.SectorId</td>
+            <td>@stat.Frequency</td>
+            <td>@stat.CdrDrops</td>
+            <td>@String.Format("{0:0.00}", stat.CdrDropRate)</td>
+            <td>@String.Format("{0:0.00}", stat.KpiDropRate)</td>
+            <td>@stat.AverageRssi</td>
+            <td>@stat.AverageDropEcio</td>
+            <td>@stat.AverageDropDistance</td>
+            <td>
+                <button type="button" class="btn btn-primary btn-lg top-history"
+                    name="history;@stat.CdmaName;@stat.CdmaCellId;@stat.SectorId;@stat.Frequency">
+                    <span class="glyphicon glyphicon-search"></span>历史信息
+                </button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary btn-lg dropdown-toggle"
+                    data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span>详细信息
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a class="top-detail-distance" 
+                                title="detail;@stat.CdmaName;@stat.CdmaCellId;@stat.SectorId;@stat.Frequency" href="#">
+                                距离分布指标
+                            </a>
+                        </li>
+                        <li>
+                            <a class="top-detail-drophour"
+                                title="detail;@stat.CdmaName;@stat.CdmaCellId;@stat.SectorId;@stat.Frequency" href="#">
+                                掉话次数小时趋势
+                            </a>
+                        </li>
+                        <li>
+                            <a class="top-detail-coverageinterference"
+                                title="detail;@stat.CdmaName;@stat.CdmaCellId;@stat.SectorId;@stat.Frequency" href="#">
+                                覆盖干扰小时趋势
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="top-detail-alarm"
+                                title="detail;@stat.CdmaName;@stat.CdmaCellId;@stat.SectorId;@stat.Frequency" href="#">
+                                告警分析
+                            </a>
+                        </li>
+                        <li>
+                            <a class="top-detail-neighbor"
+                                title="detail;@stat.CdmaName;@stat.CdmaCellId;@stat.SectorId;@stat.Frequency" href="#">
+                                邻区分析
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

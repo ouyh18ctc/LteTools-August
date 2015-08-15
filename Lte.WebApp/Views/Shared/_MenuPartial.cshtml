@@ -1,0 +1,17 @@
+﻿<ul class="nav navbar-nav nav-pills">
+    <li>
+        @Html.ActionLink("基础数据", "Infrastructure", "Home")
+
+    </li>
+    <li>
+        @Html.ActionLink("专题分析", "Topic", "Home")
+
+    </li>
+    <li>@Html.ActionLink("全网指标", "Index", "Kpi")</li>
+    <li>
+        @Html.ActionLink("4G精确覆盖率", "Precise4G", "Kpi", null, new {@title="统计日常的4G精确覆盖率指标"})
+    </li>
+    <li>
+        @Html.ActionLink("联系我", "Contact", "Manage")
+    </li>
+</ul>

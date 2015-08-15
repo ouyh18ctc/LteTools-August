@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "PlotSetting对象测试";
+}
+
+@section css{
+    <link rel="Stylesheet" href="../../Content/qunit.css" type="text/css" media="screen" />
+}
+
+@{ Html.RenderPartial("_QUnitFramework");}
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqplot")
+    <script type="text/javascript" src="~/Scripts/Plugins/qunit.js" ></script>
+    <script type="text/javascript" src="~/Scripts/Dingli/PlotSetting.js"></script>
+    <script type="text/javascript">
+        test('Default测试', function () {
+            var setting = new PlotSetting('Default title', 'Default xlabel');
+            var options = setting.getOptions();
+            ok(setting.plotTitle == 'Default title', 'Test the default title');
+            ok(setting.axes.xaxis.label == 'Default xlabel', 'Test the xlabel value.');
+            ok(setting.series.length == 0, 'The default series is empty.');
+            ok(options.title == setting.plotTitle, 'The title of the options has been correctly set.');
+            equal(options.series, setting.series,
+                'The series of the options has been correctly set.');
+            equal(options.axes, setting.axes,
+                'The axes of the options has been correctly set.');
+        });
+        test('pushSeries函数测试', function () {
+            var setting = new PlotSetting('Default title', 'Default xlabel');
+            setting.pushSeries(['ylabel1', 'ylabel2', 'ylabel3', 'ylabel4']);
+            var options = setting.getOptions();
+            ok(setting.plotTitle == 'Default title', 'Test the default title');
+            ok(setting.axes.xaxis.label == 'Default xlabel', 'Test the xlabel value.');
+            ok(setting.series.length == 4, 'The series now has a size of 4 elements.');
+            equal(setting.series[0].label, 'ylabel1', 'The first ylabel has been correctly set.');
+            equal(setting.series[1].label, 'ylabel2', 'The second ylabel has been correctly set.');
+            equal(setting.series[2].label, 'ylabel3', 'The third ylabel has been correctly set.');
+            equal(setting.series[3].label, 'ylabel4', 'The fourth ylabel has been correctly set.');
+            equal(setting.series[0].yaxis, 'yaxis', 'The first series yaxis has been set to yaxis.');
+            equal(setting.series[1].yaxis, 'y2axis', 'The second series yaxis has been set to y2axis.');
+            equal(setting.series[2].yaxis, 'y3axis', 'The third series yaxis has been set to y3axis.');
+            equal(setting.series[3].yaxis, 'y3axis', 'The fourth series yaxis has been set to y3axis.');
+            equal(setting.axes.yaxis.label, 'ylabel1', 'The yaxis label has been set to ylabel1.');
+            equal(setting.axes.y2axis.label, 'ylabel2', 'The y2axis label has been set to ylabel2.');
+            equal(setting.axes.y3axis.label, 'ylabel3', 'The y3axis label has been set to ylabel3.');
+            ok(options.title == setting.plotTitle, 'The title of the options has been correctly set.');
+            equal(options.series, setting.series,
+                'The series of the options has been correctly set.');
+            equal(options.axes, setting.axes,
+                'The axes of the options has been correctly set.');
+        });
+        test('pushSeries+setYlabel函数测试', function () {
+            var setting = new PlotSetting('Default title', 'Default xlabel');
+            setting.pushSeries(['ylabel1', 'ylabel2', 'ylabel3', 'ylabel4']);
+            setting.setYlabel('New Y Label');
+            var options = setting.getOptions();
+            ok(setting.plotTitle == 'Default title', 'Test the default title');
+            ok(setting.axes.xaxis.label == 'Default xlabel', 'Test the xlabel value.');
+            ok(setting.series.length == 4, 'The series now has a size of 4 elements.');
+            equal(setting.series[0].label, 'ylabel1', 'The first ylabel has been correctly set.');
+            equal(setting.series[1].label, 'ylabel2', 'The second ylabel has been correctly set.');
+            equal(setting.series[2].label, 'ylabel3', 'The third ylabel has been correctly set.');
+            equal(setting.series[3].label, 'ylabel4', 'The fourth ylabel has been correctly set.');
+            equal(setting.series[0].yaxis, 'yaxis', 'The first series yaxis has been set to yaxis.');
+            equal(setting.series[1].yaxis, 'yaxis', 'The second series yaxis has been set to yaxis.');
+            equal(setting.series[2].yaxis, 'yaxis', 'The third series yaxis has been set to yaxis.');
+            equal(setting.series[3].yaxis, 'yaxis', 'The fourth series yaxis has been set to yaxis.');
+            equal(setting.axes.yaxis.label, 'New Y Label', 'The yaxis label has been set to New Y Label.');
+            equal(setting.axes.y2axis.label, 'ylabel2', 'The y2axis label has been set to ylabel2.');
+            equal(setting.axes.y3axis.label, 'ylabel3', 'The y3axis label has been set to ylabel3.');
+            ok(options.title == setting.plotTitle, 'The title of the options has been correctly set.');
+            equal(options.series, setting.series,
+                'The series of the options has been correctly set.');
+            equal(options.axes, setting.axes,
+                'The axes of the options has been correctly set.');
+        });
+    </script>
+}

@@ -1,0 +1,452 @@
+﻿.BMapLib_Drawing{
+}
+.BMapLib_Drawing_panel{
+    height:47px; 
+    border:1px solid #666;
+    border-radius:5px;
+    overflow:hidden;
+    box-shadow:1px 1px 3px rgba(0, 0, 0, 0.3);
+    float:left;
+}
+.BMapLib_Drawing .BMapLib_box{
+    border-right:1px solid #d2d2d2;
+    float:left;
+    height:100%;
+    width:64px;
+    height:100%;
+    background-image:url("Images/bg_drawing_tool.png");
+    cursor:pointer;
+}
+.BMapLib_Drawing .BMapLib_last{
+    border-right:none;
+}
+
+/*拖动地图图标*/
+.BMapLib_Drawing .BMapLib_hander{
+    background-position:0 0;
+}
+.BMapLib_Drawing .BMapLib_hander_hover{
+    background-position:0 -52px;
+}
+
+/*画点图标*/
+.BMapLib_Drawing .BMapLib_marker{
+    background-position:-65px 0;
+}
+.BMapLib_Drawing .BMapLib_marker_hover{
+    background-position:-65px -52px;
+}
+
+/*画圆图标*/
+.BMapLib_Drawing .BMapLib_circle{
+    background-position:-130px 0;
+}
+.BMapLib_Drawing .BMapLib_circle_hover{
+    background-position:-130px -52px;
+}
+
+/*画线图标*/
+.BMapLib_Drawing .BMapLib_polyline{
+    background-position:-195px 0;
+}
+.BMapLib_Drawing .BMapLib_polyline_hover{
+    background-position:-195px -52px;
+}
+
+/*画多边形图标*/
+.BMapLib_Drawing .BMapLib_polygon{
+    background-position:-260px 0;
+}
+.BMapLib_Drawing .BMapLib_polygon_hover{
+    background-position:-260px -52px;
+}
+
+/*画矩形图标*/
+.BMapLib_Drawing .BMapLib_rectangle{
+    background-position:-325px 0;
+}
+.BMapLib_Drawing .BMapLib_rectangle_hover{
+    background-position:-325px -52px;
+}
+
+.BMapLib_SearchInfoWindow{
+    font: 12px arial,宋体,sans-serif;
+    position: absolute;
+    border: 1px solid rgb(153, 153, 153); 
+    background-color: #fff; 
+    cursor:default;
+}
+/* === css reset === */
+.BMapLib_SearchInfoWindow form, 
+.BMapLib_SearchInfoWindow ul, 
+.BMapLib_SearchInfoWindow li {
+    margin: 0;
+    padding: 0;
+}
+.BMapLib_SearchInfoWindow img {
+    border: 0;
+}
+.BMapLib_SearchInfoWindow ul { 
+    list-style: none;
+}
+
+/* === 头部区域 === */
+.BMapLib_SearchInfoWindow .BMapLib_bubble_top{
+    border-bottom: 1px solid #ccc;
+    height: 31px;
+}
+/*标题样式*/
+.BMapLib_SearchInfoWindow .BMapLib_bubble_title{
+    line-height: 30px; 
+    background-color: rgb(249, 249, 249); 
+    overflow: hidden; 
+    height: 30px;
+    padding: 0px 5px;
+    font-size: 12px;
+}
+/*关闭按钮样式*/
+.BMapLib_SearchInfoWindow .BMapLib_bubble_close{
+    float: right;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 30px;
+    width: 32px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+.BMapLib_SearchInfoWindow .BMapLib_bubble_close span{
+    background: url(Images/iw_close1d3.gif);
+    position: absolute;
+    top: 9px;
+    right: 12px;
+    width: 10px;
+    height: 10px;
+    -moz-user-select: none;
+    overflow:hidden;
+    cursor: pointer;
+    line-height: 9999px;
+    z-index: 10000;
+}
+
+/* === 中间区域 === */
+.BMapLib_SearchInfoWindow .BMapLib_bubble_center{
+    z-index: 3; 
+}
+.BMapLib_SearchInfoWindow .BMapLib_bubble_content{
+    padding:3px 5px;
+    overflow-x: auto; 
+    overflow-y: hidden;
+}
+
+/* === 尾部区域 === */
+.BMapLib_SearchInfoWindow .BMapLib_bubble_bottom{
+    display: block; 
+    z-index: 2;
+}
+
+/* === 信息框三角形 === */
+.BMapLib_SearchInfoWindow .BMapLib_trans{
+    z-index: 5; 
+    position: absolute; 
+    bottom: -31px; 
+    *bottom: -32px; 
+}
+
+/*气泡样式*/
+.BMapLib_SearchInfoWindow .BMapLib_nav{
+    width: 100%;
+    height: 75px;
+    overflow: visible;
+    position: relative;
+}
+.BMapLib_SearchInfoWindow .BMapLib_nav input{
+    vertical-align: middle;
+}
+
+.BMapLib_SearchInfoWindow .iw_bt,
+.BMapLib_SearchInfoWindow .iw_bt_down,
+.BMapLib_SearchInfoWindow .iw_bt_over{
+    width: 48px;
+    height: 26px;
+    line-height: 18px;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background: url('Images/iw_bg.png') no-repeat 0 -87px;
+    vertical-align:middle;
+}
+.BMapLib_SearchInfoWindow .iw_bt_over{
+    background-position:-52px -87px;
+}
+.BMapLib_SearchInfoWindow .iw_bt_down{
+    background-position:-104px -87px;
+    font-weight:700;
+}
+
+.BMapLib_search_text {
+    width:100%;
+    height:20px;
+    line-height:20px;
+    border:1px solid #A5ACB2
+}
+.BMapLib_trans_text {
+    width:100%;
+    height:20px;
+    line-height:20px;
+    border:1px solid #A5ACB2;
+}
+
+.BMapLib_nav_tab {
+    height:30px;
+    width:100%;
+    background:url('Images/iw_bg.png') repeat-x 0 0
+}
+.BMapLib_nav_tab li {
+    position:relative;
+    float:left;
+    width:114px;
+    height:25px;
+    padding-top:5px;
+    text-align:center;
+    border-left:1px solid #dadada;
+    cursor:pointer;
+    overflow:hidden;
+    width:33%;
+}
+.BMapLib_nav_tab .BMapLib_icon {
+    display:inline-block;
+    position:relative;
+    width:10px;
+    height:15px;
+    top:3px;
+    margin-right:7px;
+    background:url('Images/iw_bg.png') no-repeat 0 -136px;
+}
+.BMapLib_nav_tab .BMapLib_icon_tohere {
+    background-position:-15px -136px
+}
+.BMapLib_nav_tab .BMapLib_icon_nbs {
+    width:14px;
+    height:14px;
+    background-position:-30px -136px
+}
+.BMapLib_nav_tab li.BMapLib_first {
+    border-left:0;
+}
+.BMapLib_nav_tab li:hover {
+    text-decoration:none;
+}
+.BMapLib_nav_tab li.BMapLib_current {
+    color:#4d4d4d;
+    cursor:default;
+    background:url('Images/iw_bg.png') repeat-x 0 -44px
+}
+
+
+.BMapLib_nav_tab_content li {
+    padding:10px 0 0 0;
+    position:relative;
+    height:22px;
+    font-family:"宋体"
+}
+
+.maplibTc {
+    font-size:12px;
+    width:243px;
+    border:1px solid #8BA4D8;
+    padding:3px 2px 0px 5px;
+    background:#fff;position:absolute;
+}
+    .maplibTc a {
+        text-decoration:none;
+    }
+    .maplibTcColor {
+        background:url("Images/tools_menu.gif") no-repeat scroll 138px -85px transparent;
+        font-weight:bold;
+        *background-position:128px -85px;
+    }
+    .maplibTcUpdate {
+        float:left;
+        width:13px;
+        height:14px;
+        background:url(Images/tools_menu.gif) no-repeat -12px -18px;
+        margin-left:5px;cursor:pointer
+    }
+    .maplibTcView {
+        float:right;
+        color:#00f;
+        text-decoration:none;
+        line-height:15px;
+        *line-height:18px
+    }
+    .maplibTcCurTime {
+        float:left;
+        color:#666
+    }
+    .maplibTcTime {
+        height:20px;
+        padding:5px 3px 0 0;
+    }
+    .maplibTcWeekDay {
+        height:22px;
+        color:#6688CA;
+        padding:3px 0;
+    }
+    .maplibTcWeekDay a {
+        color:#6688CA;
+        padding:3px 2px;
+    }
+    .maplibTcWeekDay ul {
+        float:left;
+        margin:0;
+        padding:0;
+    }
+    .maplibTcWeekDay span {
+        float:left;
+        line-height:23px;
+    }
+    .maplibTcWeekDay li {
+        float:left;
+        padding:0 6px;
+        list-style:none;
+        line-height:23px;
+    }
+    .maplibTcRule {
+        background:url("Images/bar.gif") no-repeat scroll 0 10px transparent;
+        width:195px;
+        float:left;
+        margin-left:20px;
+        *margin-left:10px;
+    }
+    .maplibTcRuleTxt {
+        float:left;
+        line-height:44px;
+    }
+    .maplibTcClear {
+        clear:both;
+    }
+    .maplibTcTimeBox {
+        color: #6688CA; 
+        margin-left: 137.5px; 
+        font-size: 11px; 
+        overflow: hidden;
+    }
+    .maplibTcTimeline {
+        height:34px;
+    }
+    .maplibTcTimelinePrev {
+        overflow:hidden;
+        width:9px;
+        height:9px;
+        cursor:pointer;
+        float:left;
+        margin-top:3px
+    }
+    .maplibTcTimelineNext {
+        overflow:hidden;
+        width:11px;
+        *width:10px;
+        height:9px;
+        cursor:pointer;
+        float:right;
+        margin-top:3px
+    }
+    .maplibTcTimeMove {
+        width: 9px; 
+        height: 18px; 
+        background: url("Images/tools_menu.gif") no-repeat scroll 0pt -32px transparent; 
+        float: left; 
+        cursor: pointer; 
+        margin-left: 137.5px; 
+        margin-top: 0px;
+    }
+    .maplibTcHide {
+        display:none;
+    }
+    .maplibTcBtn_deskTop {
+        background: url("Images/bgs.gif") no-repeat scroll 0px -271px transparent; 
+        cursor: pointer; 
+        height: 22px;  
+        width: 73px; 
+        z-index: 10; 
+        position: absolute;
+    }
+    .maplibTcBtn_mobile {
+        background: url("Images/traffic_bgs.png") rgba(255,255,255,0.8) no-repeat scroll -30px 0px;
+        border:1px solid #AFAFAF; 
+        background-size:60px 30px; 
+        cursor: pointer; 
+        height: 30px;  
+        width: 30px; 
+        z-index: 10; 
+        position: absolute;
+    }
+    .maplibTcBtn_deskTop {
+        background-position:0px -249px
+    }
+    .maplibTcBtnOff_mobile {
+        background-position:0px 0px;
+    }
+    .maplibTcColon {
+        float:left;
+    }
+    .maplibTcOn {
+        background:#E6EFF8;
+    }
+    .maplibTcClose {
+        background: url("Images/popup_close.gif") no-repeat scroll 0 0 transparent;
+        border: 0 none;
+        cursor:pointer;
+        height: 12px;
+        position: absolute;
+        right: 4px;
+        top: 5px;
+        width: 12px;
+    }
+
+    /*s--------------交通流量-----------------*/
+    .maplibTfctr {
+         min-width:9em; 
+         height:2.2em; 
+         display: -webkit-box; 
+         -webkit-box-align: center; 
+         -webkit-border-radius:0.3em; 
+         border:.1em solid #989898; 
+         -webkit-box-sizing:border-box; 
+         background-color: #fff; 
+         font-size:14px;
+    }
+    .maplibTfctrHide {
+        display:none;
+    }
+    .maplibTfctr_c {
+        -webkit-box-flex:1;
+    }
+    .maplibTfctr_status {
+        width:4em;
+        margin-right: .45em;
+    }
+    .maplibTfctr_status span {
+        display:inline-block;
+        margin-left:.3em;
+        font-size:14px;
+    }
+    .maplibTfctr div,.maplibTfctr span {
+        -webkit-box-sizing:border-box;
+    }
+    .maplibTfctr_l {
+        margin:0 .15em;
+    }
+    .maplibY {
+        background:#ffae00;
+    }
+    .maplibR {
+        background:#ff0000;
+    }
+    .maplibG {
+        background:#1fba00;
+    }
+    /*e--------------交通流量-----------------*/
+
+

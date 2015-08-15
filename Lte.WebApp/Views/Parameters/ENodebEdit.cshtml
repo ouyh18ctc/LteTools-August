@@ -1,0 +1,35 @@
+﻿@model Lte.Evaluations.ViewHelpers.ENodebDetailsViewModel
+
+@{
+    ViewBag.Title = Model.ENodeb.Name + "基站信息和小区信息修改";
+}
+
+@section featured {
+    <hgroup class="title">
+        <h1>@ViewBag.Title</h1>
+        <div align="right">
+            @Html.ActionLink("查看修改效果","CellList",null, new{eNodebId = Model.ENodeb.ENodebId, @class="btn-primary"})
+        </div>
+    </hgroup>
+}
+
+<div class="row">
+    <div id="radiotabs" class="col-md-12">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#lteInfo" data-toggle="tab">LTE基站信息</a></li>
+            <li><a href="#cdmaInfo" data-toggle="tab">CDMA基站信息</a></li>
+            <li><a href="#photos" data-toggle="tab">图片信息</a></li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div id="lteInfo" class="tab-pane fade in active">
+                @{Html.RenderPartial("_ENodebInfoEdit",Model.ENodeb);}
+            </div>
+            <div id="cdmaInfo" class="tab-pane fade">
+                @{Html.RenderPartial("_BtsInfoEdit",Model.Bts);}
+            </div>
+            <div id="photos" class="tab-pane fade">
+                @{Html.RenderPartial("_ImageUpload",Model);}
+            </div>
+        </div>
+    </div>
+</div>

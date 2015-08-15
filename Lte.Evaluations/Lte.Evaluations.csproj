@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF7FCB4D-F370-444F-B058-87A984028738}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lte.Evaluations</RootNamespace>
+    <AssemblyName>Lte.Evaluations</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Abp, Version=0.6.4.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.0.6.4.1\lib\net451\Abp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Abp.EntityFramework, Version=0.6.4.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.EntityFramework.0.6.4.1\lib\net451\Abp.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Facilities.Logging, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.LoggingFacility.3.3.0\lib\net45\Castle.Facilities.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.DynamicFilters, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.DynamicFilters.1.4.0\lib\net40\EntityFramework.DynamicFilters.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.AsyncEx, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.3.0.0\lib\net45\Nito.AsyncEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Concurrent, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.3.0.0\lib\net45\Nito.AsyncEx.Concurrent.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Enlightenment, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.3.0.0\lib\net45\Nito.AsyncEx.Enlightenment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.0.34.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Immutable.1.0.34\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\CollegeDto.cs" />
+    <Compile Include="Infrastructure\Abstract\IStatValueIntervalList.cs" />
+    <Compile Include="Dingli\CoverageStat.cs" />
+    <Compile Include="Dingli\FileRecordsRepository.cs" />
+    <Compile Include="Dingli\HandoverInfo.cs" />
+    <Compile Include="Dingli\ServingCellRecord.cs" />
+    <Compile Include="Dingli\LogRecord.cs" />
+    <Compile Include="Dingli\LogRecordRepository.cs" />
+    <Compile Include="Dingli\LogsOperations.cs" />
+    <Compile Include="Dingli\RateStat.cs" />
+    <Compile Include="Dingli\StatChart.cs" />
+    <Compile Include="Entities\Color.cs" />
+    <Compile Include="Rutrace\Record\NearestPciCellRepository.cs" />
+    <Compile Include="Service\BasicOperations.cs" />
+    <Compile Include="Entities\CsvCellResult.cs" />
+    <Compile Include="Entities\MeasureInfo.cs" />
+    <Compile Include="Entities\StatFieldRepository.cs" />
+    <Compile Include="ViewHelpers\CollegeViewModel.cs" />
+    <Compile Include="ViewHelpers\HttpFileImporter.cs" />
+    <Compile Include="ViewHelpers\IKpiImportController.cs" />
+    <Compile Include="ViewHelpers\StatFieldViewModel.cs" />
+    <Compile Include="Entities\StatValueField.cs" />
+    <Compile Include="Entities\StatValueInterval.cs" />
+    <Compile Include="Infrastructure\ColormapGenerator.cs" />
+    <Compile Include="Infrastructure\Entities\ColorTheme.cs" />
+    <Compile Include="Infrastructure\Entities\EvaluationSettings.cs" />
+    <Compile Include="Infrastructure\EvaluationInfrastructure.cs" />
+    <Compile Include="Infrastructure\Entities\EvaluationRegion.cs" />
+    <Compile Include="Infrastructure\Entities\StatRuChoice.cs" />
+    <Compile Include="Infrastructure\Entities\StatValueChoice.cs" />
+    <Compile Include="Kml\GoogleKml.cs" />
+    <Compile Include="Kml\KmlDocumentOperations.cs" />
+    <Compile Include="Kml\KmlElement.cs" />
+    <Compile Include="Kml\KmlFramework.cs" />
+    <Compile Include="Kpi\IViewModel.cs" />
+    <Compile Include="Kpi\KpiListViewModel.cs" />
+    <Compile Include="Kpi\KpiStatImporter.cs" />
+    <Compile Include="Kpi\Precise4GCoverageImporter.cs" />
+    <Compile Include="Kpi\TopDrop2GQueries.cs" />
+    <Compile Include="Kpi\TopViewModel.cs" />
+    <Compile Include="ViewHelpers\ENodebListViewModel.cs" />
+    <Compile Include="Service\ParametersContainer.cs" />
+    <Compile Include="ViewHelpers\TownENodebStat.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ViewHelpers\RegionViewModel.cs" />
+    <Compile Include="Rutrace\Entities\MrElementImporter.cs" />
+    <Compile Include="Rutrace\Entities\MrRecord.cs" />
+    <Compile Include="Rutrace\Entities\MrRecordSet.cs" />
+    <Compile Include="Rutrace\Entities\MrReferenceCell.cs" />
+    <Compile Include="Infrastructure\Abstract\IRuRecord.cs" />
+    <Compile Include="Infrastructure\Abstract\IRutraceImportParameters.cs" />
+    <Compile Include="Rutrace\Record\RecordSetImporter.cs" />
+    <Compile Include="ViewHelpers\RutraceParametersModel.cs" />
+    <Compile Include="Rutrace\Service\GenerateCdrTaRecordsService.cs" />
+    <Compile Include="Rutrace\Service\ImportCdrRtdRecordsService.cs" />
+    <Compile Include="Rutrace\Service\ImportCdrTaRecordsService.cs" />
+    <Compile Include="Rutrace\Service\ImportInterferenceStatsService.cs" />
+    <Compile Include="Rutrace\Service\ImportRuService.cs" />
+    <Compile Include="Service\GenerateStatService.cs" />
+    <Compile Include="Service\IntervalsGenerator.cs" />
+    <Compile Include="Service\MergeMeasurePointListService.cs" />
+    <Compile Include="Service\InterferenceStatService.cs" />
+    <Compile Include="Signalling\RadioResourceConfigDedicated.cs" />
+    <Compile Include="Signalling\RrcConnectionEstablishmentCause.cs" />
+    <Compile Include="Signalling\RrcConnectionReleaseCause.cs" />
+    <Compile Include="Signalling\RrcConnectionReleaseSignal.cs" />
+    <Compile Include="Signalling\RrcConnectionRequestSignal.cs" />
+    <Compile Include="Signalling\RrcConnectionSetupSignal.cs" />
+    <Compile Include="Signalling\SignalValueChoice.cs" />
+    <Compile Include="Signalling\SrbToAddMod.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rutrace\Record\CdrTaRecord.cs" />
+    <Compile Include="Rutrace\Record\CdrRtdRecord.cs" />
+    <Compile Include="Rutrace\Entities\ReferenceCell.cs" />
+    <Compile Include="Rutrace\Entities\RuInterference.cs" />
+    <Compile Include="Rutrace\Entities\InterferenceDetails.cs" />
+    <Compile Include="Rutrace\Record\RuInterferenceRecord.cs" />
+    <Compile Include="Rutrace\Record\RuInterferenceStat.cs" />
+    <Compile Include="Rutrace\Entities\InterferenceVictim.cs" />
+    <Compile Include="Rutrace\Entities\RuRecord.cs" />
+    <Compile Include="Rutrace\Entities\RuRecordSet.cs" />
+    <Compile Include="Rutrace\Entities\RutraceComparer.cs" />
+    <Compile Include="ViewHelpers\PagingInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lte.Domain\Lte.Domain.csproj">
+      <Project>{2dd76789-48d0-4608-bbb2-d9ac6f5d8196}</Project>
+      <Name>Lte.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lte.Parameters\Lte.Parameters.csproj">
+      <Project>{416b8231-2b39-4365-afae-a96ad42f971a}</Project>
+      <Name>Lte.Parameters</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

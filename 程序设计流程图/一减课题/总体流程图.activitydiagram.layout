@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="总体流程图">
+  <activityRootModelMoniker Id="beeace47-fde5-4caa-9a4e-ce79fedb814c" />
+  <nestedChildShapes>
+    <initialNodeShape Id="443970df-0a85-4252-864d-733552839f04" absoluteBounds="5.125, 0.75, 0.125, 0.125" customColor="89, 89, 89">
+      <initialNodeMoniker Id="a12657c3-32d8-4c11-9826-736e3dfa2c1c" LastKnownName="Initial1" />
+    </initialNodeShape>
+    <actionShape Id="a87c5e06-d8d6-472a-aa4a-7765ad0437d0" absoluteBounds="4.625, 1.375, 1.125, 0.875" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="40bd54fd-7de3-4d80-ad3f-6f3155ca2519" LastKnownName="初始化：3G信息表和4G信息表中采集3G、4G信息，特别是3G和4G站点的共站信息" />
+      <relativeChildShapes>
+        <inputPinShape Id="02e7598c-050d-499f-aa70-49eeb5191a8b" absoluteBounds="4.475, 1.75, 0.15, 0.15">
+          <inputPinMoniker Id="ef52f024-1844-4b93-8d7f-575f2da6a0de" />
+          <relativeChildShapes />
+        </inputPinShape>
+        <inputPinShape Id="21f912c5-e538-445e-9230-848bc0b258f8" absoluteBounds="5.75, 1.75, 0.15, 0.15">
+          <inputPinMoniker Id="8a2f30dd-0974-4e03-b437-2e2a6e5e57b2" />
+          <relativeChildShapes />
+        </inputPinShape>
+      </relativeChildShapes>
+    </actionShape>
+    <objectNodeShape Id="e392c43d-dc23-4f3d-8e01-c74c1413ecf9" absoluteBounds="2.125, 1.625, 1.125, 0.375" customColor="White">
+      <objectNodeMoniker Id="6d9b4ed9-b71d-489c-88db-6c11689250fb" LastKnownName="3G信息表" />
+    </objectNodeShape>
+    <objectNodeShape Id="43beb770-1b62-40f5-93cf-9a4424c57b4b" absoluteBounds="7.25, 1.625, 1.125, 0.375" customColor="White">
+      <objectNodeMoniker Id="20fda87c-509c-4821-b18c-3ba9479f910e" LastKnownName="4G信息表" />
+    </objectNodeShape>
+    <objectFlowConnector edgePoints="[(3.25 : 1.825); (4.475 : 1.825)]" fixedFrom="Algorithm" fixedTo="Caller" customColor="Black">
+      <objectFlowMoniker Id="1e94ed4c-c36a-4228-859b-07d7720f9f11" />
+      <relativeChildShapes />
+      <nodes>
+        <objectNodeShapeMoniker Id="e392c43d-dc23-4f3d-8e01-c74c1413ecf9" />
+        <inputPinShapeMoniker Id="02e7598c-050d-499f-aa70-49eeb5191a8b" />
+      </nodes>
+    </objectFlowConnector>
+    <objectFlowConnector edgePoints="[(7.25 : 1.825); (5.9 : 1.825)]" fixedFrom="Algorithm" fixedTo="Caller" customColor="Black">
+      <objectFlowMoniker Id="235a18c5-efe3-4972-96e5-e1ebdcf93e0a" />
+      <relativeChildShapes />
+      <nodes>
+        <objectNodeShapeMoniker Id="43beb770-1b62-40f5-93cf-9a4424c57b4b" />
+        <inputPinShapeMoniker Id="21f912c5-e538-445e-9230-848bc0b258f8" />
+      </nodes>
+    </objectFlowConnector>
+    <controlFlowConnector edgePoints="[(5.1875 : 0.875); (5.1875 : 1.375)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="8a3111d1-a037-497e-81f2-03285dcdc0e7" />
+      <relativeChildShapes />
+      <nodes>
+        <initialNodeShapeMoniker Id="443970df-0a85-4252-864d-733552839f04" />
+        <actionShapeMoniker Id="a87c5e06-d8d6-472a-aa4a-7765ad0437d0" />
+      </nodes>
+    </controlFlowConnector>
+    <actionShape Id="f82be1ec-ea33-452e-9074-25642b3ecee7" absoluteBounds="4.625, 2.75, 1.125, 0.875" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="4114316c-9480-468e-b8e9-32c9b32ae7b6" LastKnownName="从MR文件（RU二进制文件）中提取干扰和重叠覆盖信息，写入统计列表" />
+      <relativeChildShapes>
+        <inputPinShape Id="5d12abb0-73e3-4154-9c73-7308e5c0e3ff" absoluteBounds="4.475, 3, 0.15, 0.15">
+          <inputPinMoniker Id="dbbc30c9-dbc6-4ff8-ad5f-9e6121b1ef78" />
+          <relativeChildShapes />
+        </inputPinShape>
+      </relativeChildShapes>
+    </actionShape>
+    <objectNodeShape Id="74b61895-c6db-4eb3-8115-9281b320d2ff" absoluteBounds="2.125, 2.875, 1.125, 0.375" customColor="White">
+      <objectNodeMoniker Id="6e70cdae-ba70-4beb-8a21-fa5dc547ed8d" LastKnownName="RU二进制文件" />
+    </objectNodeShape>
+    <actionShape Id="24f8fafe-8024-40e2-b0be-249d7ae666e9" absoluteBounds="4.625, 4.125, 1.125, 0.875" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="5b7f89c1-7e2e-4432-91a2-47a291325721" LastKnownName="将原先按照被干扰小区排列的统计列表按照干扰源维度进行重组和聚合，完成结构的转变" />
+    </actionShape>
+    <actionShape Id="407e2b42-7f58-472f-b710-b66aa47d04b0" absoluteBounds="4.625, 5.5, 1.125, 1.125" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="709bd501-177a-46fc-ac5f-0d7a93f83635" LastKnownName="从简要话单文件中提取接入距离信息，并与数据重组模块输出的统计列表进行合并，在这过程中考虑直放站和射频拉远的影响" />
+      <relativeChildShapes>
+        <inputPinShape Id="1dd4281b-22df-4a8e-993c-47689c08fb59" absoluteBounds="4.475, 5.65625, 0.15, 0.15">
+          <inputPinMoniker Id="3095ab61-87e8-4bd6-ac55-c18b2c4b477e" />
+          <relativeChildShapes />
+        </inputPinShape>
+      </relativeChildShapes>
+    </actionShape>
+    <objectNodeShape Id="56e5cca6-1dd6-4331-a0ff-70752d87c4a7" absoluteBounds="2.125, 5.5, 1.125, 0.375" customColor="White">
+      <objectNodeMoniker Id="e20aa4ca-d933-4e31-9d29-b1fefeddcfd3" LastKnownName="简要话单文件" />
+    </objectNodeShape>
+    <actionShape Id="8d12061c-d034-4908-a207-dd794e5028b4" absoluteBounds="6.25, 5.875, 1.125, 0.625" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="4f264c4d-6fa2-4e19-96e4-358c94e4a275" LastKnownName="综合评估各类指标，生成负面站点清单及指标的地理化显示" />
+      <relativeChildShapes>
+        <outputPinShape Id="6daf1559-8c65-452f-bd3b-c93ffba53839" absoluteBounds="7.375, 6.0625, 0.15, 0.15">
+          <outputPinMoniker Id="9806669a-8b7b-4ebd-840f-00dab85a91ea" LastKnownName="负面清单" />
+          <relativeChildShapes />
+        </outputPinShape>
+        <outputPinShape Id="8054961c-f78e-457d-8806-89d251beedf6" absoluteBounds="6.5625, 5.725, 0.15, 0.15">
+          <outputPinMoniker Id="a1d3d01b-bb62-48c6-8f2b-a74ec59de678" LastKnownName="统计指标" />
+          <relativeChildShapes />
+        </outputPinShape>
+      </relativeChildShapes>
+    </actionShape>
+    <activityFinalNodeShape Id="67302b09-0015-412c-a952-16f044df185f" absoluteBounds="5.125, 7.5, 0.125, 0.125" customColor="89, 89, 89">
+      <activityFinalNodeMoniker Id="2b43bd23-db7c-4387-b5b9-2cc13c7414ee" LastKnownName="ActivityFinal1" />
+    </activityFinalNodeShape>
+    <controlFlowConnector edgePoints="[(5.1875 : 2.25); (5.1875 : 2.75)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="26c7ac13-9baf-4482-877a-c154c12eb8ed" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="a87c5e06-d8d6-472a-aa4a-7765ad0437d0" />
+        <actionShapeMoniker Id="f82be1ec-ea33-452e-9074-25642b3ecee7" />
+      </nodes>
+    </controlFlowConnector>
+    <controlFlowConnector edgePoints="[(5.1875 : 3.625); (5.1875 : 4.125)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="5a1e0055-6577-4d9c-a983-864092e1ac16" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="f82be1ec-ea33-452e-9074-25642b3ecee7" />
+        <actionShapeMoniker Id="24f8fafe-8024-40e2-b0be-249d7ae666e9" />
+      </nodes>
+    </controlFlowConnector>
+    <controlFlowConnector edgePoints="[(5.1875 : 5); (5.1875 : 5.5)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="65ed258f-a530-4a09-a16e-7f7ad92b4e2c" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="24f8fafe-8024-40e2-b0be-249d7ae666e9" />
+        <actionShapeMoniker Id="407e2b42-7f58-472f-b710-b66aa47d04b0" />
+      </nodes>
+    </controlFlowConnector>
+    <controlFlowConnector edgePoints="[(5.75 : 6.1875); (6.25 : 6.1875)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="9c6982c1-115c-41ca-b0ac-74f455017c3d" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="407e2b42-7f58-472f-b710-b66aa47d04b0" />
+        <actionShapeMoniker Id="8d12061c-d034-4908-a207-dd794e5028b4" />
+      </nodes>
+    </controlFlowConnector>
+    <controlFlowConnector edgePoints="[(6.65625 : 6.5); (6.65625 : 7.5625); (5.25 : 7.5625)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="1ab7191d-7f0a-4c41-b82a-7373297e60be" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="8d12061c-d034-4908-a207-dd794e5028b4" />
+        <activityFinalNodeShapeMoniker Id="67302b09-0015-412c-a952-16f044df185f" />
+      </nodes>
+    </controlFlowConnector>
+    <objectFlowConnector edgePoints="[(3.25 : 3.075); (4.475 : 3.075)]" fixedFrom="Algorithm" fixedTo="Caller" customColor="Black">
+      <objectFlowMoniker Id="df3804d8-3558-468e-b31f-52b7960d7c58" />
+      <relativeChildShapes />
+      <nodes>
+        <objectNodeShapeMoniker Id="74b61895-c6db-4eb3-8115-9281b320d2ff" />
+        <inputPinShapeMoniker Id="5d12abb0-73e3-4154-9c73-7308e5c0e3ff" />
+      </nodes>
+    </objectFlowConnector>
+    <objectFlowConnector edgePoints="[(3.25 : 5.73125); (4.475 : 5.73125)]" fixedFrom="Algorithm" fixedTo="Caller" customColor="Black">
+      <objectFlowMoniker Id="36531bb8-36ca-4fde-a545-46da3934d9b4" />
+      <relativeChildShapes />
+      <nodes>
+        <objectNodeShapeMoniker Id="56e5cca6-1dd6-4331-a0ff-70752d87c4a7" />
+        <inputPinShapeMoniker Id="1dd4281b-22df-4a8e-993c-47689c08fb59" />
+      </nodes>
+    </objectFlowConnector>
+    <objectNodeShape Id="85ff2478-4a73-42a6-aca4-e26392315e35" absoluteBounds="7.125, 6.875, 1.125, 0.375" customColor="White">
+      <objectNodeMoniker Id="11803b26-c88a-4d8b-a11b-898ac6aa240e" LastKnownName="负面清单列表" />
+    </objectNodeShape>
+    <objectFlowConnector edgePoints="[(7.525 : 6.1375); (7.91875 : 6.1375); (7.91875 : 6.875)]" fixedFrom="Caller" fixedTo="Algorithm" customColor="Black">
+      <objectFlowMoniker Id="daf77543-bbc0-4e1d-843f-baa4659efb6a" />
+      <relativeChildShapes />
+      <nodes>
+        <outputPinShapeMoniker Id="6daf1559-8c65-452f-bd3b-c93ffba53839" />
+        <objectNodeShapeMoniker Id="85ff2478-4a73-42a6-aca4-e26392315e35" />
+      </nodes>
+    </objectFlowConnector>
+    <objectNodeShape Id="02590cb6-d6d2-48f0-a4b7-58f6d32d0d6c" absoluteBounds="7.125, 4.625, 1.125, 0.375" customColor="White">
+      <objectNodeMoniker Id="d82b6d46-ed9a-4796-8722-0d7c2aa8d742" LastKnownName="指标的地理化呈现" />
+    </objectNodeShape>
+    <objectFlowConnector edgePoints="[(6.6375 : 5.725); (6.6375 : 4.8125); (7.125 : 4.8125)]" fixedFrom="Caller" fixedTo="Algorithm" customColor="Black">
+      <objectFlowMoniker Id="0c510d19-0157-4a2b-8e7a-fad69667e3b6" />
+      <relativeChildShapes />
+      <nodes>
+        <outputPinShapeMoniker Id="8054961c-f78e-457d-8806-89d251beedf6" />
+        <objectNodeShapeMoniker Id="02590cb6-d6d2-48f0-a4b7-58f6d32d0d6c" />
+      </nodes>
+    </objectFlowConnector>
+  </nestedChildShapes>
+</activityDiagram>

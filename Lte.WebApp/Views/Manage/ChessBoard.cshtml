@@ -1,0 +1,100 @@
+﻿@{
+    Layout = null;
+}
+
+<article>
+    <img src="/Images/pawn.png"  width="75" height="75" style="display:none"/>
+    <img src="/Images/rook.png"  width="75" height="75" style="display:none"/>
+    <img src="/Images/knight.png"  width="75" height="75" style="display:none"/>
+    <img src="/Images/bishop.png"  width="75" height="75" style="display:none"/>
+    <img src="/Images/queen.png"  width="75" height="75" style="display:none"/>
+    <img src="/Images/king.png"  width="75" height="75" style="display:none"/>
+    <img src="/Images/wpawn.png"  width="75" height="75" style="display:none"/>
+    <img src="/Images/wrook.png"  width="75" height="75" style="display:none"/>
+    <img src="/Images/wknight.png"  width="75" height="75" style="display:none"/>
+    <img src="/Images/wbishop.png"  width="75" height="75" style="display:none"/>
+    <img src="/Images/wqueen.png"  width="75" height="75" style="display:none"/>
+    <img src="/Images/wking.png"  width="75" height="75" style="display:none"/>
+    <canvas id="board" width="600" height="600">
+        建设中……
+    </canvas>
+</article>
+
+    <script type="text/javascript" src="~/Scripts/Dingli/ChessPlay.js"></script>
+<script type="text/javascript">
+    var chessCanvas = document.getElementById("board");
+    var chessContext = chessCanvas.getContext("2d");
+
+    //Define an array to store 32 pieces
+    var pieces = new Array(32);
+    createPieces();
+
+    drawBoard();
+    drawAllPieces();
+
+    function drawBoard() {
+        chessContext.clearRect(0, 0, 600, 600);
+        var gradiant = chessContext.createLinearGradient(0, 600, 600, 0);
+        gradiant.addColorStop(0.0, "#000005");
+        gradiant.addColorStop(0.5, "#E27883");
+        gradiant.addColorStop(1.0, "#000000");
+
+        chessContext.fillStyle = gradiant;
+        chessContext.strokeStyle = "red";
+
+        for (var x = 0; x < 8; x++) {
+            for (var y = 0; y < 8; y++) {
+                if ((x + y) % 2) {
+                    chessContext.fillRect(75 * x, 75 * y, 75, 75);
+                }
+            }
+        }
+
+        chessContext.strokeRect(0, 0, 600, 600);
+
+    }
+
+    function drawAllPieces() {
+        for (var i = 0; i < 32; i++) {
+            if (pieces[i] != null && !pieces[i].killed) {
+                drawPiece(pieces[i]);
+            }
+        }
+    }
+
+    function drawPiece(p) {
+        if (!p.killed)
+            chessContext.drawImage(p.image,
+                (75 - p.width) / 2 + (75 * p.x),
+                73 - p.height + (75 * p.y),
+                parseInt(p.width), parseInt(p.height));
+    };
+
+    function createPieces() {
+        for (var i = 0; i < 32; i++) {
+            pieces[i] = new ChessPiece();
+        }
+        for (i = 0; i < 8; i++) {
+            pieces[i].drawPawn(i);
+        }
+        pieces[8].drawRook(0);
+        pieces[9].drawRook(7);
+        pieces[10].drawKnight(1);
+        pieces[11].drawKnight(6);
+        pieces[12].drawBishop(2);
+        pieces[13].drawBishop(5);
+        pieces[14].drawQueen();
+        pieces[15].drawKing();
+        for (i = 0; i < 8; i++) {
+            pieces[16 + i].drawPawnW(i);
+        }
+        pieces[24].drawRookW(0);
+        pieces[25].drawRookW(7);
+        pieces[26].drawKnightW(1);
+        pieces[27].drawKnightW(6);
+        pieces[28].drawBishopW(2);
+        pieces[29].drawBishopW(5);
+        pieces[30].drawQueenW();
+        pieces[31].drawKingW();
+    }
+</script>

@@ -1,0 +1,122 @@
+﻿@model Lte.Evaluations.ViewHelpers.CollegeEditViewModel
+
+@{
+    bool newCollege = @Model.CollegeDto.Id == -1;
+    ViewBag.Title = newCollege ? "新增校园信息" : "修改校园信息：" + Model.CollegeDto.Name;
+}
+
+@section featured {
+    <hgroup class="title">
+        <h1>@ViewBag.Title</h1>
+    </hgroup>
+}
+
+<section>
+    @using (Html.BeginForm("CollgeEdit", "College",
+            FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <fieldset>
+            <legend>详细信息</legend>
+            <ol>
+                @if (newCollege)
+                {
+                    <li>
+                        @Html.LabelFor(x => x.CollegeDto.Name)
+                        @Html.EditorFor(x => x.CollegeDto.Name)
+                        @Html.ValidationMessageFor(x => x.CollegeDto.Name)
+                    </li>
+                    <li>
+                        @Html.LabelFor(x => x.CollegeDto.CityName)
+                        @Html.DropDownListFor(x => x.CollegeDto.CityName, Model.CityList)
+                    </li>
+                    <li>
+                        @Html.LabelFor(x => x.CollegeDto.DistrictName)
+                        @Html.DropDownListFor(x => x.CollegeDto.DistrictName, Model.DistrictList)
+                    </li>
+                    <li>
+                        @Html.LabelFor(x => x.CollegeDto.TownName)
+                        @Html.DropDownListFor(x => x.CollegeDto.TownName, Model.TownList)
+                    </li>
+                }
+                else
+                {
+                    <li>
+                        @Html.LabelFor(x => x.CollegeDto.Name) :
+                        @Model.CollegeDto.Name
+                    </li>
+                    <li>
+                        @Html.LabelFor(x => x.CollegeDto.CityName) :
+                        @Model.CollegeDto.CityName
+                    </li>
+                    <li>
+                        @Html.LabelFor(x => x.CollegeDto.DistrictName) :
+                        @Model.CollegeDto.DistrictName
+                    </li>
+                    <li>
+                        @Html.LabelFor(x => x.CollegeDto.TownName) :
+                        @Model.CollegeDto.TownName
+                    </li>
+                }
+                <li>
+                    @Html.LabelFor(x => x.CollegeDto.OldOpenDate)
+                    @Html.EditorFor(x => x.CollegeDto.OldOpenDate)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.CollegeDto.NewOpenDate)
+                    @Html.EditorFor(x => x.CollegeDto.NewOpenDate)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.CollegeDto.TotalStudents)
+                    @Html.TextBoxFor(x => x.CollegeDto.TotalStudents)
+                    @Html.ValidationMessageFor(x => x.CollegeDto.TotalStudents)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.CollegeDto.CurrentSubscribers)
+                    @Html.TextBoxFor(x => x.CollegeDto.CurrentSubscribers)
+                    @Html.ValidationMessageFor(x => x.CollegeDto.CurrentSubscribers)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.CollegeDto.GraduateStudents)
+                    @Html.TextBoxFor(x => x.CollegeDto.GraduateStudents)
+                    @Html.ValidationMessageFor(x => x.CollegeDto.GraduateStudents)
+                </li>
+                <li>
+                    @Html.LabelFor(x => x.CollegeDto.NewSubscribers)
+                    @Html.TextBoxFor(x => x.CollegeDto.NewSubscribers)
+                    @Html.ValidationMessageFor(x => x.CollegeDto.NewSubscribers)
+                </li>
+            </ol>
+        </fieldset>
+        @Html.HiddenFor(x => x.CollegeDto.Id)
+        <p>
+            <input type="submit" class="btn btn-primary" value="确认提交" />
+            @Html.ActionLink("放弃修改", "List", "College")
+        </p>
+    }
+</section>
+
+@section css{
+    @Styles.Render("~/Content/themes/base/css")
+}
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="~/Scripts/Parameters/RegionRefresh.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#CollegeView_OldOpenDate").datepicker({ dateFormat: 'yy-mm-dd' });
+        $("#CollegeView_NewOpenDate").datepicker({ dateFormat: 'yy-mm-dd' });
+        var region = new RegionRefresh("#CollegeDto_CityName", "#CollegeDto_DistrictName", "#CollegeDto_TownName", "");
+        $("#CollegeView_CityName").change(function () {
+            region.getDistrictList($(this).val(), "/ParametersQuery/GetDistrictList/", true);
+            region.getRegionName("/ParametersQuery/GetRegionName/");
+        });
+        $("#CollegeView_DistrictName").change(function () {
+            region.getTownList($("#CollegeView_CityName").val(), $(this).val(), "/ParametersQuery/GetTownList/", true);
+            region.getRegionName("/ParametersQuery/GetRegionName/");
+        });
+    });
+
+</script>
+}

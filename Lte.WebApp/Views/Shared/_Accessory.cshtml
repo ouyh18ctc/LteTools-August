@@ -1,0 +1,13 @@
+﻿
+    <div class="list-group">
+        <div class="list-group-item active">
+            <h3 class="list-group-item-heading">辅助功能-单元测试</h3>
+        </div>
+        <p class="list-group-item-text">
+            这里提供对本网页的众多javascript脚本测试，属于内部功能
+        </p>
+        @Html.ActionLink("基本测试", "SimpleTest", "QUnit", null, new{@class="list-group-item"})
+        @Html.ActionLink("画图配置对象测试", "PlotSettingTest", "QUnit", null, new{@class="list-group-item"})
+        @Html.ActionLink("Highchart Combo配置对象测试", "ComboSettingTest", "QUnit", null, new{@class="list-group-item"})
+        @Html.ActionLink("国际象棋", "ChessBoard", "Manage", null, new{@class="list-group-item"})
+    </div>

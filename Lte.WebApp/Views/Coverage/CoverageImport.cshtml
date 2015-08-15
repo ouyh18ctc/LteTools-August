@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "导入路测数据";
+}
+
+@section featured {
+    <hgroup class="title">
+        <h1>@ViewBag.Title</h1>
+    </hgroup>
+    }
+
+@using (Html.BeginForm("CoverageAnalyze", "Coverage",
+    FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <p class="field input">
+        路测信息文件选择（鼎利：.txt；惠捷朗：.csv）：
+        <input type="file" name="fileUpload" accept=".txt, .csv" multiple="multiple" />
+    </p>
+    <p>
+        <button type="submit" class="btn btn-primary btn-lg">
+            <span class="glyphicon glyphicon-user"></span>导入数据
+       </button>
+    @if ((int)(TempData["StatLength"]) > 0) 
+    { 
+        <input type="button" value="覆盖统计" id="showPlots" />
+        <input type="button" value="覆盖校正" id="coverageAdjust" />
+        @Html.ActionLink("地理化分析", "ExportPoints", "Coverage", new { fieldName = "信号RSRP" }, null)
+    }
+    </p>
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">信号RSRP分布统计</a></li>
+            <li><a href="#tabs-2">信号SINR分布统计</a></li>
+            <li><a href="#tabs-3">传播损耗校正统计</a></li>
+        </ul>
+        <div id="tabs-1">
+            <div id="container_rsrp" style="height: 400px"></div>
+        </div>
+        <div id="tabs-2">
+            <div id="container_sinr" style="height: 400px"></div>
+        </div>
+        <div id="tabs-3">
+            <table summary="User Grid" class="zebra">
+                <thead>
+                    <tr style="font-weight:bold; background-color:#A8C3CB;">
+	                    <th>小区名称</th>
+                        <th>频点</th>
+                        <th>-165</th>
+                        <th>-135</th>
+                        <th>-105</th>
+                        <th>-75</th>
+                        <th>-45</th>
+                        <th>-15</th>
+                        <th>15</th>
+                        <th>45</th>
+                        <th>75</th>
+                        <th>105</th>
+                        <th>135</th>
+                        <th>165</th>
+                    </tr>
+                </thead>
+                <tbody id="adjustments">
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+
+@section css{
+@Styles.Render("~/Content/themes/base/css")
+}
+@section scripts{
+@Scripts.Render("~/bundles/jqueryui")
+@Scripts.Render("~/bundles/highcharts")
+<script type="text/javascript" src="~/Scripts/Highcharts/modules/exporting.js"></script>
+<script type="text/javascript" src="../../Scripts/Dingli/CoverageAnalysisSet.js"></script>
+<script type="text/javascript" src="../../Scripts/Dingli/Pie3dSetting.js"></script>
+<script type="text/javascript" >
+    $("#tabs").tabs();
+    $("#showPlots").click(function () {
+        var dataSet = new CoverageAnalysisSet();
+        var dataRsrpPercentage = dataSet.getRsrpPercentage();
+        var rsrpPieSetting = new Pie3dSetting('所选数据信号RSRP区间分布统计', dataRsrpPercentage);
+        $('#container_rsrp').highcharts(rsrpPieSetting.getOptions());
+        var dataSinrPercentage = dataSet.getSinrPercentage();
+        var sinrPieSetting = new Pie3dSetting('所选数据信号SINR区间分布统计', dataSinrPercentage);
+        $('#container_sinr').highcharts(sinrPieSetting.getOptions());
+    });
+    $("#coverageAdjust").click(function () {
+        $.ajax({
+            type: "GET", //提交的类型  
+            dataType: "json",
+            url: "/Coverage/CoverageAdjust/",
+            success: function (data) {
+                $("#adjustments").html("");
+                $(data).each(function (index) {
+                    $("#adjustments").append('<tr><td>' + data[index].N
+                    + '</td><td>' + data[index].F + '</td><td>'
+                    + data[index].F165m + '</td><td>'
+                    + data[index].F135m + '</td><td>'
+                    + data[index].F105m + '</td><td>'
+                    + data[index].F75m + '</td><td>'
+                    + data[index].F45m + '</td><td>'
+                    + data[index].F15m + '</td><td>'
+                    + data[index].F15 + '</td><td>'
+                    + data[index].F45 + '</td><td>'
+                    + data[index].F75 + '</td><td>'
+                    + data[index].F105 + '</td><td>'
+                    + data[index].F135 + '</td><td>'
+                    + data[index].F165 + '</td></tr>');
+                });
+            }
+        });
+    });
+</script>
+}

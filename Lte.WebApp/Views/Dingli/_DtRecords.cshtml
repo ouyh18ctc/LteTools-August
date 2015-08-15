@@ -1,0 +1,66 @@
+﻿@model Lte.Evaluations.Dingli.TestListViewModel
+
+<div class="modal-body form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">区域</label>
+        <label class="col-sm-10 control-label">数据更新日期</label>
+    </div>
+    @{
+        IEnumerable<string> districts = Model.TownList.Select(x => x.DistrictName).Distinct();
+        foreach (string district in districts)
+        {
+            <div class="form-group">
+                <label class="col-sm-2 control-label">@district</label>
+                <div class="btn-group col-sm-10">
+                    <button id="rural-@district" class="btn btn-primary showdata">
+                        <span class="glyphicon glyphicon-user"></span>
+                        查看城区测试数据
+                    </button>
+                    <button id="road-@district" class="btn btn-primary showdata">
+                        <span class="glyphicon glyphicon-user"></span>
+                        查看国道省道测试数据
+                    </button>
+                    <button id="highway-@district" class="btn btn-primary showdata">
+                        <span class="glyphicon glyphicon-user"></span>
+                        查看高速测试数据
+                    </button>
+                </div>
+            </div>
+            IEnumerable<string> towns = Model.TownList.Where(x => x.DistrictName == district).Select(x => x.TownName);
+            foreach (string town in towns)
+            {
+                IEnumerable<Lte.Parameters.Service.Coverage.AreaTestDate> items =
+                    Model.AreaTestDateList.Where(x => x.Area.Trim() == town);
+                foreach (Lte.Parameters.Service.Coverage.AreaTestDate item in items)
+                {
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">@item.Area</label>
+                        <div class="btn-group col-sm-10">
+                            @if (!string.IsNullOrEmpty(item.LatestTestDate2G))
+                            {
+                                <button id="list-2G-@town" class="btn btn-primary showraster">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    2G-@item.LatestTestDate2G.Trim()
+                                </button>
+                            }                           
+                            @if (!string.IsNullOrEmpty(item.LatestTestDate3G))
+                            {
+                                <button id="list-3G-@town" class="btn btn-primary showraster">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    3G-@item.LatestTestDate3G.Trim()
+                                </button>
+                            }
+                            @if (!string.IsNullOrEmpty(item.LatestTestDate4G))
+                            {
+                                <button id="list-4G-@town" class="btn btn-primary showraster">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    4G-@item.LatestTestDate4G.Trim()
+                                </button>
+                            }
+                        </div>
+                    </div>
+                }
+            }
+        }
+    }
+</div>

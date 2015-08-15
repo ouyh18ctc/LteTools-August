@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "基础数据管理";
+    ViewBag.Message = "——LTE、CDMA基础信息（包括DT、KPI、站点建设开通等方面的数据）";
+}
+@section featured {
+    <hgroup class="title">
+        <h1>@ViewBag.Title.</h1>
+        <h2>@ViewBag.Message</h2>
+    </hgroup>
+    <p>
+        在这里，我们提供<em>基础数据完整化</em>功能。
+    </p>
+}
+<div class="row">
+    <div class="col-md-4">
+        <div class="one">
+            <h4>建设交维信息</h4>
+            
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="two">
+            <h4>日常指标导入</h4>
+            <p>
+                导入全网指标监控日报（需用管理员帐号登录）请点击
+                @Html.ActionLink("日常指标导入", "Import", "Kpi", null, new {@class="btn btn-primary"})<br/>
+                <b>数据提供人：欧阳晖</b>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="three">
+            <h4>网优工参信息</h4>
+            <p>
+                全网小区列表和地理化显示
+                @Html.ActionLink("LTE小区列表", "List", "Parameters", null, new {@class="btn btn-primary"})<br />
+                对全网的基站按照基站名称、地址等信息进行查询，并进行个别基站小区的增删、修改信息的操作请点击
+                @Html.ActionLink("LTE小区查询", "Query", "Parameters", null, new {@class="btn btn-primary"})<br/>
+                <b>数据提供人：欧阳晖</b>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="four">
+            <h4>DT基础信息</h4>  
+            <p>
+                按照区域或专题查看已导入的DT基础信息
+                @Html.ActionLink("DT数据查看","List","Dingli", null, new {@class="btn btn-primary"})<br />
+                <b>数据提供人：韩亚妹</b>
+            </p>     
+        </div>
+    </div>
+</div>

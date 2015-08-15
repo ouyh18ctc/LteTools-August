@@ -1,0 +1,133 @@
+﻿@section featured {
+    <hgroup class="title">
+        <h1>@ViewBag.Title</h1>
+    </hgroup>
+    }
+
+@using (Html.BeginForm("RateAnalyze", "Rate",
+    FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <p class="field input">
+        路测信息文件选择（鼎利：.txt；惠捷朗：.csv）：
+        <input type="file" name="fileUpload" accept=".txt, .csv" />
+    </p>
+    <p><button type="submit">导入数据</button>
+    @if ((int)(TempData["StatLength"]) > 0) 
+    { 
+        <input type="button" value="输出图表" id="showPlots" />
+    }
+    </p>
+}
+<section class="radiotabs">
+	<input type="radio" name="tab" id="tab1" class="tabs" checked="checked">
+		<label for="tab1">
+			下行速率和频谱效率时序
+		</label>
+	<input type="radio" name="tab" id="tab2" class="tabs">
+		<label for="tab2">
+			下行覆盖指标和频谱效率时序
+		</label>
+	<input type="radio" name="tab" id="tab3" class="tabs">
+		<label for="tab3">
+			SINR和下行频谱效率关系
+		</label>
+	<input type="radio" name="tab" id="tab4" class="tabs">
+		<label for="tab4">
+			RSRP和下行频谱效率关系
+		</label>
+	<section id="view1" class="tabcontent">
+		<div id="chart1" style="height:650px;width:900px; "></div>
+	</section>
+	<section id="view2" class="tabcontent">
+		<div id="chart2" style="height:650px;width:900px; "></div>
+	</section>
+	<section id="view3" class="tabcontent">
+		<div id="chart3" style="height:650px;width:900px; "></div>
+	</section>
+	<section id="view4" class="tabcontent">
+		<div id="chart4" style="height:650px;width:900px; "></div>
+	</section>
+</section>
+
+@section scripts{
+<script type="text/javascript" src="~/Scripts/Dingli/PlotSetting.js"></script>
+<script type="text/javascript" src="~/Scripts/Dingli/RateAnalysisSet.js"></script>
+<script type="text/javascript">
+    var dataSet = new RateAnalysisSet();
+    $("section#view1").show();
+    $("input.tabs").click(function () {
+        $(".tabcontent").hide();
+        var tabid = $("input.tabs:checked").attr("id");
+        switch (tabid) {
+            case "tab1":
+                $("section#view1").show();
+                break;
+            case "tab2":
+                $("section#view2").show();
+                break;
+            case "tab3":
+                $("section#view3").show();
+                break;
+            case "tab4":
+                $("section#view4").show();
+                break;
+        }
+    });
+    $("#showPlots").click(function () {
+        var tabid = $("input.tabs:checked").attr("id");
+        switch (tabid) {
+            case "tab1":
+                $("#chart1").html("");
+                var setting = new PlotSetting('下行RB利用率和频谱效率', '时间（秒）');
+                var dataValuePdschRb = dataSet.getValuePdschRb();
+                var dataValueFrequencyEfficiency = dataSet.getValueFrequencyEfficiency();
+                var dataValueDlThroughput = dataSet.getValueDlThroughput();
+                setting.pushSeries(['下行RB分配数量', '下行频谱效率（bit/s/Hz）', 'PDCP层下行速率（Mbit/s）']);
+                setting.setYAxisRange(1, -0.1, 5.5);
+                setting.setYAxisRange(2, -10, 100);
+                var plot1 = $.jqplot('chart1',
+                    [dataValuePdschRb, dataValueFrequencyEfficiency, dataValueDlThroughput],
+                    setting.getOptions());
+                break;
+            case "tab2":
+                $("#chart2").html("");
+                var setting = new PlotSetting('下行覆盖指标和频谱效率', '时间（秒）');
+                var dataValueRsrp = dataSet.getValueRsrp();
+                var dataValueSinr = dataSet.getValueSinr();
+                var dataValueFrequencyEfficiency = dataSet.getValueFrequencyEfficiency();
+                setting.pushSeries(['RSRP（dBm）', 'SINR（dB）', '下行频谱效率（bit/s/Hz）']);
+                setting.setYAxisRange(2, -0.1, 5.5);
+                var plot2 = $.jqplot('chart2',
+                    [dataValueRsrp, dataValueSinr, dataValueFrequencyEfficiency],
+                    setting.getOptions());
+                break;
+            case "tab3":
+                $("#chart3").html("");
+                var setting = new PlotSetting('SINR和频谱效率', 'SINR（dB）');
+                var dataValueLowSinr2FE = dataSet.getValueLowSinr2FE();
+                var dataValueHighSinr2FE = dataSet.getValueHighSinr2FE();
+                var dataValueTheorySinr2FE = dataSet.getValueTheorySinr2FE();
+                setting.pushSeries(['频谱效率（每子帧分配RB大于5）', '频谱效率（每子帧分配RB小于5）', '理论频谱效率（bit/s/Hz）']);
+                setting.setYlabel('频谱效率（bit/s/Hz）');
+                setting.setScatterDef([true, true, false]);
+                var plot3 = $.jqplot('chart3',
+                    [dataValueHighSinr2FE, dataValueLowSinr2FE, dataValueTheorySinr2FE],
+                    setting.getOptions());
+                break;
+            case "tab4":
+                $("#chart4").html("");
+                var setting = new PlotSetting('RSRP和频谱效率', 'RSRP（dBm）');
+                var dataValueLowRsrp2FE = dataSet.getValueLowRsrp2FE();
+                var dataValueHighRsrp2FE = dataSet.getValueHighRsrp2FE();
+                setting.pushSeries(['频谱效率（每子帧分配RB大于5）', '频谱效率（每子帧分配RB小于5）']);
+                setting.setYlabel('频谱效率（bit/s/Hz）');
+                setting.setScatterDef([true, true]);
+                setting.addTrendLines();
+                var plot4 = $.jqplot('chart4',
+                    [dataValueHighRsrp2FE, dataValueLowRsrp2FE],
+                    setting.getOptions());
+                break;
+        }
+    });
+</script>
+}

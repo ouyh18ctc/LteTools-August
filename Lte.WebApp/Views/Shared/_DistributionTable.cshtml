@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Lte.Parameters.Entities.IndoorDistribution>
+
+<h4>室内分布信息</h4>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Range)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SourceName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SourceType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Longtitute)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lattitute)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Range)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SourceName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SourceType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Longtitute)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lattitute)
+        </td>
+    </tr>
+}
+
+</table>

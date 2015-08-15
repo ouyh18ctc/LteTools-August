@@ -1,0 +1,80 @@
+﻿@model Lte.Evaluations.ViewHelpers.RegionViewModel
+
+@{
+    ViewBag.Title = "行政区域管理";
+}
+
+@section featured {
+    <hgroup class="title">
+        <h1>@ViewBag.Title</h1>
+
+    </hgroup>
+    }
+
+@using (Html.BeginForm("RegionProcess", "Region",
+    FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<table summary="User Grid" class="zebra">
+    <thead>
+        <tr>
+            <th></th>
+            <th>现有选择</th>
+            <th>输入值</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Html.LabelFor(x => x.CityName)</td>
+            <td>@Html.DropDownListFor(x => x.CityName, Model.CityList)</td>
+            <td>@Html.EditorFor(x => x.NewCityName)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(x => x.DistrictName)</td>
+            <td>@Html.DropDownListFor(x => x.DistrictName, Model.DistrictList)</td>
+            <td>@Html.EditorFor(x => x.NewDistrictName)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(x => x.TownName)</td>
+            <td>@Html.DropDownListFor(x => x.TownName, Model.TownList)</td>
+            <td>@Html.EditorFor(x => x.NewTownName)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(x => x.RegionName)</td>
+            <td>@Html.EditorFor(x => x.RegionName)</td>
+        </tr>
+    </tbody>
+</table>
+    @Html.HiddenFor(m => m.SubmitButtonName)
+    <p>
+        @Html.CheckBoxFor(x => x.ForceSwapRegionDistricts)
+        @Html.LabelFor(x => x.ForceSwapRegionDistricts, new { @class = "checkbox" })
+    </p>
+    <p>
+        <input type="submit" value="新增镇街" class="btn btn-primary" data-action="addTown" />
+        <input type="submit" value="删除镇街" class="btn btn-primary" data-action="deleteTown" />
+        <input type="submit" value="新增或修改片区信息" class="btn btn-primary" data-action="modifyRegion" />
+        <input type="submit" value="删除片区信息" class="btn btn-primary" data-action="deleteRegion" />
+    </p>
+}
+
+@section scripts{
+<script type="text/javascript" src="~/Scripts/Parameters/RegionRefresh.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var region = new RegionRefresh("#CityName", "#DistrictName", "#TownName", "#RegionName");
+        $("#CityName").change(function () {
+            region.getDistrictList("/api/DistrictList/" + $(this).val(), true);
+            region.getRegionName("/api/RegionName/" + $("#CityName").val() + "/" + $("#DistrictName").val());
+        });
+        $("#DistrictName").change(function () {
+            region.getTownList("/api/TownList/" + $("#CityName").val() + "/" + $(this).val(), true);
+            region.getRegionName("/api/RegionName/" + $("#CityName").val() + "/" + $(this).val());
+        });
+        $("input[type=submit][data-action]").click(function () {
+            var action = $(this).attr('data-action');
+            $("#SubmitButtonName").val(action);
+        });
+    });
+
+</script>
+}

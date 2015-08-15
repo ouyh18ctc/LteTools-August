@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "ComboSetting对象测试";
+}
+
+@section css{
+    <link rel="Stylesheet" href="../../Content/qunit.css" type="text/css" media="screen" />
+}
+
+@{ Html.RenderPartial("_QUnitFramework");}
+
+@section scripts{
+    @Scripts.Render("~/bundles/highcharts")
+    <script type="text/javascript" src="~/Scripts/Plugins/qunit.js" ></script>
+    <script type="text/javascript" src="~/Scripts/Dingli/ComboSetting.js"></script>
+    <script type="text/javascript">
+        test('Default测试', function() {
+            var setting = new ComboSetting('Default Title');
+            var options = setting.getOptions();
+            equal(options.chart.zoomType, 'xy', 'The zoomType is xy');
+            equal(options.title.text, 'Default Title', 'The default title is correctly set');
+            equal(options.xAxis.length, 1, 'The default setting has 1 xAxis');
+            equal(options.xAxis[0].categories.length, 0, 'The default categories set is empty');
+            equal(options.xAxis[0].labels.step, 1, 'The default x axis label step is 1');
+            equal(options.yAxis.length, 1, 'The default setting has 1 yAxis');
+            equal(options.yAxis[0].labels.format, '{value}', 'The default yAxis label display only the value');
+            equal(options.tooltip.shared, true, 'The default tooltip is shared');
+            equal(options.legend.layout, 'vertical', 'The default legend\'s layout is vertical');
+            equal(options.legend.align, 'left', 'The default legend aligns left');
+        });
+        test('setPrimaryAxis test', function() {
+            var setting = new ComboSetting('Default Title');
+            setting.setPrimaryYAxis('V', 'The currency');
+            var options = setting.getOptions();
+            equal(options.yAxis[0].labels.format, '{value} V', 'The unit is correctly set');
+            equal(options.yAxis[0].title.text, 'The currency', 'The yAxis label is correctly set');
+        });
+        test('addYAxis test', function() {
+            var setting = new ComboSetting('Default Title');
+            setting.addYAxis('The second y axis', 'A', 3);
+            var options = setting.getOptions();
+            equal(options.yAxis.length, 2, 'Now the number of y axes increases to be 2');
+            equal(options.yAxis[1].title.text, 'The second y axis', 'The second y axis\'s label is correctly set');
+            equal(options.yAxis[1].labels.format, '{value} A', 'The unit is correctly set');
+        });
+    </script>
+}
+

@@ -1,0 +1,80 @@
+﻿@model Lte.Evaluations.Dingli.TestListViewModel
+
+@{
+    ViewBag.Title = "DT数据查看";
+    ViewBag.Message = "——提供日常DT数据管理、覆盖分析和部分使用小工具功能";
+}
+
+@section featured {
+    <hgroup class="title">
+        <h1>@ViewBag.Title</h1>
+        <h2>@ViewBag.Message</h2>
+    </hgroup>
+}
+
+<article>
+    <div id="radiotabs">
+        <ul>
+            <li><a href="#dt-records">分区DT数据记录</a></li>
+            <li><a href="#geography">地理化呈现</a></li>
+        </ul>
+        <div id="dt-records">
+            @{ Html.RenderPartial("_DtRecords", Model); }
+        </div>
+        <div id="geography"></div>
+    </div>
+    <div id="dialog-modal"></div>
+</article>
+
+@{ Html.RenderPartial("_DtMenu");}
+
+@section css{
+@Styles.Render("~/Content/themes/base/css")
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="~/Scripts/Parameters/ExtendOperations.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#radiotabs").tabs();
+            $(".showdata").click(function() {
+                var title = $(this).attr("id").split('-');
+                var keyword;
+                var district = title[1];
+                switch (title[0]) {
+                    case "rural":
+                        keyword = "城区";
+                        break;
+                    case "road":
+                        keyword = "国道";
+                        break;
+                    default:
+                        keyword = "高速";
+                        break;
+                }
+                $.ajax({
+                    url: "/api/DtFileInfos/"+district+"/"+keyword,
+                    type: "GET",
+                    dataType: "json",
+                    success: function(list) {
+                        $("#dialog-modal").showDtInfoListDialog(district + keyword + '测试文件列表', list, 800, 480);
+                    }
+                });
+            });
+            $(".showraster").click(function() {
+                var title = $(this).attr("id").split('-');
+                var type = title[1];
+                var town = title[2];
+                $.ajax({
+                    url: "/api/FileNames/"+town+"/"+type,
+                    type: "GET",
+                    dataType: "json",
+                    success: function(list) {
+                        $("#dialog-modal").showRasterInfoListDialog(town + type + '测试文件列表', list, type, 800, 480);
+                    }
+                });
+            });
+        });
+    </script>
+}

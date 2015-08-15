@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="beeace47-fde5-4caa-9a4e-ce79fedb814c" name="总体流程图" linkedPackageId="df8db9cd-a3df-4799-ae33-c442d68ad71e" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="01f2aa70-6f3e-4108-9d01-22c4560c246a" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="d902868d-0070-4c4b-a749-389524b75dde" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="e8501abe-97ce-4375-97da-0423771ad814">
+          <propertyInstance Id="d89950db-9f25-4f06-9103-2a1f101e0809" name="BaseName">
+            <elementDefinition Id="b909c1d9-f039-4e3a-8361-b6c3649cae5c" />
+          </propertyInstance>
+          <elementDefinition Id="6f9588b2-c5a2-41f6-8305-98f95fb97edc" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="c1c2df8d-0fb4-4498-8361-9a1c549e79cd">
+          <propertyInstance Id="b03bb959-3373-4b36-8a95-21ae66f064b2" name="ClrAttributes">
+            <elementDefinition Id="19a219eb-3a9c-4c83-9dc1-61fc1761021c" />
+          </propertyInstance>
+          <elementDefinition Id="dd60cb12-6fa3-4028-bd43-70a9397c2649" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="904701f9-b246-4d45-b28a-8308a6a430c6">
+          <propertyInstance Id="8abb7fe4-e2d6-4dc1-aeca-19c9800d7cbc" name="Usings">
+            <elementDefinition Id="4b35385f-db9a-49dc-9c08-f03524202e90" />
+          </propertyInstance>
+          <elementDefinition Id="242858d7-6dfc-4f45-b4e0-7d00febb07f7" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="be7d242c-aac6-4f95-a218-4b77d66165c3" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="12d0c820-d2d8-4c73-9404-d1a0083d0b07" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="0d3d30ff-e502-4d3e-ac50-d9e89085dc07">
+          <propertyInstance Id="0e681d64-47b8-4a38-a21c-5004e9972b04" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="f877d50a-6d4b-4e81-97e2-677c41b1a836" />
+          </propertyInstance>
+          <elementDefinition Id="dc0b7c06-5b9b-4d5c-810a-788fb1ac3c8c" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="097cdb59-e834-4ccc-b0a7-09beb531ed32">
+          <propertyInstance Id="b59e1fa7-1ebb-4327-9a31-5ea5327d3e03" name="TemplateFilePath" value="ClassTemplate=D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="c6070deb-b077-43db-8d59-6cba939377a9" />
+          </propertyInstance>
+          <elementDefinition Id="ea323429-dc76-4189-9772-ec0cc1f9165c" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="f45a4f51-0540-461c-83bf-b943bf17b595">
+          <propertyInstance Id="7ef8de16-372c-45c3-b443-b716eea293f4" name="ProjectPath" value="ClassTemplate=..\程序设计流程图Lib\程序设计流程图Lib.csproj|EnumTemplate=..\程序设计流程图Lib\程序设计流程图Lib.csproj|InterfaceTemplate=..\程序设计流程图Lib\程序设计流程图Lib.csproj|StructTemplate=..\程序设计流程图Lib\程序设计流程图Lib.csproj">
+            <elementDefinition Id="023aebb5-dfe7-4d43-8bec-e574bd55dcc4" />
+          </propertyInstance>
+          <elementDefinition Id="63f717c2-eae2-42e8-bcfa-83598d514974" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="2f89a14c-07ef-484d-a09a-607be142bfd2">
+          <propertyInstance Id="4ee94ed6-a765-41ff-8750-55ecc19d9c86" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="64cdedcf-fbcc-4d35-81ab-ad491d2f4482" />
+          </propertyInstance>
+          <elementDefinition Id="24594cb8-3a88-441a-a473-130ea95eb00a" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="4c3b6093-a605-4c63-8447-d5f2ad5ff8b6">
+          <propertyInstance Id="72bb1b0e-f3e3-41b3-9f30-45eb265bec97" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="ab36a85c-f59b-4a60-a5bf-9a371fb3e2fd" />
+          </propertyInstance>
+          <elementDefinition Id="5c62d799-0f32-42a6-8e4c-0aad9919ed6b" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="d7ed8bf4-0c46-4c47-a538-7982b492f466">
+          <propertyInstance Id="7597a7bd-ad05-4ef0-9b1b-3b86a0a881e1" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="10efb90d-f41a-4f66-8589-052f08defabb" />
+          </propertyInstance>
+          <elementDefinition Id="c16c9d0d-80b7-4fa0-a83c-7d866994ae5b" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="9142db3c-5878-4b8a-b68d-9b839990f1ea">
+          <propertyInstance Id="e8b4c6f1-d80b-42df-a0a9-464c1eb4811c" name="Parameters">
+            <elementDefinition Id="37873a52-aac7-4365-9a33-f33e67b38a70" />
+          </propertyInstance>
+          <elementDefinition Id="7528ab24-6f96-4038-b817-61482a4d9298" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="5fd70fb5-8be7-4f68-9c24-1c656b4fac1c" name="总体流程图" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="ea1c70ae-a18a-43a0-af3a-8144b823555b" />
+        <nodes>
+          <initialNode Id="a12657c3-32d8-4c11-9826-736e3dfa2c1c" name="Initial1" isLeaf="false">
+            <elementDefinition Id="23328098-3c5a-4001-a91b-f8c907fd78e6" />
+            <flowNodeTargets>
+              <controlFlow Id="8a3111d1-a037-497e-81f2-03285dcdc0e7" isLeaf="false">
+                <opaqueActionMoniker Id="40bd54fd-7de3-4d80-ad3f-6f3155ca2519" LastKnownName="初始化：3G信息表和4G信息表中采集3G、4G信息，特别是3G和4G站点的共站信息" />
+                <elementDefinition Id="119ffba2-b7df-4dd9-8597-bf640a99a00b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="40bd54fd-7de3-4d80-ad3f-6f3155ca2519" name="初始化：3G信息表和4G信息表中采集3G、4G信息，特别是3G和4G站点的共站信息" isLeaf="false">
+            <elementDefinition Id="e84e37d5-0f64-4e48-b8f9-2f18588e3100" />
+            <flowNodeTargets>
+              <controlFlow Id="26c7ac13-9baf-4482-877a-c154c12eb8ed" isLeaf="false">
+                <opaqueActionMoniker Id="4114316c-9480-468e-b8e9-32c9b32ae7b6" LastKnownName="从MR文件（RU二进制文件）中提取干扰和重叠覆盖信息，写入统计列表" />
+                <elementDefinition Id="b6fa5f8f-fc67-42cf-b0cb-1746437c622d" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin Id="ef52f024-1844-4b93-8d7f-575f2da6a0de" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="de250cf7-14bf-4d74-98bf-103675f65ba1" />
+                  <upperBound>
+                    <literalInteger Id="0dedaa27-32d0-421d-a81f-49ba44a89779" name="2147483647" value="2147483647">
+                      <elementDefinition Id="522edac1-86ce-49d6-b9b9-dee76e75e38a" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+              <opaqueActionHasInputValues>
+                <inputPin Id="8a2f30dd-0974-4e03-b437-2e2a6e5e57b2" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="f0385f6d-0301-4b2b-8d3d-3c0cd52f77ca" />
+                  <upperBound>
+                    <literalInteger Id="05737042-f042-4300-8b42-8bb99adae84a" name="2147483647" value="2147483647">
+                      <elementDefinition Id="2baecdbb-b928-4de1-8c21-18a0df4add39" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <objectNode Id="6d9b4ed9-b71d-489c-88db-6c11689250fb" name="3G信息表" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="92a34624-9c05-4439-90c0-e94cbeb5da5c" />
+            <objectFlowTargets>
+              <objectFlow Id="1e94ed4c-c36a-4228-859b-07d7720f9f11" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="ef52f024-1844-4b93-8d7f-575f2da6a0de" />
+                <elementDefinition Id="f483d5fe-2674-4351-bb7b-44c32919e462" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="84ed8dad-fdb5-4e93-b061-b4cfe944b7d8" name="2147483647" value="2147483647">
+                <elementDefinition Id="04d783ec-3f59-45b6-8229-91bbbe1b5cdd" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="20fda87c-509c-4821-b18c-3ba9479f910e" name="4G信息表" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="6ae995d0-4ab3-4944-a23b-2e75302d48dc" />
+            <objectFlowTargets>
+              <objectFlow Id="235a18c5-efe3-4972-96e5-e1ebdcf93e0a" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="8a2f30dd-0974-4e03-b437-2e2a6e5e57b2" />
+                <elementDefinition Id="d854f420-249a-43d8-935e-f6ba552521b8" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="08124153-1f89-4b9d-a256-ffe08ed8ac2c" name="2147483647" value="2147483647">
+                <elementDefinition Id="c8bcc1b2-9fef-420d-b05d-d788c7b8cffe" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="4114316c-9480-468e-b8e9-32c9b32ae7b6" name="从MR文件（RU二进制文件）中提取干扰和重叠覆盖信息，写入统计列表" isLeaf="false">
+            <elementDefinition Id="7d5fe103-9de8-4933-98fc-f80253ec4ae4" />
+            <flowNodeTargets>
+              <controlFlow Id="5a1e0055-6577-4d9c-a983-864092e1ac16" isLeaf="false">
+                <opaqueActionMoniker Id="5b7f89c1-7e2e-4432-91a2-47a291325721" LastKnownName="将原先按照被干扰小区排列的统计列表按照干扰源维度进行重组和聚合，完成结构的转变" />
+                <elementDefinition Id="97410bdd-1c65-4786-aeb3-6efb131a5aba" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin Id="dbbc30c9-dbc6-4ff8-ad5f-9e6121b1ef78" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="391560fa-b6ca-4177-be6d-5b7d97505e5f" />
+                  <upperBound>
+                    <literalInteger Id="eef833ed-4bf4-4de8-bee6-0418b8ed804d" name="2147483647" value="2147483647">
+                      <elementDefinition Id="1b9669fb-4143-4030-bea8-fef943c92fd2" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <objectNode Id="6e70cdae-ba70-4beb-8a21-fa5dc547ed8d" name="RU二进制文件" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="a4a81c36-70d8-419a-ae17-252b5033f1f2" />
+            <objectFlowTargets>
+              <objectFlow Id="df3804d8-3558-468e-b31f-52b7960d7c58" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="dbbc30c9-dbc6-4ff8-ad5f-9e6121b1ef78" />
+                <elementDefinition Id="e8ad477b-ef82-4de1-b005-de04f80b95cf" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="b06a9137-387a-4bf2-93d9-bd650a66102e" name="2147483647" value="2147483647">
+                <elementDefinition Id="ba4516e3-c54f-4123-884e-62e2c7eed0f9" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="5b7f89c1-7e2e-4432-91a2-47a291325721" name="将原先按照被干扰小区排列的统计列表按照干扰源维度进行重组和聚合，完成结构的转变" isLeaf="false">
+            <elementDefinition Id="d7fbee89-1cbe-4774-9e03-408f97a8e0c5" />
+            <flowNodeTargets>
+              <controlFlow Id="65ed258f-a530-4a09-a16e-7f7ad92b4e2c" isLeaf="false">
+                <opaqueActionMoniker Id="709bd501-177a-46fc-ac5f-0d7a93f83635" LastKnownName="从简要话单文件中提取接入距离信息，并与数据重组模块输出的统计列表进行合并，在这过程中考虑直放站和射频拉远的影响" />
+                <elementDefinition Id="af0a8462-b6ff-4466-9513-f60dbfc9e3e4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="709bd501-177a-46fc-ac5f-0d7a93f83635" name="从简要话单文件中提取接入距离信息，并与数据重组模块输出的统计列表进行合并，在这过程中考虑直放站和射频拉远的影响" isLeaf="false">
+            <elementDefinition Id="b39f0893-5291-4e17-8b2b-85864d6c7285" />
+            <flowNodeTargets>
+              <controlFlow Id="9c6982c1-115c-41ca-b0ac-74f455017c3d" isLeaf="false">
+                <opaqueActionMoniker Id="4f264c4d-6fa2-4e19-96e4-358c94e4a275" LastKnownName="综合评估各类指标，生成负面站点清单及指标的地理化显示" />
+                <elementDefinition Id="8431a42e-45f8-4b3f-8622-3d3d0574c1eb" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin Id="3095ab61-87e8-4bd6-ac55-c18b2c4b477e" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="d391bda4-4659-41da-866d-d03be1cda582" />
+                  <upperBound>
+                    <literalInteger Id="7412ecda-7722-4ed7-bf62-7ad2f1e101a8" name="2147483647" value="2147483647">
+                      <elementDefinition Id="c82dc75b-ee0f-46c7-a664-73bc88197d61" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <objectNode Id="e20aa4ca-d933-4e31-9d29-b1fefeddcfd3" name="简要话单文件" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="100ee0db-7478-42c9-8879-c5802a149e92" />
+            <objectFlowTargets>
+              <objectFlow Id="36531bb8-36ca-4fde-a545-46da3934d9b4" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="3095ab61-87e8-4bd6-ac55-c18b2c4b477e" />
+                <elementDefinition Id="02331fff-ec51-4113-bcd8-353f62178211" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="43e5cb93-eaea-40b9-b331-f47c9040d2e0" name="2147483647" value="2147483647">
+                <elementDefinition Id="407b936b-2926-4984-bd00-20dfd8a1a4c8" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="4f264c4d-6fa2-4e19-96e4-358c94e4a275" name="综合评估各类指标，生成负面站点清单及指标的地理化显示" isLeaf="false">
+            <elementDefinition Id="ec41c16b-359b-4ba7-8a24-4453a38c384a" />
+            <flowNodeTargets>
+              <controlFlow Id="1ab7191d-7f0a-4c41-b82a-7373297e60be" isLeaf="false">
+                <activityFinalNodeMoniker Id="2b43bd23-db7c-4387-b5b9-2cc13c7414ee" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="05cd5e3c-e862-46db-a372-6fba2ee04a7d" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin Id="9806669a-8b7b-4ebd-840f-00dab85a91ea" name="负面清单" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="df3bc14c-f0e6-4217-84bf-b4a261946c7a" />
+                  <objectFlowTargets>
+                    <objectFlow Id="daf77543-bbc0-4e1d-843f-baa4659efb6a" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="11803b26-c88a-4d8b-a11b-898ac6aa240e" LastKnownName="负面清单列表" />
+                      <elementDefinition Id="4cb90341-ff56-421b-96c8-756a8f6ede76" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="2be1315f-7cb9-4871-b5ae-dbf4cbffc73e" name="2147483647" value="2147483647">
+                      <elementDefinition Id="48c6818e-1ebf-4656-9371-0a7b18370a7e" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+              <opaqueActionHasOutputValues>
+                <outputPin Id="a1d3d01b-bb62-48c6-8f2b-a74ec59de678" name="统计指标" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="3bb4813d-98f1-4e60-921d-66f8d64291e0" />
+                  <objectFlowTargets>
+                    <objectFlow Id="0c510d19-0157-4a2b-8e7a-fad69667e3b6" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="d82b6d46-ed9a-4796-8722-0d7c2aa8d742" LastKnownName="指标的地理化呈现" />
+                      <elementDefinition Id="4ffec643-97a3-49e9-b2c0-4146412a8378" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="f86120b7-06c1-4283-9c2b-ee6083bafe12" name="2147483647" value="2147483647">
+                      <elementDefinition Id="d04ee930-91d4-44cf-b8a0-06d61ef08ada" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+            </pins>
+          </opaqueAction>
+          <activityFinalNode Id="2b43bd23-db7c-4387-b5b9-2cc13c7414ee" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="6d689f0a-7652-4672-a9fa-558403875656" />
+          </activityFinalNode>
+          <objectNode Id="11803b26-c88a-4d8b-a11b-898ac6aa240e" name="负面清单列表" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="d5307094-1be9-4c4c-8bf1-031cbec4a3e4" />
+            <upperBound>
+              <literalInteger Id="de395590-15f6-4e69-ad47-9ed28b4834b7" name="2147483647" value="2147483647">
+                <elementDefinition Id="11735dd5-9e3c-44ee-a812-e6336888e315" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="d82b6d46-ed9a-4796-8722-0d7c2aa8d742" name="指标的地理化呈现" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="89e1e46b-b51c-4d40-b9ac-a70091056da2" />
+            <upperBound>
+              <literalInteger Id="a2fca2eb-8cee-4177-ab7e-ad68f925e121" name="2147483647" value="2147483647">
+                <elementDefinition Id="31db9fa8-63c9-439a-907a-7fbe4bff3c69" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="df8db9cd-a3df-4799-ae33-c442d68ad71e" name="程序设计流程图">
+    <elementDefinition Id="fbe1d8c8-8ba0-418f-89e0-42c5cd33b822" />
+    <profileInstances>
+      <packageHasProfileInstances Id="16905741-481c-4ada-985c-e2225e49ed4d">
+        <profileInstance Id="ff1db442-b2b4-4be7-86bd-1e37b9aa7af7" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="604a30b5-19ca-4140-9a44-e07b3b5e6444">
+        <profileInstance Id="02a6fd57-0177-42eb-b614-da18c3e4a0b1" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="4d4c3a8d-ca40-48c2-bbbf-98c4267a05e0">
+        <profileInstance Id="a03a0a82-ec67-48ec-8f09-86036148232a" name="CSharpProfile">
+          <elementDefinition Id="6e752274-2099-4212-8fdd-8e1e3e591fc5" />
+        </profileInstance>
+        <elementDefinition Id="88f9bc42-1594-4e4d-b086-b243b52f00d5" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="c02a6433-4b74-47d7-a883-d3ba8ba38209">
+        <profileInstance Id="a2269909-0cab-4eac-9903-f883f7703214" name="TextTemplateBindings">
+          <elementDefinition Id="cec03ec2-f976-48a9-b1df-477452ecce63" />
+        </profileInstance>
+        <elementDefinition Id="83d8309a-3aa1-401f-9fd1-b4d9a3c75f87" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

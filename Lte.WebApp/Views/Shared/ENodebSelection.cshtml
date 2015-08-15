@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Lte.Parameters.Entities.ENodeb>
+
+<section>
+    <table summary="User Grid" class="zebra">
+        <thead>
+        <tr>
+	        <th>基站名</th>
+            <th>经度</th>
+            <th>纬度</th>
+            <th>地址</th>
+            <th>选择基站</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (Lte.Parameters.Entities.ENodeb eNodeb in Model)
+        { 
+        <tr>
+            <td>@eNodeb.Name</td>
+            <td>@eNodeb.Longtitute</td>
+            <td>@eNodeb.Lattitute</td>
+            <td>@eNodeb.Address</td>
+            <td><input type="checkbox" checked="checked" class="ENodeb" value="@eNodeb.ENodebId" /></td>
+        </tr>
+        }
+        </tbody>
+    </table>
+</section>

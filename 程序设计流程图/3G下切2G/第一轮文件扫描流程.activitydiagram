@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="85073e66-1918-4c04-8b89-cbf15da9abec" name="第一轮文件扫描流程" linkedPackageId="9077d0d6-e059-4b6a-b03e-fcfd2cc9fe20" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="c9b7d9c1-df4a-4a7c-8b5f-a69e964b476f">
+      <elementDefinition Id="9c0f37d1-6532-47f5-8d61-7eebda5258f0" />
+      <body>实际上是一个释放3G小区为空的DownSwitchEvent对象</body>
+      <annotatedElements>
+        <objectNodeMoniker Id="1e18e39c-5398-4074-aee8-386782069fc6" LastKnownName="纯2G话单记录" />
+      </annotatedElements>
+    </comment>
+    <comment Id="84612899-3c80-47b5-846e-bb5159c65d5a">
+      <elementDefinition Id="f7c6df22-9bdc-4858-9fc4-9c80dbbbd53e" />
+      <body>是否为最后一条话单？</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="0f18c3df-7866-42d0-bdb7-88b1ac89dab5" LastKnownName="Decision3" />
+      </annotatedElements>
+    </comment>
+    <comment Id="9d3e3943-8e43-481a-9243-159044aeb7c0">
+      <elementDefinition Id="560aafc1-ce3d-46a4-92a9-479cb2336447" />
+      <body>是否为最后一个用户话单集合？</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="67ec3af4-2711-4194-8be5-af13bfe0d1b0" LastKnownName="Decision4" />
+      </annotatedElements>
+    </comment>
+    <comment Id="80fe8837-8760-4df5-b8e2-4a74a9d64562">
+      <elementDefinition Id="018f57df-85ea-43fc-84ab-8ca8bd801fb6" />
+      <body>所有文件是否已经读取完毕？</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="3324129b-e44c-4458-af45-deaf7cdc6f29" LastKnownName="Decision5" />
+      </annotatedElements>
+    </comment>
+    <comment Id="5c6bce9f-610c-4355-948c-edfa48d51eb8">
+      <elementDefinition Id="89ca9984-e5f1-4a8c-b0ba-8ab194075d13" />
+      <body>话单集合内是否含有2G话单？</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="292f016f-46a4-4e50-b7ca-862f114dd4f7" LastKnownName="Decision8" />
+      </annotatedElements>
+    </comment>
+    <comment Id="aa751041-9743-45c7-9eb5-43ef1a2a54b1">
+      <elementDefinition Id="dcba54df-aaab-4f0e-ac03-a92b002220fa" />
+      <body>匹配3G话单是否成功？</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="89d2aa18-cbef-42de-b905-67e2c28e722e" LastKnownName="Decision1" />
+      </annotatedElements>
+    </comment>
+    <comment Id="2cee5172-31c6-45d8-a7a8-edba56490d06">
+      <elementDefinition Id="0224d388-6a92-46e7-b9f1-ef29218b6c6a" />
+      <body>是否为最后一条话单？</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="7142c3b7-372b-4a50-8163-ebd08e8a26a1" LastKnownName="Decision2" />
+      </annotatedElements>
+    </comment>
+    <comment Id="8e9393a6-3b8e-4fd8-9a0c-849196a0ac78">
+      <elementDefinition Id="b325c52f-8eb2-421f-a54d-c6dd0c932b5f" />
+      <body>该2G话单匹配下切事件集合中该号码的最后一个记录？</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="3b0c8f2b-b6b9-47f2-bea8-1bbea44b30a1" LastKnownName="Decision6" />
+      </annotatedElements>
+    </comment>
+    <comment Id="5092582d-f6a6-4fa4-ab64-616b6541a482">
+      <elementDefinition Id="9cfd17b4-9797-41e9-b47f-e5af2fd64251" />
+      <body>集合内记录需按照时间先后顺序排列</body>
+      <annotatedElements>
+        <activityParameterNodeMoniker Id="4d738894-352a-467d-87d8-22bf96fa1b35" LastKnownName="下切事件集合" />
+      </annotatedElements>
+    </comment>
+    <comment Id="a1f0a446-e9c5-4265-960c-a42bc4f91c0a">
+      <elementDefinition Id="2f064806-0286-4ebf-91f9-60872c495a21" />
+      <body>集合内记录需按照时间先后顺序排列</body>
+      <annotatedElements>
+        <objectNodeMoniker Id="b89704fb-8adf-40a7-82ef-935c6ae500c6" LastKnownName="纯2G话单集合" />
+      </annotatedElements>
+    </comment>
+    <comment Id="7a0b6f99-0761-466a-b0cd-765eba32ee4c">
+      <elementDefinition Id="e14bdd23-3742-4b20-9923-9c6cbaecc785" />
+      <body>该2G话单匹配纯2G话单集合中该号码的最后一个记录？</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="4afce25b-5b3c-4b07-b9e7-d9a799737455" LastKnownName="Decision7" />
+      </annotatedElements>
+    </comment>
+    <comment Id="a9b6ca1b-ebb6-4776-932e-9f39fbb69aa7">
+      <elementDefinition Id="7afb2515-fab9-4f32-92b1-e838b817619d" />
+      <body>读取是否成功？</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="134f392a-5cce-4875-be62-92042837a5ea" LastKnownName="Decision9" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="590f16b0-3556-4e22-bd81-c3325ecebdb9" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="d902868d-0070-4c4b-a749-389524b75dde" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="6f1d4be6-da7d-4f41-8f3d-ae2453436227">
+          <propertyInstance Id="e4048996-6288-45ad-a63f-e7abd5107d47" name="BaseName">
+            <elementDefinition Id="b909c1d9-f039-4e3a-8361-b6c3649cae5c" />
+          </propertyInstance>
+          <elementDefinition Id="6f9588b2-c5a2-41f6-8305-98f95fb97edc" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="06c23cb7-59e6-4946-b6c4-9547b9b6e8d0">
+          <propertyInstance Id="fd1fea3d-7397-4fb8-8a16-2382b7eb51a9" name="ClrAttributes">
+            <elementDefinition Id="19a219eb-3a9c-4c83-9dc1-61fc1761021c" />
+          </propertyInstance>
+          <elementDefinition Id="dd60cb12-6fa3-4028-bd43-70a9397c2649" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="46d9f09b-7fa8-49ea-a92b-265e690e09b9">
+          <propertyInstance Id="25bef9d7-80a7-4d60-a75d-5c0ec3f178b8" name="Usings">
+            <elementDefinition Id="4b35385f-db9a-49dc-9c08-f03524202e90" />
+          </propertyInstance>
+          <elementDefinition Id="242858d7-6dfc-4f45-b4e0-7d00febb07f7" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="1eea5e01-8403-4730-b990-685babbef780" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="12d0c820-d2d8-4c73-9404-d1a0083d0b07" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="24d2535c-d3d6-4591-a208-8e6614fc3984">
+          <propertyInstance Id="d5b5de47-3d30-4b7b-9866-5bea61bd01fa" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="f877d50a-6d4b-4e81-97e2-677c41b1a836" />
+          </propertyInstance>
+          <elementDefinition Id="dc0b7c06-5b9b-4d5c-810a-788fb1ac3c8c" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="6448cab0-b50e-4e8d-9cd6-3790c5449638">
+          <propertyInstance Id="994a3911-8351-47c3-822f-efee7b80fbca" name="TemplateFilePath" value="ClassTemplate=D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="c6070deb-b077-43db-8d59-6cba939377a9" />
+          </propertyInstance>
+          <elementDefinition Id="ea323429-dc76-4189-9772-ec0cc1f9165c" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="7d53b4b2-acb1-4709-b105-3dc539672e3a">
+          <propertyInstance Id="3c9b13f7-99ea-41ea-8ad1-14e56c7987bb" name="ProjectPath" value="ClassTemplate=..\程序设计流程图Lib\程序设计流程图Lib.csproj|EnumTemplate=..\程序设计流程图Lib\程序设计流程图Lib.csproj|InterfaceTemplate=..\程序设计流程图Lib\程序设计流程图Lib.csproj|StructTemplate=..\程序设计流程图Lib\程序设计流程图Lib.csproj">
+            <elementDefinition Id="023aebb5-dfe7-4d43-8bec-e574bd55dcc4" />
+          </propertyInstance>
+          <elementDefinition Id="63f717c2-eae2-42e8-bcfa-83598d514974" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="4916fcbc-fca6-4d60-9797-d3a965b14055">
+          <propertyInstance Id="a63a3a5a-d40e-422b-9e6f-112291950ce8" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="64cdedcf-fbcc-4d35-81ab-ad491d2f4482" />
+          </propertyInstance>
+          <elementDefinition Id="24594cb8-3a88-441a-a473-130ea95eb00a" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="af19e3d8-a053-4057-a800-37051ab528c3">
+          <propertyInstance Id="5d7e2705-03a8-4c9e-8d65-2ee435335f5c" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="ab36a85c-f59b-4a60-a5bf-9a371fb3e2fd" />
+          </propertyInstance>
+          <elementDefinition Id="5c62d799-0f32-42a6-8e4c-0aad9919ed6b" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="b66ac315-d7cb-42ed-80e9-1c8e4ace3be8">
+          <propertyInstance Id="1ab6b7e4-df30-4172-b99f-b24863c849b6" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="10efb90d-f41a-4f66-8589-052f08defabb" />
+          </propertyInstance>
+          <elementDefinition Id="c16c9d0d-80b7-4fa0-a83c-7d866994ae5b" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="b017a046-e569-442f-b940-3faba0000fad">
+          <propertyInstance Id="30482b6b-7ad8-4bfe-9a99-c35b750da4c4" name="Parameters">
+            <elementDefinition Id="37873a52-aac7-4365-9a33-f33e67b38a70" />
+          </propertyInstance>
+          <elementDefinition Id="7528ab24-6f96-4038-b817-61482a4d9298" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="f9fdb296-274f-4e85-be55-661627566161" name="第一轮文件扫描流程" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="35e7e138-91a3-48c6-b19a-912e8b31805e" />
+        <nodes>
+          <initialNode Id="de8aa3d3-417d-4732-a4be-32900e81d6e3" name="Initial1" isLeaf="false">
+            <elementDefinition Id="3924bac0-6e83-47c8-9117-a9235f28ff14" />
+            <flowNodeTargets>
+              <controlFlow Id="697db3d7-94b5-41c8-807c-b96c1af04dbe" isLeaf="false">
+                <opaqueActionMoniker Id="7d56819b-3706-4a18-a594-3a0e71e7dbae" LastKnownName="按时间先后顺序读取合法的简要话单文件列表" />
+                <elementDefinition Id="6783572e-e120-495f-b326-3e7e5bf952d4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="7d56819b-3706-4a18-a594-3a0e71e7dbae" name="按时间先后顺序读取合法的简要话单文件列表" isLeaf="false">
+            <elementDefinition Id="7c033a23-7be3-4c6c-9546-4c71c7d00b31" />
+            <objectFlowTargets>
+              <objectFlow Id="6c929408-e84c-4f95-87f0-1b79ab4ff5ac" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="9c402c43-e971-4ac9-8b21-4f03cf068d6a" LastKnownName="简要话单文件列表" />
+                <elementDefinition Id="80fbee21-40ee-4065-bbae-a98cfbd9b8ec" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode Id="9c402c43-e971-4ac9-8b21-4f03cf068d6a" name="简要话单文件列表" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="7a89568c-6d64-4558-8531-f8c3365d8f63" />
+            <objectFlowTargets>
+              <objectFlow Id="716eae9b-0d9d-4d4b-ac39-51ee01fa22c1" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="ddb97b25-bb9e-4303-a594-70589c4b34e0" LastKnownName="读取下一个文件" />
+                <elementDefinition Id="6b00638b-37bd-4723-aade-995c0a08f26b" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="9c706bac-11b1-4dd6-b31d-b67d5d1f5c05" name="2147483647" value="2147483647">
+                <elementDefinition Id="696e4b68-15ac-435a-a99b-4abe8437124d" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="ddb97b25-bb9e-4303-a594-70589c4b34e0" name="读取下一个文件" isLeaf="false">
+            <elementDefinition Id="8169e14a-267f-4be2-96cf-852b28956812" />
+            <objectFlowTargets>
+              <objectFlow Id="eeef6aae-28a6-4a71-87ee-2035bcbe83ee" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="a5f48afc-5b58-4a8d-9730-7be521b7ceeb" LastKnownName="数据连接话单集合" />
+                <elementDefinition Id="7d26575a-bf35-4f9e-97d7-b91c5c2e8f50" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode Id="a5f48afc-5b58-4a8d-9730-7be521b7ceeb" name="数据连接话单集合" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="7f26d087-0a71-4da7-9295-e925e0c15a7e" />
+            <objectFlowTargets>
+              <objectFlow Id="eaa0e2f9-5daa-44c0-a72f-58718fee97f4" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="e71713c8-d96a-4b7f-9009-185379e62c46" LastKnownName="读取下一个用户的话单集合" />
+                <elementDefinition Id="d6d3c758-02da-4390-a78c-a40b62c11d69" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="9778547b-9e8b-4615-9b67-839f1d033561" name="2147483647" value="2147483647">
+                <elementDefinition Id="9a566fa3-839e-4a1e-99cf-014fd894f2df" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="e71713c8-d96a-4b7f-9009-185379e62c46" name="读取下一个用户的话单集合" isLeaf="false">
+            <elementDefinition Id="d6ae7d77-d212-4327-9275-8a943604091f" />
+            <objectFlowTargets>
+              <objectFlow Id="5f7c0e7c-96ee-4f5a-b7bb-9cb8562d8c56" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="d7ae9f9e-6a10-4186-a869-5792238c234c" LastKnownName="用户话单集合" />
+                <elementDefinition Id="4b00390b-760d-450c-801f-ec67847aba58" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode Id="d7ae9f9e-6a10-4186-a869-5792238c234c" name="用户话单集合" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="b754c2ef-6e1f-4a0e-80bf-b3876cf15f13" />
+            <objectFlowTargets>
+              <objectFlow Id="fa7bed37-6242-45d6-a60e-9abd63e74c0f" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <decisionNodeMoniker Id="292f016f-46a4-4e50-b7ca-862f114dd4f7" LastKnownName="Decision8" />
+                <elementDefinition Id="61839748-f5b4-4d4d-91c0-996b3c48bd83" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="6c3c3f34-d1e9-4fe1-a854-983dec3785f2" name="2147483647" value="2147483647">
+                <elementDefinition Id="21c670fa-bacc-48bd-82c8-8a39983c6ffc" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="b2e95a53-9238-4a0d-afd2-ec715b43bd92" name="读取下一条2G话单" isLeaf="false">
+            <elementDefinition Id="a7b11568-d92b-41e0-888b-b61406c9e9db" />
+            <flowNodeTargets>
+              <controlFlow Id="13464908-1540-482f-ae73-ef638b82e39a" isLeaf="false">
+                <decisionNodeMoniker Id="134f392a-5cce-4875-be62-92042837a5ea" LastKnownName="Decision9" />
+                <elementDefinition Id="cbe1a65e-2c55-4db8-9ca6-0d0200b1f619" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="39833c18-36b7-48d2-a424-c5c3de492c7e" name="合并连续的2G话单集合" isLeaf="false">
+            <elementDefinition Id="c9b2333f-def1-4c1d-849a-f7fdc80894df" />
+            <objectFlowTargets>
+              <objectFlow Id="63c23871-c663-4290-8770-bb9314b0ce2f" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="1e18e39c-5398-4074-aee8-386782069fc6" LastKnownName="纯2G话单记录" />
+                <elementDefinition Id="46d570a8-8fdd-496a-be35-7ba7eb02d64a" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode Id="1e18e39c-5398-4074-aee8-386782069fc6" name="纯2G话单记录" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="024a58d6-fe00-4568-a856-985aa6a77e6d" />
+            <objectFlowTargets>
+              <objectFlow Id="f67371fc-c7cc-4f25-bb28-a2ba05f87aab" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="a8ece4b1-7d11-47f0-8e82-9899ca64fff9" LastKnownName="匹配之前释放的3G小区信息" />
+                <elementDefinition Id="40601653-d268-4260-a32a-4a1f7778482a" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="5bdc2546-995f-4dbb-bf86-0ca8f78b7775" name="2147483647" value="2147483647">
+                <elementDefinition Id="d573ba27-44d6-4c65-be1e-e62b83fd5fcc" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="a8ece4b1-7d11-47f0-8e82-9899ca64fff9" name="匹配之前释放的3G小区信息" isLeaf="false">
+            <elementDefinition Id="021a8ce7-9724-462f-8309-7f83c2be0120" />
+            <flowNodeTargets>
+              <controlFlow Id="14bf4121-1bfc-4771-b27c-21a143853baf" isLeaf="false">
+                <decisionNodeMoniker Id="89d2aa18-cbef-42de-b905-67e2c28e722e" LastKnownName="Decision1" />
+                <elementDefinition Id="18cf1608-9576-475a-9671-c4faf2df666c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="89d2aa18-cbef-42de-b905-67e2c28e722e" name="Decision1" isLeaf="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="f9a2e298-41e0-42ee-9e24-6b26e4b28292" name="TextTemplateBindings" profile="TextTemplateBindings">
+                <elementDefinition Id="96cd99a0-d430-4a6b-ba1c-8fc31015c8a8" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7400dd8b-0987-41c5-b084-20746d2a17b8">
+                    <propertyInstance Id="dd57c8ca-930c-4fbd-9e2e-f32969eb69bd" name="Alias">
+                      <elementDefinition Id="f24144e2-7d41-4368-9005-96ab636ed086" />
+                    </propertyInstance>
+                    <elementDefinition Id="340794cb-1c9e-405f-8bf9-3fb9afad1de6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2d319655-3dc8-4d4a-885e-8865a71a2106">
+                    <propertyInstance Id="4d6f0998-df73-4b51-b6f2-579cb508e1ab" name="TemplateFilePath">
+                      <elementDefinition Id="8baeb273-d51a-4c86-a70b-0e1344e04046" />
+                    </propertyInstance>
+                    <elementDefinition Id="80163aba-fe9f-46e6-8ed3-8d70cc2211a5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="86ba6248-4444-410c-8857-6c8745617e1f">
+                    <propertyInstance Id="a0d497c8-20c4-4a85-ac48-7efd55816b33" name="ProjectPath">
+                      <elementDefinition Id="bfa246f3-0620-488e-9978-6ee927605b7a" />
+                    </propertyInstance>
+                    <elementDefinition Id="49aec903-698c-4a63-937c-cf7ffce4300a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="52e85ef7-db91-4866-9792-212d3172e307">
+                    <propertyInstance Id="9aac921d-9ddd-4c35-9253-046430849c6d" name="TargetDirectory">
+                      <elementDefinition Id="3122f0fa-1c8a-4221-b4da-1ee5b758658f" />
+                    </propertyInstance>
+                    <elementDefinition Id="140ad433-599e-4cc8-8321-4698c9dfedbe" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bd2c1c8a-e9de-47d6-83a1-cf6ccdc65ab5">
+                    <propertyInstance Id="81e5c764-0538-4a98-a961-531984a378c1" name="TargetName">
+                      <elementDefinition Id="7cdd5a42-d4de-49c3-b632-059aabef0fa3" />
+                    </propertyInstance>
+                    <elementDefinition Id="43dedfcf-935b-416f-8c26-35fae4ebbaaf" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4a5670b2-f892-43eb-93db-8c9ce063c410">
+                    <propertyInstance Id="731496b4-ef6e-4482-a078-6a4bb67702bf" name="Overwrite">
+                      <elementDefinition Id="b4ff01c9-ab73-4845-9542-28f737851237" />
+                    </propertyInstance>
+                    <elementDefinition Id="741f11e0-0ca1-4295-8549-19b01f9c0f5d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2e2b2cd8-f4ab-448c-a708-2ba027e7b390">
+                    <propertyInstance Id="fdf0e838-d417-4ba4-915e-229da134a7ce" name="Parameters">
+                      <elementDefinition Id="b126fd83-a55d-4f93-9c92-22515c8ffb25" />
+                    </propertyInstance>
+                    <elementDefinition Id="b9f7cccf-7412-4f0f-9492-ee4791df5495" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="c69c175e-bde2-4741-9584-759479dc974e" />
+            <flowNodeTargets>
+              <controlFlow Id="6d865e8c-9007-4832-a969-1dec8b9f3627" guard="是" isLeaf="false">
+                <sendSignalActionMoniker Id="e58e96b2-e45d-4ec2-81ac-3f02289c91b8" LastKnownName="生成完整的下切事件并加入下切事件集合" />
+                <elementDefinition Id="ed6f9a1c-5615-4546-bc29-60069a46c53a" />
+              </controlFlow>
+              <controlFlow Id="a072568d-e2d2-4931-b39e-7ed545ec699b" guard="否" isLeaf="false">
+                <decisionNodeMoniker Id="3b0c8f2b-b6b9-47f2-bea8-1bbea44b30a1" LastKnownName="Decision6" />
+                <elementDefinition Id="815f95d5-1b46-49eb-804e-2960b4e82757" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <sendSignalAction Id="278dcac2-15a5-4455-b8d5-650a4b53b425" name="该部分2G话单记录合并到纯2G话单集合待处理" isLeaf="false">
+            <elementDefinition Id="3d5ccb15-b535-4be7-9fb0-5053c180056d" />
+            <flowNodeTargets>
+              <controlFlow Id="608d6d59-1a56-4a1e-96e2-9e45c1c07d76" isLeaf="false">
+                <mergeNodeMoniker Id="303a7abb-6f19-47b0-843f-6c836de44657" LastKnownName="Merge1" />
+                <elementDefinition Id="059ace91-199e-4644-b34d-2b95d73cea67" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <actionHasOutputsInternal>
+                <outputPin Id="e1a0e830-5713-4fc2-89d2-ad946c99d072" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="41c505af-0a31-4d00-8616-151f29889a6b" />
+                  <objectFlowTargets>
+                    <objectFlow Id="7dd9722e-0184-4c1d-8cff-929bc813cd87" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="b89704fb-8adf-40a7-82ef-935c6ae500c6" LastKnownName="纯2G话单集合" />
+                      <elementDefinition Id="ba88e0ba-b630-406a-8f65-85fe52131498" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="b4ce1e83-3594-4161-9414-5708283bb7e0" name="2147483647" value="2147483647">
+                      <elementDefinition Id="8d61ee85-409d-46b4-a047-4637c31506cf" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </actionHasOutputsInternal>
+            </pins>
+          </sendSignalAction>
+          <sendSignalAction Id="e58e96b2-e45d-4ec2-81ac-3f02289c91b8" name="生成完整的下切事件并加入下切事件集合" isLeaf="false">
+            <elementDefinition Id="75b7098a-509d-4868-a0e0-9f1e9d1a2642" />
+            <flowNodeTargets>
+              <controlFlow Id="2cad59ba-f0f5-40e7-ba93-9a28805500d5" isLeaf="false">
+                <mergeNodeMoniker Id="303a7abb-6f19-47b0-843f-6c836de44657" LastKnownName="Merge1" />
+                <elementDefinition Id="7bf2b062-624d-4d48-a583-f608576ea405" />
+              </controlFlow>
+              <controlFlow Id="a5217e54-86bf-4d2f-a2ac-c86a17b55077" isLeaf="false">
+                <mergeNodeMoniker Id="2ab60994-e4f9-450a-95ef-8d229bb53110" LastKnownName="Merge2" />
+                <elementDefinition Id="e5a64ced-4fce-4bb5-b385-ed2c2dd20b59" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <actionHasOutputsInternal>
+                <outputPin Id="0f5b618f-e2c9-4c21-aa03-df958c086f3e" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="b104703a-d297-4a9f-af51-b17aeae551aa" />
+                  <objectFlowTargets>
+                    <objectFlow Id="ad300647-94c0-45b8-a4cd-9dc39a0d483f" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <activityParameterNodeMoniker Id="4d738894-352a-467d-87d8-22bf96fa1b35" LastKnownName="下切事件集合" />
+                      <elementDefinition Id="18389257-acd7-4551-9dde-6450144b9e0e" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="50f471c8-7e97-42be-891e-851dde5932a4" name="2147483647" value="2147483647">
+                      <elementDefinition Id="4d1d10c8-83bb-4628-9ee2-d15cc695ea15" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </actionHasOutputsInternal>
+            </pins>
+          </sendSignalAction>
+          <mergeNode Id="303a7abb-6f19-47b0-843f-6c836de44657" name="Merge1" isLeaf="false">
+            <elementDefinition Id="b04d2eb7-2e62-4877-ba7d-b3490b4f8a01" />
+            <flowNodeTargets>
+              <controlFlow Id="fd046729-fbed-4418-8903-b870604dd10c" isLeaf="false">
+                <decisionNodeMoniker Id="7142c3b7-372b-4a50-8163-ebd08e8a26a1" LastKnownName="Decision2" />
+                <elementDefinition Id="ac2581bd-6c37-49a0-b16d-1501608fbf9e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <decisionNode Id="7142c3b7-372b-4a50-8163-ebd08e8a26a1" name="Decision2" isLeaf="false">
+            <elementDefinition Id="f4973488-846d-4c16-a0c0-82bb8480e77a" />
+            <flowNodeTargets>
+              <controlFlow Id="08ba5642-9c54-4b1d-b922-2fa2f73c9102" guard="是" isLeaf="false">
+                <opaqueActionMoniker Id="e71713c8-d96a-4b7f-9009-185379e62c46" LastKnownName="读取下一个用户的话单集合" />
+                <elementDefinition Id="5202d1fe-7df9-4987-a1d4-e714be7de11f" />
+              </controlFlow>
+              <controlFlow Id="a00b77a2-0eb7-4535-b600-4a684ee9cb98" guard="否" isLeaf="false">
+                <opaqueActionMoniker Id="b2e95a53-9238-4a0d-afd2-ec715b43bd92" LastKnownName="读取下一条2G话单" />
+                <elementDefinition Id="21372d90-ce28-4ea5-aac5-fffbe6531ffc" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode Id="0f18c3df-7866-42d0-bdb7-88b1ac89dab5" name="Decision3" isLeaf="false">
+            <elementDefinition Id="86a80f59-46af-45e5-8d49-ea701fafaf80" />
+            <flowNodeTargets>
+              <controlFlow Id="d774f4f4-5ae3-4f79-85e7-b6ae1615e92a" guard="否" isLeaf="false">
+                <opaqueActionMoniker Id="b2e95a53-9238-4a0d-afd2-ec715b43bd92" LastKnownName="读取下一条2G话单" />
+                <elementDefinition Id="36ce31eb-bf68-4f1f-8379-3c3a44855c9f" />
+              </controlFlow>
+              <controlFlow Id="03b87877-6555-472b-bb8d-92cb0675b0ba" guard="是" isLeaf="false">
+                <mergeNodeMoniker Id="cf7321cf-9a75-4476-9cbb-d71a5f18388c" LastKnownName="Merge3" />
+                <elementDefinition Id="754931cb-5630-48a8-b4ea-cab9207bf1e9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode Id="67ec3af4-2711-4194-8be5-af13bfe0d1b0" name="Decision4" isLeaf="false">
+            <elementDefinition Id="8a60e92c-b030-4dd7-8932-7e9f647cabc1" />
+            <flowNodeTargets>
+              <controlFlow Id="96b329c1-d822-46db-9ce9-c54f80c4ddfa" guard="否" isLeaf="false">
+                <opaqueActionMoniker Id="e71713c8-d96a-4b7f-9009-185379e62c46" LastKnownName="读取下一个用户的话单集合" />
+                <elementDefinition Id="7d173f37-54da-4d87-9685-b4ba5b352c3d" />
+              </controlFlow>
+              <controlFlow Id="96a2385a-4794-4d98-b900-b5284f607248" guard="是" isLeaf="false">
+                <decisionNodeMoniker Id="3324129b-e44c-4458-af45-deaf7cdc6f29" LastKnownName="Decision5" />
+                <elementDefinition Id="fa1e88ce-b271-4ec0-9b28-65c514a73619" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode Id="3324129b-e44c-4458-af45-deaf7cdc6f29" name="Decision5" isLeaf="false">
+            <elementDefinition Id="ec9003e2-b1b3-4fc3-a92f-af1401b84466" />
+            <flowNodeTargets>
+              <controlFlow Id="0c791f8c-da6c-48ef-a57e-94137dedffe1" guard="否" isLeaf="false">
+                <opaqueActionMoniker Id="ddb97b25-bb9e-4303-a594-70589c4b34e0" LastKnownName="读取下一个文件" />
+                <elementDefinition Id="6e84d2bc-6654-4248-99a0-56564715a463" />
+              </controlFlow>
+              <controlFlow Id="2370d306-7716-41ca-aec2-04a70e8b9575" guard="是" isLeaf="false">
+                <activityFinalNodeMoniker Id="357a4c77-f561-4634-ada7-b9dea93cfac8" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="9da0b71b-aa3c-41ec-a8cc-e96412e03427" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode Id="357a4c77-f561-4634-ada7-b9dea93cfac8" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="3d8dbd5a-b4cc-4866-aaef-0b71f7eb689e" />
+          </activityFinalNode>
+          <activityParameterNode Id="4d738894-352a-467d-87d8-22bf96fa1b35" name="下切事件集合" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="9511d4a0-8b48-46a6-b93b-b760462e301f" />
+            <upperBound>
+              <literalInteger Id="4005a876-aa29-417f-ac40-4cb3b0d7752d" name="2147483647" value="2147483647">
+                <elementDefinition Id="b872d201-6d5e-496c-9668-31c6a2faa77b" />
+              </literalInteger>
+            </upperBound>
+          </activityParameterNode>
+          <objectNode Id="b89704fb-8adf-40a7-82ef-935c6ae500c6" name="纯2G话单集合" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="cdfe8feb-37d3-45ac-82a4-f6b1f828e589" />
+            <upperBound>
+              <literalInteger Id="51cda5f5-5137-448a-a1e3-fc05f41091de" name="2147483647" value="2147483647">
+                <elementDefinition Id="9e3cba92-5871-48ea-b523-f920a40635eb" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <sendSignalAction Id="93092e71-c0e6-4bd4-a4b8-e7c4ab94a257" name="将2G话单合并到已有的下切事件集合中" isLeaf="false">
+            <elementDefinition Id="3ac4a9de-4092-47aa-9365-1d6ff33b1e26" />
+            <flowNodeTargets>
+              <controlFlow Id="b59645c0-6c79-40c8-bd6f-c9d8e4eb67b0" isLeaf="false">
+                <mergeNodeMoniker Id="2ab60994-e4f9-450a-95ef-8d229bb53110" LastKnownName="Merge2" />
+                <elementDefinition Id="60b2ef1d-98ee-4b55-b7f3-eeff378cb913" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <actionHasOutputsInternal>
+                <outputPin Id="cfc6aa6e-3a8d-40fd-8ca0-09aa34da6a51" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="3febfe7d-ecd0-47fc-895f-27edd70bc4c6" />
+                  <objectFlowTargets>
+                    <objectFlow Id="81c8bf1d-f953-4893-a0bd-7c479a75c5f2" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <activityParameterNodeMoniker Id="4d738894-352a-467d-87d8-22bf96fa1b35" LastKnownName="下切事件集合" />
+                      <elementDefinition Id="45bc7698-97dc-45da-b615-0a2015d4d70d" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="abc0a408-e664-4e71-9bbc-a22e3dbc76fc" name="2147483647" value="2147483647">
+                      <elementDefinition Id="098f997c-a24a-40bf-ae3c-47f8eb0b80f3" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </actionHasOutputsInternal>
+            </pins>
+          </sendSignalAction>
+          <decisionNode Id="3b0c8f2b-b6b9-47f2-bea8-1bbea44b30a1" name="Decision6" isLeaf="false">
+            <elementDefinition Id="a474a663-fba2-44fe-9053-afefeb596962" />
+            <flowNodeTargets>
+              <controlFlow Id="94c6d48c-aab0-48c6-ba66-a4a09f8b76a0" guard="是" isLeaf="false">
+                <sendSignalActionMoniker Id="93092e71-c0e6-4bd4-a4b8-e7c4ab94a257" LastKnownName="将2G话单合并到已有的下切事件集合中" />
+                <elementDefinition Id="76e0bd75-5e40-4629-93c7-cb1c9e033531" />
+              </controlFlow>
+              <controlFlow Id="da33bb71-62c4-4b76-8e7d-a33362b521d2" guard="否" isLeaf="false">
+                <decisionNodeMoniker Id="4afce25b-5b3c-4b07-b9e7-d9a799737455" LastKnownName="Decision7" />
+                <elementDefinition Id="e4a9b9f0-04d0-4495-acb7-08cfa660b5e9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <mergeNode Id="2ab60994-e4f9-450a-95ef-8d229bb53110" name="Merge2" isLeaf="false">
+            <elementDefinition Id="60e9588c-659e-43bf-afda-ee0dfeabf9c3" />
+            <flowNodeTargets>
+              <controlFlow Id="754ab9ac-aa52-429b-91d8-6a0f9cd8ecdf" isLeaf="false">
+                <decisionNodeMoniker Id="0f18c3df-7866-42d0-bdb7-88b1ac89dab5" LastKnownName="Decision3" />
+                <elementDefinition Id="8fe96239-1258-4ee9-922d-1179c480531d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <decisionNode Id="4afce25b-5b3c-4b07-b9e7-d9a799737455" name="Decision7" isLeaf="false">
+            <elementDefinition Id="85fbe042-945c-4617-9910-8c3c4d9124e9" />
+            <flowNodeTargets>
+              <controlFlow Id="24948586-a807-4fc5-9e70-d27d53ef581a" guard="是" isLeaf="false">
+                <sendSignalActionMoniker Id="278dcac2-15a5-4455-b8d5-650a4b53b425" LastKnownName="该部分2G话单记录合并到纯2G话单集合待处理" />
+                <elementDefinition Id="584d24b7-305e-45b3-891c-81f89bcc4457" />
+              </controlFlow>
+              <controlFlow Id="c21ac07f-474e-4326-93d5-eb6df4730fec" guard="否" isLeaf="false">
+                <sendSignalActionMoniker Id="0d797365-bc18-421c-ad13-95d1f2df3a5a" LastKnownName="该部分2G话单记录生成一个包含纯2G记录的DownSwitch对象加入到纯2G话单记录集合中" />
+                <elementDefinition Id="0d1a5406-b01e-4c7d-8eaa-2a551b6cbe94" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <sendSignalAction Id="0d797365-bc18-421c-ad13-95d1f2df3a5a" name="该部分2G话单记录生成一个包含纯2G记录的DownSwitch对象加入到纯2G话单记录集合中" isLeaf="false">
+            <elementDefinition Id="d05e2a43-8866-4132-8be3-af51426fb5e6" />
+            <pins>
+              <actionHasOutputsInternal>
+                <outputPin Id="42b9f5b1-17ce-41d9-adde-a69a89aa5984" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="2e9e1c3f-8427-41d4-b635-e64f6011c1d7" />
+                  <objectFlowTargets>
+                    <objectFlow Id="832badac-29d1-43a6-a691-5c235ac39361" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="b89704fb-8adf-40a7-82ef-935c6ae500c6" LastKnownName="纯2G话单集合" />
+                      <elementDefinition Id="8b05fcb1-51ed-44c6-8109-b164a690dfe5" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="3c9deef6-cf3b-46d0-b771-dae4ad545d37" name="2147483647" value="2147483647">
+                      <elementDefinition Id="269266ca-1fdb-4ed8-a2a4-8f812d820ac0" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </actionHasOutputsInternal>
+            </pins>
+          </sendSignalAction>
+          <decisionNode Id="292f016f-46a4-4e50-b7ca-862f114dd4f7" name="Decision8" isLeaf="false">
+            <elementDefinition Id="baed05fe-009b-4b35-a8ca-41245bd18a48" />
+            <flowNodeTargets>
+              <controlFlow Id="6e974912-85e8-44a9-908d-33c670a59563" guard="是" isLeaf="false">
+                <opaqueActionMoniker Id="b2e95a53-9238-4a0d-afd2-ec715b43bd92" LastKnownName="读取下一条2G话单" />
+                <elementDefinition Id="4dd09c7f-d93f-440f-994c-19a376ff535d" />
+              </controlFlow>
+              <controlFlow Id="f4d55fec-b6a5-4b91-bcc2-4f1ab1b642f6" guard="否" isLeaf="false">
+                <mergeNodeMoniker Id="cf7321cf-9a75-4476-9cbb-d71a5f18388c" LastKnownName="Merge3" />
+                <elementDefinition Id="5eba7be0-852c-4000-b192-8beee71afd0d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <mergeNode Id="cf7321cf-9a75-4476-9cbb-d71a5f18388c" name="Merge3" isLeaf="false">
+            <elementDefinition Id="4d494ed6-654c-45aa-b454-28cc1a80e65d" />
+            <flowNodeTargets>
+              <controlFlow Id="5e302e2a-9b91-4baf-ae87-8e81a919a25e" isLeaf="false">
+                <decisionNodeMoniker Id="67ec3af4-2711-4194-8be5-af13bfe0d1b0" LastKnownName="Decision4" />
+                <elementDefinition Id="00420bec-e398-47bd-83aa-99e710cf0b56" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <decisionNode Id="134f392a-5cce-4875-be62-92042837a5ea" name="Decision9" isLeaf="false">
+            <elementDefinition Id="ff20ccf0-12a0-4b8a-be00-181324e97550" />
+            <flowNodeTargets>
+              <controlFlow Id="9ed75df1-e992-4011-9486-ac51aef24f4e" guard="否" isLeaf="false">
+                <opaqueActionMoniker Id="39833c18-36b7-48d2-a424-c5c3de492c7e" LastKnownName="合并连续的2G话单集合" />
+                <elementDefinition Id="9fcffc59-92b3-4fef-b47c-9074f8a3bca7" />
+              </controlFlow>
+              <controlFlow Id="40162d04-a7cd-4ff5-8f95-b260a0270f97" guard="是" isLeaf="false">
+                <mergeNodeMoniker Id="cf7321cf-9a75-4476-9cbb-d71a5f18388c" LastKnownName="Merge3" />
+                <elementDefinition Id="0e822a72-5d95-49a6-a7c3-b64f0d876fa9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="9077d0d6-e059-4b6a-b03e-fcfd2cc9fe20" name="程序设计流程图">
+    <elementDefinition Id="fbe1d8c8-8ba0-418f-89e0-42c5cd33b822" />
+    <profileInstances>
+      <packageHasProfileInstances Id="e9b1dfb0-84d4-4178-8355-e962abd0c44c">
+        <profileInstance Id="fff44029-1ca4-4c36-9d49-84127a72bdc5" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="1b79a2cb-ae62-4392-9f0e-17b82264579e">
+        <profileInstance Id="7563ed1b-cca0-47d7-845c-73c8f3155718" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="b0d705fe-7c45-4d53-a96a-71c1a889939e">
+        <profileInstance Id="29296120-9607-42ba-b768-bc801b66698f" name="CSharpProfile">
+          <elementDefinition Id="6e752274-2099-4212-8fdd-8e1e3e591fc5" />
+        </profileInstance>
+        <elementDefinition Id="88f9bc42-1594-4e4d-b086-b243b52f00d5" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="83b854fa-efdc-4c7d-aeb0-4bd5c1b68ecf">
+        <profileInstance Id="77891933-92a8-42f4-a399-89bc79889d53" name="TextTemplateBindings">
+          <elementDefinition Id="cec03ec2-f976-48a9-b1df-477452ecce63" />
+        </profileInstance>
+        <elementDefinition Id="83d8309a-3aa1-401f-9fd1-b4d9a3c75f87" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

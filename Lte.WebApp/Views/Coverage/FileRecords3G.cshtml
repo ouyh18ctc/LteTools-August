@@ -1,0 +1,81 @@
+﻿@model Lte.Evaluations.Dingli.TestFileRecordsViewModel
+
+@{
+    ViewBag.Title = "3G路测数据-" + Model.FileName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<input type="hidden" id="longitude" value="@Model.CenterX" />
+<input type="hidden" id="lattitude" value="@Model.CenterY" />
+<section>
+    <h2>@ViewBag.Title</h2>
+    <div class="btn-group">
+        <input class="btn btn-toolbar" type="button" value="SINR" id="showSinr"/>
+        <input class="btn btn-toolbar" type="button" value="天线0接收功率" id="showRx0"/>
+        <input class="btn btn-toolbar" type="button" value="天线1接收功率" id="showRx1"/>
+    </div>
+    <table class="float-right">
+        <tbody>
+            <tr id ="colors"></tr>
+            <tr id="limits"></tr>
+        </tbody>
+    </table>
+</section>
+
+@section scripts{
+    <script type="text/javascript" src="~/Scripts/Parameters/MapContainer.js"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/ExtendOperations.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var map = new BMap.Map("allmap");
+            var center = new BMap.Point($("#longitude").val(), $("#lattitude").val());
+            var container = new MapContainer(map);
+            container.initalize(center, 15);
+
+            $("#showSinr").click(function() {
+                map.clearOverlays();
+                var data = [
+                    { L: -40, H: -3, C: 'ff0000' },
+                    { L: -3, H: -0, C: '800f0f' },
+                    { L: 0, H: 6, C: '080880' },
+                    { L: 6, H: 40, C: '08f008' }
+                ];
+                for (var i = 0; i < data.length; i++) {
+                    container.addDtPoints("/api/SinrPoints/", data[i].L, data[i].H, '#' + data[i].C);
+                }
+                $("#colors").updateColor(data, "SINR(dB)");
+                $("#limits").updateLimit(data);
+            });
+
+            $("#showRx0").click(function() {
+                map.clearOverlays();
+                var data = [
+                    { L: -120, H: -100, C: 'ff0000' },
+                    { L: -100, H: -90, C: '800f0f' },
+                    { L: -90, H: -70, C: '080880' },
+                    { L: -70, H: 0, C: '08f008' }
+                ];
+                for (var i = 0; i < data.length; i++) {
+                    container.addDtPoints("/api/Rx0Points/", data[i].L, data[i].H, '#' + data[i].C);
+                }
+                $("#colors").updateColor(data, "RxAGC0(dBm)");
+                $("#limits").updateLimit(data);
+            });
+
+            $("#showRx1").click(function() {
+                map.clearOverlays();
+                var data = [
+                    { L: -120, H: -100, C: 'ff0000' },
+                    { L: -100, H: -90, C: '800f0f' },
+                    { L: -90, H: -70, C: '080880' },
+                    { L: -70, H: 0, C: '08f008' }
+                ];
+                for (var i = 0; i < data.length; i++) {
+                    container.addDtPoints("/api/Rx1Points/", data[i].L, data[i].H, '#' + data[i].C);
+                }
+                $("#colors").updateColor(data, "RxAGC1(dBm)");
+                $("#limits").updateLimit(data);
+            });
+        });
+    </script>
+}

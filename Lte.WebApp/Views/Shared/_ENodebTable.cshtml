@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Lte.Parameters.Entities.ENodeb>
+
+<h4>LTE基站信息</h4>
+<table  summary="User Grid" class="zebra">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ENodebId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Longtitute)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lattitute)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Factory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlanNum)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENodebId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Longtitute)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lattitute)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Factory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlanNum)
+        </td>
+    </tr>
+}
+
+</table>

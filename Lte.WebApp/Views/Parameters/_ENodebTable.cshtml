@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Lte.Parameters.Entities.ENodeb>
+
+<section>
+    @if (Model.Any())
+    {
+    <table class="table table-striped">
+        <thead>
+        <tr style="font-weight:bold; background-color:#A8C3CB;">
+            <th>@Html.LabelFor(x=>x.ElementAt(0).ENodebId)</th>
+	        <th>@Html.LabelFor(x=>x.ElementAt(0).Name)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).Longtitute)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).Lattitute)</th>
+            <th>@Html.LabelFor(x=>x.ElementAt(0).Address)</th>
+            <th>小区列表</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (Lte.Parameters.Entities.ENodeb eNodeb in Model)
+        { 
+        <tr>
+            <td>@eNodeb.ENodebId</td>
+            <td>@eNodeb.Name</td>
+            <td>@eNodeb.Longtitute</td>
+            <td>@eNodeb.Lattitute</td>
+            <td>@eNodeb.Address</td>
+            <td>
+                <div class="btn-group">
+                    @Html.ActionLink("详细信息", "CellList", new { eNodebId = eNodeb.ENodebId }, new {@class="btn btn-primary"})
+                    @Html.ActionLink("修改信息","ENodebEdit", new { eNodebId = eNodeb.ENodebId }, new {@class="btn btn-primary"})
+                </div>
+            </td>
+        </tr>
+        }
+        </tbody>
+    </table>
+    }
+</section>

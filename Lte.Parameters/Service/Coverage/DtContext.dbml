@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ouyanghui_test" Class="DtContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.17.165.100;Initial Catalog=ouyanghui_test;Persist Security Info=True;User ID=ouyanghui" SettingsObjectName="Lte.Parameters.Properties.Settings" SettingsPropertyName="ouyanghui_testConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.areaTestDate" Member="AreaTestDate">
+    <Type Name="AreaTestDate">
+      <Column Name="area" Member="Area" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="latestTestDate2G" Member="LatestTestDate2G" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="latestTestDate3G" Member="LatestTestDate3G" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="latestTestDate4G" Member="LatestTestDate4G" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.csvFilesInfo" Member="CsvFilesInfo">
+    <Type Name="CsvFilesInfo">
+      <Column Name="testDate" Member="TestDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="csvFileName" Member="CsvFileName" Type="System.String" DbType="Char(300)" CanBeNull="true" />
+      <Column Name="direct" Member="Direct" Type="System.String" DbType="Char(300)" CanBeNull="true" />
+      <Column Name="dataType" Member="DataType" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.rasterInfo" Member="RasterInfo">
+    <Type Name="RasterInfo">
+      <Column Name="rasterNum" Member="RasterNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="csvFilesName4G" Member="CsvFilesName4G" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="csvFilesName3G" Member="CsvFilesName3G" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="csvFilesName2G" Member="CsvFilesName2G" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="coordinate0" Member="Coordinate0" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="coordinate1" Member="Coordinate1" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="coordinate2" Member="Coordinate2" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="coordinate3" Member="Coordinate3" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="area" Member="Area" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_get2GRasterInfos" Method="sp_get2GRasterInfos">
+    <Parameter Name="area" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_get2GRasterInfosResult">
+      <Column Name="rasterNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="csvFilesName4G" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="csvFilesName3G" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="csvFilesName2G" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="coordinate0" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="coordinate1" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="coordinate2" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="coordinate3" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="area" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_getDtFileInfos" Method="sp_getDtFileInfos">
+    <Parameter Name="keyword" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="district" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="type" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="sp_getDtFileInfosResult">
+      <Column Name="testDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="csvFileName" Type="System.String" DbType="Char(300)" CanBeNull="true" />
+      <Column Name="direct" Type="System.String" DbType="Char(300)" CanBeNull="true" />
+      <Column Name="dataType" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_get3GRasterInfos" Method="sp_get3GRasterInfos">
+    <Parameter Name="area" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_get3GRasterInfosResult">
+      <Column Name="rasterNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="csvFilesName4G" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="csvFilesName3G" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="csvFilesName2G" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="coordinate0" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="coordinate1" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="coordinate2" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="coordinate3" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="area" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_get4GRasterInfos" Method="sp_get4GRasterInfos">
+    <Parameter Name="area" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_get4GRasterInfosResult">
+      <Column Name="rasterNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="csvFilesName4G" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="csvFilesName3G" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="csvFilesName2G" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="coordinate0" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="coordinate1" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="coordinate2" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="coordinate3" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="area" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

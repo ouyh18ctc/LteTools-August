@@ -1,0 +1,19 @@
+﻿@model Lte.Evaluations.ViewHelpers.StatFieldViewModel
+@using Lte.Evaluations.Infrastructure.Entities
+            
+<p>
+    区间数量：
+    @Html.DropDownListFor(x => x.FieldLength,
+        new List<SelectListItem> 
+        {
+            new SelectListItem { Text="4", Value="4" }, 
+            new SelectListItem { Text = "6", Value = "6" },
+            new SelectListItem { Text = "8", Value = "8" }
+        }
+        )
+</p>
+<p>
+    颜色主题：                    
+    @Html.DropDownListFor(x=>x.ColorThemeDescription,ColorThemeQueries.Choices.Select(
+        x => new SelectListItem() { Text = x, Value = x }).ToList())
+</p>

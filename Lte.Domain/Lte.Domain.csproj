@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2DD76789-48D0-4608-BBB2-D9AC6F5D8196}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lte.Domain</RootNamespace>
+    <AssemblyName>Lte.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Moq, Version=4.2.1507.118, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.2.1507.0118\lib\net40\Moq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq, Version=1.13.52.2, Culture=neutral, PublicKeyToken=8c59a1bf3e8d42c1, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Data.Linq.1.0.0\lib\NET40\Remotion.Data.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Measure\IAntennaFactorProperty.cs" />
+    <Compile Include="Regular\ColumnAttribute.cs" />
+    <Compile Include="Regular\DataTableExtensions.cs" />
+    <Compile Include="Regular\ExcelImporter.cs" />
+    <Compile Include="Geo\Abstract\ICdmaCarrier.cs" />
+    <Compile Include="Geo\Abstract\ITown.cs" />
+    <Compile Include="Geo\Service\GeoMath.cs" />
+    <Compile Include="Geo\Entities\GeoPoint.cs" />
+    <Compile Include="Geo\Abstract\ICell.cs" />
+    <Compile Include="Geo\Abstract\IGeoPoint.cs" />
+    <Compile Include="Geo\Abstract\IOutdoorCell.cs" />
+    <Compile Include="Geo\Service\MockOutdoorCellOperations.cs" />
+    <Compile Include="Geo\Service\OutdoorCellMathOperations.cs" />
+    <Compile Include="Geo\Entities\SectorTriangle.cs" />
+    <Compile Include="Geo\Service\QueryGeoPointsService.cs" />
+    <Compile Include="Geo\Service\QueryOutdoorCellService.cs" />
+    <Compile Include="Geo\Entities\StubOutdoorCell.cs" />
+    <Compile Include="LinqToExcel\Entities\Attributes.cs" />
+    <Compile Include="LinqToExcel\Entities\ExcelDomain.cs" />
+    <Compile Include="LinqToExcel\Entities\ExcelQuery.cs" />
+    <Compile Include="LinqToExcel\Entities\WhereClauseExpressionTreeVisitor.cs" />
+    <Compile Include="LinqToExcel\ExcelQueryFactory.cs" />
+    <Compile Include="LinqToExcel\IExcelQueryFactory.cs" />
+    <Compile Include="LinqToExcel\Service\ExcelCommonExtensions.cs" />
+    <Compile Include="LinqToExcel\Service\ExcelQueryExecutor.cs" />
+    <Compile Include="LinqToExcel\Service\ExcelUtilities.cs" />
+    <Compile Include="LinqToExcel\Entities\SqlGeneratorQueryModelVisitor.cs" />
+    <Compile Include="Regular\DateTimeTranslation.cs" />
+    <Compile Include="TypeDefs\AlarmType.cs" />
+    <Compile Include="TypeDefs\IpAddress.cs" />
+    <Compile Include="LinqToCsv\CsvColumnAttribute.cs" />
+    <Compile Include="LinqToCsv\Context\CsvContext.cs" />
+    <Compile Include="LinqToCsv\Context\FileDataAccess.cs" />
+    <Compile Include="LinqToCsv\Context\RowReader.cs" />
+    <Compile Include="LinqToCsv\Description\CsvFileDescription.cs" />
+    <Compile Include="LinqToCsv\Description\DataRow.cs" />
+    <Compile Include="LinqToCsv\Description\DataRowItem.cs" />
+    <Compile Include="LinqToCsv\Description\IDataRow.cs" />
+    <Compile Include="LinqToCsv\LinqToCsvException.cs" />
+    <Compile Include="LinqToCsv\Mapper\FieldIndexInfo.cs" />
+    <Compile Include="LinqToCsv\Mapper\FieldMapper.cs" />
+    <Compile Include="LinqToCsv\Mapper\FieldMapper_Reading.cs" />
+    <Compile Include="LinqToCsv\Mapper\TypeFieldInfo.cs" />
+    <Compile Include="LinqToCsv\StreamDef\CsvStream.cs" />
+    <Compile Include="LinqToCsv\StreamDef\CsvStreamBuffer.cs" />
+    <Compile Include="LinqToCsv\StreamDef\CsvStreamLine.cs" />
+    <Compile Include="Measure\ComparableCell.cs" />
+    <Compile Include="Measure\LinkBudget.cs" />
+    <Compile Include="Measure\MeasurableCell.cs" />
+    <Compile Include="Measure\MeasurableCellRepository.cs" />
+    <Compile Include="Measure\MeasurePlanCellRelation.cs" />
+    <Compile Include="Measure\MeasurePoint.cs" />
+    <Compile Include="Measure\MeasurePointListOperations.cs" />
+    <Compile Include="Measure\MeasurePointResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regular\ExtendedMath.cs" />
+    <Compile Include="Regular\GeneralText.cs" />
+    <Compile Include="Regular\SecureConversion.cs" />
+    <Compile Include="Regular\SecureValue.cs" />
+    <Compile Include="TypeDefs\CommonEqualityComparer.cs" />
+    <Compile Include="TypeDefs\FrequencyBand.cs" />
+    <Compile Include="TypeDefs\ITimeStat.cs" />
+    <Compile Include="TypeDefs\Matrix.cs" />
+    <Compile Include="TypeDefs\TypeOperations.cs" />
+    <Compile Include="TypeDefs\UrbanType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

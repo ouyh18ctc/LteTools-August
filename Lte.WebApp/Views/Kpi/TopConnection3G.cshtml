@@ -1,0 +1,108 @@
+﻿@model Lte.Evaluations.Kpi.TopConnection3GViewModel
+
+@{
+    ViewBag.Title = "TOP连接小区分析";
+}
+
+@section featured {
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+            </hgroup>
+    }
+<div class="row">
+    <div id="radiotabs" class="col-md-8">
+        <ul>
+            <li><a href ="#oneday">当日指标分析</a></li>
+            <li><a href="#multi-days">TOP小区变化趋势</a></li>
+        </ul>
+        <div id="oneday">
+            @using (Html.BeginForm("TopConnection3G", "Kpi",
+                FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                Html.RenderPartial("_StatDateSelection", Model);
+                <p><input type="submit" id="stat" value="统计指标" /></p>
+            }
+            @if (Model.StatList.Any())
+            {
+                <h3>@Model.StatDate.ToShortDateString() TOP连接指标</h3>
+                Html.RenderPartial("_TopConnection3GStatTable", Model.StatList);
+            }
+        </div>
+        <div id="multi-days">
+            @{ Html.RenderPartial("_DateSpanAndTopCountSelection", Model); }
+            <p><input type="button" id="showresults" value="显示图表" /></p>
+            @foreach (string city in Model.Cities)
+            { 
+                <div id="top-@city" style="min-width: 600px; min-height: 400px; margin: 0 auto"></div>
+            }
+        </div>
+    </div>
+    <div class="col-md-4">@{ Html.RenderPartial("_KpiMenu");}</div>
+    @foreach (string city in Model.Cities)
+    { 
+        <input type="hidden" class="citylist" value="@city" />
+    }
+    <div id="dialog-modal"></div>
+</div>
+
+@section css{
+@Styles.Render("~/Content/themes/base/css")
+}
+
+@section Scripts {
+@Scripts.Render("~/bundles/jqueryui")
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/highcharts")
+<script type="text/javascript" src="~/Scripts/Highcharts/modules/exporting.js"></script>
+<script type="text/javascript" src="~/Scripts/Dingli/ComboSetting.js"></script>
+<script type="text/javascript" src="~/Scripts/Parameters/TopStatSet.js"></script>
+<script type="text/javascript" src="~/Scripts/Parameters/TopHistorySet.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#radiotabs").tabs();
+        $("#StatDate").datepicker({ dateFormat: 'yy-mm-dd' });
+        $("#StartDate").datepicker({ dateFormat: 'yy-mm-dd' });
+        $("#EndDate").datepicker({ dateFormat: 'yy-mm-dd' });
+    });
+    $("#showresults").click(function () {
+        var begin = new Date($("#StartDate").val());
+        var end = new Date($("#EndDate").val());
+        $("#system_message").html("");
+        if (begin.toString() == "Invalid Date" || end.toString() == "Invalid Date") {
+            $("#system_message").append("<div class='error'>输入日期格式错误！</div>");
+        } else if (begin > end) {
+            $("#system_message").append("<div class='error'>开始日期必须早于或等于结束日期！</div>");
+        } else {
+            $(".citylist").each(function () {
+                var city = $(this).val();
+                var statSet = new TopStatSet(city);
+                statSet.queryTopConnection3G($("#StartDate").val(), $("#EndDate").val(), "#top-", $("#TopCounts").val());
+            });
+        }
+    });
+    $(".topdetails").click(function () {
+        var cellInfo = $(this).attr('name');
+        var end = $("#StatDate").val();
+        var setting = new TopHistorySet(cellInfo, end);
+
+        $("#dialog-modal").dialog({
+            modal: true,
+            title: '历史信息',
+            hide: 'slide',
+            width: 640,
+            height: 480,
+            buttons: {
+                '关闭': function () {
+                    $(this).dialog("close");
+                }
+            },
+            open: function () {
+                $(this).html("");
+                $(this).highcharts(setting.getTopConnection3GOptions());
+            }
+        });
+    });
+</script>
+}
+
+

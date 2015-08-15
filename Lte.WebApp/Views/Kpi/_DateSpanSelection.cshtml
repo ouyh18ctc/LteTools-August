@@ -1,0 +1,11 @@
+﻿@model Lte.Evaluations.Kpi.IDateSpanViewModel
+
+<h4>日期选择：</h4>
+<div class="input-group">
+    <span class="input-group-addon">@Html.LabelFor(x => x.StartDate)</span>
+    @Html.EditorFor(x => x.StartDate, new {@class="form-control"})
+</div>
+<div class="input-group">
+    <span class="input-group-addon">@Html.LabelFor(x => x.EndDate)</span>
+    @Html.EditorFor(x => x.EndDate, new {@class="form-control"})
+</div>

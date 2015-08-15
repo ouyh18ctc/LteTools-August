@@ -1,0 +1,38 @@
+﻿@model Lte.Evaluations.ViewHelpers.StatFieldViewModel
+@using Lte.Evaluations.Infrastructure.Entities
+
+@section featured {
+            <hgroup class="title">
+                <h1>仿真指标显示设置</h1>
+            </hgroup>
+}
+
+<article>
+@using (Html.BeginForm("PointsAnalysis", "Evaluation",
+    FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+            <p>
+                选择指标：
+                @Html.DropDownListFor(x => x.FieldName, StatValueChoiceQueries.Choices.Select(
+                    x => new SelectListItem { Text = x, Value = x }).ToList())
+            </p>
+    Html.RenderPartial("../Rutrace/StatFieldInput", Model);
+            <p><input type="submit" value="生成区间" />
+            @Html.ActionLink("输出结果", "ExportPoints", new { fieldName = Model.FieldName })
+            <span>&nbsp;|&nbsp;</span>
+            @Html.ActionLink("导出KML文件", "ExportKml", new { fieldName = Model.FieldName })
+            </p>
+}
+</article>
+
+<aside>
+    @{ Html.RenderPartial("_EvaluationIntervalTable", Model.IntervalList); }
+</aside>
+
+@section scripts{
+<script type="text/javascript" src="../../Scripts/Parameters/StatField.js"></script>
+<script type="text/javascript">
+    UpdateFieldName("GetStatValueField");
+</script>
+}
+

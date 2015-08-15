@@ -1,0 +1,95 @@
+﻿@model Lte.Evaluations.ViewHelpers.ENodebDetailsViewModel
+
+@{
+    ViewBag.Title = Model.ENodeb.Name + "基站信息和小区列表";
+}
+
+@section featured {
+    <hgroup class="title">
+        <h1>@ViewBag.Title</h1>
+    </hgroup>
+}
+
+<article>
+    <div class="btn-group">
+        @Html.ActionLink("返回全网基站列表","List", null, new{@class="btn btn-primary"})
+        @Html.ActionLink("返回镇区基站列表","ENodebList", new{townId=Model.ENodeb.TownId}, new{@class="btn btn-primary"})
+    </div>
+    <div id="radiotabs">
+        <ul>
+            <li><a href="#enodeb-info">基站信息</a></li>
+            <li><a href="#cells-info">小区信息</a></li>
+            <li><a href="#cell-map">小区地图</a></li>
+        </ul>
+        <div id="enodeb-info">
+            @{
+                Html.RenderPartial("_ENodebInfo");
+                if (Model.Photos.Any())
+                {
+                    Html.RenderPartial("_PhotosInfo", Model.Photos);
+                }
+            }
+        </div>
+        <div id="cells-info">
+            @{Html.RenderPartial("_CellsInfo");}
+        </div>
+        <div id="cell-map">
+            <div id="allmap" style="width: 100%;height: 600px;overflow: hidden;margin:0;"></div>
+        </div>
+    </div>
+    @{
+        Html.RenderPartial("_ENodebEdit", Model.ENodeb.ENodebId);
+    }
+    <input type="hidden" id="eid" value="@Model.ENodeb.ENodebId" />
+</article>
+
+@section css{
+    @Styles.Render("~/Content/themes/base/css")
+    }
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/knockout")
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=OeWDTDlnolWHBNP1GSkDph34"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/MapContainer.js"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/EditModel.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#radiotabs").tabs();
+            var model = new EditModel($("#eid").val());
+            ko.applyBindings(model);
+            $("#editENodeb").click(function () {
+                model.controller = "ENodeb";
+                model.load();
+                $(".modal").modal('show');
+            });
+            $("#editBts").click(function () {
+                model.controller = "Bts";
+                model.load();
+                $(".modal").modal('show');
+            });
+            var map = new BMap.Map("allmap");
+            var container = new MapContainer(map);
+            map.enableScrollWheelZoom(); //启用滚轮放大缩小
+            $.ajax({
+                url: "/api/ENodeb/"+$("#eid").val(),
+                type: "GET",
+                dataType: "json",
+                success: function(data) {
+                    var center = new BMap.Point(data.BaiduLongtitute, parseFloat(data.BaiduLattitute) + 0.01);
+                    map.centerAndZoom(center, 16);
+                    container.addOneENodebMarker(data, $("#eid").val());
+                }
+            });
+            $.ajax({
+                url: "/api/SectorList/" + $("#eid").val(),
+                type: "GET",
+                dataType: "json",
+                success: function(data) {
+                    container.drawSectors(data, true);
+                }
+            });
+        });
+    </script>
+}

@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="OpenRuFileDialogTitle" xml:space="preserve">
+    <value>打开RU二进制文件</value>
+  </data>
+  <data name="OpenRuFileDialogFilter" xml:space="preserve">
+    <value>RU二进制文件|*.dat</value>
+  </data>
+  <data name="OpenCdrFileDialogTitle" xml:space="preserve">
+    <value>打开简要话单文件</value>
+  </data>
+  <data name="OpenCdrFileDialogFilter" xml:space="preserve">
+    <value>简要话单文件|*.txt</value>
+  </data>
+  <data name="OpenKpiFileDialogTitle" xml:space="preserve">
+    <value>打开每日指标文件</value>
+  </data>
+  <data name="OpenKpiFileDialogFilter" xml:space="preserve">
+    <value>每日指标文件|*.csv</value>
+  </data>
+  <data name="OpenMrFileDialogFilter" xml:space="preserve">
+    <value>MR记录文件|*.xml</value>
+  </data>
+  <data name="OpenMrFileDialogTiltle" xml:space="preserve">
+    <value>打开MR XML文件</value>
+  </data>
+  <data name="DefaultCdrFileExt" xml:space="preserve">
+    <value>txt</value>
+  </data>
+  <data name="DefaultKpiFileExt" xml:space="preserve">
+    <value>csv</value>
+  </data>
+  <data name="DefaultMrFileExt" xml:space="preserve">
+    <value>xml</value>
+  </data>
+  <data name="DefaultRuFileExt" xml:space="preserve">
+    <value>dat</value>
+  </data>
+  <data name="OpenPreciseFileDialogFilter" xml:space="preserve">
+    <value>精确覆盖指标文件|*.csv</value>
+  </data>
+  <data name="OpenPreciseFileDialogTitle" xml:space="preserve">
+    <value>打开精确覆盖指标文件</value>
+  </data>
+  <data name="DefaultMmlFileExt" xml:space="preserve">
+    <value>txt</value>
+  </data>
+  <data name="DefaultParametersFileExt" xml:space="preserve">
+    <value>xlsx</value>
+  </data>
+  <data name="OpenCdmaFileDialogTitle" xml:space="preserve">
+    <value>打开CDMA工参文件</value>
+  </data>
+  <data name="OpenLteFileDialogTitle" xml:space="preserve">
+    <value>打开LTE工参文件</value>
+  </data>
+  <data name="OpenMmlFileDialogFilter" xml:space="preserve">
+    <value>MML文件|*.txt</value>
+  </data>
+  <data name="OpenMmlFileDialogTitle" xml:space="preserve">
+    <value>打开MML文件</value>
+  </data>
+  <data name="OpenParametersFileDialogFilter" xml:space="preserve">
+    <value>工参文件|*.xls;*.xlsx</value>
+  </data>
+  <data name="MainMenu_KpiImportTitle" xml:space="preserve">
+    <value>每日指标信息导入</value>
+  </data>
+  <data name="MainMenu_KpiImportComments" xml:space="preserve">
+    <value>      导入全天掉话性能以及相关详细信息、原因分析和4G精确覆盖率等指标分布。</value>
+  </data>
+  <data name="MainMenu_ParametersComments" xml:space="preserve">
+    <value>      通过Excel表导入全网或部分基站、小区信息。首先从Excel表和MML文件中读入LTE和CDMA的工参信息，然后将基站、小区和共站信息导入到数据库中。</value>
+  </data>
+  <data name="MainMenu_ParametersTitle" xml:space="preserve">
+    <value>基础数据导入</value>
+  </data>
+  <data name="MainMenu_RuMrDisplayComments" xml:space="preserve">
+    <value>      MRS和MRO数据导入，用于简要数据库内容测试，以验证后续网页程序应用。</value>
+  </data>
+  <data name="MainMenu_RuMrDisplayTitle" xml:space="preserve">
+    <value>MR数据导入</value>
+  </data>
+  <data name="MainMenu_RutraceImportComments" xml:space="preserve">
+    <value>      导入RU二进制记录及简要话单文件，用于后续4G站点规划分析，生成规划负面清单。</value>
+  </data>
+  <data name="MainMenu_RutraceImportTitle" xml:space="preserve">
+    <value>RU及简要话单文件导入</value>
+  </data>
+  <data name="OpenLteNeighborDialogFilter" xml:space="preserve">
+    <value>LTE邻区关系定义文件|*.csv</value>
+  </data>
+  <data name="OpenLteNeighborDialogTitle" xml:space="preserve">
+    <value>打开LTE邻区关系定义文件</value>
+  </data>
+  <data name="MainMenu_DtDisplayContents" xml:space="preserve">
+    <value>      通过输入经纬度等信息，查询相应的DT数据记录内容，测试查询数据库程序的正确性。 </value>
+  </data>
+  <data name="MainMenu_DtDisplayTitle" xml:space="preserve">
+    <value>查看DT数据内容</value>
+  </data>
+</root>

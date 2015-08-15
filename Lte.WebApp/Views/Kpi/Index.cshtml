@@ -1,0 +1,139 @@
+﻿@model Lte.Evaluations.Kpi.KpiListViewModel
+
+@{
+    ViewBag.Title = "全网指标总览";
+}
+
+@section featured {
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+            </hgroup>
+    }
+
+<div class="row">
+    <div class="col-md-8">
+        <ul id="radiotabs" class="nav nav-tabs">
+            <li class="active"><a href ="#overall" data-toggle="tab">总体指标情况</a></li>
+            @foreach (string city in Model.Cities)
+            {
+                <li><a href="#chart-@city" data-toggle="tab">@city 指标变化趋势图表</a></li>
+            }
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div id="overall" class="tab-pane fade in active">
+                @using (Html.BeginForm("Index", "Kpi",
+                    FormMethod.Post, new { enctype = "multipart/form-data" }))
+                { 
+                    Html.RenderPartial("_StatDateSelection",Model);
+                    <p>
+                        <button type="submit" id="stat" class="btn btn-primary btn-lg">
+                            <span class="glyphicon glyphicon-user"></span>统计指标
+
+                        </button>
+
+                    </p>
+                }
+                @if (Model.CdmaStats.Any())
+                {
+                    Html.RenderPartial("_OverallStatTable", Model.CdmaStats);
+                }
+            
+            </div>
+            @foreach (string city in Model.Cities)
+            { 
+                <div id="chart-@city" class="tab-pane fade">
+                    @{ Html.RenderPartial("_DateSpanSelection", Model); }
+                    <p>
+                        <button type="button" id="showresults" class="btn btn-primary btn-lg">
+                            <span class="glyphicon glyphicon-search"></span>显示图表
+                        </button>
+                    </p>   
+                    <div id="display-@city"> 
+                        <h3><a href="#">2G话务量</a></h3>       
+                        <div id="erlang-2G-@city" style="min-height: 400px; margin: 0 auto"></div>
+                        <h3><a href="#">2G掉话率</a></h3> 
+                        <div id="drop-2G-@city" style="min-height: 400px; margin: 0 auto"></div>
+                        <h3><a href="#">Ec/Io优良比</a></h3> 
+                        <div id="ecio-2G-@city" style="min-height: 400px; margin: 0 auto"></div>
+                        <h3><a href="#">3G流量</a></h3> 
+                        <div id="flow-3G-@city" style="min-height: 400px; margin: 0 auto"></div>
+                        <h3><a href="#">3G下切2G流量比</a></h3> 
+                        <div id="downswitch-@city" style="min-height: 400px; margin: 0 auto"></div>
+                        <h3><a href="#">C/I优良比</a></h3> 
+                        <div id="ci-3G-@city" style="min-height: 400px; margin: 0 auto"></div>
+                    </div>             
+                </div>
+            }
+        </div>
+    </div>
+    <div class="col-md-4">
+        @{ Html.RenderPartial("_KpiMenu");}
+    </div>
+    @foreach (string city in Model.Cities)
+    { 
+        <input type="hidden" class="citylist" value="@city" />
+    }
+</div>
+
+@section css
+{
+    @Styles.Render("~/Content/themes/base/css")
+}
+@section Scripts {
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/highcharts")
+@Scripts.Render("~/bundles/jqueryui")
+<script type="text/javascript" src="~/Scripts/Dingli/ComboSetting.js"></script>
+<script type="text/javascript" src="~/Scripts/Highcharts/modules/exporting.js"></script>
+<script type="text/javascript" src="~/Scripts/Parameters/KpiStatSet.js"></script>
+<script type="text/javascript" src="~/Scripts/Parameters/DateValidation.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#StatDate").datepicker({ dateFormat: 'yy-mm-dd' });
+            $("#StartDate").datepicker({ dateFormat: 'yy-mm-dd' });
+            $("#EndDate").datepicker({ dateFormat: 'yy-mm-dd' });
+            $(".citylist").each(function () {
+                $("#display-" + $(this).val()).accordion();
+            });
+        });
+        $("#showresults").click(function () {
+            var validation = new DateValidation({
+                startdatetag: "StartDate",
+                enddatetag: "EndDate",
+                messagetag: "system_message"
+            });
+            if (validation.validate()) {
+                $.ajax({
+                    url: "/KpiStat/Query",
+                    type: "GET",
+                    dataType: "json",
+                    data: {
+                        begin: $("#StartDate").val(),
+                        end: $("#EndDate").val()
+                    },
+                    success: function () {
+                        $(".citylist").each(function () {
+                            var city = $(this).val();
+                            $.ajax({
+                                url: "/KpiStat/GetDateCategories",
+                                type: "GET",
+                                dataType: "json",
+                                data: {
+                                    city: city
+                                },
+                                success: function (data) {
+                                    $("#display-" + city + " > h3 a").each(function() {
+                                        var setting = new ComboSetting(city + $(this).html() + '变化趋势');
+                                        var dataSet = new KpiStatSet(setting);
+                                        dataSet.generateChart(city, data, $(this).parent().next(), $(this).html());
+                                    });
+                                }
+                            });
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+}
+

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="干扰记录数据结构">
+  <logicalClassDesignerModelMoniker Id="56a23931-6d5d-491b-9d19-f49259f61f48" />
+  <nestedChildShapes>
+    <classShape Id="89f38a85-c3f3-4e07-8ee5-1b5a4546b4a7" absoluteBounds="1.625, 0.875, 2.25, 1.8372395833333335" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="7948b729-36fe-4993-9f03-9d9cb211da25" LastKnownName="RuInterferenceRecord" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="d77321b0-5a82-43d3-a193-5fe671906f12" absoluteBounds="1.64, 1.2650000000000001, 2.2199999999999998, 0.93400065104166663" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="f87b4718-23ca-4295-8796-752864853a70" absoluteBounds="1.64, 2.2090006510416664, 2.2199999999999998, 0.40323893229166674" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="db02c3b4-44ca-435e-a6d2-3510dc0d469e" absoluteBounds="5, 2.25, 2, 1.8372395833333335" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="8e76d886-054e-44e3-af33-7f3ac4b1cf36" LastKnownName="RuInterference" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="26f97cfc-8fc0-4f2f-9868-ae6fc156f015" absoluteBounds="5.015, 2.64, 1.9700000000000002, 1.1109212239583333" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="1c85654e-80d1-45b3-8bfd-09d532abd40f" absoluteBounds="5.015, 3.7609212239583334, 1.9700000000000002, 0.22631835937500022" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.875 : 1.64014923878205); (6 : 1.64014923878205); (6 : 2.25)]" fixedFrom="Caller" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="1" targetMultiplicity="0..N">
+      <associationMoniker Id="c9a053d6-7e41-429b-acad-247d6f71c112" />
+      <relativeChildShapes />
+      <moveableDecoratorHostShapes>
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="4.431854248046875, 1.3750000000000002, 0.79795324802398682, 0.16650390625" shapeFieldName="SourceRoleName" />
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="3.9375, 1.3465294471153841, 0.125, 0.16650390625" shapeFieldName="SourceMultiplicity" />
+      </moveableDecoratorHostShapes>
+      <nodes>
+        <classShapeMoniker Id="89f38a85-c3f3-4e07-8ee5-1b5a4546b4a7" />
+        <classShapeMoniker Id="db02c3b4-44ca-435e-a6d2-3510dc0d469e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

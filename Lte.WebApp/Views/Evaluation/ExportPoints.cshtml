@@ -1,0 +1,64 @@
+﻿@model Lte.Evaluations.Entities.StatValueField
+@using Lte.Evaluations.Infrastructure.Entities
+@{
+    ViewBag.Title = "仿真结果";
+}
+@section featured 
+{
+    <hgroup class="title">
+        <h1>@ViewBag.Title</h1>
+    </hgroup>
+}
+
+<input type="hidden" id="longitude" value="@TempData["centerX"]" />
+<input type="hidden" id="lattitude" value="@TempData["centerY"]" />
+<div class="float-left">
+	<input type="button" id="refresh" value="刷新"/>
+    <input type="button" id="display" value="显示/隐藏"/>
+	@Html.DropDownListFor(x => x.FieldName, StatValueChoiceQueries.Choices.Select(
+        s => new SelectListItem { Text = s, Value = s }).ToList())
+</div> 
+<table class="float-right">
+    <tbody>
+        <tr id ="colors"></tr>
+        <tr id="limits"></tr>
+    </tbody>
+</table>
+<div id="allmap" style="width: 100%;height: 600px;overflow: hidden;margin:0;"></div>
+
+@section scripts{
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=OeWDTDlnolWHBNP1GSkDph34"></script>
+<script type="text/javascript" src="../../Scripts/Parameters/MapContainer.js"></script>
+<script type="text/javascript" src="~/Scripts/Parameters/ExtendOperations.js"></script>
+<script type="text/javascript" src="~/Scripts/Parameters/RegionCellsPresenter.js"></script>
+<script type="text/javascript" src="~/Scripts/Parameters/EvaluationMapCanvas.js"></script>
+<script type="text/javascript">
+    var map = new BMap.Map("allmap");
+    var container = new MapContainer(map);
+    var point = new BMap.Point($("#longitude").val(), $("#lattitude").val());
+    container.initalize(point, 15);
+    container.drawSectors("GetSectors");
+    var canvas = new EvaluationMapCanvas(container);
+
+    $("#colors").updateColorTag("GetStatValueField", $("#FieldName").val());
+    $("#limits").updateLimitTag("GetStatValueField", $("#FieldName").val());
+    $("#FieldName").change(function () {
+        $("#colors").updateColorTag("GetStatValueField", $(this).val());
+        $("#limits").updateLimitTag("GetStatValueField", $(this).val());
+    });
+
+    $("#refresh").click(function () {
+        canvas.drawGrids("GetPoints", $("#FieldName").val());
+    });
+    $("#display").toggle(function () {
+        for (var i = 0; i < grids.length; i++) {
+            grids[i].hide();
+        }
+    }, function () {
+        for (var i = 0; i < grids.length; i++) {
+            grids[i].show();
+        }
+    });
+</script>
+}
+

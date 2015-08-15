@@ -1,0 +1,65 @@
+﻿@model Lte.Evaluations.Dingli.TestFileRecordsViewModel
+
+@{
+    ViewBag.Title = "4G路测数据-" + Model.FileName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<input type="hidden" id="longitude" value="@Model.CenterX" />
+<input type="hidden" id="lattitude" value="@Model.CenterY" />
+<section>
+    <h2>@ViewBag.Title</h2>
+    <div class="btn-group">
+        <input class="btn btn-toolbar" type="button" value="SINR" id="showSinr"/>
+        <input class="btn btn-toolbar" type="button" value="RSRP" id="showRsrp"/>
+    </div>
+    <table class="float-right">
+        <tbody>
+            <tr id ="colors"></tr>
+            <tr id="limits"></tr>
+        </tbody>
+    </table>
+</section>
+
+@section scripts{
+    <script type="text/javascript" src="~/Scripts/Parameters/MapContainer.js"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/ExtendOperations.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var map = new BMap.Map("allmap");
+            var center = new BMap.Point($("#longitude").val(), $("#lattitude").val());
+            var container = new MapContainer(map);
+            container.initalize(center, 15);
+
+            $("#showSinr").click(function() {
+                map.clearOverlays();
+                var data = [
+                    { L: -40, H: 0, C: 'ff0000' },
+                    { L: 0, H: 6, C: '800f0f' },
+                    { L: 6, H: 12, C: '080880' },
+                    { L: 12, H: 40, C: '08f008' }
+                ];
+                for (var i = 0; i < data.length; i++) {
+                    container.addDtPoints("/api/Sinr4GPoints/", data[i].L, data[i].H, '#' + data[i].C);
+                }
+                $("#colors").updateColor(data, "SINR(dB)");
+                $("#limits").updateLimit(data);
+            });
+
+            $("#showRsrp").click(function () {
+                map.clearOverlays();
+                var data = [
+                    { L: -140, H: -110, C: 'ff0000' },
+                    { L: -110, H: -100, C: '800f0f' },
+                    { L: -100, H: -85, C: '080880' },
+                    { L: -85, H: 0, C: '08f008' }
+                ];
+                for (var i = 0; i < data.length; i++) {
+                    container.addDtPoints("/api/RsrpPoints/", data[i].L, data[i].H, '#' + data[i].C);
+                }
+                $("#colors").updateColor(data, "RSRP(dBm)");
+                $("#limits").updateLimit(data);
+            });
+        });
+    </script>
+}

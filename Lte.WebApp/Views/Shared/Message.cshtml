@@ -1,0 +1,17 @@
+﻿@{
+    Layout = null;
+}
+<div id="system_message">
+        @if (TempData["info"] != null) {
+            <div class="info">@TempData["info"]</div>
+        }
+        else if (TempData["success"] != null) {
+            <div class="success">@TempData["success"]</div>
+        }
+        else if (TempData["warning"] != null) {
+            <div class="warning">@TempData["warning"]</div>
+        }
+        else if (TempData["error"] != null) {
+            <div class="error">@TempData["error"]</div>
+        }
+</div>

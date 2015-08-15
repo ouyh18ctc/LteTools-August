@@ -1,0 +1,103 @@
+﻿@model Lte.Evaluations.ViewHelpers.ENodebQueryViewModel
+
+@section featured {
+            <hgroup class="title">
+                <h1>查询条件设定</h1>
+            </hgroup>
+}
+<article>
+    @using (Html.BeginForm("Query", "Parameters",
+        FormMethod.Post, new {enctype = "multipart/form-data"}))
+    {
+        Html.RenderPartial("QueryConditions", Model);
+    }
+
+    <div id="radiotabs">
+        <ul>
+            <li><a href="#enodeb-info">基站信息</a></li>
+            <li><a href="#cell-map">小区地图</a></li>
+        </ul>
+        <div id="enodeb-info">
+            @if (Model != null && Model.ENodebs != null) {
+                Html.RenderPartial("_ENodebTable", Model.ENodebs);
+            }
+        </div>
+        <div id="cell-map">
+            <div class="btn-group">
+                <button id="showbts" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-road"></span>
+                    显示基站
+                </button>
+                <button id="showcells" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-plane"></span>
+                    显示小区
+                </button>
+                <button id="resetmap" class="btn btn-primary show-details">
+                    <span class="glyphicon glyphicon-edit"></span>
+                    重置地图
+                </button>
+            </div>
+            <div id="allmap" style="width: 100%;height: 600px;overflow: hidden;margin:0;"></div>
+        </div>
+    </div>
+</article>
+
+<input type="hidden" id="longitude" value="@Model.CenterLongtitute" />
+<input type="hidden" id="lattitude" value="@Model.CenterLattitute" />
+
+@section css
+{
+    @Styles.Render("~/Content/themes/base/css")
+}
+
+@section scripts{
+@Scripts.Render("~/bundles/jqueryui")
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=OeWDTDlnolWHBNP1GSkDph34"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/MapContainer.js"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/EvaluationMapCanvas.js"></script>
+<script type="text/javascript" src="~/Scripts/Parameters/RegionRefresh.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var region = new RegionRefresh("#CityName", "#DistrictName", "#TownName");
+        $("#CityName").change(function () {
+            region.getDistrictList("/api/DistrictList/"+$(this).val(), false);
+        });
+        $("#DistrictName").change(function () {
+            region.getTownList("/api/TownList/"+$("#CityName").val()+"/"+$(this).val(), false);
+        });
+        $("#radiotabs").tabs();
+    });
+    var map = new BMap.Map("allmap");
+    var container = new MapContainer(map);
+    var point = new BMap.Point($("#longitude").val(), $("#lattitude").val());
+    var canvas = new EvaluationMapCanvas(container);
+    $("#showbts").click(function () {
+        $.ajax({
+            url: "/api/QueryENodeb",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                canvas.drawMarkers("/api/ENodeb", data);
+            }
+        });
+    });
+    $("#showcells").click(function () {
+        $.ajax({
+            url: "/api/QueryENodeb",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                canvas.drawSectors("/api/SectorList", data);
+            }
+        });
+    });
+    $("#resetmap").click(function () {
+        canvas.removeMarkers();
+        canvas.removeSectors();
+    });
+
+    map.centerAndZoom(point, 15);
+    map.setCurrentCity("佛山");
+    map.enableScrollWheelZoom(); //启用滚轮放大缩小
+</script>
+}

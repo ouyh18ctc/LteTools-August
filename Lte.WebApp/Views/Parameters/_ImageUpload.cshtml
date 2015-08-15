@@ -1,0 +1,30 @@
+﻿@model Lte.Evaluations.ViewHelpers.ENodebDetailsViewModel
+
+@using (Html.BeginForm("UpdateImage", "Parameters",
+    FormMethod.Post, new {enctype = "multipart/form-data"}))
+{
+    @Html.HiddenFor(x => x.ENodeb.ENodebId)
+    @Html.HiddenFor(x => x.ENodeb.Name)
+    <fieldset>
+        <legend>图像文件选择</legend>
+        <ol>
+            <li>
+                基站文件选择：
+                <input type="file" name="btsImage" accept=".jpg, .jpeg, .png, .img, .gif" />
+            </li>
+            @foreach (Lte.Parameters.Entities.Cell cell in Model.Cells)
+            {
+                <li>
+                    小区-@cell.SectorId 文件选择：
+                    <input type="file" name="cellImage-@cell.SectorId" accept=".jpg, .jpeg, .png, .img, .gif" />
+                </li>
+            }
+        </ol>
+    </fieldset>
+
+    <p>
+        <button type="submit" class="btn btn-primary btn-lg">
+            <span class="glyphicon glyphicon-save"></span>导入文件
+        </button>
+    </p>
+}

@@ -1,0 +1,247 @@
+﻿@using Lte.Parameters.Entities
+@model Lte.Evaluations.ViewHelpers.InfrastructureInfoViewModel
+
+@{
+    ViewBag.Title = "校园基础信息管理：" + Model.InfrastructureName;
+    ViewBag.Info = "——查看该校园有关的LTE和CDMA基站、小区和室内分布系统信息";
+}
+
+@section featured 
+{
+    <hgroup class="title">
+        <h1>@ViewBag.Title</h1>
+        <h2>@ViewBag.Info</h2>
+    </hgroup>
+}
+
+<section>
+    <div class="btn-group">
+        @Html.ActionLink("返回校园网列表","List",null,new{@class="btn btn-primary"})
+        @Html.ActionLink("查看校园覆盖信息","CollegeCoverage",new{id=Model.InfrastructureId},new{@class="btn btn-primary"})
+    </div>
+    <div id="radiotabs">
+        <ul>
+            <li><a href="#lte-info">LTE信息</a></li>
+            <li><a href="#cdma-info">CDMA信息</a></li>
+            <li><a href="#distribution-info">室分信息</a></li>
+            <li><a href="#cell-map">地理化显示</a></li>
+        </ul>
+        <div id="lte-info">
+            <p>
+                @{Html.RenderPartial("_ENodebTable",Model.ENodebs??new List<ENodeb>());}
+            </p>
+            <p>
+                @{Html.RenderPartial("../Kpi/_DateSpanSelection", Model);}
+            </p>
+            <p>
+                @{Html.RenderPartial("_LteCellTable",Model.Cells??new List<Cell>());}
+            </p>
+        </div>
+        <div id="cdma-info">
+            <p>
+                @{Html.RenderPartial("_BtsTable",Model.Btss??new List<CdmaBts>());}
+            </p>
+            <p>
+                @{Html.RenderPartial("_CdmaCellTable",Model.CdmaCells?? new List<CdmaCell>());}
+            </p>
+        </div>
+        <div id="distribution-info">
+            <p>
+                @{Html.RenderPartial("_DistributionTable",Model.LteDistributions??new List<IndoorDistribution>());}
+            </p>
+            <p>
+                @{ Html.RenderPartial("_DistributionTable", Model.CdmaDistributions??new List<IndoorDistribution>()); }
+            </p>
+        </div>
+        <div id="cell-map">
+            <div class="btn-group">
+                <button id="show-enodeb" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-road"></span>
+                    显示LTE基站
+                </button>
+                <button id="show-bts" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-road"></span>
+                    显示CDMA基站
+                </button>
+                <button id="show-cell" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-plane"></span>
+                    显示LTE小区
+                </button>
+                <button id="cdma-cell" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-plane"></span>
+                    显示CDMA小区
+                </button>
+                <button id="lte-distribution" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-plane"></span>
+                    显示LTE室分
+                </button>
+                <button id="cdma-distribution" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-plane"></span>
+                    显示CDMA室分
+                </button>
+                <button id="resetmap" class="btn btn-primary show-details">
+                    <span class="glyphicon glyphicon-edit"></span>
+                    重置地图
+                </button>
+            </div>
+            <div id="allmap" style="width: 100%;height: 600px;overflow: hidden;margin:0;"></div>
+        </div>
+    </div>
+    <div id="dialog-modal"></div>
+</section>
+
+<input type="hidden" id="longitude" value="@Model.CenterLongtitute" />
+<input type="hidden" id="lattitude" value="@Model.CenterLattitute" />
+<input type="hidden" id="college-id" value="@Model.InfrastructureId"/>
+
+@section css
+{
+    @Styles.Render("~/Content/themes/base/css")
+	<link rel="stylesheet" href="~/Content/Page.css" />
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/highcharts")
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=OeWDTDlnolWHBNP1GSkDph34"></script>
+    <script type="text/javascript" src="~/Scripts/Plugins/DrawingManager.js"></script>
+    <script type="text/javascript" src="~/Scripts/Plugins/SearchInfoWindow.js"></script>
+    <script type="text/javascript" src="~/Scripts/Plugins/GeoUtils.js"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/MapContainer.js"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/EvaluationMapCanvas.js"></script>
+    <script type="text/javascript" src="~/Scripts/Dingli/ComboSetting.js"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/MrsStatSet.js"></script>
+    <script type="text/javascript" src="~/Scripts/Parameters/ExtendOperations.js"></script>
+    <script type="text/javascript">
+        $("#radiotabs").tabs();
+        $("#StatDate").datepicker({ dateFormat: 'yy-mm-dd' });
+        $("#StartDate").datepicker({ dateFormat: 'yy-mm-dd' });
+        $("#EndDate").datepicker({ dateFormat: 'yy-mm-dd' });
+        var map = new BMap.Map("allmap");
+        var point = new BMap.Point($("#longitude").val(), $("#lattitude").val());
+
+        var lteContainer = new MapContainer(map);
+        var lteCanvas = new EvaluationMapCanvas(lteContainer);
+        $("#show-enodeb").click(function() {
+            lteCanvas.drawENodebMarkers("/api/QueryENodebs");
+        });
+        $("#show-cell").click(function() {
+            lteCanvas.drawQuerySectors("/api/QueryLteSectors");
+        });
+        $(".show-precise").click(function() {
+            var segments = $(this).attr("id").split(':');
+            var eNodebId = segments[1];
+            var sectorId = segments[2];
+            var startDate = $("#StartDate").val();
+            var endDate = $("#EndDate").val();
+            var setting = new ComboSetting(eNodebId + "-" + sectorId + '精确覆盖率变化趋势');
+            var dataSet = new PreciseStatSet(setting);
+            dataSet.generatePlot("/api/QueryPreciseStat/" + eNodebId + "/" + sectorId + "/" + startDate + "/" + endDate,
+                $("#dialog-modal"), 900, 480);
+        });
+
+        var cdmaContainer = new MapContainer(map);
+        var cdmaCanvas = new EvaluationMapCanvas(cdmaContainer);
+        $("#show-bts").click(function() {
+            cdmaCanvas.drawBtsMarkers("/api/QueryBtss");
+        });
+        $("#cdma-cell").click(function() {
+            cdmaCanvas.drawQuerySectors("/api/QueryCdmaSectors");
+        });
+
+        var lteDisContainer = new MapContainer(map);
+        var lteDisCanvas = new EvaluationMapCanvas(lteDisContainer);
+        $("#lte-distribution").click(function() {
+            lteDisCanvas.drawDistributionMarkers("/api/QueryLteDistributions");
+        });
+
+        var cdmaDisContainer = new MapContainer(map);
+        var cdmaDisCanvas = new EvaluationMapCanvas(cdmaDisContainer);
+        $("#cdma-distribution").click(function() {
+            cdmaDisCanvas.drawDistributionMarkers("/api/QueryCdmaDistributions");
+        });
+
+        $("#resetmap").click(function() {
+            lteCanvas.removeMarkers();
+            lteCanvas.removeSectors();
+            cdmaCanvas.removeMarkers();
+            cdmaCanvas.removeSectors();
+            lteDisCanvas.removeMarkers();
+            cdmaDisCanvas.removeMarkers();
+            for (var i = 0; i < overlays.length; i++) {
+                map.removeOverlay(overlays[i]);
+            }
+            overlays.length = 0;
+        });
+
+        map.centerAndZoom(point, 15);
+        map.setCurrentCity("佛山");
+        map.enableScrollWheelZoom(); //启用滚轮放大缩小
+
+        var overlays = [];
+        var overlaycomplete = function(e) {
+            overlays.push(e.overlay);
+            if (e.drawingMode == BMAP_DRAWING_CIRCLE) {
+                var radius = e.overlay.getRadius();
+
+                $.get("/api/DrawCollegeRegion", {
+                        id: $("#college-id").val(),
+                        centerX: e.overlay.getCenter().lng,
+                        centerY: e.overlay.getCenter().lat,
+                        radius: radius
+                    });
+                return;
+            }
+            if (e.drawingMode == BMAP_DRAWING_POLYGON || e.drawingMode == BMAP_DRAWING_RECTANGLE) {
+                var area = BMapLib.GeoUtils.getPolygonArea(e.overlay);
+                var points = e.overlay.getPath();
+                if (e.drawingMode == BMAP_DRAWING_POLYGON) {
+                    var info = "";
+                    for (var i = 0; i < points.length - 1; i++) {
+                        info += points[i].lng + ";" + points[i].lat + ";";
+                    }
+                    info += points[points.length - 1].lng + ";" + points[points.length - 1].lat;
+                    $.get("/api/DrawCollegeRegion", {
+                            id: $("#college-id").val(),
+                            area: area,
+                            message: info
+                        });
+                } else {
+                    $.get("/api/DrawCollegeRegion", {
+                            id: $("#college-id").val(),
+                            area: area,
+                            x1: points[0].lng,
+                            y1: points[0].lat,
+                            x2: points[2].lng,
+                            y2: points[2].lat
+                        });
+                }
+            }
+        };
+        var styleOptions = {
+            strokeColor: "red", //边线颜色。
+            fillColor: "red", //填充颜色。当参数为空时，圆形将没有填充效果。
+            strokeWeight: 3, //边线的宽度，以像素为单位。
+            strokeOpacity: 0.8, //边线透明度，取值范围0 - 1。
+            fillOpacity: 0.2, //填充的透明度，取值范围0 - 1。
+            strokeStyle: 'solid' //边线的样式，solid或dashed。
+        }
+        //实例化鼠标绘制工具
+        var drawingManager = new BMapLib.DrawingManager(map, {
+            isOpen: false, //是否开启绘制模式
+            enableDrawingTool: true, //是否显示工具栏
+            drawingToolOptions: {
+                anchor: BMAP_ANCHOR_TOP_RIGHT, //位置
+                offset: new BMap.Size(5, 5), //偏离值
+            },
+            circleOptions: styleOptions, //圆的样式
+            polylineOptions: styleOptions, //线的样式
+            polygonOptions: styleOptions, //多边形的样式
+            rectangleOptions: styleOptions //矩形的样式
+        });
+        //添加鼠标绘制工具监听事件，用于获取绘制结果
+        drawingManager.addEventListener('overlaycomplete', overlaycomplete);
+    </script>
+}

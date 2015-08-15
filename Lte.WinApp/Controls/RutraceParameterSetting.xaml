@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="Lte.WinApp.Controls.RutraceParameterSetting"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:e="clr-namespace:Lte.Evaluations.ViewHelpers;assembly=Lte.Evaluations"
+             xmlns:viewHelpers="clr-namespace:Lte.Evaluations.ViewHelpers;assembly=Lte.Evaluations"
+             mc:Ignorable="d">
+    <d:UserControl.DataContext>
+        <viewHelpers:RutraceImportModel />
+    </d:UserControl.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Content="邻区干扰门限" Margin="5"/>
+        <Label Content="干扰比例计算门限" Grid.Row="1" Grid.Column="0" Margin="5"/>
+        <Label Content="超远覆盖门限" Grid.Row="2" Grid.Column="0" Margin="5"/>
+        <Label Content="拉远覆盖剔除低门限" Grid.Row="3" Grid.Column="0" Margin="5"/>
+        <Label Content="拉远覆盖高低门限比值" Grid.Row="4" Grid.Column="0" Margin="5"/>
+        <TextBox Text="{Binding InterferenceThreshold,Mode=TwoWay}" Grid.Row="0" Grid.Column="1" Margin="5">
+            <TextBox.ToolTip>
+                <StackPanel>
+                    <TextBlock Text="单位：dB"/>
+                    <TextBlock Text="含义：只有高于该门限的邻区才算作干扰小区"/>
+                    <TextBlock Text="范围：1.5到6.5之间"/>
+                </StackPanel>
+            </TextBox.ToolTip>
+        </TextBox>
+        <TextBox Text="{Binding RatioThreshold,Mode=TwoWay}" Grid.Row="1" Grid.Column="1" Margin="5">
+            <TextBox.ToolTip>
+                <StackPanel>
+                    <TextBlock Text="单位：%"/>
+                    <TextBlock Text="含义：只有干扰比例高于该门限的干扰小区才把中心小区算作被干扰小区"/>
+                    <TextBlock Text="范围：1到10之间"/>
+                </StackPanel>
+            </TextBox.ToolTip>
+        </TextBox>
+        <TextBox Text="{Binding RtdExcessThreshold,Mode=TwoWay}" Grid.Row="2" Grid.Column="1" Margin="5">
+            <TextBox.ToolTip>
+                <StackPanel>
+                    <TextBlock Text="单位：米"/>
+                    <TextBlock Text="含义：CDR中释放距离RTD大于该门限的作为超远覆盖，用于计算超远覆盖率"/>
+                    <TextBlock Text="范围：500到2000之间"/>
+                </StackPanel>
+            </TextBox.ToolTip>
+        </TextBox>
+        <TextBox Text="{Binding TaLowerBound,Mode=TwoWay}" Grid.Row="3" Grid.Column="1" Margin="5">
+            <TextBox.ToolTip>
+                <StackPanel>
+                    <TextBlock Text="单位：米"/>
+                    <TextBlock Text="含义：低门限与高门限之间的CDR作为拉远覆盖剔除"/>
+                    <TextBlock Text="范围：500到1000之间"/>
+                </StackPanel>
+            </TextBox.ToolTip>
+        </TextBox>
+        <TextBox Text="{Binding TaUpperRatio,Mode=TwoWay}" Grid.Row="4" Grid.Column="1" Margin="5">
+            <TextBox.ToolTip>
+                <StackPanel>
+                    <TextBlock Text="单位：无"/>
+                    <TextBlock Text="含义：高门限与低门限之间的比值"/>
+                    <TextBlock Text="范围：2到4之间"/>
+                </StackPanel>
+            </TextBox.ToolTip>
+        </TextBox>
+    </Grid>
+</UserControl>
