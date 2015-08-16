@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewBag.Title = "校园网一览";
+    ViewBag.Info = "——校园网信息的整体呈现";
+}
+
+@section featured 
+{
+    <hgroup class="title">
+        <h1>@ViewBag.Title</h1>
+        <h2>@ViewBag.Info</h2><div align="right">
+            @Html.ActionLink("返回校园网列表","List",null,new{@class="btn btn-primary"})
+        </div>
+    </hgroup>
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <div id="allmap" style="width: 100%;height: 600px;overflow: hidden;margin:0;"></div>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
+@section Scripts{
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=OeWDTDlnolWHBNP1GSkDph34"></script>
+    <script type="text/javascript" src="~/Scripts/App/appAjax.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var map = new BMap.Map("allmap");
+            var point = new BMap.Point(113.1023, 23.0223);
+            map.centerAndZoom(point, 10);
+            map.setCurrentCity("佛山");
+            map.enableScrollWheelZoom(); //启用滚轮放大缩小
+            sendRequest("/api/CollegeQuery", "GET", null, function(data) {
+                var names = [];
+                for (var index = 0; index < data.length; index++) {
+                    var id = data[index].Id;
+                    names[id] = data[index].Name;
+                    sendRequest("/api/QueryCollegeRegion", "GET", { id: id }, function(result) {
+                        var type = result.RegionType;
+                        var info = result.Info;
+                        var coors = info.split(';');
+                        var centerx = 0;
+                        var centery = 0;
+                        if (type == 2) {
+                            var points = [];
+                            for (var p = 0; p < coors.length/2; p++) {
+                                points.push(new BMap.Point(parseFloat(coors[2*p]), parseFloat(coors[2*p + 1])));
+                                centerx += parseFloat(coors[2*p]);
+                                centery += parseFloat(coors[2 * p + 1]);
+                                console.log(coors[2 * p]);
+                                console.log(coors[2 * p + 1]);
+                            }
+                            centerx /= coors.length/2;
+                            centery /= coors.length/2;
+                            var polygon = new BMap.Polygon(points,
+                                { strokeColor: "blue", strokeWeight: 2, strokeOpacity: 0.5 });
+                            map.addOverlay(polygon);
+                        } else if (type == 1) {
+                            centerx = (parseFloat(coors[0]) + parseFloat(coors[2])) / 2;
+                            centery = (parseFloat(coors[1]) + parseFloat(coors[3])) / 2;
+                            var rectangle = new BMap.Polygon([
+                                new BMap.Point(parseFloat(coors[0]), parseFloat(coors[1])),
+                                new BMap.Point(parseFloat(coors[2]), parseFloat(coors[1])),
+                                new BMap.Point(parseFloat(coors[2]), parseFloat(coors[3])),
+                                new BMap.Point(parseFloat(coors[0]), parseFloat(coors[3]))
+                            ], { strokeColor: "blue", strokeWeight: 2, strokeOpacity: 0.5 });
+                            map.addOverlay(rectangle);
+                        } else if (type == 0) {
+                            centerx = parseFloat(coors[0]);
+                            centery = parseFloat(coors[1]);
+                            var circle = new BMap.Circle(new BMap.Point(parseFloat(coors[0]), parseFloat(coors[1])),
+                                parseFloat(coors[2]),
+                                { strokeColor: "blue", strokeWeight: 2, strokeOpacity: 0.5 });
+                            map.addOverlay(circle);
+                        }
+                        var marker = new BMap.Marker(new BMap.Point(centerx, centery));
+                        map.addOverlay(marker);
+                        var opts = {
+                            position: new BMap.Point(centerx, centery),    // 指定文本标注所在的地理位置
+                            offset: new BMap.Size(10, -20)    //设置文本偏移量
+                        }
+                        var label = new BMap.Label(names[result.AreaId], opts);  // 创建文本标注对象
+                        label.setStyle({
+                            color: "red",
+                            fontSize: "12px",
+                            height: "20px",
+                            lineHeight: "20px",
+                            fontFamily: "微软雅黑"
+                        });
+                        map.addOverlay(label);
+                    });
+                }
+            });
+        });
+    </script>
+}

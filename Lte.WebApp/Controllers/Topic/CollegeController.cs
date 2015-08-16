@@ -70,6 +70,11 @@ namespace Lte.WebApp.Controllers.Topic
             get { return _infrastructureRepository; }
         }
 
+        public ActionResult Map()
+        {
+            return View();
+        }
+
         public ActionResult List()
         {
             IEnumerable<CollegeInfo> infos = _repository.GetAllList();

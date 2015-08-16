@@ -328,6 +328,7 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Content\themes\InfoWindow.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -353,6 +354,7 @@
     <Content Include="Images\wpawn.png" />
     <Content Include="Images\wqueen.png" />
     <Content Include="Images\wrook.png" />
+    <Content Include="Scripts\App\appAjax.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Dingli\BarSetting.js" />
@@ -615,6 +617,7 @@
     <Content Include="Views\Manage\ChessBoard.cshtml" />
     <Content Include="Views\Shared\_Accessory.cshtml" />
     <Content Include="Views\College\_CollegeTable.cshtml" />
+    <Content Include="Views\College\Map.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

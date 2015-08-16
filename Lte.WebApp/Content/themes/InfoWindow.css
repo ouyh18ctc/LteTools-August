@@ -1,0 +1,59 @@
+﻿.infoBoxContent {
+    font-size:12px;
+}
+	.infoBoxContent .title {
+	    background:url(title.jpg) no-repeat;
+        height:42px;
+        width:272px;
+	}
+	.infoBoxContent .title strong {
+	    font-size:14px;
+        line-height:42px;
+        padding:0 10px 0 5px;
+	}
+	.infoBoxContent .title .price {
+	    color:#FFFF00;
+	}
+	.infoBoxContent .list {
+	    width:268px;
+        border:solid 1px #4FA5FC;
+        border-top:none;
+        background:#fff;
+        height:260px;
+	}
+	.infoBoxContent .list ul {
+	    margin:0;
+        padding:5px;
+        list-style:none;
+	}
+	.infoBoxContent .list ul li {
+	    float:left;
+        width:255px;
+        border-bottom:solid 1px #4FA5FC;
+        padding:2px 0;
+	}
+	.infoBoxContent .list ul .last {
+	    border:none;
+	}
+	.infoBoxContent .list ul img {
+	    width:53px;
+        height:42px;
+        margin-right:5px;
+	}
+	.infoBoxContent .list ul p {
+	    padding:0;
+        margin:0;
+	}
+	.infoBoxContent .left {
+	    float:left;
+	}
+	.infoBoxContent .rmb {
+	    float:right;
+        color:#EB6100;
+        font-size:14px;
+        font-weight:bold;
+	}
+	.infoBoxContent a {
+	    color:#0041D9;
+        text-decoration:none;
+	}

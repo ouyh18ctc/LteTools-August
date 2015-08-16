@@ -53,10 +53,17 @@
 <input type="hidden" id="longitude" value="@Model.CenterLongtitute" />
 <input type="hidden" id="lattitude" value="@Model.CenterLattitute" />
 
+@section css
+{
+    <link rel="stylesheet" href="~/Content/themes/InfoWindow.css"/>
+}
+
 @section scripts{
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=OeWDTDlnolWHBNP1GSkDph34"></script>
     <script type="text/javascript" src="~/Scripts/Parameters/MapContainer.js"></script>
     <script type="text/javascript" src="~/Scripts/Parameters/EvaluationMapCanvas.js"></script>
+    <script type="text/javascript" src="~/Scripts/App/appAjax.js"></script>
+    <script type="text/javascript" src="~/Scripts/Plugins/InfoBox.js"></script>
     <script type="text/javascript">
         var map = new BMap.Map("allmap");
         var container = new MapContainer(map);

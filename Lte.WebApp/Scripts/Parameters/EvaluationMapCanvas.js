@@ -40,13 +40,8 @@ EvaluationMapCanvas.prototype.drawMarkers = function (url, ids) {
         return;
     }
     $(ids).each(function (i) {
-        $.ajax({
-            url: url + "/" + ids[i],
-            type: "GET",
-            dataType: "json",
-            success: function (result) {
-                container.addOneENodebMarker(result);
-            }
+        sendRequest(url, "GET", { id: ids[i] }, function(result) {
+            container.addOneENodebMarker(result);
         });
     });
 };
