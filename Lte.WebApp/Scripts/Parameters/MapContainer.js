@@ -13,19 +13,28 @@ MapContainer.prototype.initalize = function (point, scale) {
 MapContainer.prototype.addOneENodebMarker = function (data) {
     var marker = new BMap.Marker(new BMap.Point(data.BaiduLongtitute, data.BaiduLattitute));
     this.map.addOverlay(marker);
-    var html = ["<div class='infoBoxContent'><div class='title'><strong>基站名称</strong><span class='price'>"+data.Name+"</span></div>",
-"<div class='list'><ul><li><div class='left'>基站编号</div><div class='rmb'>" + data.ENodebId + "</div></li>","<li><div class='left'>厂家</div><div class='rmb'>" + data.Factory + "</div></li>","<li><div class='left'>地址</div><div class='rmb'>" + data.Address + "</div></li>","<li><div class='left'>FSC编号</div><div class='rmb'>" + data.PlanNum + "</div></li>","<li><div class='left'>开通日期</div><div class='rmb'>" + data.OpenDate + "</div></li>","</ul></div>", "</div>"];
-
-    var infoBox = new BMapLib.InfoBox(this.map, html.join(""), {
+    var html = '<div class="infoBoxContent">'
+        + '<div class="title">ENodeb ID: <span class="price">'
+        + data.ENodebId + '</span></div>'
+        + '<div class="list"><ul>'
+        + '<li><div class="left">Name:</div><div class="rmb"> '
+        + data.Name + '</div></li><li><div class="left">Address: </div><div class="rmb">' + data.Address
+        + '</div></li><li><div class="left">Factory: </div><div class="rmb">' + data.Factory
+        + '</div></li></ul></div></div>';
+    //var infoWindow = new BMap.InfoWindow(html);
+    var infoBox = new BMapLib.InfoBox(map, html, {
         boxStyle: {
             width: "270px",
-            height: "300px"
+            height: "200px"
         },
         closeIconMargin: "1px 1px 0 0",
         enableAutoPan: true,
         align: INFOBOX_AT_TOP
-    });
-    marker.addEventListener("click", function () { infoBox.open(marker); });
+    });
+    marker.addEventListener("click", function() {
+        // this.openInfoWindow(infoWindow);
+        infoBox.open(this);
+    });
     this.markers.push(marker);
 };
 
