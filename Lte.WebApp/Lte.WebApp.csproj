@@ -327,6 +327,7 @@
     <Content Include="Content\themes\base\spinner.css" />
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\tipbox.jpg" />
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="Content\themes\InfoWindow.css" />
     <Content Include="favicon.ico" />
@@ -653,11 +654,12 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50459</DevelopmentServerPort>
+          <DevelopmentServerPort>63903</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:2543/</IISUrl>
+          <IISUrl>
+          </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

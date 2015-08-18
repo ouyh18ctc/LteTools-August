@@ -14,16 +14,19 @@ MapContainer.prototype.addOneENodebMarker = function (data) {
     var marker = new BMap.Marker(new BMap.Point(data.BaiduLongtitute, data.BaiduLattitute));
     this.map.addOverlay(marker);
     var html = '<div class="infoBoxContent">'
-        + '<div class="title">ENodeb ID: <span class="price">'
-        + data.ENodebId + '</span></div>'
+        + '<div class="title"><strong>基站基本信息: </strong></div>'
         + '<div class="list"><ul>'
-        + '<li><div class="left">Name:</div><div class="rmb"> '
+        + '<li><div class="left">ENodeb ID:</div><div class="rmb"> '
+        + data.ENodebId + '</div></li><li><div class="left">Name:</div><div class="rmb"> '
         + data.Name + '</div></li><li><div class="left">Address: </div><div class="rmb">' + data.Address
         + '</div></li><li><div class="left">Factory: </div><div class="rmb">' + data.Factory
-        + '</div></li></ul></div></div>';
+        + '</div></li>'
+        + '</ul></div>'
+        + '</div>';
     //var infoWindow = new BMap.InfoWindow(html);
     var infoBox = new BMapLib.InfoBox(map, html, {
         boxStyle: {
+            background: "url('/Content/themes/tipbox.jpg') no-repeat center top",
             width: "270px",
             height: "200px"
         },
