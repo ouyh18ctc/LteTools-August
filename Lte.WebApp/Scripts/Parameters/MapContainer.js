@@ -10,15 +10,13 @@ MapContainer.prototype.initalize = function (point, scale) {
     this.map.enableScrollWheelZoom(); //启用滚轮放大缩小
 };
 
-MapContainer.prototype.addOneENodebMarker = function (data) {
-    var marker = new BMap.Marker(new BMap.Point(data.BaiduLongtitute, data.BaiduLattitute));
-    this.map.addOverlay(marker);
+MapContainer.prototype.addOneCollegeMarkerInfo = function (data, marker) {
     var html = '<div class="infoBoxContent">'
-        + '<div class="title"><strong>基站基本信息: </strong></div>'
+        + '<div class="title"><strong>校园基本信息: </strong></div>'
         + '<div class="list"><ul>'
-        + '<li><div class="left">ENodeb ID:</div><div class="rmb"> '
-        + data.ENodebId + '</div></li><li><div class="left">Name:</div><div class="rmb"> '
-        + data.Name + '</div></li><li><div class="left">Address: </div><div class="rmb">' + data.Address
+        + '<li><div class="left">ENodeb ID:</div><div class="rmb"> ' + data.ENodebId
+        + '</div></li><li><div class="left">Name:</div><div class="rmb"> ' + data.Name
+        + '</div></li><li><div class="left">Address: </div><div class="rmb">' + data.Address
         + '</div></li><li><div class="left">Factory: </div><div class="rmb">' + data.Factory
         + '</div></li>'
         + '</ul></div>'
@@ -30,6 +28,38 @@ MapContainer.prototype.addOneENodebMarker = function (data) {
             width: "270px",
             height: "200px"
         },
+        closeIconUrl: "/Content/themes/close.png",
+        closeIconMargin: "1px 1px 0 0",
+        enableAutoPan: true,
+        align: INFOBOX_AT_TOP
+    });
+    marker.addEventListener("click", function () {
+        // this.openInfoWindow(infoWindow);
+        infoBox.open(this);
+    });
+}
+
+MapContainer.prototype.addOneENodebMarker = function (data) {
+    var marker = new BMap.Marker(new BMap.Point(data.BaiduLongtitute, data.BaiduLattitute));
+    this.map.addOverlay(marker);
+    var html = '<div class="infoBoxContent">'
+        + '<div class="title"><strong>基站基本信息: </strong></div>'
+        + '<div class="list"><ul>'
+        + '<li><div class="left">ENodeb ID:</div><div class="rmb"> ' + data.ENodebId 
+        + '</div></li><li><div class="left">Name:</div><div class="rmb"> '+ data.Name 
+        + '</div></li><li><div class="left">Address: </div><div class="rmb">' + data.Address
+        + '</div></li><li><div class="left">Factory: </div><div class="rmb">' + data.Factory
+        + '</div></li>'
+        + '</ul></div>'
+        + '</div>';
+    //var infoWindow = new BMap.InfoWindow(html);
+    var infoBox = new BMapLib.InfoBox(map, html, {
+        boxStyle: {
+            background: "url('/Content/themes/tipbox.jpg') no-repeat center top",
+            width: "270px",
+            height: "200px"
+        },
+        closeIconUrl: "/Content/themes/close.png",
         closeIconMargin: "1px 1px 0 0",
         enableAutoPan: true,
         align: INFOBOX_AT_TOP

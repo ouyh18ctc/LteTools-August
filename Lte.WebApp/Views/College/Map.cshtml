@@ -27,6 +27,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             var map = new BMap.Map("allmap");
+            var container = new MapContainer(map);
             map.centerAndZoom("佛山", 10);
             var bdary = new BMap.Boundary();
             bdary.get("佛山市", function (rs) {       //获取行政区域
@@ -50,6 +51,7 @@
                 for (var index = 0; index < data.length; index++) {
                     var id = data[index].Id;
                     names[id] = data[index].Name;
+
                     sendRequest("/api/QueryCollegeRegion", "GET", { id: id }, function(result) {
                         var type = result.RegionType;
                         var info = result.Info;
@@ -86,8 +88,13 @@
                                 { strokeColor: "blue", strokeWeight: 2, strokeOpacity: 0.5 });
                             map.addOverlay(circle);
                         }
+
                         var marker = new BMap.Marker(new BMap.Point(centerx, centery));
                         map.addOverlay(marker);
+                        sendRequest("/api/CollegeQuery", "GET", { id: id }, function (college) {
+                            container.addOneCollegeMarkerInfo(college, marker);
+                        });
+
                         var opts = {
                             position: new BMap.Point(centerx, centery),    // 指定文本标注所在的地理位置
                             offset: new BMap.Size(10, -20)    //设置文本偏移量

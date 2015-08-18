@@ -8,7 +8,7 @@
     <hgroup class="title">
         <h1>@ViewBag.Title</h1>
         <div align="right">
-            @Html.ActionLink("查看修改效果","CellList",null, new{eNodebId = Model.ENodeb.ENodebId, @class="btn-primary"})
+            @Html.ActionLink("查看修改效果","CellList",new{eNodebId = Model.ENodeb.ENodebId}, new {@class="btn btn-primary"})
         </div>
     </hgroup>
 }
@@ -25,7 +25,10 @@
                 @{Html.RenderPartial("_ENodebInfoEdit",Model.ENodeb);}
             </div>
             <div id="cdmaInfo" class="tab-pane fade">
-                @{Html.RenderPartial("_BtsInfoEdit",Model.Bts);}
+                @if (Model.Bts != null)
+                {
+                    Html.RenderPartial("_BtsInfoEdit", Model.Bts);
+                }
             </div>
             <div id="photos" class="tab-pane fade">
                 @{Html.RenderPartial("_ImageUpload",Model);}

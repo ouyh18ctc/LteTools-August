@@ -90,6 +90,9 @@ namespace Lte.WebApp.Controllers.Parameters
             eNodeb.Address = item.Address;
             eNodeb.Name = item.Name;
             eNodeb.Factory = item.Factory;
+            eNodeb.Longtitute = item.Longtitute;
+            eNodeb.Lattitute = item.Lattitute;
+            _eNodebRepository.Update(eNodeb);
             ENodebDetailsViewModel viewModel = new ENodebDetailsViewModel();
             viewModel.Import(eNodeb.ENodebId, _eNodebRepository, _cellRepository, _btsRepository, _cdmaCellRepository,
                 _photoRepository);
@@ -103,6 +106,8 @@ namespace Lte.WebApp.Controllers.Parameters
             if (bts == null) return View("ENodebEdit", new ENodebDetailsViewModel());
             bts.Address = item.Address;
             bts.Name = item.Name;
+            bts.Longtitute = item.Longtitute;
+            bts.Lattitute = item.Lattitute;
             _btsRepository.Update(bts);
             ENodebDetailsViewModel viewModel = new ENodebDetailsViewModel();
             viewModel.Import(bts.ENodebId, _eNodebRepository, _cellRepository, _btsRepository, _cdmaCellRepository,
