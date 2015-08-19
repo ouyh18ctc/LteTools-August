@@ -10,7 +10,7 @@ MapContainer.prototype.initalize = function (point, scale) {
     this.map.enableScrollWheelZoom(); //启用滚轮放大缩小
 };
 
-MapContainer.prototype.addOneCollegeMarkerInfo = function (data, markers) {
+MapContainer.prototype.addOneCollegeMarkerInfo = function (data, centerxs, centerys) {
     var html = '<div class="infoBoxContent">'
         + '<div class="title"><strong>校园基本信息: </strong></div>'
         + '<div class="list"><ul>'
@@ -26,8 +26,11 @@ MapContainer.prototype.addOneCollegeMarkerInfo = function (data, markers) {
         + '</div></li>'
         + '</ul></div>'
         + '</div>';
-    console.log(html);
+
     var map = this.map;
+    //console.log(data.Id);
+    var marker = new BMap.Marker(new BMap.Point(centerxs[data.Id], centerys[data.Id]));
+    map.addOverlay(marker);
     var infoBox = new BMapLib.InfoBox(map, html, {
         boxStyle: {
             background: "url('/Content/themes/tipbox.jpg') no-repeat center top",
@@ -39,7 +42,7 @@ MapContainer.prototype.addOneCollegeMarkerInfo = function (data, markers) {
         enableAutoPan: true,
         align: INFOBOX_AT_TOP
     });
-    markers[data.Id].addEventListener("click", function () {
+    marker.addEventListener("click", function () {
         // this.openInfoWindow(infoWindow);
         infoBox.open(this);
     });

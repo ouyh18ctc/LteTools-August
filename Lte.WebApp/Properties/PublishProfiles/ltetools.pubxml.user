@@ -139,19 +139,19 @@
       <publishTime>07/16/2015 08:46:38</publishTime>
     </File>
     <File Include="bin/Lte.Domain.dll">
-      <publishTime>08/15/2015 17:53:42</publishTime>
+      <publishTime>08/19/2015 21:24:29</publishTime>
     </File>
     <File Include="bin/Lte.Evaluations.dll">
-      <publishTime>08/16/2015 17:00:33</publishTime>
+      <publishTime>08/19/2015 21:24:32</publishTime>
     </File>
     <File Include="bin/Lte.Parameters.dll">
-      <publishTime>08/16/2015 17:00:32</publishTime>
+      <publishTime>08/19/2015 21:24:31</publishTime>
     </File>
     <File Include="bin/Lte.ViewModels.dll">
       <publishTime>06/06/2015 17:19:19</publishTime>
     </File>
     <File Include="bin/Lte.WebApp.dll">
-      <publishTime>08/18/2015 21:21:03</publishTime>
+      <publishTime>08/19/2015 21:24:33</publishTime>
     </File>
     <File Include="bin/Microsoft.Data.Edm.dll">
       <publishTime>08/03/2015 08:34:16</publishTime>
@@ -946,7 +946,7 @@
       <publishTime>08/02/2015 08:33:24</publishTime>
     </File>
     <File Include="Scripts/Parameters/MapContainer.js">
-      <publishTime>08/18/2015 20:44:04</publishTime>
+      <publishTime>08/19/2015 21:24:16</publishTime>
     </File>
     <File Include="Scripts/Parameters/MrsStatSet.js">
       <publishTime>08/02/2015 08:33:24</publishTime>
@@ -1237,7 +1237,7 @@
       <publishTime>08/16/2015 23:18:14</publishTime>
     </File>
     <File Include="Views/College/Map.cshtml">
-      <publishTime>08/18/2015 19:28:34</publishTime>
+      <publishTime>08/19/2015 21:23:24</publishTime>
     </File>
     <File Include="Views/College/_CollegeTable.cshtml">
       <publishTime>08/14/2015 20:43:43</publishTime>

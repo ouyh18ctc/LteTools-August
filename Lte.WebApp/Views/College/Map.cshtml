@@ -14,17 +14,17 @@
     </hgroup>
 }
 
-@section css
-{
-    <link rel="stylesheet" href="~/Content/themes/InfoWindow.css"/>
-}
-
 <div class="row">
     <div class="col-md-8">
         <div id="allmap" style="width: 100%;height: 600px;overflow: hidden;margin:0;"></div>
     </div>
     <div class="col-md-4"></div>
 </div>
+
+@section css
+{
+    <link rel="stylesheet" href="~/Content/themes/InfoWindow.css"/>
+}
 
 @section Scripts{
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=OeWDTDlnolWHBNP1GSkDph34"></script>
@@ -37,24 +37,27 @@
             var container = new MapContainer(map);
             map.centerAndZoom("佛山", 10);
             map.enableScrollWheelZoom(); //启用滚轮放大缩小
-            //var bdary = new BMap.Boundary();
-            //bdary.get("佛山市", function (rs) {       //获取行政区域
-            //    map.clearOverlays();        //清除地图覆盖物       
-            //    var count = rs.boundaries.length; //行政区域的点有多少个
-            //    if (count === 0) {
-            //        alert('未能获取当前输入行政区域');
-            //        return;
-            //    }
-            //    var pointArray = [];
-            //    for (var i = 0; i < count; i++) {
-            //        var ply = new BMap.Polygon(rs.boundaries[i], { strokeWeight: 2, strokeColor: "#ff0000" }); //建立多边形覆盖物
-            //        map.addOverlay(ply);  //添加覆盖物
-            //        pointArray = pointArray.concat(ply.getPath());
-            //    }
-            //    map.setViewport(pointArray);    //调整视野                 
-            //});
+            var bdary = new BMap.Boundary();
+            bdary.get("佛山市", function (rs) {       //获取行政区域
+                var count = rs.boundaries.length; //行政区域的点有多少个
+                if (count === 0) {
+                    alert('未能获取当前输入行政区域');
+                    return;
+                }
+                var pointArray = [];
+                for (var i = 0; i < count; i++) {
+                    var ply = new BMap.Polygon(rs.boundaries[i], {
+                        strokeWeight: 2, strokeColor: "#ff0000", fillColor:"#001000", fillOpacity: 0
+                    }); //建立多边形覆盖物
+                    map.addOverlay(ply);  //添加覆盖物
+                    pointArray = pointArray.concat(ply.getPath());
+                }
+                map.setViewport(pointArray);    //调整视野                 
+            });
             sendRequest("/api/CollegeQuery", "GET", null, function(data) {
                 var names = [];
+                var centerxs = [];
+                var centerys = [];
                 for (var index = 0; index < data.length; index++) {
                     var id = data[index].Id;
                     names[id] = data[index].Name;
@@ -96,11 +99,8 @@
                             map.addOverlay(circle);
                         }
 
-                        var marker = new BMap.Marker(new BMap.Point(centerx, centery));
-                        map.addOverlay(marker);
-                        sendRequest("/api/CollegeStat", "GET", { id: id }, function (college) {
-                            container.addOneCollegeMarkerInfo(college, marker);
-                        });
+                        centerxs[result.AreaId] = centerx;
+                        centerys[result.AreaId] = centery;
 
                         var opts = {
                             position: new BMap.Point(centerx, centery),    // 指定文本标注所在的地理位置
@@ -115,6 +115,10 @@
                             fontFamily: "微软雅黑"
                         });
                         map.addOverlay(label);
+                    });
+                    //console.log(id);
+                    sendRequest("/api/CollegeStat", "GET", { id: id }, function (college) {
+                        container.addOneCollegeMarkerInfo(college, centerxs, centerys);
                     });
                 }
             });

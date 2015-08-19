@@ -73,7 +73,7 @@ namespace Lte.Parameters.Entities
             Name = info.Name;
             ExpectedSubscribers = info.ExpectedSubscribers;
             Area = region.Area;
-            Id = id;
+            Id = region.AreaId;
         }
 
         public void UpdateStats(IInfrastructureRepository repository)

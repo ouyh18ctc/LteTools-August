@@ -17,94 +17,94 @@
     </hgroup>
 }
 
-<section>
-    <div id="radiotabs">
-        <ul>
-            <li><a href="#coverage-cdma">2/3G覆盖</a></li>
-            <li><a href="#coverage-lte">4G覆盖</a></li>
+<div class="row">
+    <div class="col-md-12">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#coverage-cdma" data-toggle="tab">2/3G覆盖</a></li>
+            <li><a href="#coverage-lte" data-toggle="tab">4G覆盖</a></li>
         </ul>
-        <div id="coverage-cdma">
-            <div class="btn-group">
-                <input class="btn btn-toolbar" type="button" value="Ec/Io" id="showEcIo"/>
-                <input class="btn btn-toolbar" type="button" value="接收功率" id="showRx"/>
-                <input class="btn btn-toolbar" type="button" value="SINR" id="showSinr"/>
-                <input class="btn btn-toolbar" type="button" value="天线0接收功率" id="showRx0"/>
-                <input class="btn btn-toolbar" type="button" value="天线1接收功率" id="showRx1" />
-                <button id="show-bts" class="btn btn-primary">
-                    <span class="glyphicon glyphicon-road"></span>
-                    显示CDMA基站
-                </button>
-                <button id="cdma-cell" class="btn btn-primary">
-                    <span class="glyphicon glyphicon-plane"></span>
-                    显示CDMA小区
-                </button>
-                <button id="cdma-distribution" class="btn btn-primary">
-                    <span class="glyphicon glyphicon-plane"></span>
-                    显示CDMA室分
-                </button>
-                <button id="resetmap-cdma" class="btn btn-primary show-details">
-                    <span class="glyphicon glyphicon-edit"></span>
-                    重置地图
-                </button>
+        <div id="myTabContent" class="tab-content">
+            <div id="coverage-cdma" class="tab-pane fade in active">
+                <div class="btn-group">
+                    <input class="btn btn-toolbar" type="button" value="Ec/Io" id="showEcIo"/>
+                    <input class="btn btn-toolbar" type="button" value="接收功率" id="showRx"/>
+                    <input class="btn btn-toolbar" type="button" value="SINR" id="showSinr"/>
+                    <input class="btn btn-toolbar" type="button" value="天线0接收功率" id="showRx0"/>
+                    <input class="btn btn-toolbar" type="button" value="天线1接收功率" id="showRx1" />
+                    <button id="show-bts" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-road"></span>
+                        显示CDMA基站
+                    </button>
+                    <button id="cdma-cell" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-plane"></span>
+                        显示CDMA小区
+                    </button>
+                    <button id="cdma-distribution" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-plane"></span>
+                        显示CDMA室分
+                    </button>
+                    <button id="resetmap-cdma" class="btn btn-primary show-details">
+                        <span class="glyphicon glyphicon-edit"></span>
+                        重置地图
+                    </button>
+                </div>
+                <table class="float-right">
+                    <tbody>
+                        <tr id ="colors-cdma"></tr>
+                        <tr id="limits-cdma"></tr>
+                    </tbody>
+                </table>
+                <div id="allmap-cdma" style="width: 100%;height: 600px;overflow: hidden;margin:0;"></div>
             </div>
-            <table class="float-right">
-                <tbody>
-                    <tr id ="colors-cdma"></tr>
-                    <tr id="limits-cdma"></tr>
-                </tbody>
-            </table>
-            <div id="allmap-cdma" style="width: 100%;height: 600px;overflow: hidden;margin:0;"></div>
-        </div>
-        <div id="coverage-lte">
-            <div class="btn-group">
-                <input class="btn btn-toolbar" type="button" value="SINR" id="showSinr4G"/>
-                <input class="btn btn-toolbar" type="button" value="RSRP" id="showRsrp"/>
-                <button id="show-enodeb" class="btn btn-primary">
-                    <span class="glyphicon glyphicon-road"></span>
-                    显示LTE基站
-                </button>
-                <button id="show-cell" class="btn btn-primary">
-                    <span class="glyphicon glyphicon-plane"></span>
-                    显示LTE小区
-                </button>
-                <button id="lte-distribution" class="btn btn-primary">
-                    <span class="glyphicon glyphicon-plane"></span>
-                    显示LTE室分
-                </button>
-                <button id="resetmap-lte" class="btn btn-primary show-details">
-                    <span class="glyphicon glyphicon-edit"></span>
-                    重置地图
-                </button>
+            <div id="coverage-lte" class="tab-pane fade">
+                <div class="btn-group">
+                    <input class="btn btn-toolbar" type="button" value="SINR" id="showSinr4G"/>
+                    <input class="btn btn-toolbar" type="button" value="RSRP" id="showRsrp"/>
+                    <button id="show-enodeb" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-road"></span>
+                        显示LTE基站
+                    </button>
+                    <button id="show-cell" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-plane"></span>
+                        显示LTE小区
+                    </button>
+                    <button id="lte-distribution" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-plane"></span>
+                        显示LTE室分
+                    </button>
+                    <button id="resetmap-lte" class="btn btn-primary show-details">
+                        <span class="glyphicon glyphicon-edit"></span>
+                        重置地图
+                    </button>
+                </div>
+                <table class="float-right">
+                    <tbody>
+                        <tr id ="colors-lte"></tr>
+                        <tr id="limits-lte"></tr>
+                    </tbody>
+                </table>
+                <div id="allmap-lte" style="width: 100%;height: 600px;overflow: hidden;margin:0;"></div>
             </div>
-            <table class="float-right">
-                <tbody>
-                    <tr id ="colors-lte"></tr>
-                    <tr id="limits-lte"></tr>
-                </tbody>
-            </table>
-            <div id="allmap-lte" style="width: 100%;height: 600px;overflow: hidden;margin:0;"></div>
         </div>
     </div>
-</section>
+</div>
 
 <input type="hidden" id="longitude" value="@Model.CenterLongtitute" />
 <input type="hidden" id="lattitude" value="@Model.CenterLattitute" />
 
-section css
+@section css
 {
-    @Styles.Render("~/Content/themes/base/css")
+    <link rel="stylesheet" href="~/Content/themes/InfoWindow.css"/>
 }
 
 @section scripts
 {
-    @Scripts.Render("~/bundles/jqueryui")
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=OeWDTDlnolWHBNP1GSkDph34"></script>
     <script type="text/javascript" src="~/Scripts/Parameters/MapContainer.js"></script>
     <script type="text/javascript" src="~/Scripts/Parameters/EvaluationMapCanvas.js"></script>
     <script type="text/javascript" src="~/Scripts/Parameters/ExtendOperations.js"></script>
+    <script type="text/javascript" src="~/Scripts/Plugins/InfoBox.js"></script>
     <script type="text/javascript">
-        $("#radiotabs").tabs();
-
         var mapLte = new BMap.Map("allmap-lte");
         var lteContainer = new MapContainer(mapLte);
         var lteCanvas = new EvaluationMapCanvas(lteContainer);
