@@ -102,4 +102,23 @@ namespace Lte.WebApp.Controllers.Topic
         }
 
     }
+
+    public class CollegeStatController : ApiController
+    {
+        private readonly ICollegeRepository _repository;
+        private readonly IInfrastructureRepository _infrastructureRepository;
+
+        public CollegeStatController(ICollegeRepository repository, IInfrastructureRepository infrastructureRepository)
+        {
+            _repository = repository;
+            _infrastructureRepository = infrastructureRepository;
+        }
+
+        public CollegeStat Get(int id)
+        {
+            CollegeStat stat=new CollegeStat(_repository,id);
+            stat.UpdateStats(_infrastructureRepository);
+            return stat;
+        }
+    }
 }

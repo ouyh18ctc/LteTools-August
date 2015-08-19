@@ -1,6 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using Abp.Domain.Entities.Auditing;
+using Lte.Parameters.Abstract;
 
 namespace Lte.Parameters.Entities
 {
@@ -22,6 +24,11 @@ namespace Lte.Parameters.Entities
 
         public DateTime NewOpenDate { get; set; }
 
+        public int ExpectedSubscribers
+        {
+            get { return CurrentSubscribers + NewSubscribers - GraduateStudents; }
+        }
+
         public CollegeRegion CollegeRegion { get; set; }
     }
 
@@ -35,5 +42,69 @@ namespace Lte.Parameters.Entities
         public RegionType RegionType { get; set; }
 
         public string Info { get; set; }
+    }
+
+    public class CollegeStat
+    {
+        public int Id { get; set; }
+
+        public string Name { get; private set; }
+
+        public int ExpectedSubscribers { get; private set; }
+
+        public double Area { get; private set; }
+
+        public int TotalLteENodebs { get; set; }
+
+        public int TotalLteCells { get; set; }
+
+        public int TotalCdmaBts { get; set; }
+
+        public int TotalCdmaCells { get; set; }
+
+        public int TotalLteIndoors { get; set; }
+        
+        public int TotalCdmaIndoors { get; set; }
+
+        public CollegeStat(ICollegeRepository repository, int id)
+        {
+            CollegeInfo info = repository.Get(id);
+            CollegeRegion region = repository.GetRegion(id);
+            Name = info.Name;
+            ExpectedSubscribers = info.ExpectedSubscribers;
+            Area = region.Area;
+            Id = id;
+        }
+
+        public void UpdateStats(IInfrastructureRepository repository)
+        {
+            TotalLteENodebs = repository.InfrastructureInfos.Count(x => x.HotspotName == Name
+                                                                        && x.HotspotType == HotspotType.College
+                                                                        &&
+                                                                        x.InfrastructureType ==
+                                                                        InfrastructureType.ENodeb);
+            TotalLteCells = repository.InfrastructureInfos.Count(x => x.HotspotName == Name
+                                                                      && x.HotspotType == HotspotType.College
+                                                                      && x.InfrastructureType == InfrastructureType.Cell);
+            TotalCdmaBts = repository.InfrastructureInfos.Count(x => x.HotspotName == Name
+                                                                     && x.HotspotType == HotspotType.College
+                                                                     &&
+                                                                     x.InfrastructureType == InfrastructureType.CdmaBts);
+            TotalCdmaCells = repository.InfrastructureInfos.Count(x => x.HotspotName == Name
+                                                                       && x.HotspotType == HotspotType.College
+                                                                       &&
+                                                                       x.InfrastructureType ==
+                                                                       InfrastructureType.CdmaCell);
+            TotalLteIndoors = repository.InfrastructureInfos.Count(x => x.HotspotName == Name
+                                                                        && x.HotspotType == HotspotType.College
+                                                                        &&
+                                                                        x.InfrastructureType ==
+                                                                        InfrastructureType.LteIndoor);
+            TotalCdmaIndoors = repository.InfrastructureInfos.Count(x => x.HotspotName == Name
+                                                                         && x.HotspotType == HotspotType.College
+                                                                         &&
+                                                                         x.InfrastructureType ==
+                                                                         InfrastructureType.CdmaIndoor);
+        }
     }
 }

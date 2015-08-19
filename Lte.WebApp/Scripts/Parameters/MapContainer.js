@@ -10,18 +10,24 @@ MapContainer.prototype.initalize = function (point, scale) {
     this.map.enableScrollWheelZoom(); //启用滚轮放大缩小
 };
 
-MapContainer.prototype.addOneCollegeMarkerInfo = function (data, marker) {
+MapContainer.prototype.addOneCollegeMarkerInfo = function (data, markers) {
     var html = '<div class="infoBoxContent">'
         + '<div class="title"><strong>校园基本信息: </strong></div>'
         + '<div class="list"><ul>'
-        + '<li><div class="left">ENodeb ID:</div><div class="rmb"> ' + data.ENodebId
-        + '</div></li><li><div class="left">Name:</div><div class="rmb"> ' + data.Name
-        + '</div></li><li><div class="left">Address: </div><div class="rmb">' + data.Address
-        + '</div></li><li><div class="left">Factory: </div><div class="rmb">' + data.Factory
+        + '<li><div class="left">校园名称:</div><div class="rmb"> ' + data.Name
+        + '</div></li><li><div class="left">用户数:</div><div class="rmb"> ' + data.ExpectedSubscribers
+        + '</div></li><li><div class="left">区域面积: </div><div class="rmb">' + data.Area
+        + '</div></li><li><div class="left">LTE基站数: </div><div class="rmb">' + data.TotalLteENodebs
+        + '</div></li><li><div class="left">LTE小区数: </div><div class="rmb">' + data.TotalLteCells
+        + '</div></li><li><div class="left">CDMA基站数: </div><div class="rmb">' + data.TotalCdmaBts
+        + '</div></li><li><div class="left">CDMA小区数: </div><div class="rmb">' + data.TotalCdmaCells
+        + '</div></li><li><div class="left">LTE室内分布数: </div><div class="rmb">' + data.TotalLteIndoors
+        + '</div></li><li><div class="left">CDMA室内分布数: </div><div class="rmb">' + data.TotalCdmaIndoors
         + '</div></li>'
         + '</ul></div>'
         + '</div>';
-    //var infoWindow = new BMap.InfoWindow(html);
+    console.log(html);
+    var map = this.map;
     var infoBox = new BMapLib.InfoBox(map, html, {
         boxStyle: {
             background: "url('/Content/themes/tipbox.jpg') no-repeat center top",
@@ -33,7 +39,7 @@ MapContainer.prototype.addOneCollegeMarkerInfo = function (data, marker) {
         enableAutoPan: true,
         align: INFOBOX_AT_TOP
     });
-    marker.addEventListener("click", function () {
+    markers[data.Id].addEventListener("click", function () {
         // this.openInfoWindow(infoWindow);
         infoBox.open(this);
     });
@@ -53,6 +59,7 @@ MapContainer.prototype.addOneENodebMarker = function (data) {
         + '</ul></div>'
         + '</div>';
     //var infoWindow = new BMap.InfoWindow(html);
+    var map = this.map;
     var infoBox = new BMapLib.InfoBox(map, html, {
         boxStyle: {
             background: "url('/Content/themes/tipbox.jpg') no-repeat center top",

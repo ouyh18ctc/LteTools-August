@@ -51,10 +51,7 @@ namespace Lte.Evaluations.Entities
         public DateTime NewOpenDate { get; set; }
 
         [Display(Name = "预计用户到达数")]
-        public int ExpectedSubscribers
-        {
-            get { return CurrentSubscribers + NewSubscribers - GraduateStudents; }
-        }
+        public int ExpectedSubscribers { get; set; }
 
         [Display(Name = "城市")]
         public string CityName { get; set; }
